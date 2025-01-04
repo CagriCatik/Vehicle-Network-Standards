@@ -84,9 +84,45 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'canSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'CAN',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'linSidebar',
+            position: 'left',
+            label: 'LIN',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'flexraySidebar',
+            position: 'left',
+            label: 'FlexRay',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'ethernetSidebar',
+            position: 'left',
+            label: 'Ethernet',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'doipSidebar',
+            position: 'left',
+            label: 'DoIP',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'someipSidebar',
+            position: 'left',
+            label: 'SOME/IP',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'xcpSidebar',
+            position: 'left',
+            label: 'XCP',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

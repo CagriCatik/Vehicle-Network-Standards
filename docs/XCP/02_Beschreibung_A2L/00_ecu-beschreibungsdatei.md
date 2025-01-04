@@ -111,7 +111,7 @@ Die A2L-Datei definiert Umrechnungsregeln, die notwendig sind, um Rohdaten aus d
 
 **Lineare Umrechnung:**
 
-Formel: \( \text{Physikalischer Wert} = a \times \text{Rohwert} + b \)
+Formel:  text Physikalischer Wert = a \times \text{Rohwert} + b 
 
 **Nichtlineare Umrechnung:**
 

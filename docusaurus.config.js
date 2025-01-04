@@ -73,8 +73,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+
       navbar: {
         title: 'Vehicle Network Standards',
         logo: {
@@ -175,7 +174,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Vehicle Network Standards.`,
       },
       prism: {
         theme: prismThemes.github,

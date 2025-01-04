@@ -28,3 +28,46 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 24px; /* Space between boxes */
+  padding: 20px; /* Padding around the grid */
+}
+
+.feature-box {
+  border: 1px solid #ddd; /* Light border around the box */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px; /* Padding inside the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  display: flex; /* Flexbox for aligning content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Spread content evenly */
+  align-items: center; /* Center align content horizontally */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effect */
+  height: 260px; /* Fixed height for uniformity */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* Lift the box slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.features-grid .feature-box h3 {
+  margin-bottom: 12px; /* Space below the title */
+  font-size: 1.0rem; /* Adjust title size */
+  text-align: center; /* Center the title */
+}
+
+.features-grid .feature-box p {
+  color: #555; /* Subtle text color for description */
+  text-align: center; /* Center the description */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}

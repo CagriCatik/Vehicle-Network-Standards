@@ -1,0 +1,1 @@
+- **DTC (Diagnostic Trouble Code)**: Codes stored by the vehicle's ECU that indicate a specific fault or issue detected within the vehicle.

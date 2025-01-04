@@ -4,8 +4,15 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
+    title: 'AUTOSAR (Automotive Open System Architecture)',
+    description: (
+      <>
+        Explore AUTOSAR, the standardized automotive software architecture designed to improve interoperability, scalability, and software reuse across the automotive industry.
+      </>
+    ),
+  },
+  {
     title: 'CAN (Controller Area Network)',
-    // Svg: require('@site/static/img/undraw_data_processing.svg').default,
     description: (
       <>
         Learn about the widely-used Controller Area Network (CAN) protocol, its architecture, and practical use cases in modern automotive systems.
@@ -13,35 +20,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'LIN (Local Interconnect Network)',
-    // Svg: require('@site/static/img/undraw_networking.svg').default,
-    description: (
-      <>
-        Explore the simplicity and efficiency of the LIN protocol, ideal for low-cost, low-speed vehicle networks.
-      </>
-    ),
-  },
-  {
-    title: 'FlexRay',
-    // Svg: require('@site/static/img/undraw_connected_world.svg').default,
-    description: (
-      <>
-        Delve into the high-speed, deterministic communication offered by FlexRay, designed for safety-critical automotive applications.
-      </>
-    ),
-  },
-  {
-    title: 'SOME/IP (Scalable service-Oriented Middleware over IP)',
-    // Svg: require('@site/static/img/undraw_server_cluster.svg').default,
-    description: (
-      <>
-        Understand how SOME/IP enables efficient communication in service-oriented architectures within automotive Ethernet networks.
-      </>
-    ),
-  },
-  {
     title: 'DoIP (Diagnostics over IP)',
-    // Svg: require('@site/static/img/undraw_debugging.svg').default,
     description: (
       <>
         Learn about the Diagnostics over IP protocol, essential for vehicle diagnostics in modern Ethernet-based systems.
@@ -49,68 +28,95 @@ const FeatureList = [
     ),
   },
   {
-    title: 'XCP (Universal Measurement and Calibration Protocol)',
-    // Svg: require('@site/static/img/undraw_calibration.svg').default,
-    description: (
-      <>
-        Gain insights into XCP, the protocol for real-time measurement and calibration of ECU parameters during development.
-      </>
-    ),
-  },
-  {
-    title: 'Automotive Ethernet',
-    // Svg: require('@site/static/img/undraw_fast_car.svg').default,
+    title: 'Ethernet',
     description: (
       <>
         Discover the importance of Ethernet in automotive networks, supporting high-bandwidth communication for ADAS and infotainment.
       </>
     ),
   },
-
   {
-    title: 'UDS (Unified Diagnostic Services)',
-    // Svg: require('@site/static/img/undraw_secure_server.svg').default,
+    title: 'FlexRay',
     description: (
       <>
-        Understand UDS, the ISO-standardized diagnostic communication protocol used for vehicle diagnostics and reprogramming in ECUs.
+        Delve into the high-speed, deterministic communication offered by FlexRay, designed for safety-critical automotive applications.
       </>
     ),
   },
-
   {
-    title: 'AUTOSAR (Automotive Open System Architecture)',
-    // Svg: require('@site/static/img/undraw_coding.svg').default,
+    title: 'LIN (Local Interconnect Network)',
     description: (
       <>
-        Explore AUTOSAR, the standardized automotive software architecture designed to improve interoperability, scalability, and software reuse.
+        Explore the simplicity and efficiency of the LIN protocol, ideal for low-cost, low-speed vehicle networks.
+      </>
+    ),
+  },
+  {
+    title: 'SecOC (Secure Onboard Communication)',
+    description: (
+      <>
+        Understand SecOC, the automotive cybersecurity standard ensuring secure and reliable communication within vehicle networks.
+      </>
+    ),
+  },
+  {
+    title: 'SOME/IP (Scalable service-Oriented Middleware over IP)',
+    description: (
+      <>
+        Learn how SOME/IP enables efficient communication in service-oriented architectures within automotive Ethernet networks.
+      </>
+    ),
+  },
+  {
+    title: 'SOVA (Service-Oriented Vehicle Architecture)',
+    description: (
+      <>
+        Explore SOVA, the architecture that facilitates modular development and integration of vehicle services and applications.
+      </>
+    ),
+  },
+  {
+    title: 'SOVD (Service-Oriented Vehicle Diagnostics)',
+    description: (
+      <>
+        Gain insights into SOVD, a modern approach to vehicle diagnostics leveraging service-oriented architectures for scalability and efficiency.
+      </>
+    ),
+  },
+  {
+    title: 'UDS (Unified Diagnostic Services)',
+    description: (
+      <>
+        Understand UDS, the ISO-standardized diagnostic communication protocol used for vehicle diagnostics and ECU reprogramming in automotive systems.
+      </>
+    ),
+  },
+  {
+    title: 'XCP (Universal Measurement and Calibration Protocol)',
+    description: (
+      <>
+        Learn about XCP, the protocol for real-time measurement and calibration of ECU parameters during development.
       </>
     ),
   },
 ];
 
-function Feature({title, description}) {
+function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--4')}>
-      {/* Uncomment the following block if SVGs are available */}
-      {/* 
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      */}
+    <div className="feature-box">
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
   );
 }
 
-
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className="features">
       <div className="container">
-        <div className="row">
+        <div className="features-grid">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

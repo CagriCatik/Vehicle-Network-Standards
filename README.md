@@ -52,11 +52,11 @@ To view the documentation locally or contribute to the project, follow these ste
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/automotive-communication-protocols.git
+   git clone https://github.com/cagricatik/Vehicle-Network-Standards.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd automotive-communication-protocols
+   cd Vehicle-Network-Standards
    ```
 3. Install dependencies:
    ```bash

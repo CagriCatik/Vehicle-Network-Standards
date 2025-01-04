@@ -1,0 +1,1 @@
+- **ECU (Electronic Control Unit):** A generic term for any embedded system that controls one or more electrical systems or subsystems in a vehicle.

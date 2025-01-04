@@ -1,0 +1,1 @@
+- **API (Application Programming Interface)**: A set of rules and specifications that software programs can follow to communicate with each other.

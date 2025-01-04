@@ -1,0 +1,8 @@
+{
+  "label": "SOVD in Practice",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "This section explores practical applications of Service-Oriented Vehicle Diagnostics (SOVD). Topics include a case study on vehicle quick checks, prototypical implementations and evaluations, and lessons learned from early deployments in real-world scenarios."
+  }
+}

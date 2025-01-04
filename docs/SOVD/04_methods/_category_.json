@@ -1,0 +1,8 @@
+{
+  "label": "SOVD Methods and Functionalities",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "This section details the methods and functionalities of Service-Oriented Vehicle Diagnostics (SOVD). Topics covered include capability discovery with resource discovery, queries, and schema-based descriptions; data access and management with data categorization and trigger-based data access; fault handling, including querying and deleting faults and accessing environment data; and operational controls such as initiating and monitoring operations and resource locking mechanisms."
+  }
+}

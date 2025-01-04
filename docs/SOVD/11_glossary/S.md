@@ -1,0 +1,1 @@
+- **SOVD (Service-Oriented Vehicle Diagnostics):** A diagnostic framework that leverages service-oriented architecture principles and web technologies to facilitate comprehensive vehicle diagnostics.

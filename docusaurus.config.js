@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Vehicle Network Standards',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -76,55 +76,55 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Vehicle Network Standards',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/car.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'canSidebar',
-            position: 'left',
+            position: 'right',
             label: 'CAN',
           },
           {
             type: 'docSidebar',
             sidebarId: 'linSidebar',
-            position: 'left',
+            position: 'right',
             label: 'LIN',
           },
           {
             type: 'docSidebar',
             sidebarId: 'flexraySidebar',
-            position: 'left',
+            position: 'right',
             label: 'FlexRay',
           },
           {
             type: 'docSidebar',
             sidebarId: 'ethernetSidebar',
-            position: 'left',
+            position: 'right',
             label: 'Ethernet',
           },
           {
             type: 'docSidebar',
             sidebarId: 'doipSidebar',
-            position: 'left',
+            position: 'right',
             label: 'DoIP',
           },
           {
             type: 'docSidebar',
             sidebarId: 'someipSidebar',
-            position: 'left',
+            position: 'right',
             label: 'SOME/IP',
           },
           {
             type: 'docSidebar',
             sidebarId: 'xcpSidebar',
-            position: 'left',
+            position: 'right',
             label: 'XCP',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

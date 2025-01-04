@@ -1,0 +1,34 @@
+### SOME/IP
+
+**Hintergrund**
+Eine neue Philosophie für die Datenübertragung kommt mit SOME/IP (Scalable service-Oriented MiddlewarE over IP) ins Kraftfahrzeug. Während auf klassischen Bussystemen (CAN, LIN, FlexRay) eine signalorientierte Datenübertragung verwendet wird, erlaubt SOME/IP die Einführung der service-orientierten Übertragung von Informationen. Es ist allerdings zu beachten, dass SOME/IP nicht nur die Kommunikation beschreibt. Vielmehr handelt es sich um eine Middleware, die Auswirkungen auf die Softwarekomponenten eines Steuergerätes hat. Aus diesem Grund gibt es einen eigenen Softwarepfad in AUTOSAR, der eine Anbindung bis in die Applikation erlaubt.
+
+**Übertragung bei Bedarf**
+Bei der signalorientierten Datenübertragung werden Informationen gesendet, wenn der Sender einen Bedarf sieht, beispielsweise bei Aktualisierungen oder Änderungen von Werten. Ganz unabhängig davon, ob diese Daten im Netzwerk gerade von einem Empfänger benötigt werden. Anders ist es bei der service-orientierten Datenübertragung. Hier überträgt ein Sender Daten nur dann, wenn mindestens ein Empfänger im Netzwerk diese benötigt. Der Vorteil dieser Vorgehensweise ist, dass das Netzwerk und alle angeschlossenen Knoten nicht durch unnötige Daten belastet werden. Die service-orientierte Datenübertragung setzt somit voraus, dass ein Server auf irgendeine Art darüber informiert ist, welche Empfänger auf seine Daten warten.
+
+**Abonnieren von Inhalten**
+Ein Client hat die Möglichkeit einen Inhalt eines Service beim Server zu abonnieren. Im Falle eines Ereignisses erhält er dann die aktualisierten Daten vom Server. Das Abonnieren eines Inhalts erfolgt mit Hilfe des SOME/IP Service Discovery (SOME/IP-SD). Ein Client, der einen Inhalt beim Server abonnieren möchte, sendet an diesen einen Subscribe Eventgroup. Ist es möglich den Inhalt zu abonnieren, schickt der Server als Antwort ein positives Acknowledgement zurück an den Client. Das Abonnement ist nun aktiv. Ist ein Inhalt stattdessen nicht verfügbar, so kann der Server das Abonnement, durch Senden eines negativen Acknowledgements, ablehnen.
+
+Ein Inhalt eines Service kann von mehreren Clients gleichzeitig abonniert werden. Wie die verfügbaren Daten an die Clients gesendet werden, hängt davon ab, ob der Inhalt eines Services per UDP oder TCP verfügbar gemacht wird. Bei UDP kann der Server im Falle eines Ereignisses die Daten an alle Clients mit aktivem Abonnement per Unicast, Multicast oder Broadcast senden. Wird der Inhalt über TCP zur Verfügung gestellt, so muss von jedem Client eine Verbindung zum Server aufgebaut werden, die das jeweilige Versenden der Daten ermöglicht.
+
+**Event und Field Notification**
+Die Inhalte, die aufgrund eines aktiven Abonnements durch den Server versendet werden, können in zwei Formaten vorliegen: Als Event Notification und als Field Notification. Beiden Formaten ist gemeinsam, dass sie ereignisgesteuert erzeugt werden. Die Event Notification entspricht einem Formular, dessen Felder mit Eigenschaften befüllt sind, die eine Momentaufnahme darstellen, ohne Bezug zu früheren Ereignissen zu haben. Die Field Notification enthält stattdessen Werte, die in einem Bezug zu früheren Inhalten stehen und daher über eine Historie verfügen. Aus diesem Grund kann ein Field um Getter- und Setter-Methoden erweitert werden, die das Lesen und Schreiben der gewünschten Inhalte durch einen Client ermöglichen. So kann ein Client auch ohne Abonnement auf die Inhalte des Servers lesend oder schreibend zugreifen.
+
+**Methoden**
+Eine weitere Möglichkeit des Datenaustauschs besteht darin, dass Informationen durch den Aufruf einer Methode zur Verfügung gestellt werden können. Ein Client führt einen sogenannten Remote Procedure Call (RPC) aus, wodurch eine Funktion auf dem kontaktierten Server gestartet wird. Der Funktionsaufruf erfolgt mittels Request, den der Client über das Netzwerk sendet. Dieser Request des Clients kann dabei auch Daten enthalten, die der aufzurufenden Methode als Parameter übergeben werden. Nach Ausführen der Funktion auf dem Server kann ein Rückgabewert ausgeben werden, der mittels Response vom Server an den Client gesendet wird. Da der Client die Funktion aufgerufen hat, ist impliziert, dass dieser die resultierenden Daten verwerten möchte. Alternativ ist es aber auch möglich, dass der Client eine Methode auf dem Server aufruft, die keinen Rückgabewert hat. In diesem Fall ist mit dem eigentlichen Aufruf der Methode der Vorgang von Seiten des Clients schon abgeschlossen.
+
+**Service Discovery**
+Damit ein Client weiß, welche Dienste momentan verfügbar sind, stellt SOME/IP-SD zwei Mechanismen zur Verfügung, die das dynamische Auffinden von Services erlauben. Ein Offer Service ermöglicht dem Server, alle von ihm angebotenen Services im Netzwerk anzubieten. Das Find Service erlaubt es den Clients stattdessen, nach verfügbaren Services zu fragen.
+
+**Signal- vs. serviceorientierte Datenübertragung**
+Die signalorientierte Datenübertragung und die serviceorientierte Datenübertragung unterscheiden sich in ihrer grundlegenden Herangehensweise und Zielsetzung:
+
+1. **Signalorientierte Datenübertragung:**
+   * **Fokus auf Signalen:** Bei der signalorientierten Datenübertragung liegt der Fokus auf einzelnen Signalen oder Datenpunkten. Es werden spezifische Informationen übertragen, wenn ein Sender einen Bedarf sieht, unabhängig davon, ob ein Empfänger diese Daten gerade benötigt.
+   * **Unabhängigkeit von Empfängerbedarf:** Die Übertragung erfolgt unabhängig davon, ob die gesendeten Daten gerade von einem Empfänger im Netzwerk benötigt werden. Der Sender entscheidet, wann und welche Informationen gesendet werden.
+   * **Häufig in Bussystemen:** Diese Art der Datenübertragung ist in traditionellen Bussystemen wie CAN (Controller Area Network), LIN (Local Interconnect Network) oder FlexRay üblich.
+2. **Serviceorientierte Datenübertragung (SOME/IP):**
+   * **Fokus auf Services:** Im Gegensatz dazu konzentriert sich die serviceorientierte Datenübertragung auf die Übertragung von Diensten oder Services. Daten werden nur dann übertragen, wenn mindestens ein Empfänger im Netzwerk diese benötigt. Der Fokus liegt auf der bedarfsgesteuerten Informationsübertragung.
+   * **Vermeidung unnötiger Datenübertragung:** Der Vorteil liegt darin, dass das Netzwerk und die angeschlossenen Knoten nicht durch unnötige Daten belastet werden, da Daten nur dann gesendet werden, wenn sie von einem Empfänger angefordert werden.
+   * **Middleware-Einfluss:** Bei serviceorientierter Datenübertragung handelt es sich oft um eine Middleware wie SOME/IP, die Auswirkungen auf die Softwarekomponenten eines Steuergerätes hat. Es ermöglicht eine Integration bis in die Applikation.
+   * **Aktives Abonnement von Inhalten:** Clients haben die Möglichkeit, Inhalte eines Dienstes zu abonnieren, und sie erhalten Aktualisierungen nur im Falle eines Ereignisses.

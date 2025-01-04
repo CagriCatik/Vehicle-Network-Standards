@@ -1,0 +1,6 @@
+Ein Steuergerät (ECU) ist ein Teil eines technischen Systems (z. B. Automatikgetriebe). Das Verhalten technischer Systeme wird von physikalischen Größen beeinflusst. Über Sensoren werden die Eingangsgrößen vom Steuergerät erfasst und anschließend per Software weiterverarbeitet. Das Steuergeräteprogramm greift dabei auf eine hohe Anzahl von Steuer- und Regelparametern bei der Berechnung komplexer Algorithmen zurück. Die Aufgabe des Applikationsingenieurs ist es, diese Steuer- und Regelparameter so zu optimieren, dass das technische System die gestellten Anforderungen erfüllt.
+
+Zu diesem Zweck benötigt der Applikationsingenieur ein Werkzeug, welches ihm zur Laufzeit des Systems erlaubt, gleichzeitig Parameterwerte zu verstellen und Messsignale zu messen. CANape bietet dem Anwender verschiedene Verfahren an, Parameterwerte im Steuergerät zu verstellen (auch: kalibrieren oder applizieren). Voraussetzung ist dabei, dass die Parameter in einem beschreibbaren Speicherbereich abgelegt sind. Dieser sogenannte applizierbare Speicher könnte z. B. im RAM oder EEPROM liegen.
+
+Der Zugriff auf den Gerätespeicher wird bei modernen Applikationssystemen mit Hilfe von ASAM-konformen Protokollen ermöglicht. CAN (Controller Area Network) CANape (CAN application environment) CCP (CAN Calibration Protocol) ECU (Electronic Control Unit) XCP (Universal Calibration Protocol)
+

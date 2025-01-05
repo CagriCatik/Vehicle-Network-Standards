@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Vehicle Network Standards',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Detailed  resources on automotive networking and systems',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

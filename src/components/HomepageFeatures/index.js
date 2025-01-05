@@ -15,15 +15,18 @@ const FeatureList = [
     title: 'CAN (Controller Area Network)',
     description: (
       <>
-        Learn about the widely-used Controller Area Network (CAN) protocol, its architecture, and practical use cases in modern automotive systems.
+        Learn about the widely-used <a href="/docs/CAN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>CAN</a> protocol, including its architecture and practical use cases in modern automotive systems. 
+        .
       </>
     ),
   },
+  
+  
   {
     title: 'DoIP (Diagnostics over IP)',
     description: (
       <>
-        Learn about the Diagnostics over IP protocol, essential for vehicle diagnostics in modern Ethernet-based systems.
+        Learn about the <a href="/docs/DoIP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>DoIP</a>, essential for vehicle diagnostics in modern Ethernet-based systems.
       </>
     ),
   },
@@ -31,7 +34,7 @@ const FeatureList = [
     title: 'Ethernet',
     description: (
       <>
-        Discover the importance of Ethernet in automotive networks, supporting high-bandwidth communication for ADAS and infotainment.
+        Discover the importance of <a href="/docs/Ethernet/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>Ethernet</a> in automotive networks, supporting high-bandwidth communication for ADAS and infotainment.
       </>
     ),
   },
@@ -39,7 +42,7 @@ const FeatureList = [
     title: 'FlexRay',
     description: (
       <>
-        Delve into the high-speed, deterministic communication offered by FlexRay, designed for safety-critical automotive applications.
+        Delve into the high-speed, deterministic communication offered by <a href="/docs/FLEXRAY/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>FlexRay</a>, designed for safety-critical automotive applications.
       </>
     ),
   },
@@ -47,7 +50,7 @@ const FeatureList = [
     title: 'LIN (Local Interconnect Network)',
     description: (
       <>
-        Explore the simplicity and efficiency of the LIN protocol, ideal for low-cost, low-speed vehicle networks.
+        Explore the simplicity and efficiency of the <a href="/docs/LIN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>LIN</a> protocol, ideal for low-cost, low-speed vehicle networks.
       </>
     ),
   },
@@ -63,7 +66,7 @@ const FeatureList = [
     title: 'SOME/IP (Scalable service-Oriented Middleware over IP)',
     description: (
       <>
-        Learn how SOME/IP enables efficient communication in service-oriented architectures within automotive Ethernet networks.
+        Learn how <a href="/docs/SOME-IP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOME/IP</a> enables efficient communication in service-oriented architectures within automotive Ethernet networks.
       </>
     ),
   },
@@ -95,7 +98,7 @@ const FeatureList = [
     title: 'XCP (Universal Measurement and Calibration Protocol)',
     description: (
       <>
-        Learn about XCP, the protocol for real-time measurement and calibration of ECU parameters during development.
+        Learn about <a href="/docs/XCP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>XCP</a>, the protocol for real-time measurement and calibration of ECU parameters during development.
       </>
     ),
   },

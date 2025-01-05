@@ -1,1 +1,0 @@
-# Transition to a New World: Automotive E/E Architecture and Connectivity

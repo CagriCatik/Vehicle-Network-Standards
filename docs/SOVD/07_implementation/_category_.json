@@ -1,8 +1,0 @@
-{
-  "label": "Implementation and Migration Strategies",
-  "position": 7,
-  "link": {
-    "type": "generated-index",
-    "description": "This section discusses strategies for implementing and migrating to Service-Oriented Vehicle Diagnostics (SOVD). It includes the use of SOVD2UDS adapters, development of diagnostic testers for SOVD, and step-by-step approaches to ensure a smooth transition."
-  }
-}

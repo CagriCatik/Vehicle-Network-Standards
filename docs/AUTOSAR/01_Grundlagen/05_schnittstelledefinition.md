@@ -1,1 +1,0 @@
-# Schnittstellendefinitionen in AUTOSAR

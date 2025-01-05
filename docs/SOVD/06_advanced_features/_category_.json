@@ -1,8 +1,0 @@
-{
-  "label": "Advanced SOVD Features",
-  "position": 6,
-  "link": {
-    "type": "generated-index",
-    "description": "This section highlights the advanced features of Service-Oriented Vehicle Diagnostics (SOVD). Topics include multi-client support, software update management with options for automated and manual updates, and robust logging and tracing mechanisms for diagnostics and debugging."
-  }
-}

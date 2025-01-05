@@ -1,8 +1,0 @@
-{
-  "label": "SOVD API and Communication Protocols",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "This section covers the API and communication protocols used in Service-Oriented Vehicle Diagnostics (SOVD). It includes an overview of HTTP/REST principles, JSON and OpenAPI specifications, and authentication and authorization mechanisms such as OAuth2."
-  }
-}

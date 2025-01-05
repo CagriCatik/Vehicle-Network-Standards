@@ -1,8 +1,0 @@
-{
-  "label": "SOVD Architecture and Concepts",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "This section outlines the architecture and key concepts of Service-Oriented Vehicle Diagnostics (SOVD). It includes the reference architecture, core components such as the SOVD Gateway, Diagnostic Manager, and SOVD-to-UDS Translation Layer, as well as the backend and connectivity aspects."
-  }
-}

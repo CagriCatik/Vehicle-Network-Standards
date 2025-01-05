@@ -1,6 +1,6 @@
-# Automotive Communication Protocols
+# Vehicle Network Standards
 
-This repository serves as a comprehensive knowledge base for **Automotive Communication Protocols**. It provides structured information on widely-used protocols in the automotive industry, organized into the following categories:
+This repository serves as a comprehensive knowledge base for **Vehicle Network Standards**. It provides structured information on widely-used protocols in the automotive industry, organized into the following categories:
 
 - **CAN** (Controller Area Network)
 - **LIN** (Local Interconnect Network)
@@ -22,7 +22,7 @@ The content in this repository is the foundation of a Docusaurus-powered website
 
 ### Website
 
-The documentation is hosted and built using [Docusaurus](https://docusaurus.io/). Check out the live site here: [Automotive Communication Protocols Documentation](#) (link to be updated once deployed).
+The documentation is hosted and built using [Docusaurus](https://docusaurus.io/). Check out the live site here: [Vehicle Network Standards Documentation](#) (link to be updated once deployed).
 
 ## Folder Structure
 

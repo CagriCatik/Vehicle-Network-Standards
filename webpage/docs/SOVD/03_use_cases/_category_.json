@@ -1,0 +1,8 @@
+{
+  "label": "Diagnostic Use Cases and Scenarios",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "This section explores various diagnostic use cases and scenarios for SOVD. It includes traditional diagnostic use cases, HPC-specific diagnostic scenarios, and the processes involved in migration and ensuring compatibility with UDS."
+  }
+}

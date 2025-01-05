@@ -1,0 +1,8 @@
+{
+  "label": "Service-Discovery",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "This section contains a glossary of terms and definitions relevant to Service-Oriented Vehicle Diagnostics (SOVD), providing clarity on key concepts, abbreviations, and terminologies used throughout the documentation."
+  }
+}

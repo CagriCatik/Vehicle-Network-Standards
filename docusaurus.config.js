@@ -75,12 +75,38 @@ const config = {
     ({
 
       navbar: {
-        title: 'Vehicle Network Standards',
+        title: 'VNS',
         logo: {
           alt: 'My Site Logo',
           src: 'img/car.svg',
         },
         items: [
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'autosarSidebar',
+            position: 'right',
+            label: 'AUTOSAR',
+          },
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'sovaSidebar',
+            position: 'right',
+            label: 'SOVA',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'sovdSidebar',
+            position: 'right',
+            label: 'SOVD',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'udsSidebar',
+            position: 'right',
+            label: 'UDS',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'canSidebar',
@@ -123,11 +149,17 @@ const config = {
             position: 'right',
             label: 'XCP',
           },
-          {to: '/blog', label: 'Blog', position: 'right'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'docSidebar',
+            sidebarId: 'secocSidebar',
             position: 'right',
+            label: 'SecOC',
+          },
+
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'right'
           },
         ],
       },
@@ -135,28 +167,57 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Protocols',
             items: [
               {
-                label: 'Tutorial',
+                label: 'CAN',
+                to: '/docs/intro',
+              },
+              {
+                label: 'LIN',
+                to: '/docs/intro',
+              },
+              {
+                label: 'FlexRay',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Ethernet',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Diagnostic',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'UDS',
+                to: '/docs/UDS/Getting-Started',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'DoIP',
+                to: '/docs/UDS/Getting-Started',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'SOVD',
+                to: '/docs/UDS/Getting-Started',
+              },
+            ],
+          },
+          {
+            title: 'Architecture',
+            items: [
+              {
+                label: 'AUTOSAR',
+                to: '/docs/AUTOSAR/Getting-Started',
+              },
+              {
+                label: 'SOVA',
+                to: '/docs/SOVA/Getting-Started',
+              },
+              {
+                label: 'SOME/IP',
+                to: '/docs/SOME-IP/Getting-Started',
               },
             ],
           },
@@ -168,8 +229,16 @@ const config = {
                 to: '/blog',
               },
               {
+                label: 'Sources',
+                to: '/docs/SOURCES/info',
+              },
+              {
+                label: 'Glossary',
+                to: '/docs/GLOSSARY/info',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/CagriCatik/Vehicle-Network-Standards',
               },
             ],
           },

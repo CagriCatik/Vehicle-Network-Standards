@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 
-# Core Components of SOVD
+# Core Components
 
 ## **SOVD Gateway**
 

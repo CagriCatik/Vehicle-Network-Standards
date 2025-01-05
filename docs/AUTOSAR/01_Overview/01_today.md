@@ -1,1 +1,0 @@
-# Stand der Technik

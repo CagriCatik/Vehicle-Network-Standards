@@ -1,6 +1,6 @@
-# 1. AUTOSAR PDU (Protokolldateneinheit)
+# AUTOSAR PDU (Protokolldateneinheit)
 
-## 1.1 Signal-orientierte Kommunikation
+## Signal-orientierte Kommunikation
 
 Die signalorientierte Kommunikation ist ein grundlegendes Konzept in automobilen Kommunikationsprotokollen, insbesondere im Kontext des AUTOSAR (AUTomotive Open System ARchitecture) Frameworks. Diese Methode wird verwendet, um Daten zwischen verschiedenen elektronischen Steuergeräten (ECUs) innerhalb eines Fahrzeugs zu übertragen.
 

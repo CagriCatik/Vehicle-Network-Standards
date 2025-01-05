@@ -1,1 +1,0 @@
-# Ziele von AUTOSAR

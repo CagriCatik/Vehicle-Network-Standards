@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 
 
-# Service-Oriented Vehicle Diagnostics (SOVD) Documentation
+# Diagnostic Manager
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# **Manuellen Erstellung von A2L-Datei**
+# Manuellen Erstellung von A2L-Datei
 
 Die manuelle Erstellung von **A2L-Dateien** (ASAM MCD-2 MC Description File) ist ein essenzieller Prozess im Bereich der Fahrzeugsteuergerätekalibrierung und -diagnose. Diese Dateien dienen als Schnittstelle zwischen dem Mess- und Kalibrierwerkzeug sowie dem Steuergerät (ECU) und beschreiben detailliert die Speicherstruktur, Kommunikationsparameter und die relevanten Mess- und Verstellgrößen der ECU. Im Folgenden wird der Prozess der manuellen Erstellung einer A2L-Datei umfassend erläutert, einschließlich der notwendigen Schritte, Herausforderungen und bewährten Methoden.
 

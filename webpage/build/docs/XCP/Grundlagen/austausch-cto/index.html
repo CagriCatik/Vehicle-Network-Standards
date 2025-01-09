@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-XCP/Grundlagen/austausch-cto" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Austausch von CTOs im ASAM XCP-Protokoll | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch-cto"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Austausch von CTOs im ASAM XCP-Protokoll | Vehicle Network Standards"><meta data-rh="true" name="description" content="Der Austausch von CTOs (Command and Response Transport Objects) bildet das Rückgrat der Kommunikation zwischen Master und Slave im ASAM XCP (Universal Measurement and Calibration Protocol). Dieses Protokoll ermöglicht eine effiziente und flexible Datenübertragung für Mess- und Kalibrieranwendungen in der Automobilindustrie und anderen Bereichen. Im Folgenden wird die Struktur und Funktionsweise des CTO-Austauschs detailliert erläutert."><meta data-rh="true" property="og:description" content="Der Austausch von CTOs (Command and Response Transport Objects) bildet das Rückgrat der Kommunikation zwischen Master und Slave im ASAM XCP (Universal Measurement and Calibration Protocol). Dieses Protokoll ermöglicht eine effiziente und flexible Datenübertragung für Mess- und Kalibrieranwendungen in der Automobilindustrie und anderen Bereichen. Im Folgenden wird die Struktur und Funktionsweise des CTO-Austauschs detailliert erläutert."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch-cto"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch-cto" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch-cto" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.b665053f.css">
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.6e69769e.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/main.48ecfa15.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/Getting-Started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting-started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/Getting-Started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/Getting-Started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/Getting-Started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/Getting-Started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/XCP/Getting-Started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/Definitions">SecOC</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Vehicle-Network-Standards/docs/XCP/Getting-Started">Erste Schritte</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Introduction">Einstieg</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/beschreibung-a2l">Beschreibung A2L</a><button aria-label="Expand sidebar category &#x27;Beschreibung A2L&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-kommunikationsprotokoll">Grundlagen</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-kommunikationsprotokoll">XCP Kommunikationsmodell</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-protokollschicht">XCP-Protokollschicht</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch-cto">Austausch von CTOs im ASAM XCP-Protokoll</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch_dto">austausch_dto</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/zeit-korrelation">zeit-korrelation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-transportschichten">xcp-transportschichten</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-services">xcp-services</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Kalibrierkonzepte/parameter-flash">Kalibrierkonzepte</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Tooling/Messen_Auswerten">Tooling</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Grundlagen</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Austausch von CTOs im ASAM XCP-Protokoll</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Austausch von CTOs im ASAM XCP-Protokoll</h1></header>
+<p>Der Austausch von CTOs (Command and Response Transport Objects) bildet das Rückgrat der Kommunikation zwischen Master und Slave im ASAM XCP (Universal Measurement and Calibration Protocol). Dieses Protokoll ermöglicht eine effiziente und flexible Datenübertragung für Mess- und Kalibrieranwendungen in der Automobilindustrie und anderen Bereichen. Im Folgenden wird die Struktur und Funktionsweise des CTO-Austauschs detailliert erläutert.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="grundlegende-kommunikationsstruktur">Grundlegende Kommunikationsstruktur<a href="#grundlegende-kommunikationsstruktur" class="hash-link" aria-label="Direct link to Grundlegende Kommunikationsstruktur" title="Direct link to Grundlegende Kommunikationsstruktur">​</a></h2>
+<p>In der XCP-Kommunikation fungiert der Master als Initiator der Kommunikation, während der Slave als Empfänger agiert. Die Interaktion erfolgt über den Austausch von Kommandos (CMD) und entsprechenden Antworten (RES oder ERR). Jedes Kommando, das der Master an den Slave sendet, muss vom Slave mit einer positiven (RES) oder negativen (ERR) Antwort quittiert werden. Diese strukturierte Kommunikation gewährleistet eine zuverlässige und nachvollziehbare Datenübertragung.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="aufbau-eines-cto-pakets">Aufbau eines CTO-Pakets<a href="#aufbau-eines-cto-pakets" class="hash-link" aria-label="Direct link to Aufbau eines CTO-Pakets" title="Direct link to Aufbau eines CTO-Pakets">​</a></h2>
+<p>Ein CTO-Paket besteht aus mehreren Komponenten, die eine eindeutige Identifikation und Verarbeitung des Kommandos ermöglichen:</p>
+<ul>
+<li><strong>Packet Identifier (PID):</strong> Dieses Feld, das den Wertbereich von <code>0xC0</code> bis <code>0xFF</code> umfasst, dient der eindeutigen Identifikation des Kommandos.</li>
+<li><strong>Command Data:</strong> Hier werden spezifische Parameter des Kommandos übertragen. Die Anzahl der Parameter ist durch <code>MAX_CTO-1</code> begrenzt, wobei <code>MAX_CTO</code> die maximale Länge des CTO-Pakets in Bytes definiert.</li>
+</ul>
+<p>Die allgemeine Struktur eines CTO-Pakets ist wie folgt:</p>
+<table><thead><tr><th>Position</th><th>Byte-Bereich</th><th>Beschreibung</th></tr></thead><tbody><tr><td>0</td><td>1 Byte</td><td>Packet Identifier CMD (0xC0…0xFF)</td></tr><tr><td>1..MAX_CTO-1</td><td>MAX_CTO-1 Bytes</td><td>Command Data</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="positive-und-negative-antworten">Positive und Negative Antworten<a href="#positive-und-negative-antworten" class="hash-link" aria-label="Direct link to Positive und Negative Antworten" title="Direct link to Positive und Negative Antworten">​</a></h2>
+<p>Sowohl positive als auch negative Antworten können zusätzliche spezifische Parameter enthalten, die weiterführende Informationen über den Status oder Fehler liefern. Beispielsweise erfolgt beim Verbindungsaufbau zwischen Master und Slave ein Austausch von Connect-Kommando und positiver Antwort:</p>
+<ol>
+<li><strong>Master → Slave:</strong> <code>Connect</code></li>
+<li><strong>Slave → Master:</strong> <code>Positive Response</code></li>
+</ol>
+<p>Im Falle einer positiven Antwort kann der Slave dem Master kommunikationsspezifische Informationen übermitteln, wie etwa die Unterstützung von Page Switching (<code>RESOURCE</code>) oder die maximale Paketlänge für die Messdatenübertragung (<code>MAX_DTO</code>). Diese Informationen sind in der ASAM XCP Teil 2 Protocol Layer Spezifikation detailliert beschrieben.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kommando--und-antwortmechanismus">Kommando- und Antwortmechanismus<a href="#kommando--und-antwortmechanismus" class="hash-link" aria-label="Direct link to Kommando- und Antwortmechanismus" title="Direct link to Kommando- und Antwortmechanismus">​</a></h2>
+<p>Der Master sendet ein Kommando an den Slave, wobei das <code>PID</code>-Feld die spezifische Identifikationsnummer des Kommandos enthält. Im Datenfeld des Pakets werden zusätzliche Parameter übertragen. Nach dem Senden des Kommandos wartet der Master auf die Reaktion des Slaves, die entweder eine positive Antwort (<code>RES</code>) oder ein Fehlerkommando (<code>ERR</code>) sein kann.</p>
+<p>Ein wichtiger Aspekt der XCP-Implementierung ist ihre Skalierbarkeit. Nicht jedes Kommando muss zwingend implementiert werden. Die verfügbaren Kommandos sind in der A2L-Datei unter dem Abschnitt <code>XCP IF_DATA</code> aufgelistet. Sollte ein Kommando, das der Master sendet, vom Slave nicht unterstützt werden, antwortet der Slave mit <code>ERR_CMD_UNKNOWN</code>, wodurch der Master erkennt, dass das Kommando nicht implementiert ist und keine weiteren Aktivitäten im Slave ausgelöst werden.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gruppierung-der-kommandos">Gruppierung der Kommandos<a href="#gruppierung-der-kommandos" class="hash-link" aria-label="Direct link to Gruppierung der Kommandos" title="Direct link to Gruppierung der Kommandos">​</a></h2>
+<p>Die XCP-Kommandos sind in verschiedene Gruppen unterteilt, die unterschiedliche Funktionalitäten abdecken. Diese Gruppierung ermöglicht eine modulare Implementierung, bei der nur die benötigten Kommandos realisiert werden müssen. Die Hauptgruppen sind:</p>
+<ul>
+<li><strong>Standardkommandos</strong></li>
+<li><strong>Kalibrierkommandos</strong></li>
+<li><strong>Seitenumschaltungs-Kommandos</strong></li>
+<li><strong>Programmierkommandos</strong></li>
+<li><strong>Debugging-Kommandos</strong></li>
+<li><strong>DAQ-Kommandos (Data Acquisition)</strong></li>
+</ul>
+<p>Innerhalb jeder Gruppe können bestimmte Kommandos als obligatorisch oder optional gekennzeichnet sein. Beispielsweise müssen in der Gruppe der Seitenumschaltungs-Kommandos <code>SET_CAL_PAGE</code> und <code>GET_CAL_PAGE</code> implementiert sein, wenn der Slave Page Switching unterstützt. Andernfalls können diese Kommandos weggelassen werden.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="übersicht-der-standardkommandos">Übersicht der Standardkommandos<a href="#übersicht-der-standardkommandos" class="hash-link" aria-label="Direct link to Übersicht der Standardkommandos" title="Direct link to Übersicht der Standardkommandos">​</a></h2>
+<p>Die Standardkommandos bilden das Fundament der XCP-Kommunikation und umfassen grundlegende Funktionen wie Verbindungsmanagement, Statusabfragen und Identifikationsprozesse. Eine Auswahl dieser Kommandos ist im Folgenden dargestellt:</p>
+<table><thead><tr><th>Kommando</th><th>PID</th><th>Optionalität</th></tr></thead><tbody><tr><td>CONNECT</td><td>0xFF</td><td>Nein</td></tr><tr><td>DISCONNECT</td><td>0xFE</td><td>Nein</td></tr><tr><td>GET_STATUS</td><td>0xFD</td><td>Nein</td></tr><tr><td>SYNCH</td><td>0xFC</td><td>Nein</td></tr><tr><td>GET_COMM_MODE_INFO</td><td>0xFB</td><td>Ja</td></tr><tr><td>GET_ID</td><td>0xFA</td><td>Ja</td></tr><tr><td>SET_REQUEST</td><td>0xF9</td><td>Ja</td></tr><tr><td>GET_SEED</td><td>0xF8</td><td>Ja</td></tr><tr><td>UNLOCK</td><td>0xF7</td><td>Ja</td></tr><tr><td>SET_MTA</td><td>0xF6</td><td>Ja</td></tr><tr><td>UPLOAD</td><td>0xF5</td><td>Ja</td></tr><tr><td>SHORT_UPLOAD</td><td>0xF4</td><td>Ja</td></tr><tr><td>BUILD_CHECKSUM</td><td>0xF3</td><td>Ja</td></tr><tr><td>TRANSPORT_LAYER_CMD</td><td>0xF2</td><td>Ja</td></tr><tr><td>USER_CMD</td><td>0xF1</td><td>Ja</td></tr><tr><td>GET_VERSIONPID</td><td>0xC0, 0x00</td><td>Optional</td></tr></tbody></table>
+<p>Diese Kommandos decken eine Vielzahl von Funktionen ab, von der Herstellung und Beendigung der Verbindung (<code>CONNECT</code>, <code>DISCONNECT</code>) über Statusabfragen (<code>GET_STATUS</code>) bis hin zu spezifischen Steuerbefehlen (<code>SET_REQUEST</code>, <code>UNLOCK</code>).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kalibrierkommandos">Kalibrierkommandos<a href="#kalibrierkommandos" class="hash-link" aria-label="Direct link to Kalibrierkommandos" title="Direct link to Kalibrierkommandos">​</a></h2>
+<p>Kalibrierkommandos sind essenziell für die Anpassung und Optimierung der Messsysteme. Sie ermöglichen das Herunterladen und Modifizieren von Kalibrierdaten sowie die Verwaltung von Bits und Speicherbereichen. Wichtige Kalibrierkommandos umfassen:</p>
+<table><thead><tr><th>Kommando</th><th>PID</th><th>Optionalität</th></tr></thead><tbody><tr><td>DOWNLOAD</td><td>0xF0</td><td>Nein</td></tr><tr><td>DOWNLOAD_NEXT</td><td>0xEF</td><td>Ja</td></tr><tr><td>DOWNLOAD_MAX</td><td>0xEE</td><td>Ja</td></tr><tr><td>SHORT_DOWNLOAD</td><td>0xED</td><td>Ja</td></tr><tr><td>MODIFY_BITSPID</td><td>0xEC</td><td>Ja</td></tr></tbody></table>
+<p>Diese Kommandos ermöglichen eine präzise Steuerung der Kalibrierprozesse und sind daher unverzichtbar für eine genaue Messdatenerfassung und -analyse.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="seitenumschaltung">Seitenumschaltung<a href="#seitenumschaltung" class="hash-link" aria-label="Direct link to Seitenumschaltung" title="Direct link to Seitenumschaltung">​</a></h2>
+<p>Die Seitenumschaltungs-Kommandos ermöglichen das Wechseln zwischen verschiedenen Kalibrierungsseiten oder Speicherbereichen im Slave. Dies ist besonders nützlich, wenn verschiedene Messbereiche oder Konfigurationen benötigt werden. Wichtige Kommandos in dieser Gruppe sind:</p>
+<table><thead><tr><th>Kommando</th><th>PID</th><th>Optionalität</th></tr></thead><tbody><tr><td>SET_CAL_PAGE</td><td>0xEB</td><td>Nein</td></tr><tr><td>GET_CAL_PAGE</td><td>0xEA</td><td>Nein</td></tr><tr><td>GET_PAG_PROCESSOR_INFO</td><td>0xE9</td><td>Ja</td></tr><tr><td>GET_SEGMENT_INFO</td><td>0xE8</td><td>Ja</td></tr><tr><td>GET_PAGE_INFO</td><td>0xE7</td><td>Ja</td></tr><tr><td>SET_SEGMENT_MODE</td><td>0xE6</td><td>Ja</td></tr><tr><td>GET_SEGMENT_MODE</td><td>0xE5</td><td>Ja</td></tr><tr><td>COPY_CAL_PAGE</td><td>0xE4</td><td>Ja</td></tr></tbody></table>
+<p>Diese Kommandos ermöglichen eine flexible Verwaltung der Kalibrierungsdaten und unterstützen komplexe Konfigurationsanforderungen.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="zyklischer-datenaustausch-daq">Zyklischer Datenaustausch (DAQ)<a href="#zyklischer-datenaustausch-daq" class="hash-link" aria-label="Direct link to Zyklischer Datenaustausch (DAQ)" title="Direct link to Zyklischer Datenaustausch (DAQ)">​</a></h2>
+<p>Der zyklische Datenaustausch ist ein zentrales Element für die kontinuierliche Erfassung von Messdaten. Die DAQ-Kommandos ermöglichen das Einrichten, Starten, Stoppen und Konfigurieren von DAQ-Listen, die die zu erfassenden Datenpunkte definieren. Die DAQ-Kommandos sind in drei Kategorien unterteilt:</p>
+<ol>
+<li>
+<p><strong>Basics:</strong></p>
+<ul>
+<li><code>SET_DAQ_PTR</code> (0xE2)</li>
+<li><code>WRITE_DAQ</code> (0xE1)</li>
+<li><code>SET_DAQ_LIST_MODE</code> (0xE0)</li>
+<li><code>START_STOP_DAQ_LIST</code> (0xDE)</li>
+<li><code>START_STOP_SYNCH</code> (0xDD)</li>
+<li><code>WRITE_DAQ_MULTIPLE</code> (0xC7)</li>
+<li><code>READ_DAQ</code> (0xDB)</li>
+<li><code>GET_DAQ_CLOCK</code> (0xDC)</li>
+<li><code>GET_DAQ_PROCESSOR_INFO</code> (0xDA)</li>
+<li><code>GET_DAQ_RESOLUTION_INFO</code> (0xD9)</li>
+<li><code>GET_DAQ_LIST_MODE</code> (0xDF)</li>
+<li><code>GET_DAQ_EVENT_INFO</code> (0xD7)</li>
+<li><code>DTO_CTR_Properties</code> (0xC5)</li>
+<li><code>SET_DAQ_PACKED_MODE</code> (0xC0, 0x01)</li>
+<li><code>Get_DAQ_PACKED_Mode</code> (0xC0, 0x02)</li>
+</ul>
+</li>
+<li>
+<p><strong>Statische Konfiguration:</strong></p>
+<ul>
+<li><code>CLEAR_DAQ_LIST</code> (0xE3)</li>
+<li><code>GET_DAQ_LIST_INFO</code> (0xD8)</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamische Konfiguration:</strong></p>
+<ul>
+<li><code>FREE_DAQ</code> (0xD6)</li>
+<li><code>ALLOC_DAQ</code> (0xD5)</li>
+<li><code>ALLOC_ODT</code> (0xD4)</li>
+<li><code>ALLOC_ODT_ENTRY</code> (0xD3)</li>
+</ul>
+</li>
+</ol>
+<p>Diese Kommandos ermöglichen eine umfassende Steuerung des DAQ-Prozesses, von der Initialisierung über die Konfiguration bis hin zur Datenerfassung und -verwaltung.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flash-programmierung">Flash-Programmierung<a href="#flash-programmierung" class="hash-link" aria-label="Direct link to Flash-Programmierung" title="Direct link to Flash-Programmierung">​</a></h2>
+<p>Die Flash-Programmierungs-Kommandos sind essenziell für das Schreiben und Verwalten von Firmware im Slave. Sie umfassen Befehle zum Starten, Löschen, Überprüfen und Verifizieren der Programmierung. Wichtige Kommandos sind:</p>
+<table><thead><tr><th>Kommando</th><th>PID</th><th>Optionalität</th></tr></thead><tbody><tr><td>PROGRAM_START</td><td>0xD2</td><td>Nein</td></tr><tr><td>PROGRAM_CLEAR</td><td>0xD1</td><td>Nein</td></tr><tr><td>PROGRAM_RESET</td><td>0xD0</td><td>Nein</td></tr><tr><td>GET_PGM_PROCESSOR_INFO</td><td>0xCF</td><td>Ja</td></tr><tr><td>GET_SECTOR_INFO</td><td>0xCE</td><td>Ja</td></tr><tr><td>PROGRAM_PREPARE</td><td>0xCD</td><td>Ja</td></tr><tr><td>PROGRAM_FORMAT</td><td>0xCC</td><td>Ja</td></tr><tr><td>PROGRAM_NEXT</td><td>0xCB</td><td>Ja</td></tr><tr><td>PROGRAM_MAX</td><td>0xCA</td><td>Ja</td></tr><tr><td>PROGRAM_VERIFY</td><td>0xC9</td><td>Ja</td></tr></tbody></table>
+<p>Diese Kommandos gewährleisten eine sichere und effiziente Programmierung der Firmware, was für die Aktualisierung und Wartung von Steuergeräten unerlässlich ist.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="zeitsynchronisierung">Zeitsynchronisierung<a href="#zeitsynchronisierung" class="hash-link" aria-label="Direct link to Zeitsynchronisierung" title="Direct link to Zeitsynchronisierung">​</a></h2>
+<p>Das Kommando <code>TIME_CORRELATION_PROPERTIES</code> (0xC6) ermöglicht die Synchronisierung der Zeit zwischen Master und Slave. Dies ist besonders wichtig für zeitkritische Anwendungen, bei denen die genaue Zuordnung von Messdaten zu Zeitpunkten erforderlich ist.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="unterstützung-von-asam-standards">Unterstützung von ASAM-Standards<a href="#unterstützung-von-asam-standards" class="hash-link" aria-label="Direct link to Unterstützung von ASAM-Standards" title="Direct link to Unterstützung von ASAM-Standards">​</a></h2>
+<p>XCP unterstützt verschiedene ASAM-Standards, die zusätzliche Funktionalitäten und Kommandos bereitstellen. Beispiele hierfür sind:</p>
+<ul>
+<li><strong>ASAM AE MCD-1-XCP AS SW-DBG-over-XCP:</strong> PID <code>0xC0, 0xFC</code></li>
+<li><strong>DBG-over-XCP ASAM AE MCD-1 POD BS:</strong> PID <code>0xC0, 0xFD</code></li>
+</ul>
+<p>Diese erweiterten Kommandos ermöglichen eine tiefere Integration und spezifische Anpassungen an besondere Anforderungen von Anwendungen und Systemen.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fazit">Fazit<a href="#fazit" class="hash-link" aria-label="Direct link to Fazit" title="Direct link to Fazit">​</a></h2>
+<p>Der Austausch von CTOs im ASAM XCP-Protokoll ist ein komplexes, aber hochflexibles System, das eine präzise und zuverlässige Kommunikation zwischen Master und Slave gewährleistet. Durch die modulare Struktur der Kommandos und die Möglichkeit zur Erweiterung und Anpassung an spezifische Anforderungen bietet XCP eine leistungsfähige Lösung für Mess- und Kalibrieranwendungen in der modernen Automobilindustrie und darüber hinaus. Ein tiefes Verständnis der Kommandostruktur und der Kommunikationsmechanismen ist unerlässlich, um das volle Potenzial des XCP-Protokolls auszuschöpfen und eine effiziente Implementierung zu gewährleisten.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="erweiterte-analyse-der-xcp-kommunikationsmechanismen-res-err-ev-serv-und-parameterverwaltung">Erweiterte Analyse der XCP-Kommunikationsmechanismen: RES, ERR, EV, SERV und Parameterverwaltung<a href="#erweiterte-analyse-der-xcp-kommunikationsmechanismen-res-err-ev-serv-und-parameterverwaltung" class="hash-link" aria-label="Direct link to Erweiterte Analyse der XCP-Kommunikationsmechanismen: RES, ERR, EV, SERV und Parameterverwaltung" title="Direct link to Erweiterte Analyse der XCP-Kommunikationsmechanismen: RES, ERR, EV, SERV und Parameterverwaltung">​</a></h3>
+<p>Im Rahmen des ASAM XCP (Universal Measurement and Calibration Protocol) ist die effiziente und zuverlässige Kommunikation zwischen Master und Slave von zentraler Bedeutung. Neben dem Austausch von CTOs (Command and Response Transport Objects) spielen die Mechanismen RES (Response), ERR (Error), EV (Event) und SERV (Service Request) eine entscheidende Rolle für die Steuerung und Überwachung des Systems. Zudem ist die Verwaltung von Parametern im Slave ein kritischer Aspekt für die Anpassung und Optimierung von Steuergeräten. Dieser Text bietet eine detaillierte Analyse dieser Komponenten aus der Perspektive eines XCP-Experten.</p>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-res-positive-antworten-des-slaves">1. RES: Positive Antworten des Slaves<a href="#1-res-positive-antworten-des-slaves" class="hash-link" aria-label="Direct link to 1. RES: Positive Antworten des Slaves" title="Direct link to 1. RES: Positive Antworten des Slaves">​</a></h4>
+<p><strong>Definition und Funktion:</strong></p>
+<p>RES steht für &quot;Response&quot; und signalisiert dem Master, dass eine Anforderung erfolgreich umgesetzt wurde. Wenn der Slave ein Kommando vom Master erhält und dieses korrekt ausführen kann, sendet er eine positive Bestätigung zurück.</p>
+<p><strong>Struktur und Inhalte:</strong></p>
+<p>Die RES-Nachricht enthält nicht nur die Bestätigung der erfolgreichen Ausführung, sondern kann auch zusätzliche Parameter zur Verfügung stellen. Diese Parameter bieten weiterführende Informationen über den Status oder spezifische Ergebnisse der ausgeführten Aktion.</p>
+<p><strong>Beispielhafte Anwendung:</strong></p>
+<p>Beim Verbindungsaufbau sendet der Master ein <code>Connect</code>-Kommando. Der Slave bestätigt dies mit einer RES-Nachricht, die zusätzlich Informationen wie unterstützte Funktionen oder maximale Paketgrößen enthalten kann.</p>
+<p><strong>Referenz:</strong></p>
+<p>Für detaillierte Informationen über die enthaltenen Parameter verweist die ASAM XCP Protocol Layer Spezifikation auf spezifische Abschnitte, die die Struktur und Bedeutung dieser Parameter erläutern.</p>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-err-fehlerbehandlung-im-kommunikationsprozess">2. ERR: Fehlerbehandlung im Kommunikationsprozess<a href="#2-err-fehlerbehandlung-im-kommunikationsprozess" class="hash-link" aria-label="Direct link to 2. ERR: Fehlerbehandlung im Kommunikationsprozess" title="Direct link to 2. ERR: Fehlerbehandlung im Kommunikationsprozess">​</a></h4>
+<p><strong>Definition und Funktion:</strong></p>
+<p>ERR steht für &quot;Error&quot; und wird vom Slave gesendet, wenn eine Anforderung des Masters nicht verarbeitet werden kann. Dies kann auf verschiedene Ursachen zurückzuführen sein, wie beispielsweise ungültige Befehle, Ressourcenmangel oder andere Implementierungsfehler.</p>
+<p><strong>Struktur und Inhalte:</strong></p>
+<p>Die ERR-Nachricht enthält einen spezifischen Fehlercode, der die Art des Fehlers beschreibt. Diese Fehlercodes sind in der ASAM XCP Protocol Layer Spezifikation detailliert aufgeführt und ermöglichen es dem Master, die genaue Ursache des Fehlers zu identifizieren und entsprechende Maßnahmen zu ergreifen.</p>
+<p><strong>Beispielhafte Anwendung:</strong></p>
+<p>Wenn der Master ein Kommando sendet, das der Slave nicht unterstützt, antwortet der Slave mit <code>ERR_CMD_UNKNOWN</code>. Dies signalisiert dem Master, dass das gesendete Kommando nicht implementiert ist, wodurch der Master weitere Aktivitäten im Slave vermeiden kann.</p>
+<p><strong>Fehlercodes:</strong></p>
+<p>Die ASAM XCP Spezifikation definiert eine Vielzahl von Fehlercodes, die unterschiedliche Fehlersituationen abdecken, beispielsweise:</p>
+<ul>
+<li><code>ERR_CMD_UNKNOWN</code> (0x10): Unbekanntes Kommando</li>
+<li><code>ERR_CMD_SYNTAX</code> (0x11): Syntaxfehler im Kommando</li>
+<li><code>ERR_RESOURCES</code> (0x12): Ressourcenmangel</li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-ev-asynchrone-ereignisbenachrichtigungen">3. EV: Asynchrone Ereignisbenachrichtigungen<a href="#3-ev-asynchrone-ereignisbenachrichtigungen" class="hash-link" aria-label="Direct link to 3. EV: Asynchrone Ereignisbenachrichtigungen" title="Direct link to 3. EV: Asynchrone Ereignisbenachrichtigungen">​</a></h4>
+<p><strong>Definition und Funktion:</strong></p>
+<p>EV steht für &quot;Event&quot; und ermöglicht es dem Slave, den Master über asynchrone Ereignisse zu informieren. Diese Ereignisse können beispielsweise Störungen, Funktionsausfälle oder andere wichtige Systemänderungen sein.</p>
+<p><strong>Struktur und Inhalte:</strong></p>
+<p>Ein EV-Paket enthält Informationen über das aufgetretene Ereignis, einschließlich eines Ereigniscodes und optionaler zusätzlicher Parameter, die das Ereignis näher beschreiben.</p>
+<p><strong>Optionale Implementierung:</strong></p>
+<p>Die Implementierung von EV ist optional und hängt von den spezifischen Anforderungen der Anwendung ab. In Szenarien, in denen eine kontinuierliche Überwachung und schnelle Reaktion auf Systemereignisse erforderlich ist, kann die Nutzung von EV-Kommunikation von großem Vorteil sein.</p>
+<p><strong>Beispielhafte Anwendung:</strong></p>
+<p>Ein Slave erkennt einen Ausfall der Kommunikationsschnittstelle und sendet ein EV-Paket an den Master, um diesen über den Vorfall zu informieren. Der Master kann daraufhin entsprechende Maßnahmen ergreifen, wie das Initiieren eines Neustarts oder das Benachrichtigen eines Bedieners.</p>
+<p><strong>Unterscheidung von Mess- und Stimulationsevents:</strong></p>
+<p>Es ist wichtig zu beachten, dass EV-Nachrichten des Slaves sich von Ereignissen im Zusammenhang mit Messungen und Stimulation unterscheiden. Während letztere typischerweise von der Mess- oder Steuerlogik ausgelöst werden, dienen EV-Nachrichten der systemweiten Überwachung und Fehlermeldung.</p>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-serv-service-anfragen-des-slaves">4. SERV: Service-Anfragen des Slaves<a href="#4-serv-service-anfragen-des-slaves" class="hash-link" aria-label="Direct link to 4. SERV: Service-Anfragen des Slaves" title="Direct link to 4. SERV: Service-Anfragen des Slaves">​</a></h4>
+<p><strong>Definition und Funktion:</strong></p>
+<p>SERV steht für &quot;Service Request&quot; und ermöglicht es dem Slave, den Master zur Ausführung bestimmter Service-Aufgaben aufzufordern. Dies ist besonders nützlich, wenn der Slave erkennt, dass bestimmte Aktionen auf der Master-Seite erforderlich sind, um den Betrieb fortzusetzen oder wiederherzustellen.</p>
+<p><strong>Struktur und Inhalte:</strong></p>
+<p>Ein SERV-Paket enthält einen Service-Request-Code, der die spezifische angeforderte Dienstleistung beschreibt. Diese Codes sind in der ASAM XCP Protocol Layer Spezifikation definiert und decken eine Vielzahl von möglichen Service-Anforderungen ab.</p>
+<p><strong>Beispielhafte Anwendung:</strong></p>
+<p>Der Slave erkennt, dass ein Neustart des Systems notwendig ist, um eine fehlerhafte Funktionalität zu beheben. Er sendet eine SERV-Nachricht mit dem entsprechenden Service-Request-Code, der den Master auffordert, einen Reset-Befehl auszuführen.</p>
+<p><strong>Service-Request-Code-Tabelle:</strong></p>
+<p>Die spezifischen Service-Request-Codes sind in der ASAM XCP Spezifikation aufgeführt und umfassen Anforderungen wie:</p>
+<ul>
+<li><code>SERV_RESET</code> (0x01): Anforderung eines Systemneustarts</li>
+<li><code>SERV_CALIBRATE</code> (0x02): Anforderung einer Kalibrierungsroutine</li>
+<li><code>SERV_UPDATE</code> (0x03): Anforderung eines Firmware-Updates</li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="5-parameterverwaltung-im-xcp-slave">5. Parameterverwaltung im XCP-Slave<a href="#5-parameterverwaltung-im-xcp-slave" class="hash-link" aria-label="Direct link to 5. Parameterverwaltung im XCP-Slave" title="Direct link to 5. Parameterverwaltung im XCP-Slave">​</a></h4>
+<p>Die Verwaltung von Parametern im Slave ist ein wesentlicher Bestandteil der XCP-Kommunikation, da sie die Anpassung und Optimierung von Steuergeräten ermöglicht. Dieser Prozess umfasst das Verstellen von Parametern sowie die dauerhafte Speicherung der geänderten Werte.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="51-verstellen-von-parametern">5.1 Verstellen von Parametern<a href="#51-verstellen-von-parametern" class="hash-link" aria-label="Direct link to 5.1 Verstellen von Parametern" title="Direct link to 5.1 Verstellen von Parametern">​</a></h5>
+<p><strong>Adressierung und Datenübertragung:</strong></p>
+<p>Um einen Parameter im Slave zu ändern, muss der Master sowohl die Adresse des Parameters als auch den neuen Wert an den Slave senden. XCP definiert Adressen mit fünf Bytes: vier für die eigentliche Adresse und ein Byte für die Adress-Extension.</p>
+<p><strong>Herausforderungen bei der Übertragung über CAN:</strong></p>
+<p>Im Kontext einer CAN-Übertragung stehen nur sieben Nutzbytes pro Frame zur Verfügung. Bei der Änderung eines 4-Byte-Werts sind insgesamt neun Bytes (fünf für die Adresse und vier für den Wert) erforderlich. Dies überschreitet die Kapazität eines einzelnen CAN-Frames, sodass die Änderung über zwei Pakete übertragen werden muss.</p>
+<p><strong>Kommunikationsablauf:</strong></p>
+<ol>
+<li>
+<p><strong>Erstes Paket:</strong></p>
+<ul>
+<li><strong>Kommando:</strong> <code>SET_MTA</code> (Set Memory Transfer Address)</li>
+<li><strong>Dateninhalt:</strong> Adresse des Parameters (z.B., HEX: <code>001C002C</code>, Extension: <code>0</code>)</li>
+<li><strong>Bestätigung:</strong> Slave antwortet mit <code>RES: SET_MTA</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Zweites Paket:</strong></p>
+<ul>
+<li><strong>Kommando:</strong> <code>DOWNLOAD</code></li>
+<li><strong>Dateninhalt:</strong> Neuer Wert (z.B., HEX: <code>00 00 E0 40</code> für einen Float-Wert)</li>
+<li><strong>Bestätigung:</strong> Slave antwortet mit <code>RES: DOWNLOAD</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Drittes Paket (Optional):</strong></p>
+<ul>
+<li><strong>Kommando:</strong> <code>SHORT_UPLOAD</code> zur Überprüfung</li>
+<li><strong>Bestätigung:</strong> Slave bestätigt mit <code>RES: SHORT_UPLOAD</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Trace-Darstellung:</strong></p>
+<p>In einer Trace-Darstellung (Bild 18) würde die Kommunikation wie folgt visualisiert:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Master → Slave: SET_MTA (Adresse: 001C002C, Extension: 0)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Slave → Master: RES: SET_MTA</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Master → Slave: DOWNLOAD (Wert: 00 00 E0 40, Länge: 4)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Slave → Master: RES: DOWNLOAD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Master → Slave: SHORT_UPLOAD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Slave → Master: RES: SHORT_UPLOAD</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Überprüfung und Bestätigung:</strong></p>
+<p>Durch den abschließenden <code>SHORT_UPLOAD</code> kann der Master sicherstellen, dass der Parameter erfolgreich geändert wurde, indem er den neuen Wert ausliest und mit dem gesetzten Wert vergleicht.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="52-dauerhafte-speicherung-von-parametern">5.2 Dauerhafte Speicherung von Parametern<a href="#52-dauerhafte-speicherung-von-parametern" class="hash-link" aria-label="Direct link to 5.2 Dauerhafte Speicherung von Parametern" title="Direct link to 5.2 Dauerhafte Speicherung von Parametern">​</a></h5>
+<p>Die geänderten Parameter im RAM des Steuergerätes sind nach einem Neustart verloren, da der RAM flüchtig ist. Daher müssen die Änderungen dauerhaft gespeichert werden. Es gibt zwei Hauptansätze:</p>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="a-speicherung-im-steuergerät">A) Speicherung im Steuergerät<a href="#a-speicherung-im-steuergerät" class="hash-link" aria-label="Direct link to A) Speicherung im Steuergerät" title="Direct link to A) Speicherung im Steuergerät">​</a></h6>
+<ol>
+<li>
+<p><strong>EEPROM oder Flash:</strong></p>
+<ul>
+<li><strong>EEPROM:</strong> Nicht-flüchtiger Speicher, der Änderungen automatisch oder manuell speichern kann. Vorteilhaft für kleine Datenmengen, aber bei großen Parametern oft unpraktisch.</li>
+<li><strong>Flash:</strong> Größerer Speicherplatz, aber komplexer in der Handhabung, da Flash-Speicher blockweise gelöscht und neu beschrieben werden muss.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verfahren:</strong></p>
+<ul>
+<li><strong>Automatische Speicherung:</strong> Beim Herunterfahren des Steuergeräts.</li>
+<li><strong>Manuelle Speicherung:</strong> Durch Benutzerinteraktion.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Herausforderungen:</strong></p>
+<ul>
+<li>Begrenzter Speicherplatz im EEPROM.</li>
+<li>Komplexität beim Schreiben in Flash-Speicher, insbesondere bei großen Datenmengen und der Notwendigkeit, Prüfsummen korrekt zu berechnen.</li>
+</ul>
+<h6 class="anchor anchorWithStickyNavbar_LWe7" id="b-speicherung-auf-dem-computer">B) Speicherung auf dem Computer<a href="#b-speicherung-auf-dem-computer" class="hash-link" aria-label="Direct link to B) Speicherung auf dem Computer" title="Direct link to B) Speicherung auf dem Computer">​</a></h6>
+<ol>
+<li>
+<p><strong>Parametersatzdateien:</strong></p>
+<ul>
+<li><strong>Formate:</strong> ASCII-Textdateien, C- oder H-Files, Hex-Files.</li>
+<li><strong>Inhalte:</strong> Namen und Werte der Parameter, sowie optionale Metadaten wie Reifegrad oder Historie.</li>
+</ul>
+</li>
+<li>
+<p><strong>Vorgehensweise:</strong></p>
+<ul>
+<li><strong>Speichern:</strong> Geänderte Parameter werden auf dem Computer abgelegt.</li>
+<li><strong>Wiederherstellen:</strong> Beim Neustart des Steuergeräts werden die Parameter aus der Datei per <code>DOWNLOAD</code>-Kommando in den RAM des Slaves übertragen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Vorteile:</strong></p>
+<ul>
+<li>Flexibilität und Skalierbarkeit, da große Parametermengen effizient verwaltet werden können.</li>
+<li>Einfachere Handhabung und Integration in Arbeitsprozesse, insbesondere ohne Zugriff auf den Quellcode des Steuergeräts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Beispiel-Szenario:</strong></p>
+<ul>
+<li><strong>Speicherung:</strong> Ein Applikateur speichert nach Abschluss der Arbeit die geänderten Parameter in einer Datei.</li>
+<li><strong>Wiederherstellung:</strong> Am nächsten Tag lädt der Applikateur die Datei wieder in den Slave, sodass die vorherigen Änderungen fortgesetzt werden können.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Abbildung 19: Übertragung einer Parametersatzdatei</strong></p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Parametersatzdatei (Computer) → Master → Slave: DOWNLOAD (Parameterwerte)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Slave → Master: RES: DOWNLOAD</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Flashen der Parameter:</strong></p>
+<ol>
+<li>
+<p><strong>Hex-Files:</strong></p>
+<ul>
+<li><strong>Erstellung:</strong> Parameterdateien werden in Hex-Files umgewandelt.</li>
+<li><strong>Integration:</strong> Die Hex-Files werden in das bestehende Flash-File integriert, unter Berücksichtigung der Adressen und Werte.</li>
+<li><strong>Prüfsummen:</strong> Korrekte Berechnung und Einfügung der Prüfsummen ist entscheidend für die erfolgreiche Flash-Programmierung.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prozessschritte:</strong></p>
+<ul>
+<li><strong>Kopieren:</strong> Die Parameterdatei wird in das Flash-File kopiert.</li>
+<li><strong>Verarbeitung:</strong> Eventuell notwendige zusätzliche Schritte zur Erstellung eines flashbaren Files.</li>
+<li><strong>Flashen:</strong> Das aktualisierte Flash-File wird in das Steuergerät geschrieben.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Herausforderungen:</strong></p>
+<ul>
+<li>Längere Erstellungszeiten für flashbare Hex-Files.</li>
+<li>Notwendigkeit der genauen Adressierung und Prüfsummenberechnung.</li>
+<li>Einschränkungen bei der Verfügbarkeit des Quellcodes.</li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="6-zusammenfassung-und-best-practices">6. Zusammenfassung und Best Practices<a href="#6-zusammenfassung-und-best-practices" class="hash-link" aria-label="Direct link to 6. Zusammenfassung und Best Practices" title="Direct link to 6. Zusammenfassung und Best Practices">​</a></h4>
+<p>Die effektive Nutzung der RES, ERR, EV und SERV Mechanismen sowie die sorgfältige Verwaltung von Parametern sind essenziell für eine robuste und flexible XCP-Implementierung. Hier einige Best Practices:</p>
+<ul>
+<li><strong>Klare Fehlerbehandlung:</strong> Implementieren Sie umfassende ERR-Nachrichten und behandeln Sie Fehler systematisch, um die Stabilität der Kommunikation zu gewährleisten.</li>
+<li><strong>Ereignismanagement:</strong> Nutzen Sie EV-Nachrichten für kritische Systemereignisse, um proaktive Überwachungs- und Reaktionsmechanismen zu etablieren.</li>
+<li><strong>Service Requests:</strong> Verwenden Sie SERV-Nachrichten, um notwendige Service-Aktionen automatisch zu initiieren und die Systemintegrität aufrechtzuerhalten.</li>
+<li><strong>Parameterverwaltung:</strong> Bevorzugen Sie die Speicherung von Parametern auf dem Computer, um Flexibilität und Skalierbarkeit zu maximieren. Nutzen Sie Flash-Speicher nur, wenn unbedingt erforderlich und die Komplexität beherrschbar ist.</li>
+<li><strong>Dokumentation:</strong> Halten Sie eine umfassende Dokumentation der verwendeten Parameter und Kommunikationsabläufe bereit, um Wartung und Erweiterungen zu erleichtern.</li>
+</ul>
+<hr>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fazit-1">Fazit<a href="#fazit-1" class="hash-link" aria-label="Direct link to Fazit" title="Direct link to Fazit">​</a></h4>
+<p>Die erweiterten Kommunikationsmechanismen von ASAM XCP, einschließlich RES, ERR, EV und SERV, bieten eine robuste Grundlage für die Steuerung und Überwachung von Steuergeräten in komplexen Systemen. Die sorgfältige Verwaltung von Parametern, unterstützt durch flexible Speichermethoden, ermöglicht eine präzise Anpassung und Optimierung der Systeme. Ein tiefes Verständnis dieser Mechanismen ist unerlässlich, um das volle Potenzial des XCP-Protokolls auszuschöpfen und eine effiziente Implementierung sicherzustellen. Durch die Anwendung bewährter Methoden und die Berücksichtigung der beschriebenen Herausforderungen können Entwickler und Ingenieure die Leistungsfähigkeit ihrer Mess- und Kalibrieranwendungen signifikant steigern.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/XCP/02_Grundlagen/03_austausch-cto.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-protokollschicht"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">XCP-Protokollschicht</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/austausch_dto"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">austausch_dto</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#grundlegende-kommunikationsstruktur" class="table-of-contents__link toc-highlight">Grundlegende Kommunikationsstruktur</a></li><li><a href="#aufbau-eines-cto-pakets" class="table-of-contents__link toc-highlight">Aufbau eines CTO-Pakets</a></li><li><a href="#positive-und-negative-antworten" class="table-of-contents__link toc-highlight">Positive und Negative Antworten</a></li><li><a href="#kommando--und-antwortmechanismus" class="table-of-contents__link toc-highlight">Kommando- und Antwortmechanismus</a></li><li><a href="#gruppierung-der-kommandos" class="table-of-contents__link toc-highlight">Gruppierung der Kommandos</a></li><li><a href="#übersicht-der-standardkommandos" class="table-of-contents__link toc-highlight">Übersicht der Standardkommandos</a></li><li><a href="#kalibrierkommandos" class="table-of-contents__link toc-highlight">Kalibrierkommandos</a></li><li><a href="#seitenumschaltung" class="table-of-contents__link toc-highlight">Seitenumschaltung</a></li><li><a href="#zyklischer-datenaustausch-daq" class="table-of-contents__link toc-highlight">Zyklischer Datenaustausch (DAQ)</a></li><li><a href="#flash-programmierung" class="table-of-contents__link toc-highlight">Flash-Programmierung</a></li><li><a href="#zeitsynchronisierung" class="table-of-contents__link toc-highlight">Zeitsynchronisierung</a></li><li><a href="#unterstützung-von-asam-standards" class="table-of-contents__link toc-highlight">Unterstützung von ASAM-Standards</a></li><li><a href="#fazit" class="table-of-contents__link toc-highlight">Fazit</a><ul><li><a href="#erweiterte-analyse-der-xcp-kommunikationsmechanismen-res-err-ev-serv-und-parameterverwaltung" class="table-of-contents__link toc-highlight">Erweiterte Analyse der XCP-Kommunikationsmechanismen: RES, ERR, EV, SERV und Parameterverwaltung</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/GLOSSARY/info">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</body>
+</html>

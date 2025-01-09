@@ -1,4 +1,4 @@
-# **Aufbau und zur Struktur von A2L-Datei**
+# Aufbau und zur Struktur von A2L-Datei
 
 Als Experte im Bereich des **ASAM XCP (Universal Measurement and Calibration Protocol)** ist es essenziell, ein tiefgehendes Verständnis der A2L-Dateien zu besitzen. Diese Dateien spielen eine zentrale Rolle bei der Kommunikation zwischen Mess- und Kalibrierwerkzeugen sowie Steuergeräten (ECUs). Im Folgenden wird der Aufbau einer A2L-Datei detailliert erläutert, einschließlich der wesentlichen Schlüsselwörter und deren Funktionen, sowie anhand praktischer Beispiele veranschaulicht.
 

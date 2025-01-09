@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-XCP/Einstieg/Polling" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Polling | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Einstieg/Polling"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Polling | Vehicle Network Standards"><meta data-rh="true" name="description" content="XCP (Universal Measurement and Calibration Protocol) bietet zwei grundlegende Messmodi: den Polling-Modus und den Synchronen Datenerfassungsmodus (kurz DAQ-Modus). Diese Modi ermöglichen es Entwicklern und Ingenieuren, Fahrzeugdaten effizient zu erfassen und zu analysieren, um die Leistung und Funktionalität von Steuergeräten zu optimieren."><meta data-rh="true" property="og:description" content="XCP (Universal Measurement and Calibration Protocol) bietet zwei grundlegende Messmodi: den Polling-Modus und den Synchronen Datenerfassungsmodus (kurz DAQ-Modus). Diese Modi ermöglichen es Entwicklern und Ingenieuren, Fahrzeugdaten effizient zu erfassen und zu analysieren, um die Leistung und Funktionalität von Steuergeräten zu optimieren."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Einstieg/Polling"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Einstieg/Polling" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/XCP/Einstieg/Polling" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.b665053f.css">
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.6e69769e.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/main.48ecfa15.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/Getting-Started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting-started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/Getting-Started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/Getting-Started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/Getting-Started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/Getting-Started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/XCP/Getting-Started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/Definitions">SecOC</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Vehicle-Network-Standards/docs/XCP/Getting-Started">Erste Schritte</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Introduction">Einstieg</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Introduction">Einführung in XCP</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Polling">Polling</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Synchronous_Data_Aquisition">Synchronisierte Datenerfassung mit XCP</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Performance_Analysis">Performance Analysis</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/beschreibung-a2l">Beschreibung A2L</a><button aria-label="Expand sidebar category &#x27;Beschreibung A2L&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Grundlagen/xcp-kommunikationsprotokoll">Grundlagen</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Kalibrierkonzepte/parameter-flash">Kalibrierkonzepte</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Vehicle-Network-Standards/docs/XCP/Tooling/Messen_Auswerten">Tooling</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Einstieg</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Polling</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Polling</h1></header>
+<p>XCP (Universal Measurement and Calibration Protocol) bietet zwei grundlegende Messmodi: den <strong>Polling-Modus</strong> und den <strong>Synchronen Datenerfassungsmodus</strong> (kurz <strong>DAQ-Modus</strong>). Diese Modi ermöglichen es Entwicklern und Ingenieuren, Fahrzeugdaten effizient zu erfassen und zu analysieren, um die Leistung und Funktionalität von Steuergeräten zu optimieren.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="auswahl-des-messmodus-in-canape">Auswahl des Messmodus in CANape<a href="#auswahl-des-messmodus-in-canape" class="hash-link" aria-label="Direct link to Auswahl des Messmodus in CANape" title="Direct link to Auswahl des Messmodus in CANape">​</a></h2>
+<p>Der CANape-Benutzer hat die Flexibilität, den bevorzugten Messmodus innerhalb der Messkonfiguration von CANape auszuwählen. Diese Auswahl hängt maßgeblich von den spezifischen Anforderungen des Projekts ab, einschließlich der Anzahl der zu messenden Signale, der erforderlichen Messgeschwindigkeit und der verfügbaren Systemressourcen.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vertiefung-in-den-polling-modus">Vertiefung in den Polling-Modus<a href="#vertiefung-in-den-polling-modus" class="hash-link" aria-label="Direct link to Vertiefung in den Polling-Modus" title="Direct link to Vertiefung in den Polling-Modus">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="implementierung-des-polling-modus">Implementierung des Polling-Modus<a href="#implementierung-des-polling-modus" class="hash-link" aria-label="Direct link to Implementierung des Polling-Modus" title="Direct link to Implementierung des Polling-Modus">​</a></h3>
+<p>Der <strong>Polling-Modus</strong> wird in XCP durch die Verwendung der Befehle <code>SHORT_UPLOAD</code> oder <code>UPLOAD</code> implementiert. Dieser Modus arbeitet, indem jedes angeforderte Signal einzeln aus dem Speicher des Steuergeräts gelesen wird. Die Abfrage erfolgt sequenziell, was bedeutet, dass jeder XCP-Befehl nacheinander verarbeitet wird. Ein Befehl muss vollständig verarbeitet und bestätigt werden, bevor der nächste Befehl vom Master gesendet werden kann.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ablauf-der-kommunikation-im-polling-modus">Ablauf der Kommunikation im Polling-Modus<a href="#ablauf-der-kommunikation-im-polling-modus" class="hash-link" aria-label="Direct link to Ablauf der Kommunikation im Polling-Modus" title="Direct link to Ablauf der Kommunikation im Polling-Modus">​</a></h4>
+<ol>
+<li><strong>Befehlsübermittlung:</strong> Der Master (z.B. CANape) sendet einen <code>SHORT_UPLOAD</code>- oder <code>UPLOAD</code>-Befehl an das Steuergerät, um den Wert eines spezifischen Signals anzufordern.</li>
+<li><strong>Verarbeitung und Bestätigung:</strong> Das Steuergerät empfängt den Befehl, liest das angeforderte Signal aus dem Speicher und sendet eine entsprechende Bestätigung zurück.</li>
+<li><strong>Nächster Befehl:</strong> Erst nach Erhalt der Bestätigung kann der Master den nächsten Befehl senden, um ein weiteres Signal abzurufen.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kommunikationsstruktur-und-buslast">Kommunikationsstruktur und Buslast<a href="#kommunikationsstruktur-und-buslast" class="hash-link" aria-label="Direct link to Kommunikationsstruktur und Buslast" title="Direct link to Kommunikationsstruktur und Buslast">​</a></h3>
+<p>Die sequenzielle Verarbeitung der XCP-Befehle hat direkte Auswirkungen auf die Kommunikationsstruktur und die Auslastung des Busses:</p>
+<ul>
+<li>
+<p><strong>Asynchrone Messung:</strong> Da die Befehle nacheinander abgearbeitet werden, ist es nicht möglich, mehrere Signale exakt gleichzeitig zu messen. Jedes Signal wird mit einer gewissen Zeitverzögerung nacheinander erfasst.</p>
+</li>
+<li>
+<p><strong>Hohe Buslast bei vielen Signalen:</strong> Für jedes gemessene Signal werden mindestens zwei XCP-Nachrichten pro Zyklus benötigt (ein Befehl und eine Bestätigung). Bei einer großen Anzahl von Signalen kann dies zu einer erheblichen Belastung des Kommunikationsbusses führen, was die Gesamtleistung und Reaktionsfähigkeit des Systems beeinträchtigen kann.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vor--und-nachteile-des-polling-modus">Vor- und Nachteile des Polling-Modus<a href="#vor--und-nachteile-des-polling-modus" class="hash-link" aria-label="Direct link to Vor- und Nachteile des Polling-Modus" title="Direct link to Vor- und Nachteile des Polling-Modus">​</a></h3>
+<p><strong>Vorteile:</strong></p>
+<ul>
+<li><strong>Einfachheit:</strong> Der Polling-Modus ist einfach zu implementieren und eignet sich gut für Systeme mit wenigen Signalen und niedrigen Messraten.</li>
+<li><strong>Geringer Ressourcenverbrauch:</strong> Bei einer begrenzten Anzahl von Signalen ist die Belastung des Kommunikationsbusses überschaubar.</li>
+</ul>
+<p><strong>Nachteile:</strong></p>
+<ul>
+<li><strong>Eingeschränkte Messgenauigkeit:</strong> Aufgrund der sequenziellen Verarbeitung können keine Signale exakt synchron erfasst werden, was die Genauigkeit in dynamischen Messanwendungen beeinträchtigen kann.</li>
+<li><strong>Hohe Buslast bei vielen Signalen:</strong> Die Notwendigkeit, für jedes Signal separate Nachrichten zu senden, kann die Buskapazität schnell erschöpfen und die Systemleistung negativ beeinflussen.</li>
+<li><strong>Begrenzte Skalierbarkeit:</strong> Der Polling-Modus ist weniger geeignet für komplexe Systeme mit einer großen Anzahl von Signalen oder hohen Messanforderungen.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="anwendungsfälle-für-den-polling-modus">Anwendungsfälle für den Polling-Modus<a href="#anwendungsfälle-für-den-polling-modus" class="hash-link" aria-label="Direct link to Anwendungsfälle für den Polling-Modus" title="Direct link to Anwendungsfälle für den Polling-Modus">​</a></h3>
+<p>Der Polling-Modus eignet sich insbesondere für die Messung weniger dynamischer Signale bei niedrigeren Messraten. Beispiele hierfür sind:</p>
+<ul>
+<li><strong>Temperaturvariablen:</strong> Langsam wechselnde Größen wie Kühlmitteltemperaturen oder Motortemperaturen.</li>
+<li><strong>Statusanzeigen:</strong> Zustände von Schaltern, Relais oder anderen binären Signalen, die selten wechseln.</li>
+<li><strong>Langsame Prozessvariablen:</strong> Parameter wie Ölstand oder Luftdruck, die sich nur langsam ändern.</li>
+</ul>
+<p>Sollten Sie weitere Anwendungsfälle oder spezifische Szenarien im Auge haben, in denen der Polling-Modus von Nutzen sein könnte, empfiehlt es sich, diese Fragen direkt an den Trainer Ihres bevorstehenden CANape-Trainings zu richten. Dort können praxisnahe Beispiele und tiefgehende Erklärungen angeboten werden.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vergleich-mit-dem-daq-modus">Vergleich mit dem DAQ-Modus<a href="#vergleich-mit-dem-daq-modus" class="hash-link" aria-label="Direct link to Vergleich mit dem DAQ-Modus" title="Direct link to Vergleich mit dem DAQ-Modus">​</a></h2>
+<p>Um Signale synchronisiert zu messen, also genau zur gleichen Zeit, muss der <strong>DAQ-Modus</strong> verwendet werden. Dieser Modus bietet eine effizientere Methode zur Erfassung mehrerer Signale gleichzeitig und minimiert die Buslast durch gebündelte Datenübertragung. Im nächsten Kapitel werden wir den DAQ-Modus detailliert untersuchen, seine Implementierung und Vorteile im Vergleich zum Polling-Modus erläutern und aufzeigen, wann der Einsatz des DAQ-Modus vorzuziehen ist.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-für-den-einsatz-des-polling-modus">Best Practices für den Einsatz des Polling-Modus<a href="#best-practices-für-den-einsatz-des-polling-modus" class="hash-link" aria-label="Direct link to Best Practices für den Einsatz des Polling-Modus" title="Direct link to Best Practices für den Einsatz des Polling-Modus">​</a></h2>
+<p>Um den Polling-Modus effizient zu nutzen und dessen Einschränkungen zu minimieren, sollten folgende Best Practices beachtet werden:</p>
+<ol>
+<li><strong>Minimierung der Anzahl der Signale:</strong> Beschränken Sie die Anzahl der im Polling-Modus zu messenden Signale auf das notwendige Minimum, um die Buslast zu reduzieren.</li>
+<li><strong>Optimierung der Messfrequenz:</strong> Passen Sie die Messrate an die Dynamik der zu messenden Signale an. Für langsam wechselnde Signale sind niedrigere Messfrequenzen ausreichend.</li>
+<li><strong>Priorisierung wichtiger Signale:</strong> Priorisieren Sie kritische Signale, um sicherzustellen, dass diese trotz hoher Buslast zuverlässig erfasst werden.</li>
+<li><strong>Effiziente Speicherverwaltung:</strong> Stellen Sie sicher, dass die Signale effizient im Speicher des Steuergeräts organisiert sind, um die Lesezeiten zu minimieren.</li>
+<li><strong>Monitoring der Buslast:</strong> Überwachen Sie die Busauslastung kontinuierlich, um Engpässe frühzeitig zu erkennen und gegebenenfalls Anpassungen vorzunehmen.</li>
+</ol>
+<p>Durch die Einhaltung dieser Best Practices kann der Polling-Modus effektiv eingesetzt werden, insbesondere in Szenarien, in denen die Anforderungen an die Synchronisation und die Anzahl der zu messenden Signale moderat sind.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fazit">Fazit<a href="#fazit" class="hash-link" aria-label="Direct link to Fazit" title="Direct link to Fazit">​</a></h2>
+<p>Der Polling-Modus stellt eine grundlegende Methode zur Signalerfassung in XCP dar, die sich durch ihre Einfachheit und geringe Ressourcennutzung auszeichnet. Dennoch ist er aufgrund seiner sequenziellen Natur und der daraus resultierenden Buslast bei der Messung vieler Signale nur für spezifische Anwendungsfälle geeignet. Für umfassendere und dynamischere Messanforderungen bietet der DAQ-Modus eine leistungsfähigere Alternative, die im nächsten Kapitel detailliert behandelt wird.</p>
+<p>Der Polling-Modus in XCP bietet eine einfache und direkte Methode zur Signalerfassung, ist jedoch durch seine sequenzielle Natur und die daraus resultierende Buslast begrenzt. Für Anwendungen mit wenigen, wenig dynamischen Signalen und niedrigen Messraten ist er ideal geeignet. Bei komplexeren Anforderungen, die eine hohe Synchronisation und eine große Anzahl an Signalen erfordern, stellt der DAQ-Modus eine überlegene Alternative dar. Die Wahl des richtigen Messmodus hängt somit maßgeblich von den spezifischen Projektanforderungen ab.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="beispielkonfiguration-für-den-polling-modus-in-canape">Beispielkonfiguration für den Polling-Modus in CANape<a href="#beispielkonfiguration-für-den-polling-modus-in-canape" class="hash-link" aria-label="Direct link to Beispielkonfiguration für den Polling-Modus in CANape" title="Direct link to Beispielkonfiguration für den Polling-Modus in CANape">​</a></h2>
+<p>Um den Polling-Modus in CANape einzurichten, folgen Sie diesen Schritten:</p>
+<ol>
+<li>
+<p><strong>Messkonfiguration öffnen:</strong></p>
+<ul>
+<li>Starten Sie CANape und öffnen Sie Ihr Projekt.</li>
+<li>Navigieren Sie zur Messkonfiguration über das Menü <strong>&quot;Measurement&quot;</strong> &gt; <strong>&quot;Configuration&quot;</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Messmodus auswählen:</strong></p>
+<ul>
+<li>Im Bereich <strong>&quot;XCP Settings&quot;</strong> wählen Sie den <strong>&quot;Polling-Modus&quot;</strong> aus der Dropdown-Liste der verfügbaren Messmodi.</li>
+</ul>
+</li>
+<li>
+<p><strong>Signale hinzufügen:</strong></p>
+<ul>
+<li>Fügen Sie die gewünschten Signale zur Messkonfiguration hinzu, die im Polling-Modus erfasst werden sollen.</li>
+<li>Stellen Sie sicher, dass die Signale korrekt adressiert und ihre Adressen im Steuergerät bekannt sind.</li>
+</ul>
+</li>
+<li>
+<p><strong>Befehle konfigurieren:</strong></p>
+<ul>
+<li>Konfigurieren Sie die XCP-Befehle <code>SHORT_UPLOAD</code> oder <code>UPLOAD</code> für jedes Signal.</li>
+<li>Legen Sie die Abfragefrequenz fest, die der Dynamik der jeweiligen Signale entspricht.</li>
+</ul>
+</li>
+<li>
+<p><strong>Messlauf starten:</strong></p>
+<ul>
+<li>Starten Sie die Messung und überwachen Sie die erfassten Daten in Echtzeit.</li>
+<li>Überprüfen Sie die Buslast und passen Sie bei Bedarf die Konfiguration an, um eine optimale Performance zu gewährleisten.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tipps-zur-fehlerbehebung">Tipps zur Fehlerbehebung<a href="#tipps-zur-fehlerbehebung" class="hash-link" aria-label="Direct link to Tipps zur Fehlerbehebung" title="Direct link to Tipps zur Fehlerbehebung">​</a></h2>
+<ul>
+<li>
+<p><strong>Verzögerungen bei der Datenübertragung:</strong></p>
+<ul>
+<li>Überprüfen Sie die Netzwerkkonfiguration und stellen Sie sicher, dass die physikalischen Verbindungen stabil sind.</li>
+<li>Reduzieren Sie die Anzahl der gleichzeitig abgefragten Signale, um die Buslast zu verringern.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fehlende Bestätigungen:</strong></p>
+<ul>
+<li>Stellen Sie sicher, dass die Adressen und Speicherorte der Signale korrekt konfiguriert sind.</li>
+<li>Überprüfen Sie die Firmware-Version des Steuergeräts und die Kompatibilität mit der verwendeten XCP-Implementierung.</li>
+</ul>
+</li>
+<li>
+<p><strong>Unstabile Messwerte:</strong></p>
+<ul>
+<li>Kalibrieren Sie die Messumgebung und prüfen Sie, ob elektromagnetische Störungen die Kommunikation beeinträchtigen.</li>
+<li>Nutzen Sie Filteroptionen in CANape, um Rauschen und unerwünschte Signalabweichungen zu minimieren.</li>
+</ul>
+</li>
+</ul>
+<p>Durch systematisches Vorgehen und gezielte Anpassungen können die meisten Probleme im Polling-Modus schnell identifiziert und behoben werden.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fragen">Fragen<a href="#fragen" class="hash-link" aria-label="Direct link to Fragen" title="Direct link to Fragen">​</a></h2>
+<ol>
+<li>
+<p><strong>Was sind die Hauptunterschiede zwischen dem Polling-Modus und dem DAQ-Modus in XCP?</strong></p>
+<ul>
+<li>Der Polling-Modus arbeitet sequenziell, indem jedes Signal einzeln abgefragt wird, während der DAQ-Modus mehrere Signale gleichzeitig erfasst. Der Polling-Modus erfordert für jedes Signal eine separate Nachricht, was die Buslast erhöht, während der DAQ-Modus effizienter ist und die Buslast durch gebündelte Übertragung reduziert.</li>
+</ul>
+</li>
+<li>
+<p><strong>Wie wird der Polling-Modus in XCP implementiert, und welche Befehle werden dabei verwendet?</strong></p>
+<ul>
+<li>Der Polling-Modus wird durch die Befehle <code>SHORT_UPLOAD</code> oder <code>UPLOAD</code> implementiert. Der Master sendet einen dieser Befehle, um ein Signal vom Steuergerät zu lesen. Nach der Verarbeitung und Bestätigung des Befehls kann der Master den nächsten Befehl senden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Welche Auswirkungen hat die sequenzielle Verarbeitung der Befehle im Polling-Modus auf die Buslast?</strong></p>
+<ul>
+<li>Die sequenzielle Verarbeitung führt dazu, dass für jedes Signal mindestens zwei Nachrichten (Befehl und Bestätigung) gesendet werden. Dies kann die Buslast erheblich erhöhen, insbesondere wenn viele Signale erfasst werden, und die Leistung des Systems beeinträchtigen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Welche Vorteile bietet der Polling-Modus?</strong></p>
+<ul>
+<li>Der Polling-Modus ist einfach zu implementieren und verbraucht bei wenigen Signalen und niedrigen Messraten nur geringe Ressourcen. Er eignet sich besonders gut für Systeme, in denen die Messgenauigkeit und Synchronität keine entscheidenden Faktoren sind.</li>
+</ul>
+</li>
+<li>
+<p><strong>Welche Nachteile hat der Polling-Modus im Vergleich zum DAQ-Modus?</strong></p>
+<ul>
+<li>Der Polling-Modus erfasst Signale nicht synchron, was die Messgenauigkeit bei dynamischen Signalen beeinträchtigt. Außerdem erzeugt er eine hohe Buslast bei vielen Signalen und skaliert schlecht bei größeren oder komplexeren Systemen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Für welche Anwendungsfälle ist der Polling-Modus besonders geeignet?</strong></p>
+<ul>
+<li>Der Polling-Modus ist besonders geeignet für langsam wechselnde Signale wie Temperaturmessungen, Statusanzeigen oder Prozessvariablen, die sich nicht schnell ändern. Er wird häufig verwendet, wenn keine hohe Synchronität zwischen den Signalen erforderlich ist.</li>
+</ul>
+</li>
+<li>
+<p><strong>Welche Best Practices sollten bei der Verwendung des Polling-Modus beachtet werden?</strong></p>
+<ul>
+<li>Um den Polling-Modus effizient zu nutzen, sollten die Anzahl der gemessenen Signale minimiert, die Messfrequenz den Signaldynamiken angepasst und wichtige Signale priorisiert werden. Eine effiziente Speicherverwaltung im Steuergerät und die kontinuierliche Überwachung der Buslast sind ebenfalls entscheidend.</li>
+</ul>
+</li>
+<li>
+<p><strong>Wie wird der Polling-Modus in CANape konfiguriert?</strong></p>
+<ul>
+<li>In CANape wird der Polling-Modus in den <strong>XCP Settings</strong> ausgewählt. Anschließend werden die zu messenden Signale hinzugefügt, die <code>SHORT_UPLOAD</code>- oder <code>UPLOAD</code>-Befehle konfiguriert und die Abfragefrequenz angepasst. Nach dem Start der Messung wird die Buslast überwacht und die Konfiguration bei Bedarf optimiert.</li>
+</ul>
+</li>
+<li>
+<p><strong>Welche Kommunikationsprobleme können im Polling-Modus auftreten und wie werden diese behoben?</strong></p>
+<ul>
+<li>Häufige Probleme umfassen Verzögerungen bei der Datenübertragung, fehlende Bestätigungen und unstabile Messwerte. Diese können durch Überprüfung der Netzwerkkonfiguration, Reduzierung der Buslast, Anpassung der Adressen und Speicherorte sowie die Kalibrierung der Messumgebung behoben werden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Wie kann die Messgenauigkeit im Polling-Modus optimiert werden, obwohl die Signale nicht synchron erfasst werden?</strong></p>
+<ul>
+<li>Die Messgenauigkeit kann durch die Anpassung der Abfragefrequenzen und die Priorisierung wichtiger Signale optimiert werden. Außerdem hilft die Minimierung der Anzahl abgefragter Signale, die Gesamtperformance und Zuverlässigkeit der Messungen zu verbessern.</li>
+</ul>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/XCP/01_Einstieg/02_Polling.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Introduction"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Einführung in XCP</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/XCP/Einstieg/Synchronous_Data_Aquisition"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Synchronisierte Datenerfassung mit XCP</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#auswahl-des-messmodus-in-canape" class="table-of-contents__link toc-highlight">Auswahl des Messmodus in CANape</a></li><li><a href="#vertiefung-in-den-polling-modus" class="table-of-contents__link toc-highlight">Vertiefung in den Polling-Modus</a><ul><li><a href="#implementierung-des-polling-modus" class="table-of-contents__link toc-highlight">Implementierung des Polling-Modus</a></li><li><a href="#kommunikationsstruktur-und-buslast" class="table-of-contents__link toc-highlight">Kommunikationsstruktur und Buslast</a></li><li><a href="#vor--und-nachteile-des-polling-modus" class="table-of-contents__link toc-highlight">Vor- und Nachteile des Polling-Modus</a></li><li><a href="#anwendungsfälle-für-den-polling-modus" class="table-of-contents__link toc-highlight">Anwendungsfälle für den Polling-Modus</a></li></ul></li><li><a href="#vergleich-mit-dem-daq-modus" class="table-of-contents__link toc-highlight">Vergleich mit dem DAQ-Modus</a></li><li><a href="#best-practices-für-den-einsatz-des-polling-modus" class="table-of-contents__link toc-highlight">Best Practices für den Einsatz des Polling-Modus</a></li><li><a href="#fazit" class="table-of-contents__link toc-highlight">Fazit</a></li><li><a href="#beispielkonfiguration-für-den-polling-modus-in-canape" class="table-of-contents__link toc-highlight">Beispielkonfiguration für den Polling-Modus in CANape</a></li><li><a href="#tipps-zur-fehlerbehebung" class="table-of-contents__link toc-highlight">Tipps zur Fehlerbehebung</a></li><li><a href="#fragen" class="table-of-contents__link toc-highlight">Fragen</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/GLOSSARY/info">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Kapitel 5: Die A2L-Datei: Ein Grundpfeiler der Automobil-Kalibrierung
+# A2L-Datei
 
 ## Einleitung
 

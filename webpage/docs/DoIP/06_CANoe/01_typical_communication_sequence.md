@@ -2,7 +2,7 @@
 
 This section provides a comprehensive explanation of the Diagnostic over Internet Protocol (DoIP) communication sequence, as used in conjunction with Vector CANoe. The aim is to provide a structured understanding, practical insights, and best practices for implementing and analyzing DoIP sequences.
 
-<img src="../image/ip-adress-assignment.png" alt="Image" style="max-width:75%; display: block; margin: 0 auto;" />
+![ip-adress-assignment](/img/doip/ip-adress-assignment.png)
 
 ---
 

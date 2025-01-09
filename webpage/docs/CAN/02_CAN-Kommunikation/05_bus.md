@@ -28,7 +28,8 @@ Ein typischer CAN-Knoten besteht aus folgenden Komponenten:
 
 Das dargestellte Diagramm zeigt ein typisches CAN-Netzwerk mit drei CAN-Knoten. Jeder Knoten besteht aus einem Host, einem CAN-Controller und einem CAN-Transceiver. Die CAN-High- (CANH) und CAN-Low-Leitungen (CANL) sind als verdrillte Leiterpaare dargestellt, die die Störanfälligkeit minimieren. An den Enden des Busses befinden sich Abschlusswiderstände (RT) mit einem Wert von 120 Ohm, um Reflexionen zu verhindern.
 
-<img src="./image/1712019030667.png" alt="CAN-Bus" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712019030667.png)
+
 
 ### Schlussfolgerung
 

@@ -83,15 +83,16 @@ Jeder CAN-Knoten besteht aus einem Host und einer CAN-Schnittstelle, die verschi
 3. **Akzeptanzprüfung**: Prüft, ob eine empfangene Nachricht für den Knoten bestimmt ist.
 4. **Senden und Empfangen**: Über die CAN-Schnittstelle werden Nachrichten gesendet und empfangen.
 
-<img src="./image/1712019772308.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712019772308.png)
+
 
 ---
+![CAN-Knoten](/img/can/1712019810828.png)
 
-<img src="./image/1712019810828.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
 
 ---
+![CAN-Knoten](/img/can/1712020016743.png)
 
-<img src="./image/1712020016743.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
 
 ### Kommunikationsablauf
 

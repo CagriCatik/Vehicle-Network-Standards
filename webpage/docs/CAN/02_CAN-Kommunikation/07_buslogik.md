@@ -20,7 +20,7 @@ Die Abbildung zeigt drei CAN-Knoten (Knoten 1, Knoten 2 und Knoten 3), die jewei
 - **Sender 1, 2 und 3:** Diese repräsentieren die Signale der drei Knoten. Jeder Knoten kann ein Bit senden, das entweder 0 (dominant) oder 1 (rezessiv) ist.
 - **CAN-Bus:** Der kombinierte Pegel auf dem Bus, der durch die dominante Logik der Open-Collector-Schaltung bestimmt wird.
 
-<img src="./image/1716539577015.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1716539577015.png)
 
 ## Funktionsweise der Schaltung
 

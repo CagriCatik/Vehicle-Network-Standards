@@ -17,7 +17,9 @@ Die Grafik "CAN-Highspeed-Buspegel" zeigt die unterschiedlichen Spannungsverhäl
 
 Diese Differenz von 2 Volt wird als dominanter Pegel erkannt, während eine Differenz von 0 Volt als rezessiver Pegel erkannt wird.
 
-<img src="./image/1712019086765.png" alt="CAN-Bus" style="max-width:70%; display: block; margin: 0 auto;" />
+
+![CAN-Knoten](/img/can/1712019086765.png)
+
 
 ### CAN-Lowspeed-Buspegel (ISO 11898-3)
 
@@ -28,7 +30,8 @@ Die Grafik "CAN-Lowspeed-Buspegel" zeigt die unterschiedlichen Spannungsverhält
 
 Auch hier ergibt sich eine Differenz von 2 Volt für den dominanten Pegel, während eine Differenz von 5 Volt als rezessiver Pegel erkannt wird.
 
-<img src="./image/1712019099533.png" alt="CAN-Bus" style="max-width:70%; display: block; margin: 0 auto;" />
+
+![CAN-Knoten](/img/can/1712019099533.png)
 
 ---
 

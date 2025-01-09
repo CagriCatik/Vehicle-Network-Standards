@@ -2,8 +2,6 @@
 
 ## Error State Indicator (ESI)
 
-### Überblick
-
 Im CAN-FD ist der Error State Indicator (ESI) ein kritisches Bit, das auf das Bit Rate Switch (BRS) Bit folgt. Der Zustand des ESI-Bits signalisiert den Fehlerstatus des sendenden Knotens im gesamten Netzwerk und verbessert damit die Fehlererkennung und das Netzwerkmanagement.
 
 ### Funktionalität

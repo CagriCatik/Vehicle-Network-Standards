@@ -19,7 +19,6 @@ Zur Übertragung von Nutzdaten sieht die ISO 11898-1 den sogenannten Data Frame 
 
 ![CAN-Knoten](/img/can/1712276187445.png)
 
-
 Der Data Frame ist das Rückgrat der CAN-Kommunikation und ermöglicht die effiziente Übertragung von Daten zwischen den Knoten eines CAN-Netzwerks.
 
 ## Remote Frame

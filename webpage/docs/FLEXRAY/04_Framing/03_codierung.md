@@ -1,5 +1,5 @@
 
-# FlexRay-Tutorial: Physikalische Übertragung und Codierung von Nachrichten
+# Physikalische Übertragung und Codierung von Nachrichten
 
 In diesem umfassenden Tutorial werden wir die physikalische Übertragung und Codierung von Nachrichten im FlexRay-Netzwerk detailliert untersuchen. Wir werden die verschiedenen Sequenzen, die zur Übertragung einer Nachricht gehören, sowie die spezifischen Anforderungen und Mechanismen für statische und dynamische Botschaften behandeln. Dabei werden wir kritisch auf potenzielle Ungenauigkeiten und falsche Informationen eingehen und sicherstellen, dass der Inhalt wissenschaftlich und seriös ist.
 

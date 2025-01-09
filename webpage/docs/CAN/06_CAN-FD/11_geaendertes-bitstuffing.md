@@ -1,7 +1,5 @@
 # Bitstuffing bei CAN und CAN FD: Ein umfassendes Tutorial
 
-## Einführung
-
 Das Bitstuffing ist eine zentrale Technik im Controller Area Network (CAN), die dazu dient, Synchronisationsprobleme zu vermeiden und eine zuverlässige Datenübertragung sicherzustellen. Sowohl im klassischen CAN-Protokoll als auch im CAN Flexible Data-Rate (CAN FD) Protokoll wird das Bitstuffing angewendet, jedoch mit unterschiedlichen Regeln und Bereichen. Dieser Teil bietet eine detaillierte Erklärung der Bitstuffing-Mechanismen bei CAN und CAN FD, einschließlich der Behandlung von Stuffbits im CRC-Feld.
 
 ## Bitstuffing im klassischen CAN

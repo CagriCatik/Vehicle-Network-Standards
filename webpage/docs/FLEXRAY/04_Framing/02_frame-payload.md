@@ -1,5 +1,5 @@
 
-# FlexRay-Tutorial: Nachrichtenübertragung und Fehlererkennung im Fahrzeugnetzwerk
+# Nachrichtenübertragung und Fehlererkennung im Fahrzeugnetzwerk
 
 In diesem Tutorial werden wir uns intensiv mit dem FlexRay-Kommunikationsprotokoll beschäftigen, das in der Fahrzeugelektrik und -elektronik weit verbreitet ist. Wir werden die Struktur der Nachrichtenübertragung sowie die Mechanismen zur Fehlererkennung im FlexRay-Netzwerk untersuchen. Dabei werden wir die Spezifikationen und Funktionen präzise und detailliert erläutern.
 

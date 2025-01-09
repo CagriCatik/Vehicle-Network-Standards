@@ -5,7 +5,7 @@ sidebar_position: 1
 # Controller Area Network
 ---
 ## 1. Einführung
-- **Motivation:** Warum wurde CAN entwickelt? Zuverlässige Kommunikation in Fahrzeugen und industriellen Anwendungen.
+- **Motivation:** Entwicklung von CAN - Zuverlässige Kommunikation in Fahrzeugen-
 - **Standardisierung:** Überblick über ISO 11898 und internationale Normen.
 ---
 ## 2. CAN-Kommunikation

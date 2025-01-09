@@ -1,8 +1,5 @@
 # Länge des Datenfeldes
 
-
-## Verständnis von CAN
-
 CAN ist ein robustes Fahrzeugbus-Standard, das entwickelt wurde, um Mikrocontroller und Geräte miteinander kommunizieren zu lassen, ohne dass ein Host-Computer benötigt wird. Es wurde ursprünglich für Automobilanwendungen entwickelt, hat aber mittlerweile in vielen anderen Bereichen Verwendung gefunden.
 
 **Wichtige Merkmale von CAN:**

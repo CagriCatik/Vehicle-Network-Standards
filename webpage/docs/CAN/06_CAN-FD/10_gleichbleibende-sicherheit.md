@@ -1,7 +1,5 @@
 # Mehr Daten bei gleichbleibender Sicherheit
 
-## Einführung in CAN-FD
-
 CAN-FD (Controller Area Network with Flexible Data-Rate) ist eine Erweiterung des klassischen CAN-Protokolls, das in den 1980er Jahren von Bosch entwickelt wurde. Es bietet höhere Datenraten und größere Nutzlasten, wodurch es besser für moderne Anforderungen im Automotive-Bereich geeignet ist. Während klassisches CAN auf 1 Mbit/s und 8 Byte Daten pro Frame limitiert ist, ermöglicht CAN-FD Datenraten von bis zu 5 Mbit/s und Nutzlasten bis zu 64 Byte pro Frame.
 
 ## Technische Details von CAN-FD

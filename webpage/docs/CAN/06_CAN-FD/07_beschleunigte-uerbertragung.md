@@ -1,7 +1,5 @@
 # Bitratenumschaltung und Übertragungsraten
 
-## Einleitung
-
 Das Controller Area Network mit flexibler Datenrate (CAN-FD) ist eine Weiterentwicklung des klassischen CAN-Protokolls und bietet höhere Datenraten sowie größere Datenpakete. Dieses Tutorial zielt darauf ab, ein detailliertes Verständnis von CAN-FD zu vermitteln, wobei der Fokus auf der Bitratenumschaltung (BRS) und den Übertragungsraten liegt. Dabei werden wichtige Aspekte wie Synchronisation und Implementierungsherausforderungen in Automobilumgebungen kritisch behandelt.
 
 ## Bitratenumschaltung (BRS)

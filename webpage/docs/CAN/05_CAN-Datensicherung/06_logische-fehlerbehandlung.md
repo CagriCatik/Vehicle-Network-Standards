@@ -8,7 +8,7 @@ Das Controller Area Network (CAN) Protokoll ist ein robustes Kommunikationsproto
 
 Wenn ein CAN-Knoten einen Fehler erkennt, ist es seine Pflicht, alle anderen Knoten im Netzwerk darüber zu informieren. Dies geschieht durch die Übertragung eines Fehlersignals, auch Error Flag genannt. Ein Error Flag besteht aus sechs dominanten Bits, die bewusst die Bitstuffingregel verletzen, um einen Bitstuffing-Fehler zu verursachen. Diese bewusste Regelverletzung dient dazu, sicherzustellen, dass alle Knoten im Netzwerk den Fehler erkennen.
 
-<img src="./image/1712276741129.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712276741129.png)
 
 ## Primäres und Sekundäres Error Flag
 
@@ -30,7 +30,7 @@ Die Zeit von der Fehlererkennung bis zum Wiederaufsetzen der abgebrochenen Botsc
 - **23 Bitzeiten:** Wenn sich primäres und sekundäres Error Flag nicht überlagern.
 - **31 Bitzeiten:** Wenn der fehlerhafte Knoten sich im fehlerpassiven Zustand befindet. In diesem Zustand muss der Knoten eine sogenannte Suspend Transmission Time abwarten, bevor er erneut auf den CAN-Bus zugreifen darf. Diese Sendepause beträgt 8 Bits.
 
-<img src="./image/1712276756119.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712276756119.png)
 
 ## Fehlerpassiver Zustand und Suspend Transmission Time
 

@@ -2,7 +2,7 @@
 
 Im Folgenden wird das CAN-Kommunikationsprinzip im Detail erklärt. Das Ziel ist es, ein tiefes Verständnis der Struktur und Funktionsweise eines CAN-Netzwerks im Fahrzeug zu vermitteln. Dabei wird besonders auf die Aspekte der Dezentralisierung, Ereignisorientierung und empfängerselektiven Adressierung eingegangen. Zusätzlich wird die Kommunikationsmatrix ausführlich behandelt, um die komplexen Interaktionen zwischen den CAN-Knoten zu verdeutlichen.
 
-## 1. Dezentralisierung
+## Dezentralisierung
 
 In sicherheitskritischen Anwendungen, wie dem Antriebsstrang eines Fahrzeugs, ist eine hohe Verfügbarkeit des Kommunikationssystems unerlässlich. Die Dezentralisierung des Buszugriffs spielt hierbei eine entscheidende Rolle.
 
@@ -12,7 +12,7 @@ In sicherheitskritischen Anwendungen, wie dem Antriebsstrang eines Fahrzeugs, is
 - **Lastverteilung**: Die Verteilung der Kommunikationslast auf mehrere Knoten verhindert die Überlastung einzelner Komponenten und sorgt für eine gleichmäßige Auslastung des Systems.
 - **Ausfallsicherheit**: Durch die Dezentralisierung wird die Ausfallsicherheit des Netzwerks erhöht, da kein einzelner Punkt als Schwachstelle existiert.
 
-## 2. Ereignisorientierung
+## Ereignisorientierung
 
 Ein CAN-Netzwerk verwendet eine ereignisorientierte Kommunikationsstrategie, die es ermöglicht, effizient und schnell auf Änderungen zu reagieren. Dies unterscheidet sich grundlegend von zeitgesteuerten Systemen, bei denen Nachrichten in festen Intervallen gesendet werden.
 
@@ -26,7 +26,7 @@ Ein CAN-Netzwerk verwendet eine ereignisorientierte Kommunikationsstrategie, die
 
 Ein Sensor in einem Fahrzeug detektiert eine plötzliche Bremsung und sendet sofort eine entsprechende Nachricht an das Steuergerät. Da das Netzwerk ereignisorientiert arbeitet, wird die Nachricht umgehend verarbeitet und die erforderlichen Maßnahmen werden eingeleitet.
 
-## 3. Empfängerselektive Adressierung
+## Empfängerselektive Adressierung
 
 Um eine flexible und skalierbare Netzwerkkonfiguration zu ermöglichen, verwendet das CAN-System eine empfängerselektive Adressierung. Dies bedeutet, dass jede Nachricht von jedem Knoten empfangen werden kann, aber nur die relevanten Knoten die Nachricht weiterverarbeiten.
 
@@ -40,7 +40,7 @@ Um eine flexible und skalierbare Netzwerkkonfiguration zu ermöglichen, verwende
 - **Flexibilität**: Neue Knoten können problemlos in das Netzwerk integriert werden, ohne bestehende Knoten oder die Netzwerkkonfiguration ändern zu müssen.
 - **Reduzierung der Buslast**: Durch die Filterung werden nur relevante Nachrichten weiterverarbeitet, was die Effizienz des Netzwerks erhöht.
 
-## 4. Kommunikationsmatrix im CAN-Netzwerk
+## Kommunikationsmatrix im CAN-Netzwerk
 
 Die Kommunikationsmatrix ist ein zentrales Element zur Planung und Analyse der Datenströme innerhalb eines CAN-Netzwerks. Sie definiert, welcher Knoten welche Nachrichten sendet und empfängt.
 
@@ -72,7 +72,7 @@ Die Kommunikationsmatrix ist ein zentrales Element zur Planung und Analyse der D
 
 Diese Matrix ermöglicht eine klare und strukturierte Übersicht über die Kommunikationswege im Netzwerk und unterstützt bei der Planung und Fehlersuche.
 
-## 5. Funktionsweise der CAN-Kommunikation
+## Funktionsweise der CAN-Kommunikation
 
 ### Struktur eines CAN-Knotens
 
@@ -100,7 +100,7 @@ Jeder CAN-Knoten besteht aus einem Host und einer CAN-Schnittstelle, die verschi
 3. **Nachricht empfangen**: Empfänger-Knoten prüfen anhand der Kennung und Filter, ob die Nachricht relevant ist und legen sie im Empfangspuffer ab.
 4. **Nachrichtenverarbeitung**: Der Host des Empfänger-Knotens verarbeitet die empfangene Nachricht weiter.
 
-## 6. Praxisbeispiel
+## Praxisbeispiel
 
 Stellen Sie sich vor, ein modernes Fahrzeug verfügt über mehrere Steuergeräte, die über ein CAN-Netzwerk verbunden sind. Jedes Steuergerät (ECU) ist ein CAN-Knoten und kommuniziert mit anderen Knoten, um verschiedene Funktionen zu steuern:
 
@@ -118,6 +118,6 @@ Stellen Sie sich vor, ein modernes Fahrzeug verfügt über mehrere Steuergeräte
 
 Dieses Beispiel zeigt, wie die verschiedenen Steuergeräte im Fahrzeug über ein CAN-Netzwerk interagieren und Informationen austauschen.
 
-## Schlussfolgerung
+---
 
 Ein CAN-Netzwerk im Fahrzeug bietet eine zuverlässige und flexible Kommunikationsplattform für sicherheitskritische Anwendungen. Durch die Dezentralisierung des Buszugriffs, ereignisorientierte Datenübertragung und empfängerselektive Adressierung wird eine hohe Verfügbarkeit und Effizienz gewährleistet. Die Kommunikationsmatrix hilft bei der Planung und Verwaltung der Datenströme im Netzwerk und unterstützt bei der Integration neuer Knoten.

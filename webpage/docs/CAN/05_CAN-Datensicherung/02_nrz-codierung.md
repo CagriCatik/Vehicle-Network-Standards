@@ -41,7 +41,8 @@ Betrachten wir eine Bitfolge, die nur aus logischen „1“-Bits besteht:
 
 Hier wurde nach fünf aufeinanderfolgenden „1“-Bits eine „0“ eingefügt. Dieser Mechanismus stellt sicher, dass der Empfänger die Synchronisation beibehält, auch wenn die ursprüngliche Bitfolge keine Pegeländerung aufweist.
 
-<img src="./image/1712276628306.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+
+![CAN-Netzwerk](/img/can/1712276628306.png)
 
 ### Vergleich mit Manchester-Codierung
 

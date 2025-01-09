@@ -4,7 +4,7 @@
 
 In modernen Automobilen sind zuverlässige Kommunikationsnetzwerke entscheidend für die Funktionalität und Effizienz von elektronischen Steuergeräten. Neben dem bekannten CAN-Bus (Controller Area Network) hat sich der LIN-Bus (Local Interconnect Network) als kostengünstige Alternative etabliert, insbesondere für Anwendungen, die keine hohen Datenübertragungsraten erfordern. Im Folgenden wird ein detailliertes und wissenschaftlich fundiertes Tutorial zur Bedeutung des Wellenwiderstands und des Abschlusswiderstands im CAN-Bus präsentiert, mit speziellen Hinweisen auf die Relevanz dieser Konzepte für den LIN-Bus.
 
-<img src="./image/1712276671360.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712276671360.png)
 
 ## Wellenwiderstand
 
@@ -30,7 +30,7 @@ Ein typischer Abschlusswiderstand im CAN-Bus hat einen Wert von 120 Ohm und wird
 
 Eine alternative Methode zur Terminierung ist die Verwendung eines geteilten Abschlusswiderstands. Diese Technik verwendet zwei identische Widerstände von jeweils 60 Ohm und eine Kapazität, typischerweise 4,7 nF, die zwischen den beiden Widerständen und der Masse geschaltet wird.
 
-<img src="./image/1712276687614.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712276687614.png)
 
 ### Funktionsweise und Vorteile
 

@@ -26,19 +26,19 @@ Das Verfahren der bitweisen Busarbitrierung ist ein zentraler Bestandteil des CS
 
 ## Ereignis 1
 
-<img src="./image/1712022411179.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712022411179.png)
 
 ## Ereignis 2
 
-<img src="./image/1712022493865.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712022493865.png)
 
 ## Ereignis 3
 
-<img src="./image/1712022523730.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712022523730.png)
 
 ## Ereignis 4
 
-<img src="./image/1712022543957.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712022543957.png)
 
 ## Technische Erläuterungen
 
@@ -60,6 +60,6 @@ Wenn beide Knoten gleichzeitig senden möchten:
 - Sobald Knoten B ein Bit sendet, das mit einem höheren Bit von Knoten A kollidiert, erkennt Knoten B die höhere Priorität und zieht sich zurück.
 - Knoten A setzt die Übertragung fort, da seine Nachricht die höhere Priorität hat.
 
-# Fazit
+---
 
 Die Mechanismen des Buszugriffs im CAN-Netzwerk, wie in der ISO 11898-1 beschrieben, sind darauf ausgelegt, eine effiziente und kollisionsfreie Kommunikation zu gewährleisten. Durch die Verwendung von CSMA/CA und der bitweisen Busarbitrierung können Nachrichten in Echtzeit übertragen werden, was besonders für sicherheitskritische Anwendungen in Fahrzeugen und industriellen Steuerungssystemen von großer Bedeutung ist. Die detaillierte Analyse und die grafische Darstellung helfen, diese komplexen Prozesse besser zu verstehen und ihre Bedeutung für die Zuverlässigkeit und Effizienz des CAN-Busses zu erkennen.

@@ -12,7 +12,7 @@ CAN FD unterstützt, ähnlich wie das klassische CAN-Protokoll, zwei Arten von D
 
 Das System mit zwei Rahmenformaten stellt sicher, dass CAN FD die Rückwärtskompatibilität mit bestehenden Systemen beibehält und gleichzeitig die erweiterten Fähigkeiten bietet, die moderne Automobilanwendungen erfordern.
 
-<img src="./image/README/1712277018285.png" alt="CAN-Netzwerk" style="max-width:50%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/1712277018285.png)
 
 ## Fehlen des CAN FD Remote Frames
 

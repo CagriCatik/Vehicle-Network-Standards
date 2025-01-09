@@ -4,7 +4,9 @@
 
 In modernen Fahrzeugen wird die Ankopplung des CAN-Controllers an das Kommunikationsmedium (CAN-Bus) in der Regel durch CAN-Transceiver realisiert. Dies ist eine Weiterentwicklung gegenüber der früheren diskreten Realisierung. Die symmetrische physikalische Signalübertragung in einem CAN-Netzwerk gewährleistet eine hohe elektromagnetische Verträglichkeit. Das physikalische Übertragungsmedium besteht aus zwei Leitungen: der CAN-High-Leitung (CANH) und der CAN-Low-Leitung (CANL). Entsprechend verfügen CAN-Transceiver über zwei Buspins für diese Leitungen.
 
-<img src="./image/1712018875173.png" alt="CAN-Knoten" style="max-width:50%; display: block; margin: 0 auto;" />
+
+![CAN-Leitung](/img/can/1712018875173.png)
+
 
 1. **CAN-Transceiver**:
 
@@ -30,7 +32,8 @@ Die Struktur eines High-Speed-CAN-Transceivers ist in der beigefügten Grafik da
 
 CAN-Transceiver zeichnen sich durch eine geringe Emission und eine hohe Störfestigkeit aus, die durch einen breiten Gleichtaktarbeitsbereich erreicht wird. Moderne Transceiver bieten zudem einen ESD-Schutz von bis zu 8 kV. In besonders kritischen Anwendungen kann eine nahe am Ausgang geschaltete Gleichtaktdrossel (Common Mode Choke - CMC) verwendet werden, um Emissionen weiter zu reduzieren.
 
-<img src="./image/1712018897395.png" alt="CAN-Knoten" style="max-width:50%; display: block; margin: 0 auto;" />
+![CAN-Leitung](/img/can/1712018897395.png)
+
 
 ## Maximale Anzahl an CAN-Knoten
 

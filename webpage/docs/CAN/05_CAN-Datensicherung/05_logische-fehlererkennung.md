@@ -8,8 +8,8 @@ Das CAN-Protokoll (Controller Area Network) ist ein robustes Kommunikationssyste
 4. **Auswertung des Acknowledgements (ACK-Check)**
 5. **Auswertung der Prüfsumme (Cyclic Redundancy Check, CRC)**
 
-<img src="./image/1712276705185.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
 
+![CAN-Netzwerk](/img/can/1712276705185.png)
 
 ### Aufgabenverteilung zwischen Sender und Empfänger
 

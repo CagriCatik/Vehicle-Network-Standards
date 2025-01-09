@@ -14,20 +14,20 @@ Auf Basis der ECU Configuration Description erzeugen Code-Generatoren spezifisch
 Austauschformat
 Diese Aufgaben werden typischerweise von unterschiedlichen Werkzeugen wahrgenommen. Ein wichtiger Bestandteil von AUTOSAR ist daher ein standardisiertes XML-Format, auf dessen Basis Entwurfs- und Konfigurationsdaten zwischen verschiedenen Werkzeugen ausgetauscht werden können.
 
-![1712356582105](image/README/1712356582105.png)
+![1712356582105](/img/autosar/1712356582105.png)
 
 Diese Standardisierung ist essentiell, da typischerweise Werkzeuge unterschiedlicher Hersteller im gleichen Entwicklungsprojekt zum Einsatz kommen. So kann zum Beispiel die mikrocontroller-unabhängige BSW von einem Softwarehaus kommen, während der MCAL samt passenden Code-Generatoren vom Halbleiter-Hersteller bereitgestellt wird.
 
 Potentiell könnte sogar für jedes BSW-Modul ein separates Werkzeug eingesetzt werden. Aus praktischer Sicht ist es allerdings empfehlenswert, die Konfiguration der BSW über ein einheitliches Werkzeug durchzuführen.
 
-![1712356595959](image/README/1712356595959.png)
+![1712356595959](/img/autosar/1712356595959.png)
 
 ## Migrationslösungen
 
 legacy Software
 AUTOSAR sieht bereits im Standard vor, dass auch Steuergerätesoftware in die AUTOSAR Welt übertragen werden kann, die nicht nach der AUTOSAR Methode entwickelt wurde. Dazu definiert man gemäß AUTOSAR einen spezifischen Complex Driver.
 
-![1712356643308](image/README/1712356643308.png)
+![1712356643308](/img/autosar/1712356643308.png)
 
 Ein Complex Driver kann als eine spezielle Art von SWC betrachtet werden, die nicht zwingend eine nach dem SWC Template formalisierte Beschreibung haben muss.
 
@@ -37,7 +37,7 @@ Ein komplexer Gerätetreiber darf ohne die RTE zu benutzen auf die AUTOSAR Basis
 direkte Vorteile
 Bereits hier kann man jedoch schon von Teilen der AUTOSAR Funktionalität profitieren, indem man z.B. zyklische Anteile der Applikation durch die RTE aufrufen lässt oder Kommunikation und Diagnose über die RTE laufen lässt während der Applikationskern noch nicht AUTOSAR konform umgesetzt ist.
 
-![1712356668021](image/README/1712356668021.png)
+![1712356668021](/img/autosar/1712356668021.png)
 
 weitere Schritte
 Langfristig eliminiert man die nicht nach AUTOSAR modellierten Teile der Applikation, insbesondere alle Task-Körper und Aufrufe ins Betriebssystem sowie alle Stellen mit Interruptsperre und andere Basissoftwarezugriffe. Diese werden durch AUTOSAR konforme Elemente ersetzt. Auf diese Weise sind die Applikationsteile bei einem guten Design dann effizienter umgesetzt als früher.

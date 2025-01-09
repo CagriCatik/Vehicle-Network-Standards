@@ -4,8 +4,7 @@
 
 Der Controller Area Network (CAN)-Bus ist ein wesentlicher Bestandteil moderner Automobile, der eine zuverlässige Kommunikation zwischen verschiedenen elektronischen Steuergeräten (ECUs) ermöglicht. In diesem Kontext nehmen Data Frames eine zentrale Rolle ein, da sie die Nutzdaten übertragen. Dieser Leitfaden beschreibt detailliert den Aufbau und die Funktion jedes Elements eines CAN Data Frames, um ein tiefgehendes Verständnis für dessen Mechanismen und Anwendungen zu vermitteln.
 
-
-<img src="./image/1712276346227.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276346227.png)
 
 
 ## Aufbau eines CAN Data Frames
@@ -28,13 +27,14 @@ Das Identifier Extension (IDE)-Bit unterscheidet zwischen dem Standard- und Exte
 
 Der Data Length Code (DLC) gibt die Anzahl der zu übertragenden Nutzbytes an. Diese Nutzbytes werden im Data Field transportiert. Ein Data Frame kann maximal acht Nutzbytes übertragen.
 
-<img src="./image/1712276365231.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276365231.png)
+
 
 ### 5. Data Field
 
 Das Data Field enthält die eigentlichen Nutzdaten, die im Rahmen der CAN-Kommunikation übertragen werden. Die Länge des Data Fields variiert je nach im DLC angegebenen Anzahl der Bytes.
 
-<img src="./image/1712276396634.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276396634.png)
 
 
 ### 6. Cyclic Redundancy Check (CRC) und Acknowledgement (ACK)

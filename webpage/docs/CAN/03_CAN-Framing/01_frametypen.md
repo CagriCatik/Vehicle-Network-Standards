@@ -17,7 +17,8 @@ Zur Übertragung von Nutzdaten sieht die ISO 11898-1 den sogenannten Data Frame 
 - **End of Frame (EOF):** Markiert das Ende des Data Frames.
 - **Intermission (ITM):** Ein Intervall, das zwischen zwei aufeinanderfolgenden Nachrichten liegt.
 
-<img src="./image/1712276187445.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276187445.png)
+
 
 Der Data Frame ist das Rückgrat der CAN-Kommunikation und ermöglicht die effiziente Übertragung von Daten zwischen den Knoten eines CAN-Netzwerks.
 
@@ -37,7 +38,8 @@ Während zur Übertragung von Data Frames die entsprechenden Informationserzeuge
 - **End of Frame (EOF)**
 - **Intermission (ITM)**
 
-<img src="./image/1712276204782.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276204782.png)
+
 
 Der wesentliche Unterschied zum Data Frame besteht im Fehlen des Data Fields. Der Remote Frame dient dazu, einen anderen Knoten im Netzwerk zur Übertragung eines Data Frames aufzufordern.
 
@@ -50,8 +52,9 @@ Der Error Frame steht zur Verfügung, um während des Kommunikationsbetriebs ent
 
 Ein Error Frame wird gesendet, wenn eine Station einen Fehler erkennt, und zwingt alle Stationen dazu, die fehlerhafte Nachricht zu verwerfen. Dies stellt sicher, dass keine fehlerhaften Daten im Netzwerk akzeptiert werden.
 
-<img src="./image/1712276232272.png" alt="CAN-Knoten" style="max-width:70%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/1712276232272.png)
 
-## Schlussfolgerung
+
+---
 
 Das Verständnis der verschiedenen CAN-Frame-Typen und ihrer Felder ist essenziell für die Implementierung und Fehlersuche in CAN-basierten Netzwerken. Jeder Frame-Typ erfüllt eine spezifische Rolle innerhalb des CAN-Kommunikationsprotokolls und trägt zur Robustheit und Zuverlässigkeit des Systems bei. Die präzise Kenntnis und Anwendung dieser Frames ermöglichen eine effiziente und fehlerfreie Datenkommunikation in modernen Fahrzeugnetzwerken.

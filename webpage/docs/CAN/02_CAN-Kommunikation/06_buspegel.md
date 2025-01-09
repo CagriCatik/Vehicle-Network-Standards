@@ -30,6 +30,6 @@ Auch hier ergibt sich eine Differenz von 2 Volt für den dominanten Pegel, währ
 
 <img src="./image/1712019099533.png" alt="CAN-Bus" style="max-width:70%; display: block; margin: 0 auto;" />
 
-## Schlussfolgerung
+---
 
 Die Spannungsverhältnisse und die Unterscheidung zwischen dominanten und rezessiven Pegeln sind entscheidend für die korrekte Funktion eines CAN-Busses. Die unterschiedlichen Normen ISO 11898-2 und ISO 11898-3 definieren spezifische Spannungsbereiche für Highspeed- und Lowspeed-Anwendungen. Ein tiefes Verständnis dieser Spezifikationen ist essentiell für die Entwicklung und Fehlerdiagnose in Fahrzeugnetzwerken.

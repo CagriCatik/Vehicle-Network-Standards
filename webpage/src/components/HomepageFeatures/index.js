@@ -7,7 +7,7 @@ const FeatureList = [
     title: 'Automotive Open System Architecture',
     description: (
       <>
-        Explore AUTOSAR, the standardized automotive software architecture designed to improve interoperability, scalability, and software reuse across the automotive industry.
+        Explore <a href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>AUTOSAR</a>, the standardized automotive software architecture designed to improve interoperability, scalability, and software reuse across the automotive industry.
       </>
     ),
   },
@@ -15,7 +15,7 @@ const FeatureList = [
     title: 'Controller Area Network',
     description: (
       <>
-        Learn about the widely-used <a href="/docs/CAN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>CAN</a> protocol, including its architecture and practical use cases in modern automotive systems. 
+        Learn about the widely-used <a href="/Vehicle-Network-Standards/docs/CAN/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>CAN</a> protocol, including its architecture and practical use cases in modern automotive systems. 
         .
       </>
     ),
@@ -26,7 +26,7 @@ const FeatureList = [
     title: 'Diagnostics over IP',
     description: (
       <>
-        Learn about the <a href="/docs/DoIP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>DoIP</a>, essential for vehicle diagnostics in modern Ethernet-based systems.
+        Learn about the <a href="/Vehicle-Network-Standards/docs/DoIP/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>DoIP</a>, essential for vehicle diagnostics in modern Ethernet-based systems.
       </>
     ),
   },
@@ -34,7 +34,7 @@ const FeatureList = [
     title: 'Ethernet',
     description: (
       <>
-        Discover the importance of <a href="/docs/Ethernet/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>Ethernet</a> in automotive networks, supporting high-bandwidth communication for ADAS and infotainment.
+        Discover the importance of <a href="/Vehicle-Network-Standards/docs/Ethernet/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>Ethernet</a> in automotive networks, supporting high-bandwidth communication for ADAS and infotainment.
       </>
     ),
   },
@@ -42,7 +42,7 @@ const FeatureList = [
     title: 'FlexRay',
     description: (
       <>
-        Delve into the high-speed, deterministic communication offered by <a href="/docs/FLEXRAY/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>FlexRay</a>, designed for safety-critical automotive applications.
+        Delve into the high-speed, deterministic communication offered by <a href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>FlexRay</a>, designed for safety-critical automotive applications.
       </>
     ),
   },
@@ -50,7 +50,7 @@ const FeatureList = [
     title: 'Local Interconnect Networ)',
     description: (
       <>
-        Explore the simplicity and efficiency of the <a href="/docs/LIN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>LIN</a> protocol, ideal for low-cost, low-speed vehicle networks.
+        Explore the simplicity and efficiency of the <a href="/Vehicle-Network-Standards/docs/LIN/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>LIN</a> protocol, ideal for low-cost, low-speed vehicle networks.
       </>
     ),
   },
@@ -58,7 +58,7 @@ const FeatureList = [
     title: 'Secure Onboard Communication',
     description: (
       <>
-        Understand SecOC, the automotive cybersecurity standard ensuring secure and reliable communication within vehicle networks.
+        Understand <a href="/Vehicle-Network-Standards/docs/SecOC/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SecOC</a>, the automotive cybersecurity standard ensuring secure and reliable communication within vehicle networks.
       </>
     ),
   },
@@ -66,7 +66,7 @@ const FeatureList = [
     title: 'Scalable service-Oriented Middleware over IP',
     description: (
       <>
-        Learn how <a href="/docs/SOME-IP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOME/IP</a> enables efficient communication in service-oriented architectures within automotive Ethernet networks.
+        Learn how <a href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOME/IP</a> enables efficient communication in service-oriented architectures within automotive Ethernet networks.
       </>
     ),
   },
@@ -74,7 +74,7 @@ const FeatureList = [
     title: 'Service-Oriented Vehicle Architecture',
     description: (
       <>
-        Explore SOVA, the architecture that facilitates modular development and integration of vehicle services and applications.
+        Explore <a href="/Vehicle-Network-Standards/docs/SOVA/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOVA</a>, the architecture that facilitates modular development and integration of vehicle services and applications.
       </>
     ),
   },
@@ -82,7 +82,7 @@ const FeatureList = [
     title: 'Service-Oriented Vehicle Diagnostics',
     description: (
       <>
-        Gain insights into SOVD, a modern approach to vehicle diagnostics leveraging service-oriented architectures for scalability and efficiency.
+        Gain insights into <a href="/Vehicle-Network-Standards/docs/SOVD/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOVD</a>, a modern approach to vehicle diagnostics leveraging service-oriented architectures for scalability and efficiency.
       </>
     ),
   },
@@ -90,7 +90,7 @@ const FeatureList = [
     title: 'Unified Diagnostic Services',
     description: (
       <>
-        Understand UDS, the ISO-standardized diagnostic communication protocol used for vehicle diagnostics and ECU reprogramming in automotive systems.
+        Understand <a href="/Vehicle-Network-Standards/docs/UDS/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>UDS</a>, the ISO-standardized diagnostic communication protocol used for vehicle diagnostics and ECU reprogramming in automotive systems.
       </>
     ),
   },
@@ -98,7 +98,7 @@ const FeatureList = [
     title: 'Universal Measurement and Calibration Protocol',
     description: (
       <>
-        Learn about <a href="/docs/XCP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>XCP</a>, the protocol for real-time measurement and calibration of ECU parameters during development.
+        Learn about <a href="/Vehicle-Network-Standards/docs/XCP/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>XCP</a>, the protocol for real-time measurement and calibration of ECU parameters during development.
       </>
     ),
   },

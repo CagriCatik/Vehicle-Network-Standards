@@ -48,6 +48,6 @@ Ein ACK-Fehler tritt auf, wenn keine einzige positive Quittung von den Empfänge
 
 Wenn ein ACK-Fehler erkannt wird, bricht der Sender die laufende Nachrichtenübertragung sofort ab und sendet ein Error Flag. Dieses Error Flag signalisiert allen Knoten im Netzwerk, dass ein Fehler aufgetreten ist und stellt sicher, dass keine fehlerhaften Daten im Netzwerk verbleiben.
 
-## Schlussbemerkungen
+---
 
 Die beschriebenen Mechanismen zur Fehlererkennung und -behandlung im CAN-Netzwerk sind von zentraler Bedeutung, um eine hohe Übertragungssicherheit zu gewährleisten. Das CRC-Verfahren ermöglicht eine zuverlässige Erkennung von Übertragungsfehlern, während der Acknowledgement-Mechanismus sicherstellt, dass nur korrekte Nachrichten im Netzwerk akzeptiert werden. Bei Erkennung eines Fehlers erfolgt sofort eine Fehlerbehandlung, um die Datenkonsistenz im gesamten Netzwerk zu wahren. Diese Mechanismen tragen maßgeblich zur Robustheit und Zuverlässigkeit des CAN-Netzwerks bei.

@@ -20,7 +20,9 @@ AUTOSAR bietet eine Referenzarchitektur für Steuergerätesoftware, mit dem Ziel
 
 Die folgende Grafik zeigt den Aufbau eines modernen CAN-Knotens gemäß der AUTOSAR-Architektur.
 
-<img src="./image/1712017613322.png" alt="CAN-Knoten" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-AUTOSAR](/img/can/can_autosar.png)
+
+---
 
 ### Microcontroller Abstraction Layer
 
@@ -29,6 +31,8 @@ Diese unterste Ebene abstrahiert die Hardware und stellt Treiber bereit, die dir
 - **Microcontroller Drivers**: Treiber für die grundlegende Funktionalität des Mikrocontrollers.
 - **Memory Drivers**: Treiber für den Zugriff auf den Speicher.
 - **I/O Drivers**: Treiber für Eingabe-/Ausgabegeräte.
+
+---
 
 ### ECU Abstraction Layer
 
@@ -39,6 +43,8 @@ Diese Ebene abstrahiert die spezifische Hardware der ECUs und ermöglicht eine h
 - **Memory Hardware Abstraction**: Abstraktionsschicht für den Speicherzugriff.
 - **Onboard Device Abstraction**: Abstraktionsschicht für die Steuergeräte-Hardware.
 
+---
+
 ### Service Layer
 
 Diese höchste Ebene der Basis-Software bietet verschiedene Dienste für die Applikationssoftware. Zu den wichtigsten Komponenten gehören:
@@ -47,6 +53,6 @@ Diese höchste Ebene der Basis-Software bietet verschiedene Dienste für die App
 - **Memory Services**: Dienste für den Speicherzugriff und -verwaltung.
 - **Communication Services**: Diese umfassen AUTOSAR COM für die Standardkommunikation, den Diagnostic COM Manager für Diagnosedienste und Generic NM/CAN NM für das Netzwerkmanagement. Der PDU Router koordiniert die Kommunikation zwischen diesen Diensten und dem CAN TP (Transportprotokoll).
 
-## Schlussfolgerung
+---
 
 Die Verwendung der AUTOSAR-Architektur in modernen Fahrzeugen ermöglicht eine strukturierte und effiziente Entwicklung von Steuergerätesoftware. Durch die Entkopplung der Applikationssoftware von der Hardware und die Bereitstellung einheitlicher Dienste wird die Komplexität beherrschbar und die Wiederverwendbarkeit von Software-Komponenten gefördert. Dies trägt wesentlich zur Reduzierung von Entwicklungskosten und zur Erhöhung der Qualität und Zuverlässigkeit der Fahrzeugsoftware bei.

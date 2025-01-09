@@ -18,9 +18,7 @@ Das physikalische Übertragungsmedium in einem CAN-Netzwerk ist in der Regel ein
 
 Das untere Bild zeigt ein typisches CAN-Netzwerk mit drei CAN-Knoten (Steuergeräten), die an einen CAN-Bus angeschlossen sind. Die beiden Leitungen, CANH (CAN High Leitung) und CANL (CAN Low Leitung), sind die beiden verdrillten Drähte, die das symmetrische Signal übertragen. An beiden Enden des Busses sind Abschlusswiderstände (RT) installiert, um Reflexionen zu verhindern und die Signalqualität zu sichern. Eine mögliche Ergänzung könnte die Erwähnung der spezifischen Anforderungen an die Länge und Verdrillung der Leitungen sein, um elektromagnetische Störungen weiter zu minimieren. Auch die Integration von Busüberwachung und Diagnosefunktionen könnte für ein umfassendes Verständnis von CAN-Netzwerken sinnvoll sein.
 
-<img src="./image/1712017258157.png" alt="CAN-Netzwerk" style="max-width:90%; display: block; margin: 0 auto;" />
+![CAN-Knoten](/img/can/can_knoten.png)
 
-
-## Schlussfolgerung
 
 Ein CAN-Netzwerk ist eine wesentliche Komponente in der Fahrzeugtechnik, die eine zuverlässige und effiziente Kommunikation zwischen verschiedenen elektronischen Steuergeräten ermöglicht. Durch die Einhaltung der beschriebenen technischen Spezifikationen und Normen kann die Leistungsfähigkeit und Zuverlässigkeit eines CAN-Systems sichergestellt werden.

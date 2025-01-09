@@ -1,19 +1,29 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+# tags.yml
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+automotive:
+  label: Automotive
+  description: Articles related to automotive technologies and standards.
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+networking:
+  label: Networking
+  description: Documentation covering networking concepts and protocols.
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+standards:
+  label: Standards
+  description: Information about industry standards and best practices.
+
+SOVD:
+  label: SOVD
+  description: Details about SOVD (Service-Oriented Vehicle Diagnostics).
+
+API:
+  label: API
+  description: Guides and references for APIs used in the project.
+
+SOA:
+  label: SOA
+  description: Service-Oriented Architecture documentation.
+
+Diagnostics:
+  label: Diagnostics
+  description: Diagnostic tools and procedures.

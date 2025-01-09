@@ -52,7 +52,7 @@ Die Kommunikation im CAN-Netzwerk ist ereignisgesteuert, wie in der ISO 11898-1 
 
 Die folgende Grafik zeigt die Beziehung zwischen dem ISO/OSI-Referenzmodell der Datenkommunikation, dem CAN-Standard und der Implementierung:
 
-<img src="./image/1712017003646.png" alt="CAN-Netzwerk" style="max-width:50%; display: block; margin: 0 auto;" />
+![CAN-Netzwerk](/img/can/can_standard.png)
 
 ## Schichtenmodell
 

@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'AUTOSAR (Automotive Open System Architecture)',
+    title: 'Automotive Open System Architecture',
     description: (
       <>
         Explore AUTOSAR, the standardized automotive software architecture designed to improve interoperability, scalability, and software reuse across the automotive industry.
@@ -12,7 +12,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'CAN (Controller Area Network)',
+    title: 'Controller Area Network',
     description: (
       <>
         Learn about the widely-used <a href="/docs/CAN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>CAN</a> protocol, including its architecture and practical use cases in modern automotive systems. 
@@ -23,7 +23,7 @@ const FeatureList = [
   
   
   {
-    title: 'DoIP (Diagnostics over IP)',
+    title: 'Diagnostics over IP',
     description: (
       <>
         Learn about the <a href="/docs/DoIP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>DoIP</a>, essential for vehicle diagnostics in modern Ethernet-based systems.
@@ -47,7 +47,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'LIN (Local Interconnect Network)',
+    title: 'Local Interconnect Networ)',
     description: (
       <>
         Explore the simplicity and efficiency of the <a href="/docs/LIN/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>LIN</a> protocol, ideal for low-cost, low-speed vehicle networks.
@@ -55,7 +55,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'SecOC (Secure Onboard Communication)',
+    title: 'Secure Onboard Communication',
     description: (
       <>
         Understand SecOC, the automotive cybersecurity standard ensuring secure and reliable communication within vehicle networks.
@@ -63,7 +63,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'SOME/IP (Scalable service-Oriented Middleware over IP)',
+    title: 'Scalable service-Oriented Middleware over IP',
     description: (
       <>
         Learn how <a href="/docs/SOME-IP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>SOME/IP</a> enables efficient communication in service-oriented architectures within automotive Ethernet networks.
@@ -71,7 +71,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'SOVA (Service-Oriented Vehicle Architecture)',
+    title: 'Service-Oriented Vehicle Architecture',
     description: (
       <>
         Explore SOVA, the architecture that facilitates modular development and integration of vehicle services and applications.
@@ -79,7 +79,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'SOVD (Service-Oriented Vehicle Diagnostics)',
+    title: 'Service-Oriented Vehicle Diagnostics',
     description: (
       <>
         Gain insights into SOVD, a modern approach to vehicle diagnostics leveraging service-oriented architectures for scalability and efficiency.
@@ -87,7 +87,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'UDS (Unified Diagnostic Services)',
+    title: 'Unified Diagnostic Services',
     description: (
       <>
         Understand UDS, the ISO-standardized diagnostic communication protocol used for vehicle diagnostics and ECU reprogramming in automotive systems.
@@ -95,7 +95,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'XCP (Universal Measurement and Calibration Protocol)',
+    title: 'Universal Measurement and Calibration Protocol',
     description: (
       <>
         Learn about <a href="/docs/XCP/Getting-Started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>XCP</a>, the protocol for real-time measurement and calibration of ECU parameters during development.

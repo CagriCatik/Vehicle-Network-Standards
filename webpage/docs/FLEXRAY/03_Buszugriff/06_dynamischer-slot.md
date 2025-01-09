@@ -1,11 +1,7 @@
 
-# FlexRay-Tutorial: Dynamische Slots im Fahrzeugnetzwerk
+# Dynamischer Slot
 
-In der modernen Fahrzeugelektrik und -elektronik spielt das FlexRay-Kommunikationssystem eine entscheidende Rolle. FlexRay ist ein hochzuverlässiges, fehlertolerantes und deterministisches Busprotokoll, das vor allem in sicherheitskritischen Anwendungen, wie dem Antriebsstrang und Fahrdynamikregelungen, verwendet wird. In diesem Tutorial werden wir uns eingehend mit der Struktur und Bemessung dynamischer Slots im FlexRay-System befassen und diese mit statischen Slots vergleichen.
-
-## Einführung in FlexRay
-
-FlexRay zeichnet sich durch seine Fähigkeit aus, sowohl deterministische als auch dynamische Kommunikation zu unterstützen. Das FlexRay-Kommunikationsprotokoll teilt den Kommunikationszyklus in zwei Hauptsegmente: das statische Segment und das dynamische Segment.
+In der modernen Fahrzeugelektronik spielt das FlexRay-Kommunikationssystem eine zentrale Rolle. FlexRay ist ein hochzuverlässiges, fehlertolerantes und deterministisches Busprotokoll, das insbesondere in sicherheitskritischen Anwendungen wie dem Antriebsstrang und der Fahrdynamikregelung eingesetzt wird. In diesem Tutorial widmen wir uns ausführlich der Struktur und Dimensionierung dynamischer Slots im FlexRay-System und vergleichen diese mit statischen Slots. FlexRay zeichnet sich durch die Unterstützung sowohl deterministischer als auch dynamischer Kommunikation aus und unterteilt den Kommunikationszyklus in zwei Hauptsegmente: das statische Segment und das dynamische Segment. Durch diese Architektur gewährleistet FlexRay eine hohe Zuverlässigkeit und Effizienz in der Datenübertragung innerhalb moderner Fahrzeugelektronik.
 
 - **Statisches Segment**: Hier werden Nachrichten in festgelegten Slots mit garantierten Zeitfenstern übertragen, wodurch eine deterministische Kommunikation ermöglicht wird.
 - **Dynamisches Segment**: Hier können Nachrichten flexibel in dynamischen Slots gesendet werden, was eine effizientere Nutzung der Bandbreite ermöglicht.
@@ -50,7 +46,3 @@ Obwohl dynamische und statische Slots ähnliche Strukturen aufweisen, unterschei
 Die Beschreibung der Dynamik in FlexRay-Slots sollte stets die strengen Spezifikationen und Protokolle berücksichtigen. Es ist wichtig zu beachten, dass die dynamische Flexibilität nicht zu Lasten der deterministischen Sicherheit gehen darf, die für viele sicherheitskritische Anwendungen notwendig ist.
 
 Die Implementierung der Dynamic Trailing Sequence stellt sicher, dass die Synchronisation und Ordnung der Datenübertragungen gewahrt bleibt. Ungenauigkeiten in der Konfiguration dieser Sequenzen können jedoch zu Timing-Problemen und Kommunikationsstörungen führen. Daher ist eine präzise Planung und Validierung der Netzwerkparameter unerlässlich.
-
-## Fazit
-
-FlexRay bietet durch seine dynamischen Slots eine flexible und effiziente Kommunikationsmethode, die besonders in komplexen und sicherheitskritischen Fahrzeuganwendungen von Vorteil ist. Das Verständnis der Struktur und Funktionsweise dynamischer Slots ist essenziell für die erfolgreiche Implementierung und Wartung eines FlexRay-Netzwerks. Durch die sorgfältige Planung und Beachtung der Spezifikationen können die Vorteile von FlexRay voll ausgeschöpft werden, ohne die Zuverlässigkeit und Sicherheit des Kommunikationssystems zu gefährden.

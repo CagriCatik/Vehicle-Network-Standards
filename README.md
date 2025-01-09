@@ -1,14 +1,18 @@
 # Vehicle Network Standards
 
-This repository serves as a comprehensive knowledge base for **Vehicle Network Standards**. It provides structured information on widely-used protocols in the automotive industry, organized into the following categories:
+This repository serves as a knowledge base for [**Vehicle Network Standards**](https://cagricatik.github.io/Vehicle-Network-Standards/). It provides structured information on widely-used protocols in the automotive industry, organized into the following categories:
 
-- **CAN** (Controller Area Network)
-- **LIN** (Local Interconnect Network)
+- **CAN** 
+- **LIN** 
 - **FlexRay**
 - **ETHERNET**
-- **DoIP** (Diagnostics over IP)
-- **SOME/IP** (Scalable service-Oriented Middleware over IP)
-- **XCP** (Universal Measurement and Calibration Protocol)
+- **DoIP** 
+- **SOME/IP**
+- **XCP** 
+- **UDS**
+- **SOVD**
+- **SOVA**
+- **SecOC**
 
 ## About the Project
 

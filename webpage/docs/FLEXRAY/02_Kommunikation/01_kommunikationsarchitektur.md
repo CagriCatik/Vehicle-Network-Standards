@@ -38,8 +38,3 @@ Ein typischer Kommunikationsablaufplan für ein FlexRay-System kann beispielswei
 
 Durch diesen präzisen Zeitplan wird sichergestellt, dass keine Kollisionen auf dem Bus auftreten und jede Nachricht deterministisch und zeitgerecht übermittelt wird.
 
-## Zusammenfassung
-
-FlexRay bietet eine leistungsfähige und zuverlässige Kommunikationslösung für moderne Fahrzeuge. Die Kombination aus hohen Datenraten, Redundanz und deterministischer Kommunikation macht FlexRay zu einer idealen Wahl für sicherheitskritische Anwendungen. Die Flexibilität in der Topologie und die präzise Steuerung durch das TDMA-Verfahren stellen sicher, dass FlexRay den strengen Anforderungen der Fahrzeugelektronik gerecht wird.
-
-Für eine erfolgreiche Implementierung und Wartung eines FlexRay-Systems ist ein tiefes Verständnis der zeitgesteuerten Architektur und der spezifischen Kommunikationsablaufpläne unerlässlich. Ingenieure und Techniker müssen sicherstellen, dass alle Knoten und Nachrichten korrekt synchronisiert und gemäß den festgelegten Zeitplänen betrieben werden, um die volle Leistungsfähigkeit und Zuverlässigkeit des Systems zu gewährleisten.

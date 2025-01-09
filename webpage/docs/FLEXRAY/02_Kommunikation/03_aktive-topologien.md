@@ -1,4 +1,3 @@
-
 # Aktive Topologien
 
 ## Grundkonzepte von FlexRay

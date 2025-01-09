@@ -1,5 +1,4 @@
-
-# FlexRay-Kommunikation in der Fahrzeugelektronik und -elektrik
+# Kommunikationszyklus
 
 FlexRay ist ein Kommunikationsprotokoll, das speziell für die hohen Anforderungen der Fahrzeugelektronik und -elektrik entwickelt wurde. Es bietet deterministische, fehlertolerante und zuverlässige Datenübertragung, was es zu einer Schlüsseltechnologie für moderne Fahrzeugsysteme macht. In diesem Tutorial werden wir die grundlegenden Konzepte und Funktionsweisen des FlexRay-Protokolls detailliert erläutern.
 
@@ -45,9 +44,3 @@ Der bereitgestellte Text enthält eine solide Beschreibung der grundlegenden Fun
 1. **Zeitliche Synchronisation**: Die Beschreibung des NIT-Segments als einziges Mittel zur Synchronisation ist zu vereinfacht. In der Praxis erfolgt die Synchronisation kontinuierlich und kann zusätzliche Mechanismen beinhalten, wie z.B. die Verwendung von speziellen Synchronisationsnachrichten im statischen Segment.
 2. **Variabilität der Makroticks**: Der Einfluss unterschiedlicher Quarzfrequenzen auf die Länge der Mikroticks und damit auf die Makroticks ist korrekt beschrieben. Allerdings wird nicht erwähnt, dass FlexRay über Mechanismen verfügt, um diese Variabilität zu kompensieren und eine harmonisierte Zeitskala über alle Knoten hinweg zu gewährleisten.
 3. **Flexibilität des Protokolls**: FlexRay ist äußerst flexibel und kann an verschiedene Systemanforderungen angepasst werden. Der Text könnte mehr auf die Konfigurationsmöglichkeiten eingehen, die es Entwicklern ermöglichen, das Protokoll optimal an die spezifischen Bedürfnisse eines Fahrzeugs anzupassen.
-
-## Fazit
-
-FlexRay ist ein leistungsfähiges und vielseitiges Protokoll für die Datenkommunikation in modernen Fahrzeugen. Es bietet eine deterministische und zuverlässige Kommunikation, die für sicherheitskritische Anwendungen unerlässlich ist. Das Verständnis der grundlegenden Konzepte und der zeitlichen Strukturierung eines FlexRay-Kommunikationszyklus ist entscheidend für die erfolgreiche Implementierung und Optimierung von FlexRay-basierten Systemen.
-
-Durch die Berücksichtigung der hier vorgestellten Details und der kritischen Analyse können Ingenieure und Entwickler besser auf die Herausforderungen und Anforderungen moderner Fahrzeugelektronik und -elektrik eingehen und robustere und effizientere Kommunikationslösungen entwickeln.

@@ -1,5 +1,5 @@
 
-### FlexRay-Kommunikation im Fahrzeug: Das Statische Segment
+# Statisches Segment
 
 FlexRay ist ein hochperformantes Kommunikationssystem, das in der Fahrzeugtechnik weit verbreitet ist, insbesondere für sicherheitskritische Anwendungen und komplexe Steuerungssysteme. Innerhalb des FlexRay-Kommunikationszyklus spielt das statische Segment eine entscheidende Rolle. In diesem Tutorial erläutern wir die Struktur und Funktion des statischen Segments und gehen dabei auf technische Details und mögliche Fehlinterpretationen ein.
 
@@ -40,9 +40,3 @@ Es ist korrekt, dass FlexRay bis zu 1023 statische Slots unterstützen kann. Die
 #### Synchronisation und Fehlertoleranz
 
 Die Synchronisation der lokalen Zähler ist von entscheidender Bedeutung für die korrekte Funktion des FlexRay-Systems. Ein Fehler in der Synchronisation kann zu Kommunikationsausfällen und Datenverlust führen. Daher sind präzise Mechanismen zur Synchronisation erforderlich, um die Integrität des Systems zu gewährleisten.
-
-### Zusammenfassung
-
-Das statische Segment im FlexRay-Kommunikationszyklus stellt durch seine strukturierte und synchronisierte Übertragung von Nachrichten eine zuverlässige und deterministische Kommunikationsmethode dar. Durch die flexible Nutzung der Kommunikationskanäle zur Erhöhung der Fehlertoleranz oder der Datenrate wird FlexRay zu einer vielseitigen Lösung für moderne Fahrzeugelektronik. Die korrekte Implementierung und Synchronisation der Knoten sind dabei entscheidend für die erfolgreiche Nutzung des Systems.
-
-Dieses Tutorial hat die wesentlichen Aspekte und Funktionen des statischen Segments im FlexRay-System detailliert erläutert und die Bedeutung der Synchronisation und Flexibilität in der Datenübertragung hervorgehoben. Für weiterführende technische Details und spezifische Implementierungsfragen empfiehlt sich die Konsultation der FlexRay-Spezifikationen und relevanter Fachliteratur.

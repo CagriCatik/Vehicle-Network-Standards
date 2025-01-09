@@ -1,5 +1,5 @@
 
-# FlexRay-Tutorial: Hybrides Buszugriffsverfahren und Datenübertragung in Fahrzeugen
+# Hybrides Buszugriffsverfahren und Datenübertragung
 
 FlexRay ist ein hochentwickeltes Kommunikationsprotokoll für die Fahrzeugelektrik und -elektronik, das speziell für sicherheitskritische Anwendungen entwickelt wurde. Es bietet hohe Datenraten, Fehlertoleranz und deterministische Kommunikation. In diesem Tutorial werden wir das hybride Buszugriffsverfahren und die damit verbundene Datenübertragung in einem FlexRay-Cluster untersuchen.
 
@@ -48,9 +48,3 @@ Um die volle Funktionalität der interaktiven Grafik und der Animation nutzen zu
 
 - **Beobachten Sie den Kommunikationsablauf**: Starten Sie die Animation und beobachten Sie, wie die Daten im statischen und dynamischen Segment übertragen werden.
 - **Verstehen Sie die Segmentierung**: Lernen Sie die Unterschiede und die spezifischen Eigenschaften der beiden Segmente kennen.
-
-## Zusammenfassung
-
-FlexRay ist ein robustes und flexibles Kommunikationsprotokoll, das speziell für die hohen Anforderungen der Fahrzeugelektronik entwickelt wurde. Durch die Kombination von statischen und dynamischen Segmenten im Kommunikationsplan bietet FlexRay sowohl deterministische als auch bedarfsgesteuerte Datenübertragung. Die redundante Auslegung der Kommunikationskanäle erhöht die Zuverlässigkeit und Ausfallsicherheit des Systems. Nutzen Sie die zur Verfügung gestellten interaktiven Grafiken und Animationen, um ein tieferes Verständnis der FlexRay-Kommunikationstechnik zu erlangen.
-
-Mit diesem Wissen sind Sie gut gerüstet, um die FlexRay-Technologie in Ihren Projekten und Anwendungen effektiv zu nutzen und zu implementieren.

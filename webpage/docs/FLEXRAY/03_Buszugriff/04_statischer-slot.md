@@ -1,9 +1,7 @@
 
-# FlexRay in der Fahrzeugelektronik und -elektronik: Ein detailliertes Tutorial
+# Statischer Slot
 
-## Einführung in FlexRay
-
-FlexRay ist ein Kommunikationsprotokoll, das speziell für die Anforderungen moderner Fahrzeugelektronik entwickelt wurde. Es bietet eine hohe Datenrate und eine deterministische Datenübertragung, was es ideal für sicherheitskritische Anwendungen macht. Dieses Tutorial behandelt die Struktur und Funktionsweise des statischen Segments in einem FlexRay-Netzwerk und beleuchtet wichtige Aspekte wie die Botschaftsübertragung, Zeitpräzision und Signalverzögerung.
+FlexRay ist ein Kommunikationsprotokoll, das speziell für die Anforderungen moderner Fahrzeugelektronik entwickelt wurde. Es bietet eine hohe Datenrate und eine deterministische Datenübertragung, was es ideal für sicherheitskritische Anwendungen macht. Dieser Teil behandelt die Struktur und Funktionsweise des **statischen Segments** in einem FlexRay-Netzwerk und beleuchtet wichtige Aspekte wie die Botschaftsübertragung, Zeitpräzision und Signalverzögerung.
 
 ## Struktur einer FlexRay-Botschaft
 
@@ -55,6 +53,3 @@ Die vorliegende Beschreibung enthält einige Punkte, die präziser formuliert we
 2. **Technische Details**: Die technischen Details zur Zeitpräzision und Signalverzögerung sollten spezifiziert werden, um ihre praktischen Auswirkungen besser zu verdeutlichen.
 3. **Determinismus**: Der Begriff "deterministisch" sollte genauer erklärt werden, insbesondere im Kontext von Echtzeitsystemen, um die Bedeutung für die Zuverlässigkeit und Sicherheit im Fahrzeug zu unterstreichen.
 
-## Zusammenfassung
-
-Dieses Tutorial bietet eine umfassende Einführung in die Struktur und Funktionsweise des statischen Segments im FlexRay-Kommunikationsprotokoll. FlexRay ermöglicht eine deterministische und zuverlässige Datenübertragung, die für sicherheitskritische Anwendungen in der Fahrzeugelektronik unerlässlich ist. Die Länge des statischen Slots, die Präzision der Zeitgeber und die Signalverzögerung sind entscheidende Faktoren, die die Leistungsfähigkeit des FlexRay-Netzwerks beeinflussen. Ein tiefes Verständnis dieser Faktoren ist entscheidend für die erfolgreiche Implementierung und Optimierung von FlexRay-basierten Systemen in modernen Fahrzeugen.

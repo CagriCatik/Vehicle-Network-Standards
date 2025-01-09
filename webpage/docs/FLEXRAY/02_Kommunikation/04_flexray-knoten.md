@@ -1,4 +1,3 @@
-
 # FlexRay Knoten
 
 Ein FlexRay-Knoten ist ein elektronisches Steuergerät, das über eine FlexRay-Schnittstelle an einen FlexRay-Bus angeschlossen wird. Die FlexRay-Schnittstelle besteht aus einem Kommunikationscontroller und, abhängig von der Anzahl der Kanäle, einem oder zwei Bustreibern.

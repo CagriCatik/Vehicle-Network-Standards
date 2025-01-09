@@ -1,4 +1,3 @@
-
 # Passive Topologien
 
 ## Physikalische Topologien

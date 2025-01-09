@@ -1,4 +1,3 @@
-
 # FlexRay Bus
 
 ## Herausforderungen der elektromagnetischen Verträglichkeit

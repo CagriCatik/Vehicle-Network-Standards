@@ -1,7 +1,5 @@
 # Steer-by-Wire
 
-## Einleitung
-
 In der modernen Fahrzeugtechnik spielt die Elektronik eine immer größere Rolle, insbesondere bei sicherheitskritischen Systemen wie der Lenkung. Dieser Artikel behandelt das Steer-by-Wire-Prinzip, das auf der FlexRay-Kommunikation basiert, und analysiert die technischen Aspekte sowie die sicherheitsrelevanten Herausforderungen dieses Systems.
 
 ## Mechanische Lenkung

@@ -1,6 +1,4 @@
-
 # FlexRay Controller
-
 
 ## Einführung in FlexRay
 

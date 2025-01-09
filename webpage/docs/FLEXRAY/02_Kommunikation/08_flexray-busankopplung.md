@@ -1,4 +1,3 @@
-
 # FlexRay - Busankopplung
 
 ## Einleitung
@@ -34,17 +33,3 @@ Diese Werte stellen sicher, dass die Drosseln ausreichend Störströme unterdrü
 ## Herausforderungen und Lösungen
 
 Ein kleiner Nachteil der LC-Entstörschaltungen ist die Bildung eines Schwingkreises durch die Kombination von Streuinduktivität und Kopplungskondensator. Dieser Schwingkreis kann bei den Schaltvorgängen des FlexRay Transceivers zu einem Überschwingen der Bussignale führen. Um dieses Problem zu minimieren, muss die Streuinduktivität sorgfältig überwacht und kontrolliert werden.
-
-## Zusammenfassung
-
-Die Integration eines FlexRay Controllers mit einem FlexRay Transceiver erfordert ein tiefes Verständnis der Signalübertragung und der elektromagnetischen Verträglichkeit. Durch die richtige Auswahl und Implementierung von LC-Entstörschaltungen können Störungen minimiert und die Zuverlässigkeit der Kommunikation erhöht werden. Trotz der technischen Herausforderungen bieten FlexRay Netzwerke eine robuste und deterministische Lösung für die komplexen Anforderungen moderner Fahrzeugelektronik.
-
-## Weiterführende Ressourcen
-
-Für eine tiefere Einarbeitung in das Thema empfehlen wir die folgenden Ressourcen:
-
-- FlexRay Consortium Dokumentationen
-- Fachliteratur zur Fahrzeugelektronik und EMV
-- Technische Spezifikationen und Whitepapers von Halbleiterherstellern
-
-Mit diesem Wissen sind Sie gut gerüstet, um die Vorteile des FlexRay Netzwerks in Ihren Fahrzeugentwicklungsprojekten zu nutzen und gleichzeitig die Herausforderungen der Implementierung zu meistern.

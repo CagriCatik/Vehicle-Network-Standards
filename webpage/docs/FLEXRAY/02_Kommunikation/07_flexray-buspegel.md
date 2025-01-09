@@ -1,4 +1,3 @@
-
 # FlexRay Buspegel
 
 ## Physikalische Signalübertragung
@@ -31,12 +30,3 @@ Die FlexRay-Kommunikation basiert auf der präzisen Interpretation der Spannungs
 
 Die Spezifikation gibt genaue Schwellenwerte vor, die Sender und Empfänger einhalten müssen, um die Buspegel korrekt zu erkennen und zu verarbeiten. Diese Schwellenwerte sind entscheidend, um Signalstörungen zu minimieren und eine fehlerfreie Datenübertragung zu gewährleisten.
 
-## Zusammenfassung und kritische Anmerkungen
-
-Die physikalische Signalübertragung in einem FlexRay-Cluster ist ein komplexer Prozess, der auf der präzisen Steuerung und Interpretation von Differenzspannungen basiert. Ein fundiertes Verständnis der Buspegel und Zustände sowie der entsprechenden Schwellenwerte ist essenziell für die Entwicklung und den Betrieb zuverlässiger FlexRay-Netzwerke in Fahrzeugen.
-
-### Kritische Bewertung
-
-Es ist wichtig, darauf hinzuweisen, dass jede Ungenauigkeit in der Spannungserkennung oder Signalinterpretation zu Kommunikationsfehlern führen kann. Daher sind strenge Tests und Validierungen unerlässlich, um die Integrität des FlexRay-Systems sicherzustellen. Zudem muss bei der Implementierung und Wartung der FlexRay-Systeme sorgfältig darauf geachtet werden, dass alle Komponenten den Spezifikationen entsprechen und korrekt kalibriert sind.
-
-Durch die Anwendung dieser Prinzipien können Ingenieure und Techniker robuste und effiziente FlexRay-Netzwerke entwickeln, die den hohen Anforderungen moderner Fahrzeugelektronik gerecht werden.

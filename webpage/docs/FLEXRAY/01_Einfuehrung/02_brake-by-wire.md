@@ -1,7 +1,5 @@
 # Brake-by-Wire
 
-## Einleitung
-
 Die Elektronifizierung des Automobils umfasst heute auch Bereiche, die traditionell von Mechanik und Hydraulik dominiert wurden. Mit dem Ziel, Fahrerassistenzfunktionen weiter zu verbessern, ist es notwendig, elektronische Schnittstellen zu Fahrwerkskomponenten wie Bremsanlagen und Lenkungen zu entwickeln. Diese Entwicklung hat zur Entstehung von elektrohydraulischen und elektromechanischen Bremssystemen (EMB) geführt. In diesem Tutorial werden wir den prinzipiellen Aufbau eines EMB-Systems anhand des bereitgestellten Diagramms erläutern und die zugrunde liegenden Technologien und Konzepte kritisch beleuchten.
 
 ## Elektronische Schnittstellen in Bremssystemen

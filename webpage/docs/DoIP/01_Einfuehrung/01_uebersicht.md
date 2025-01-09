@@ -71,7 +71,3 @@ Die folgende Darstellung zeigt die verschiedenen Ebenen des DoIP-Protokolls, geo
    - Die Anwendungsschicht für die Fahrzeugdiagnose und das Flashen von Steuergeräten über IP-Netzwerke.
 
 Durch die Kombination dieser Ebenen ermöglicht DoIP eine robuste und effiziente Plattform für die moderne Fahrzeugdiagnose, die den Anforderungen an Geschwindigkeit, Zuverlässigkeit und Flexibilität gerecht wird.
-
-### Fazit
-
-DoIP ist ein wesentlicher Bestandteil der modernen Fahrzeugdiagnose und -wartung. Durch die Nutzung von Ethernet- und IP-Protokollen bietet es eine skalierbare und zukunftssichere Lösung für die Diagnose und Programmierung von Fahrzeugsteuergeräten. Die Verwendung standardisierter Beschreibungsdateien wie CDD und ODX trägt zusätzlich zur Interoperabilität und Effizienz der Diagnoseprozesse bei.

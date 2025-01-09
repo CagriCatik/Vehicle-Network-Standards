@@ -36,7 +36,5 @@ Das Design von CAN FD stellt sicher, dass bestehende Hochprotokolle wie CANopen 
 2. **SAE J1939**:
    - SAE J1939 ist ein Hochprotokoll, das in Nutzfahrzeugen zur Kommunikation und Diagnose zwischen Fahrzeugkomponenten verwendet wird. Das erweiterte Identifier-Rahmenformat in CAN FD unterstützt den umfangreichen Identifier-Bereich, der von SAE J1939 benötigt wird, und stellt sicher, dass es die erhöhten Datenraten und größeren Datenmengen von CAN FD nutzen kann.
 
-## Schlussfolgerung
 
-CAN FD stellt einen bedeutenden Fortschritt gegenüber dem klassischen CAN-Protokoll dar, indem es schnellere Datenübertragungsraten und die Möglichkeit zur Handhabung größerer Datenmengen bietet. Durch die Beibehaltung der Standard- und erweiterten Rahmenformate stellt CAN FD die Kompatibilität mit bestehenden Automobilprotokollen wie CANopen und SAE J1939 sicher. Die Entscheidung, kein spezifisches Remote Frame Format für CAN FD einzuführen, ist eine bewusste Wahl, die den Leistungszielen des Protokolls entspricht, während klassische CAN Remote Frames weiterhin zur Anforderung von CAN FD Datenrahmen verwendet werden können.
  

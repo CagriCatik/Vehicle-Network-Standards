@@ -45,8 +45,5 @@ Zur Sicherung der übertragenen Nutzbytes wird eine Prüfsumme unter Anwendung d
 
 Die Übertragung eines Data Frames wird mit sieben rezessiven Bits, dem End Of Frame (EOF), beendet. Diese Bits signalisieren das Ende der Übertragung und ermöglichen den Übergang in den Bus Idle-Zustand.
 
-## Fazit
-
-Ein tiefgehendes Verständnis der Struktur und Funktionsweise von CAN Data Frames ist für die Entwicklung und Wartung von CAN-Netzwerken essenziell. Jedes Element eines Data Frames spielt eine spezifische Rolle bei der Sicherstellung einer zuverlässigen und effizienten Kommunikation. Durch die Kenntnis dieser Elemente können Entwickler und Ingenieure robustere und effizientere CAN-basierte Systeme gestalten und implementieren.
 
  

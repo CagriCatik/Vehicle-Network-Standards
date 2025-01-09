@@ -61,6 +61,3 @@ CAN-FD ist abwärtskompatibel zum klassischen CAN ausgelegt und ermöglicht so e
 
 Trotz der höheren Datenraten bewahrt CAN-FD das deterministische Verhalten, das für Automobilanwendungen entscheidend ist, und gewährleistet eine zuverlässige und vorhersehbare Kommunikation zwischen kritischen Systemen.
 
-## Schlussfolgerung
-
-CAN-FD stellt einen bedeutenden Fortschritt im CAN-Protokoll dar und adressiert die wachsenden Anforderungen an höhere Bandbreiten und effiziente Datenübertragung in modernen Fahrzeugen. Durch die Integration variabler Bitraten und erweiterter Datenlängen bietet CAN-FD eine robuste Lösung, die die Leistung von Automobilnetzwerken verbessert und gleichzeitig die Kompatibilität mit bestehenden Systemen aufrechterhält. Angesichts der fortschreitenden Entwicklung der Automobiltechnologie ist CAN-FD eine entscheidende Innovation, die sicherstellt, dass die Kommunikation innerhalb von Fahrzeugen effizient, zuverlässig und skalierbar bleibt.

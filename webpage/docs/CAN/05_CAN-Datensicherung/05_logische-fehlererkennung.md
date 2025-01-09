@@ -37,11 +37,3 @@ Der CRC ist ein wesentliches Werkzeug zur Erkennung von Übertragungsfehlern. Da
 #### 5. ACK-Check (Sender)
 
 Das CAN-Protokoll beinhaltet einen Bestätigungsmechanismus, bei dem alle Empfänger einer CAN-Botschaft diese nach dem CRC prüfen und bestätigen müssen. Eine positive Bestätigung reicht aus, um dem Sender mitzuteilen, dass die Botschaft korrekt empfangen wurde. Bleibt diese Bestätigung aus, tritt ein ACK-Fehler auf.
-
-### Zusammenfassung
-
-Die Kombination dieser fünf Mechanismen stellt sicher, dass das CAN-Protokoll eine hohe Zuverlässigkeit und Integrität der Datenübertragung bietet. Jeder Mechanismus deckt unterschiedliche Fehlerarten ab und trägt somit zu einem umfassenden Fehlererkennungssystem bei. Die Implementierung und das Verständnis dieser Mechanismen sind für die Entwicklung und Wartung von CAN-basierten Netzwerken von entscheidender Bedeutung, insbesondere in sicherheitskritischen Anwendungen wie der Automobilindustrie.
-
-### Kritische Bewertung
-
-Während das CAN-Protokoll eine robuste Fehlererkennung bietet, ist es nicht frei von Einschränkungen. Ein hohes Maß an Redundanz und die strikte Überwachung der Bitübertragung können zu einer erhöhten Latenz führen. Zudem sind die Mechanismen darauf ausgelegt, zufällige Fehler zu erkennen und nicht notwendigerweise absichtliche Manipulationen oder Angriffe abzuwehren. Daher ist es in sicherheitskritischen Anwendungen ratsam, ergänzende Schutzmechanismen, wie zum Beispiel kryptografische Sicherungen, in Betracht zu ziehen.

@@ -36,8 +36,3 @@ Die inhaltsbezogene Adressierung im CAN-Bus ist besonders flexibel und effizient
 
 Durch die Erweiterung auf 29-Bit-Identifiers im Extended-Format wird die Skalierbarkeit des Systems erheblich erhöht, was besonders in modernen Fahrzeugen mit einer Vielzahl von Steuergeräten und Sensoren von Vorteil ist. Diese Flexibilität ist jedoch nur durch eine effektive Akzeptanzfilterung auf Empfängerseite gewährleistet.
 
-## Schlussfolgerung
-
-Die inhaltsbezogene Adressierung im CAN-Bus, kombiniert mit den beiden verfügbaren Botschaftsformaten, bietet eine hochflexible und skalierbare Kommunikationslösung für den Automobilbereich. Das Standard-Format mit 11-Bit-Identifiers ermöglicht eine einfache und schnelle Nachrichtenübertragung, während das Extended-Format mit 29-Bit-Identifiers eine erweiterte Adressierbarkeit für komplexere Systeme bietet.
-
-Durch die klare Trennung und Definition von Kontrollbits und die effiziente Nutzung von Filtermechanismen können CAN-Netzwerke auch in sehr anspruchsvollen Anwendungen zuverlässig und performant arbeiten.

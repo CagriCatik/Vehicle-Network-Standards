@@ -41,6 +41,3 @@ Eine praktische Aufgabe, wie die Simulation des Buszugriffs im CAN-Netzwerk, kan
 
 - **Buszugriff im CAN-Netzwerk:** Entwickeln Sie die Botschaftsabfolge für eine zufällige Konstellation von Data Frames und Ereignissen. Dies hilft, die Auswirkungen der Priorität und Buslast auf die Nachrichtenübertragung zu beobachten und zu verstehen.
 
-## Schlussfolgerung
-
-Ein tiefes Verständnis der Prioritäten und der Buslast im CAN-Bus ist entscheidend für die Entwicklung effizienter und zuverlässiger Kommunikationssysteme im Automobilbereich. Die Wahl der richtigen Prioritäten und die Berücksichtigung der Buslast sind essenziell, um die Echtzeitfähigkeit des Systems zu gewährleisten und Verzögerungen zu minimieren. Durch theoretische Analysen und praktische Übungen können Entwickler ihre Fähigkeiten und ihr Wissen im Umgang mit dem CAN-Bus verbessern.

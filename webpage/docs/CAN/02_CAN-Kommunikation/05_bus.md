@@ -30,7 +30,3 @@ Das dargestellte Diagramm zeigt ein typisches CAN-Netzwerk mit drei CAN-Knoten. 
 
 ![CAN-Knoten](/img/can/1712019030667.png)
 
-
-### Schlussfolgerung
-
-Ein tiefes Verständnis der physikalischen Prinzipien der CAN-Kommunikation, einschließlich der Differenzsignalübertragung, der Verwendung verdrillter Leiterpaare und der Rolle von Abschlusswiderständen, ist essenziell für die Entwicklung zuverlässiger und effizienter Netzwerke in der Automobilindustrie. Dieses Tutorial hat die wesentlichen Aspekte dieser Technologie beleuchtet und bietet eine solide Grundlage für weiterführende Studien und Anwendungen im Bereich der Fahrzeug-Elektronik.

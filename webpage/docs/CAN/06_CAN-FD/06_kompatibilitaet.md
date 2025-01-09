@@ -51,6 +51,3 @@ Die Implementierung von CAN-FD erfordert Hardware, die CAN-FD unterstützt, sowi
 
 CAN-FD findet Anwendung in Bereichen, in denen eine hohe Datenrate und große Datenmengen erforderlich sind, z.B. in ADAS (Advanced Driver Assistance Systems), Infotainment-Systemen und der Kommunikation zwischen Sensoren und Aktuatoren.
 
-## Schlussfolgerung
-
-CAN-FD stellt eine bedeutende Weiterentwicklung des klassischen CAN-Protokolls dar, die den gestiegenen Anforderungen an Datenkommunikation in modernen Fahrzeugen gerecht wird. Während klassische CAN Controller nicht mit CAN-FD-Botschaften kompatibel sind, können CAN-FD Controller beide Protokolle unterstützen, was eine schrittweise Einführung in bestehende Systeme ermöglicht. Die Vorteile von CAN-FD, wie erhöhte Datenrate und größere Datenfelder, machen es zu einer zukunftssicheren Lösung für die Automobilindustrie.

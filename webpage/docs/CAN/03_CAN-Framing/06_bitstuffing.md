@@ -28,6 +28,3 @@ Es ist wichtig zu beachten, dass die theoretische maximale Anzahl von Stuffbits 
 
 Ein weiterer Punkt, der wissenschaftlich betrachtet werden muss, ist die mögliche Verzögerung durch das Bitstuffing. Jede eingefügte Stuffbit verlängert die Übertragungszeit eines Frames geringfügig, was bei sehr zeitkritischen Anwendungen berücksichtigt werden muss.
 
-## Schlussfolgerung
-
-Die Synchronisation und Resynchronisation sind essenzielle Mechanismen im CAN-Bus, um eine präzise und zuverlässige Datenübertragung zu gewährleisten. Der Bitstuffing-Mechanismus spielt dabei eine zentrale Rolle, indem er sicherstellt, dass stets genügend Signalflanken für die Resynchronisation vorhanden sind. Ein tiefgehendes Verständnis dieser Prozesse ist entscheidend für die Entwicklung und Analyse robuster CAN-Netzwerke im Automotive-Bereich.

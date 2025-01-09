@@ -20,5 +20,6 @@ Das untere Bild zeigt ein typisches CAN-Netzwerk mit drei CAN-Knoten (Steuerger�
 
 ![CAN-Knoten](/img/can/can_knoten.png)
 
+---
 
 Ein CAN-Netzwerk ist eine wesentliche Komponente in der Fahrzeugtechnik, die eine zuverlässige und effiziente Kommunikation zwischen verschiedenen elektronischen Steuergeräten ermöglicht. Durch die Einhaltung der beschriebenen technischen Spezifikationen und Normen kann die Leistungsfähigkeit und Zuverlässigkeit eines CAN-Systems sichergestellt werden.

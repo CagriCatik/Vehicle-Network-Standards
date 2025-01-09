@@ -30,16 +30,6 @@ Um die beschriebenen Vorteile zu maximieren, werden die beiden Leitungen des CAN
 
 Die Wirksamkeit der Verdrillung hängt von der Anzahl der Umschlingungen ab. Mehr Umschlingungen pro Längeneinheit führen zu einer besseren Unterdrückung der induzierten Störungen. Im Allgemeinen wird eine Verdrillungsrate von mindestens 30 Umschlingungen pro Meter empfohlen, um eine ausreichende Reduktion der magnetischen Einflüsse zu gewährleisten.
 
-## Zusammenfassung
 
-Die symmetrische Signalübertragung ist ein entscheidendes Konzept im Automotivebereich, das durch die Differenzbildung und die Verwendung von verdrillten Leitungspaaren eine hohe Störsicherheit gewährleistet. Diese Techniken minimieren die elektromagnetische Abstrahlung und verbessern die Zuverlässigkeit und Leistungsfähigkeit des CAN-Bus-Systems.
-
-## Weiterführende Themen
-
-Für ein tieferes Verständnis könnten folgende Themen weiter untersucht werden:
-
-- Spezifische Implementierungen von CAN-Bus-Systemen in verschiedenen Fahrzeugmodellen.
-- Vergleich der symmetrischen Signalübertragung mit anderen Signalübertragungstechniken.
-- Auswirkungen unterschiedlicher Verdrillungsraten auf die Signalqualität in verschiedenen Betriebsumgebungen.
 
  

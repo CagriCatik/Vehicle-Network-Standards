@@ -51,8 +51,6 @@ Bei der Implementierung von CAN-FD sind folgende Punkte zu beachten:
 - **Konfiguration**: Konfigurieren Sie die Bit-Timing-Einstellungen richtig, um höhere Datenraten zu unterstützen. Dies umfasst das Einrichten der nominalen Bitrate und der Datenphasen-Bitrate.
 - **Fehlerbehandlung**: Implementieren Sie robuste Fehlerbehandlungs- und Wiederherstellungsmechanismen, angesichts der höheren Datenraten und größeren Nutzlasten.
 
-## Schlussfolgerung
 
-CAN-FD bietet signifikante Verbesserungen gegenüber dem klassischen CAN, indem es höhere Datendurchsätze und größere Effizienz ermöglicht. Die Einführung des FDF-Bits, erweiterte Datenfelder und die Bitratenumschaltung sind Schlüsselmerkmale, die CAN-FD in die Lage versetzen, den Anforderungen moderner Automobilanwendungen gerecht zu werden. Das Verständnis dieser Elemente und ihrer Auswirkungen ist entscheidend, um CAN-FD im automobilen Netzwerk effektiv nutzen zu können.
 
  

@@ -43,9 +43,3 @@ Die Arbitrierungslogik entscheidet, welches Steuergerät nach der Synchronisatio
 ## Ende der Arbitrierungsphase
 
 Am Ende der Arbitrierungsphase hat das Steuergerät mit der Nachricht mit der kleinsten ID die Berechtigung zu senden. Alle anderen Steuergeräte wechseln in den Empfangszustand und versuchen erneut zu senden, sobald der Bus wieder frei ist.
-
-## Schlussfolgerung
-
-Die bitweise Arbitrierung im CAN-Netzwerk ist ein komplexer, aber effizienter Mechanismus, der sicherstellt, dass nur das Steuergerät mit der höchsten Priorität seine Nachricht senden kann. Dies verhindert Datenkollisionen und sorgt für eine zuverlässige Kommunikation zwischen den Steuergeräten in einem Fahrzeug.
-
-Die detaillierte Abbildung des Buszugriffsprozesses und die Erklärung der einzelnen Schritte bieten eine umfassende Übersicht über die Funktionsweise der bitweisen Arbitrierung und deren Bedeutung für die Fahrzeugkommunikation. Diese Methode ist entscheidend für die hohe Zuverlässigkeit und Robustheit moderner Fahrzeugsysteme.

@@ -65,6 +65,4 @@ Ein CAN FD Rahmen besteht aus mehreren Feldern, die die Struktur und den Inhalt 
 3. **Erweiterte Fehlererkennung:** Die erweiterte CRC ermöglicht eine verbesserte Fehlererkennung bei größeren Datenmengen.
 4. **Flexibilität:** CAN FD bietet durch die flexible Datenrate und die größere Datenfeldlänge eine bessere Anpassung an unterschiedliche Anwendungen und Anforderungen.
 
-## Schlussfolgerung
 
-CAN FD stellt eine bedeutende Weiterentwicklung des klassischen CAN-Protokolls dar, um den gestiegenen Anforderungen moderner Fahrzeugsysteme gerecht zu werden. Die wesentlichen Änderungen im Bereich zwischen dem IDE- und dem ACK-Bit bieten erweiterte Funktionalitäten und höhere Effizienz, was CAN FD zu einem unverzichtbaren Standard in der Automobilindustrie macht. Die genaue Implementierung und Nutzung von CAN FD erfordert ein tiefes Verständnis der Protokollspezifikationen und der entsprechenden Hardwareunterstützung, um die Vorteile vollständig ausschöpfen zu können.

@@ -52,7 +52,4 @@ Remote Frames könnten in speziellen Fällen nützlich sein, beispielsweise in D
 
 Bei der Implementierung von Remote Frames müssen Sicherheits- und Leistungsaspekte berücksichtigt werden. Unbeabsichtigte oder böswillige Nutzung von Remote Frames könnte zu unnötigem Datenverkehr und erhöhtem Netzwerklast führen, was die Leistung und Zuverlässigkeit des Gesamtsystems beeinträchtigen kann.
 
-## Zusammenfassung
-
-Remote Frames bieten eine Möglichkeit, Nutzdaten im CAN-Netzwerk anzufordern, werden jedoch im Automobilbereich aufgrund der überwiegend ereignisgesteuerten Kommunikation selten genutzt. Das Verständnis des Aufbaus und der Funktion von Remote Frames sowie deren Vor- und Nachteile ist für die Planung und Implementierung von CAN-Netzwerken essenziell. Die Entscheidung, Remote Frames zu nutzen, sollte sorgfältig abgewogen werden, insbesondere in sicherheitskritischen und leistungsabhängigen Anwendungen.
  

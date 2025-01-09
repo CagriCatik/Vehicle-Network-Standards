@@ -32,6 +32,4 @@ Das Missverständnis, dass höhere Übertragungsraten nur möglich sind, wenn al
 
 Ein weiterer Vorteil von CAN-FD ist, dass es sich um eine Erweiterung des klassischen CAN-Protokolls handelt und nicht um eine völlig neue Technologie. Daher bleibt das bestehende Wissen, die Fähigkeiten und Erfahrungen mit CAN weiterhin relevant und anwendbar. Dieser Kontinuität gewährleistet, dass der Übergang von CAN zu CAN-FD ohne umfangreiche Schulungen oder den Verlust bisheriger Errungenschaften erfolgen kann.
 
-## Schlussfolgerung
 
-CAN-FD stellt eine bedeutende Weiterentwicklung im Bereich der Automobilnetzwerke dar, indem es höhere Datenraten und effizientere Kommunikation bietet und gleichzeitig die Kompatibilität mit bestehenden Systemen beibehält. Seine Implementierung kann Entwicklungsprozesse vereinfachen, die Anzahl der erforderlichen Busse reduzieren und die Gesamtleistung des Netzwerks verbessern. Durch die Nutzung des vorhandenen Wissens über das klassische CAN-Protokoll kann der Übergang zu CAN-FD reibungslos und kosteneffektiv gestaltet werden, wodurch die Vorteile dieser fortschrittlichen Technologie leicht zugänglich sind.

@@ -75,6 +75,3 @@ CAN-FD bietet mehrere Vorteile gegenüber dem klassischen CAN, einschließlich:
 - **Verbesserte Effizienz**: Mehr Daten können in weniger Frames übertragen werden, wodurch der Overhead reduziert und die Bandbreitenausnutzung verbessert wird.
 - **Erhöhte Flexibilität**: Die flexible Datenrate ermöglicht eine dynamische Anpassung der Datenraten an verschiedene Anwendungen.
 
-## Schlussfolgerung
-
-CAN-FD stellt einen bedeutenden Fortschritt in der Automobilnetzwerktechnologie dar, indem es höhere Datenraten, erhöhte Nutzlastkapazität und verbesserte Netzwerkmanagementfähigkeiten bietet. Der Error State Indicator (ESI) spielt eine entscheidende Rolle bei der Verbesserung der Fehlerverfolgung und des Managements, wodurch CAN-FD eine robuste Wahl für moderne fahrzeuginterne Kommunikationssysteme ist. Durch das Verständnis und die Implementierung von CAN-FD können Automobilingenieure effizientere, zuverlässigere und skalierbarere Netzwerke entwerfen, die den Anforderungen moderner Fahrzeuge gerecht werden.

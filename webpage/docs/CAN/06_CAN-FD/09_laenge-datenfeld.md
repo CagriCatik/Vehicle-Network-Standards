@@ -78,8 +78,6 @@ Die Verbesserungen in CAN-FD, insbesondere in Bezug auf DLC und Datenfeldgröße
 2. **Skalierbarkeit:** Die flexiblen Datenfeldlängen von CAN-FD machen es für eine breite Palette von Anwendungen geeignet, von einfachen Sensordatenübertragungen bis hin zu komplexen Datenaustauschen in fortschrittlichen Fahrerassistenzsystemen (ADAS).
 3. **Zukunftssicherheit:** Die höheren Datenraten und die erhöhte Nutzlastkapazität stellen sicher, dass CAN-FD den wachsenden Datenkommunikationsanforderungen zukünftiger Automobiltechnologien, einschließlich autonomem Fahren und vernetzten Fahrzeugsystemen, gerecht wird.
 
-## Schlussfolgerung
 
-CAN und CAN-FD sind wesentliche Komponenten moderner Fahrzeugkommunikationsnetzwerke. Das Verständnis der Unterschiede in DLC und Datenfeldgrößen zwischen den beiden Protokollen ist entscheidend, um ihre Fähigkeiten effektiv zu nutzen. Die Verbesserungen von CAN-FD, insbesondere die Unterstützung größerer Datenfeldgrößen und höherer Datenraten, machen es zu einem leistungsstarken Upgrade vom klassischen CAN und adressieren die sich entwickelnden Anforderungen der Automobilindustrie.
 
  

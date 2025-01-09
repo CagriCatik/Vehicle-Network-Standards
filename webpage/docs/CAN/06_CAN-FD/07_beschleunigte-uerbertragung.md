@@ -43,6 +43,3 @@ Der Wechsel zwischen Baudrate 1 und Baudrate 2 erfolgt an bestimmten Punkten inn
 
 Um sicherzustellen, dass die Empfänger die Hochgeschwindigkeits-Datenphase effektiv verarbeiten können, wird unmittelbar vor der Bitratenumschaltung eine zweite, harte Synchronisation durchgeführt. Diese harte Synchronisation stellt sicher, dass die Zeitabstimmung zwischen Sender und Empfänger perfekt aufeinander abgestimmt ist, um das Risiko von Datenkorruption oder -verlust zu minimieren.
 
-## Schlussfolgerung
-
-CAN-FD, mit seiner Bitratenumschaltung und den erhöhten Datenraten, bietet erhebliche Verbesserungen gegenüber dem klassischen CAN und ist somit geeignet für moderne Automobilanwendungen, die höhere Bandbreiten und Effizienz erfordern. Das Verständnis und die korrekte Implementierung von Funktionen wie BRS und das Management der Übertragungsraten sind entscheidend, um das volle Potenzial von CAN-FD in Automobilnetzwerken auszuschöpfen. Zukünftige Entwicklungen und Tests in realen Umgebungen werden diese Implementierungen weiter verfeinern und eine robuste und zuverlässige Kommunikation in zunehmend komplexeren Fahrzeugumgebungen sicherstellen.

@@ -54,8 +54,4 @@ Die Implementierung von CAN-FD in Automobilen erfordert eine sorgfältige Planun
 - **CAN-FD-fähige Transceiver und Controller:** Diese müssen die höheren Datenraten und die neuen Frame-Formate unterstützen.
 - **Angepasste Software-Stacks:** Die Software muss in der Lage sein, die neuen CRC-Berechnungen und die flexiblen Datenraten zu handhaben.
 
-## Schlussfolgerung
 
-CAN-FD stellt einen wichtigen Fortschritt im Bereich der automobilen Netzwerke dar, indem es höhere Datenraten und größere Nutzlasten ermöglicht. Die Erweiterung der CRC-Felder und die Einführung von robusteren Fehlererkennungsmechanismen tragen dazu bei, die Zuverlässigkeit der Datenübertragung in modernen Fahrzeugen zu erhöhen. Bei der Implementierung von CAN-FD müssen jedoch sorgfältig die erhöhten Anforderungen an Hardware und Software berücksichtigt werden, um die Vorteile vollständig auszuschöpfen.
-
-Dieses Tutorial bietet einen Überblick über die wesentlichen Aspekte von CAN-FD und dessen Vorteile gegenüber dem klassischen CAN-Protokoll. Durch die detaillierte Beschreibung der CRC-Berechnung und die Hervorhebung der technischen Vorteile wird die Bedeutung von CAN-FD für moderne Automobile verdeutlicht.

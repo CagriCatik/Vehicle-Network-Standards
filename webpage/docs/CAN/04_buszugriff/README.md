@@ -1,4 +1,4 @@
-# CAN-Buszugriff
+# Buszugriff
 
 - [Prinzip](./01_prinzip.md)
 - [Arbitrierung](./02_arbitrierung.md)

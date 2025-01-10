@@ -1,49 +1,75 @@
-### LIN-Kommunikation im Fahrzeug
+## Prozesse in der LIN-Kommunikation
 
-#### Master-Task und Slave-Task
+### Einführung in die Aufgabenverteilung
 
-In der Local Interconnect Network (LIN) Kommunikation gibt es keinen dedizierten Kommunikationscontroller. Stattdessen wird das Protokoll als Softwarekomponente auf dem Mikrocontroller implementiert. Jeder Knoten in einem LIN-Netzwerk besitzt daher entweder eine Master- oder eine Slave-Task, um die notwendige Kommunikation abzuwickeln. Grundsätzlich verfügt jeder Knoten über eine Slave-Task, die zum Empfangen und Senden von Informationen dient. Der Master-Knoten hat zusätzlich eine Master-Task, die das Senderecht verteilt und den Buszugriff regelt.
+Die Kommunikation im Local Interconnect Network (LIN) basiert auf der Implementierung des Protokolls als Softwarekomponente im Mikrocontroller der Knoten. Im Gegensatz zu anderen Bussystemen wird kein dedizierter Kommunikationscontroller verwendet. Stattdessen wird die LIN-Kommunikation durch softwarebasierte Prozesse abgewickelt, die als **Master-Task** und **Slave-Task** bezeichnet werden. Jeder Knoten im Netzwerk besitzt mindestens eine Slave-Task, während der Master-Knoten zusätzlich eine Master-Task ausführt, die das Senderecht verteilt und den Buszugriff koordiniert.
 
-#### Master-Verhalten
+### Master-Task: Steuerung und Zeitmanagement
 
-Wenn ein LIN-Netzwerk in Betrieb genommen wird, wird die Master-Task im Master-Knoten gestartet. Diese beginnt mit der zyklischen Abarbeitung des sogenannten Schedules, das das gewünschte Sendeschema abbildet. In diesem Schedule sind Slots für die einzelnen Botschaften definiert. Diese Slots müssen groß genug sein, um sowohl den Frame Header als auch die Frame Response zu übertragen. In jedem Slot wird immer ein kompletter Frame übertragen.
+Die Master-Task im Master-Knoten ist für die zentrale Steuerung des LIN-Netzwerks verantwortlich. Sobald das Netzwerk in Betrieb genommen wird, beginnt die Master-Task mit der zyklischen Abarbeitung des **Schedule Tables**, der das festgelegte Sendeschema abbildet. 
 
-#### Slave-Verhalten
+#### Ablauf der Master-Task:
+1. **Start des Schedules:** Der Master initiiert die Kommunikation, indem er die Einträge im Schedule Table nacheinander abarbeitet. Jeder Eintrag definiert einen **Slot**, in dem ein vollständiger Frame übertragen wird.
+2. **Frame Header:** Für jeden Slot sendet der Master-Knoten den Frame Header, bestehend aus:
+   - **Break-Feld**: Signalisiert den Beginn des Frames und dient als Synchronisationspunkt.
+   - **Sync-Feld**: Legt die Baudrate fest, damit die Slaves sich auf die Übertragung einstellen können.
+   - **Identifier-Feld**: Enthält die Kennung der Nachricht und gibt an, welcher Slave darauf reagieren soll.
+3. **Koordination der Slaves:** Nach dem Senden des Frame Headers überlässt der Master den Bus an den zuständigen Slave, der entsprechend antwortet.
 
-Für die Slave-Tasks wird ein spezifisches Antwortverhalten definiert. Dieses Verhalten legt fest, wie eine Slave-Task auf einen empfangenen Header reagieren soll. Mögliche Reaktionen umfassen das Senden einer Response, das Empfangen einer Response oder das Ignorieren des Headers. Eine gesendete Response kann generell von jeder Slave-Task empfangen werden. Das gewünschte Antwortverhalten der einzelnen Knoten ist in der LIN Description File (LDF) beschrieben.
+Durch die strikte Einhaltung des Schedules stellt die Master-Task sicher, dass die Kommunikation deterministisch bleibt und alle Knoten ihre vorgesehenen Aufgaben innerhalb der vorgegebenen Zeitfenster ausführen können.
 
-#### Technische Details und Protokollstruktur
+### Slave-Task: Reaktive Kommunikation
 
-##### Frame-Struktur
+Jeder Knoten im LIN-Netzwerk führt eine Slave-Task aus, die auf empfangene Anfragen des Masters reagiert. Die Reaktion einer Slave-Task hängt vom Inhalt des empfangenen **Frame Headers** ab. Das Verhalten wird durch die Konfiguration in der **LIN Description File (LDF)** festgelegt.
 
-Ein LIN-Frame besteht aus mehreren Komponenten:
+#### Mögliche Reaktionen der Slave-Task:
+1. **Senden einer Response:** Der Slave-Knoten liefert eine Antwort, die im Data-Feld des Frames enthalten ist.
+2. **Empfangen einer Response:** Der Slave nimmt die vom Master oder einem anderen Slave gesendete Antwort entgegen.
+3. **Ignorieren des Headers:** Der Slave reagiert nicht, wenn der Frame Header für ihn irrelevant ist.
 
-- **Break-Feld**: Signalisiert den Beginn eines Frames.
-- **Sync-Feld**: Synchronisationsfeld, das die Baudrate festlegt.
-- **Identifier-Feld**: Beinhaltet die Kennung der Nachricht.
-- **Data-Feld**: Enthält die eigentlichen Nutzdaten.
-- **Checksum-Feld**: Dient der Fehlererkennung.
+Dieses reaktive Verhalten ermöglicht eine effiziente Nutzung des Busses, da nur die Knoten aktiv werden, die für die aktuelle Kommunikation relevant sind. Die Konfiguration der Slave-Tasks durch die LDF gewährleistet, dass jeder Knoten genau weiß, wann und wie er auf bestimmte Header reagieren soll.
 
-Der Master-Knoten sendet den Break, das Sync-Feld und das Identifier-Feld. Die Slaves reagieren basierend auf ihrer Konfiguration im LDF.
+### Technische Details und Protokollstruktur
 
-##### Kommunikationsplan (Schedule Table)
+#### LIN-Frame-Struktur
+Ein vollständiger LIN-Frame besteht aus mehreren standardisierten Komponenten, die eine zuverlässige Kommunikation ermöglichen:
+1. **Break-Feld:** Signalisiert den Beginn des Frames und sorgt für eine klare Trennung zwischen den Übertragungen.
+2. **Sync-Feld:** Dient zur Synchronisation der Baudrate zwischen Master und Slaves.
+3. **Identifier-Feld:** Beinhaltet die Kennung des Frames, die die Empfänger darüber informiert, welche Daten folgen und wie sie darauf reagieren sollen.
+4. **Data-Feld:** Enthält die eigentlichen Nutzdaten, die zwischen den Knoten übertragen werden.
+5. **Checksum-Feld:** Ermöglicht die Fehlererkennung und erhöht die Zuverlässigkeit der Datenübertragung.
 
-Der Schedule Table ist ein wesentlicher Bestandteil der LIN-Kommunikation. Er definiert, wann welcher Frame gesendet wird und stellt sicher, dass die Kommunikation deterministisch abläuft. Jeder Eintrag im Schedule Table enthält:
+Diese klare Struktur stellt sicher, dass alle Knoten die Frames korrekt interpretieren und die Kommunikation robust bleibt.
 
-- **Slotzeit**: Dauer des Slots.
-- **Frame-Informationen**: Welcher Frame in diesem Slot übertragen wird.
+#### Schedule Table
+Der **Schedule Table** ist ein zentrales Element der LIN-Kommunikation, da er den zeitlichen Ablauf der Frames steuert. Jeder Eintrag im Schedule Table definiert:
+- **Slotzeit:** Die Dauer des Slots, die ausreichend lang sein muss, um den vollständigen Frame zu übertragen.
+- **Frame-Informationen:** Angaben darüber, welcher Frame in diesem Slot gesendet werden soll.
 
-#### Implementierung und Konfiguration
+Die deterministische Natur des Schedule Tables ermöglicht eine präzise Planung und Synchronisation der Kommunikation im gesamten Netzwerk.
 
-Die Implementierung eines LIN-Netzwerks erfordert eine sorgfältige Planung und Konfiguration:
+### Implementierung und Konfiguration
 
-- **Master-Task**: Muss den Schedule Table korrekt abarbeiten und die Frames gemäß den Zeitvorgaben senden.
-- **Slave-Task**: Muss auf die empfangenen Header korrekt reagieren und die vorgesehenen Daten senden oder empfangen.
+Die erfolgreiche Implementierung eines LIN-Netzwerks erfordert eine sorgfältige Planung und Konfiguration, die durch die LIN Description File (LDF) unterstützt wird. Diese Datei enthält alle relevanten Informationen über das Netzwerk, einschließlich:
+- Frame-Strukturen und deren Identifier.
+- Zeitliche Vorgaben für die Slots im Schedule Table.
+- Verhalten der Slave-Tasks bei verschiedenen Frame Headers.
 
-Die Konfiguration erfolgt hauptsächlich durch die LIN Description File (LDF), die alle relevanten Informationen wie die Frames, ihre IDs und das Verhalten der Slaves enthält.
+#### Aufgaben der Master-Task:
+- Exakte Abarbeitung des Schedule Tables.
+- Generierung und Übertragung der Frame Headers.
+- Überwachung der korrekten Ausführung durch die Slaves.
 
-#### Fehlererkennung und Diagnostik
+#### Aufgaben der Slave-Task:
+- Reaktion auf empfangene Frame Headers gemäß der LDF.
+- Senden und Empfangen von Daten entsprechend der vorgesehenen Konfiguration.
 
-LIN bietet grundlegende Mechanismen zur Fehlererkennung, darunter die Checksum im Frame. Bei der Implementierung müssen zudem Diagnostik-Frames berücksichtigt werden, die dem Master und den Slaves ermöglichen, ihren Status mitzuteilen und Fehler zu melden.
+Die LDF spielt eine zentrale Rolle bei der Definition der Kommunikationsprozesse und ermöglicht eine effiziente Implementierung und Fehlerdiagnose.
 
-Durch die genaue Beachtung dieser technischen Details und Protokollstrukturen kann ein robustes und effizientes LIN-Kommunikationsnetzwerk im Fahrzeug aufgebaut werden.
+### Fehlererkennung und Diagnostik
+
+LIN bietet grundlegende Mechanismen zur Fehlererkennung, die in die Protokollstruktur integriert sind:
+- **Checksum-Feld:** Jedes Frame enthält eine Prüfsumme, die es den Empfängern ermöglicht, Übertragungsfehler zu erkennen.
+- **Diagnostik-Frames:** Diese speziellen Frames ermöglichen es, den Status der Knoten zu überwachen und Fehler an den Master zu melden.
+
+Diese Mechanismen tragen wesentlich zur Zuverlässigkeit und Stabilität des Netzwerks bei, insbesondere in Umgebungen mit hoher elektromagnetischer Störanfälligkeit.

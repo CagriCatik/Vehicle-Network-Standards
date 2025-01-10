@@ -1,4 +1,4 @@
-# CAN-Framing
+# Framing
 
 - [Frametypen](./01_frametypen.md)
 - [Data-Frame](./02_data-frame.md)

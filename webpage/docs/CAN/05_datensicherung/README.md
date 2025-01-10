@@ -1,4 +1,4 @@
-# CAN-Datensicherung
+# Datensicherung
 
 - [Datensicherung](./01_datensicherung.md)
 - [NRZ-Codierung](./02_nrz-codierung.md)

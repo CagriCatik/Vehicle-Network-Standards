@@ -18,8 +18,6 @@ Die konventionelle Vernetzung, wie im linken Teil des Bildes dargestellt, zeigt 
 
 ![CAN-Netzwerk](/img/can/can_netzwerk.png)
 
-
-
 Das obige Bild veranschaulicht den Unterschied zwischen konventioneller Vernetzung und Busvernetzung. Links sind mehrere ECUs direkt miteinander verbunden, was eine aufwendige und unübersichtliche Verkabelung darstellt. Rechts hingegen sind die ECUs über einen gemeinsamen Bus verbunden, was die Verkabelung erheblich vereinfacht und effizienter macht. Darunter ist ein Signalverlauf dargestellt, der die bitserielle Datenübertragung im CAN-Bus symbolisiert.
 
 ## Einführung des seriellen Kommunikationssystems

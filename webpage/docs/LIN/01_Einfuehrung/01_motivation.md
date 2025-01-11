@@ -48,6 +48,7 @@ Dank seiner kosteneffizienten und einfachen Implementierung findet LIN breite An
 
 - Türmodule: Elektronische Türmodule, die Funktionen wie die zentrale Verriegelung, das Einparken und die Innenraumbeleuchtung steuern, verwenden LIN für die Kommunikation zwischen den Steuergeräten und den entsprechenden Aktoren.
 
-<img src="./image/1716459892814.png" alt="drawing" width="400"/>
+
+![slave](/img/lin/1716459892814.png)
 
 Durch die Integration von LIN in diese und weitere Anwendungen können Fahrzeughersteller die Gesamtkosten der Fahrzeugvernetzung senken, die Komplexität der Verkabelung reduzieren und gleichzeitig eine zuverlässige und effiziente Kommunikation zwischen den elektronischen Komponenten sicherstellen. LIN hat sich somit als unverzichtbares Kommunikationssystem für eine Vielzahl von Komfort- und Bedienelementen in modernen Fahrzeugen etabliert und trägt maßgeblich zur weiteren Elektronifizierung und Vernetzung von Fahrzeugen bei.

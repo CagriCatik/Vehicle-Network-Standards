@@ -1,0 +1,1 @@
+https://www.monolithicpower.com/en/learning/mpscholar/automotive-electronics/automotive-electronic-systems/vehicle-electronics-architecture

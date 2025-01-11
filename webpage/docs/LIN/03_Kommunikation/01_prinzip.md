@@ -1,6 +1,4 @@
-# Kommunikationsprinzipien im LIN-Bus
-
-## Master-Slave-Architektur
+# Kommunikationsprinzipien
 
 Das Local Interconnect Network (LIN) basiert auf einer zentralen **Master-Slave-Architektur**, die die Kommunikation innerhalb eines LIN-Clusters organisiert. Dabei gibt es stets einen einzigen Master-Knoten, der die gesamte Kommunikation zwischen den Slave-Knoten steuert. Der Master ist für das Initiieren von Datenübertragungen verantwortlich und sorgt dafür, dass alle Slaves in einem geordneten Ablauf Daten senden und empfangen können.
 

@@ -1,4 +1,4 @@
-# LIN-Bus Controller Schnittstellen und Datenübertragung
+# Controller Schnittstellen und Datenübertragung
 
 ## Controller Schnittstellen
 

@@ -1,4 +1,4 @@
-# LIN - Grundaufbau
+# Grundaufbau
 
 ## Einführung in den LIN-Cluster
 

@@ -1,7 +1,5 @@
 # Scheduling im LIN-Bus
 
-## Einführung in das Sendeschema
-
 Im LIN-Bus-System wird die Kommunikation innerhalb eines Clusters zentral vom Master-Knoten gesteuert. Der Master verwendet ein festgelegtes **Sendeschema**, das die zeitliche Abfolge der Datenübertragung bestimmt. Dieses Sendeschema, auch als **Schedule** bezeichnet, ist im **LIN Description File (LDF)** beschrieben und wird vom Systemdesigner im Voraus geplant. Durch diese strikte Planung wird eine **deterministische Kommunikation** gewährleistet, bei der die Reihenfolge und die zeitlichen Intervalle der Datenübertragungen im gesamten Netzwerk vorhersagbar sind.
 
 Das Sendeschema teilt die verfügbare Zeit in klar definierte Einheiten ein, sogenannte **Slots**, die jeweils für die Übertragung eines einzelnen Frames reserviert sind. Jeder Frame wird innerhalb seines zugewiesenen Slots übertragen, wodurch eine geordnete und kollisionsfreie Kommunikation im Netzwerk ermöglicht wird.

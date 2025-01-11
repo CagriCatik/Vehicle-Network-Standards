@@ -2,7 +2,8 @@
 
 In der modernen Fahrzeugtechnik ist das Local Interconnect Network (LIN) eine entscheidende Kommunikationsschnittstelle, die zur Steuerung und Überwachung verschiedener elektronischer Komponenten eingesetzt wird. Dieses Tutorial bietet eine detaillierte Analyse des LIN-Workflows, wie in der beigefügten Abbildung dargestellt, und stellt sicher, dass alle Informationen präzise und wissenschaftlich fundiert sind.
 
-<img src="./image/1716461381703.png" alt="drawing" width="600"/>
+
+![slave](/img/lin/1716461381703.png)
 
 ## Überblick über den LIN-Workflow
 

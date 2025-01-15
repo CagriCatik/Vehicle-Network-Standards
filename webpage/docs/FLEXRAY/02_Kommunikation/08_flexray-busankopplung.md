@@ -1,6 +1,4 @@
-# FlexRay - Busankopplung
-
-## Einleitung
+# Busankopplung
 
 FlexRay ist ein robustes und zuverlässiges Kommunikationsprotokoll, das speziell für den Einsatz in der Fahrzeugelektronik entwickelt wurde. Es bietet eine hohe Datenrate und deterministische Kommunikation, was es ideal für sicherheitskritische Anwendungen macht. In diesem Tutorial werden wir die Rolle des FlexRay Controllers und des FlexRay Transceivers erläutern und auf die technische Umsetzung und Herausforderungen bei der Integration in Fahrzeuge eingehen.
 

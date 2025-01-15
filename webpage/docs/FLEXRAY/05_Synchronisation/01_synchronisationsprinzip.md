@@ -22,7 +22,3 @@ Um eine netzwerkweite Zeitbasis herzustellen, ist es notwendig, die lokalen Zeit
 
 - **Phasenkorrektur (Offsetkorrektur)**: Diese Korrektur justiert den Zeitpunkt, zu dem ein Knoten seine lokale Zeitbasis anpasst, um die Differenz zur globalen Zeitbasis zu minimieren.
 - **Frequenzkorrektur (Steigungskorrektur)**: Diese Korrektur passt die Geschwindigkeit an, mit der die lokale Uhr läuft, um sicherzustellen, dass die Frequenz der lokalen Uhr mit der globalen Zeitbasis übereinstimmt.
-
-## Schlussfolgerung
-
-Die Synchronisation der Knoten in einem FlexRay-Cluster ist ein komplexer, aber essenzieller Prozess, um die zuverlässige und deterministische Kommunikation zu gewährleisten. Durch die Berücksichtigung von Toleranzen und die Anwendung spezifischer Algorithmen zur Zeitkorrektur stellt FlexRay sicher, dass alle Knoten synchron laufen und somit eine stabile und fehlerfreie Datenübertragung ermöglichen. Die Einhaltung der FlexRay-Spezifikation in Bezug auf Frequenzabweichungen und Synchronisation ist dabei von entscheidender Bedeutung für die Lebensdauer und Zuverlässigkeit des Netzwerks.

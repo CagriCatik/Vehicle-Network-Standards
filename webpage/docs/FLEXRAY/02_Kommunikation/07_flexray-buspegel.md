@@ -1,4 +1,4 @@
-# FlexRay Buspegel
+# Buspegel
 
 ## Physikalische Signalübertragung
 

@@ -1,40 +1,65 @@
 # Kommunikationsarchitektur
 
-## FlexRay Knoten und Topologien
+FlexRay ist ein leistungsstarkes Kommunikationsprotokoll für sicherheitskritische Anwendungen, das durch seine deterministische Struktur und hohe Flexibilität überzeugt. Diese Dokumentation erläutert die grundlegenden Elemente, darunter Topologien, Redundanzmechanismen, das TDMA-Verfahren und die Organisation des Kommunikationsablaufs.
 
-Ein FlexRay-Cluster setzt sich aus mehreren FlexRay-Knoten zusammen, die durch ein physikalisches Übertragungsmedium verbunden sind. FlexRay unterstützt verschiedene Topologien:
+## Netzwerk-Topologien
 
-- **Punkt-zu-Punkt-Verbindung**: Direkte Verbindung zwischen zwei Knoten.
-- **Linientopologie**: Mehrere Knoten sind in einer Linie verbunden.
-- **Passive Sterntopologie**: Knoten sind sternförmig um einen passiven Hub angeordnet.
-- **Aktive Sterntopologie**: Knoten sind sternförmig um einen aktiven Hub angeordnet, der Signale verstärken und weiterleiten kann.
+Ein FlexRay-Cluster besteht aus mehreren Knoten, die über ein physikalisches Medium miteinander verbunden sind. Verschiedene Topologien bieten flexible Anpassungsmöglichkeiten:
+
+- **Punkt-zu-Punkt**: Direkte Verbindung zweier Knoten für einfache Anforderungen.
+- **Linientopologie**: Serielle Verbindung mehrerer Knoten, kosteneffizient für größere Netzwerke.
+- **Passive Sterntopologie**: Knoten sind sternförmig über einen passiven Hub verbunden, mit minimaler Signalverstärkung.
+- **Aktive Sterntopologie**: Aktiver Hub verstärkt Signale und erhöht die Fehlertoleranz.
+
+![FlexRay-Topologien](../images/topologien.png)
+
+### Beispiel eines Clusters
+![FlexRay Cluster](../images/flexray_cluster.png)
 
 ## Redundanz und Datenrate
 
-FlexRay bietet die Möglichkeit der redundanten Auslegung des Kommunikationskanals, um das Ausfallrisiko zu minimieren. Jeder der beiden Kommunikationskanäle (Channel A und Channel B) kann unabhängig mit einer Datenrate von bis zu 10 MBit/s betrieben werden. Alternativ können beide Kanäle kombiniert werden, um die Datenrate auf bis zu 20 MBit/s zu erhöhen. Dies bietet eine flexible Wahl zwischen Fehlertoleranz und erhöhter Übertragungsrate für jede einzelne FlexRay-Botschaft.
+FlexRay bietet zwei unabhängige Kommunikationskanäle (Channel A und B), die flexibel konfiguriert werden können:
 
-## Zeitgesteuerte Kommunikationsarchitektur
+- **Redundante Übertragung**: Daten werden auf beiden Kanälen gespiegelt, um Fehlertoleranz zu maximieren.
+- **Erhöhte Bandbreite**: Beide Kanäle arbeiten unabhängig, wodurch eine kombinierte Datenrate von bis zu 20 MBit/s erreicht wird.
 
-FlexRay basiert auf einer zeitgesteuerten Kommunikationsarchitektur. Dies bedeutet, dass alle Aktionen im System zu festgelegten Zeitpunkten aktiviert werden. Diese Eigenschaft ermöglicht eine deterministische Datenkommunikation, die besonders wichtig für sicherheitskritische Anwendungen ist.
+## Zeitgesteuerte Kommunikation
+
+FlexRay verwendet ein zeitgesteuertes Kommunikationsmodell, das deterministische Übertragungen sicherstellt. Alle Knoten synchronisieren ihre Aktionen auf einen gemeinsamen Zeitplan, wodurch Kollisionen vermieden werden.
+
+### Vorteile:
+- **Determinismus**: Fest definierte Zeitfenster garantieren eine verlässliche Datenübertragung.
+- **Synchronisation**: Alle Knoten sind zeitlich exakt aufeinander abgestimmt.
+- **Echtzeitfähigkeit**: Kritische Anwendungen profitieren von minimalen und voraussagbaren Latenzen.
 
 ## TDMA-Verfahren
 
-Das Time Division Multiple Access (TDMA)-Verfahren ist das Kernprinzip von FlexRay. Im Gegensatz zu anderen Kommunikationsprotokollen wie CAN, bei denen der Buszugriff ereignisgesteuert erfolgt, basiert FlexRay auf einem strikten Zeitplan. Jeder Knoten im Netzwerk erhält zu festgelegten Zeitpunkten Zugriff auf den Bus, was durch einen Kommunikationsablaufplan (Schedule) definiert wird. Dieser Plan ordnet jeder FlexRay-Botschaft einen spezifischen Zeitschlitz in jedem Kommunikationszyklus zu.
+Das **Time Division Multiple Access (TDMA)** ist das zentrale Verfahren in FlexRay. Es teilt den Kommunikationszyklus in Zeitschlitze, die fest bestimmten Knoten zugeordnet sind. 
 
-## Kommunikationsablaufplan und TDMA-Prinzip
+### Bestandteile:
+1. **Statisches Segment**:
+   - Nachrichten werden in festen Zeitschlitzen gesendet.
+   - Eignet sich für priorisierte und zeitkritische Daten.
+2. **Dynamisches Segment**:
+   - Flexiblere Übertragungen für variierende Datenlasten.
 
-Ein typischer Kommunikationsablaufplan für ein FlexRay-System kann beispielsweise wie folgt aussehen:
+![TDMA-Prinzip](../images/tdma.png)
 
-1. **Kommunikationszyklus**: Der gesamte Kommunikationszyklus ist in mehrere statische und dynamische Segmente unterteilt.
+## Kommunikationsablaufplan
 
-   - **Statisches Segment**: In diesem Segment werden Nachrichten in festgelegten Zeitschlitzen gesendet. Jeder Knoten sendet in seinem zugewiesenen Zeitschlitz, was eine deterministische Kommunikation gewährleistet.
-   - **Dynamisches Segment**: Hier können Nachrichten flexibler gesendet werden, was eine höhere Effizienz bei der Busauslastung ermöglicht.
-2. **Beispielhafter Ablauf**: Angenommen, ein Kommunikationssystem besteht aus vier Knoten (A, B, C, D). Der Kommunikationsplan könnte vorsehen, dass:
+Der FlexRay-Kommunikationszyklus ist in wiederkehrende Segmente unterteilt, die die Übertragung effizient und planbar gestalten:
 
-   - Knoten A sendet seine Botschaften in den Zeitschlitzen 1 und 5.
-   - Knoten B sendet in den Zeitschlitzen 2 und 6.
-   - Knoten C sendet in den Zeitschlitzen 3 und 7.
-   - Knoten D sendet in den Zeitschlitzen 4 und 8.
+1. **Statisches Segment**:
+   - Nachrichten sind festen Zeitfenstern zugeordnet.
+2. **Dynamisches Segment**:
+   - Nachrichtenübertragung erfolgt nach Priorität.
 
-Durch diesen präzisen Zeitplan wird sichergestellt, dass keine Kollisionen auf dem Bus auftreten und jede Nachricht deterministisch und zeitgerecht übermittelt wird.
+### Beispielhafter Plan:
+| Zeitschlitz | Sender  |
+|-|-|
+| 1           | Knoten A |
+| 2           | Knoten B |
+| 3           | Knoten C |
+| 4           | Knoten D |
 
+Die strikte Organisation garantiert, dass keine Datenkollisionen auftreten und alle Botschaften innerhalb der vorgesehenen Zeit übertragen werden.

@@ -23,6 +23,20 @@ Das Steer-by-Wire-System ersetzt die mechanische Lenksäule vollständig durch e
 2. **Individuelle Einstellung der Lenkcharakteristik:** Fahrer können die Lenkcharakteristik nach ihren Vorlieben einstellen.
 3. **Integration in die Fahrdynamikregelung:** Erhöhung der aktiven Sicherheit durch Einbindung der Lenkung in Systeme wie ESP II, das durch aktive Lenkregelfunktionen neue Dimensionen der Fahrdynamik und Fahrstabilität eröffnet.
 
+## Abbildung: Steer-by-Wire-Prinzip
+
+![alt text](../images/sbw.png)
+
+Die Abbildung illustriert das Steer-by-Wire-System mit seinen Hauptkomponenten:
+
+- Handkraftaktor (Handkraftaktor)
+- Lenkungsregler (Lenkungsregler)
+- Radwinkelsteller (Radwinkelsteller)
+- Die Kommunikation erfolgt über FlexRay-Leitungen, die eine schnelle und zuverlässige Datenübertragung sicherstellen.
+
+Durch die beschriebenen Technologien und Sicherheitsmaßnahmen kann das Steer-by-Wire-System einen bedeutenden Beitrag zur Weiterentwicklung der Fahrzeugsicherheit und -dynamik leisten.
+
+
 ## Sicherheitsaspekte und Herausforderungen
 
 Die Lenkung zählt zu den sicherheitskritischsten Systemen im Fahrzeug. Der Verzicht auf eine mechanische Rückfallebene im Steer-by-Wire-System stellt besondere Anforderungen an die Zuverlässigkeit der elektronischen Komponenten. Zu den wesentlichen Herausforderungen gehören:
@@ -34,16 +48,3 @@ Die Lenkung zählt zu den sicherheitskritischsten Systemen im Fahrzeug. Der Verz
 ## Fazit
 
 Das Steer-by-Wire-Prinzip, unterstützt durch FlexRay-Kommunikation, bietet erhebliche Vorteile hinsichtlich Flexibilität, Anpassbarkeit und Integration in moderne Fahrassistenzsysteme. Dennoch erfordert die Umsetzung dieses Prinzips eine sorgfältige Berücksichtigung der Sicherheitsanforderungen und die Entwicklung robuster Fehlertoleranzstrategien. Die fortschreitende Forschung und Entwicklung auf diesem Gebiet wird die Einführung zuverlässiger und sicherer Steer-by-Wire-Systeme in Serienfahrzeugen ermöglichen.
-
-## Abbildung: Steer-by-Wire-Prinzip
-
-![Steer-by-Wire-Prinzip](attachment:/mnt/data/image.png)
-
-Die Abbildung illustriert das Steer-by-Wire-System mit seinen Hauptkomponenten:
-
-- Handkraftaktor (Handkraftaktor)
-- Lenkungsregler (Lenkungsregler)
-- Radwinkelsteller (Radwinkelsteller)
-- Die Kommunikation erfolgt über FlexRay-Leitungen, die eine schnelle und zuverlässige Datenübertragung sicherstellen.
-
-Durch die beschriebenen Technologien und Sicherheitsmaßnahmen kann das Steer-by-Wire-System einen bedeutenden Beitrag zur Weiterentwicklung der Fahrzeugsicherheit und -dynamik leisten.

@@ -28,6 +28,8 @@ Eine wesentliche Voraussetzung für die zusammensetzbare Kommunikationsarchitekt
 
 Der bereitgestellte Kommunikationsablaufplan zeigt die zeitliche Zuordnung der Nachrichtenübertragung zwischen verschiedenen Busknoten (A, B und C). Jeder Busknoten sendet und empfängt Nachrichten in vordefinierten Zeitschlitzen, wodurch ein deterministischer Kommunikationsfluss gewährleistet wird.
 
+![alt text](../images/systemintegration.png)
+
 - **Zeitschlitz 1 (t1):** Botschaft A1 wird von Busknoten A gesendet.
 - **Zeitschlitz 2 (t2):** Botschaft B1 wird von Busknoten B gesendet.
 - **Zeitschlitz 3 (t3):** Botschaft C1 wird von Busknoten C gesendet.

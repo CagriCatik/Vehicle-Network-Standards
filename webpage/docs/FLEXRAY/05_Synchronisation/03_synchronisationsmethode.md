@@ -35,10 +35,3 @@ Die Steigungskorrektur erfolgt ähnlich der Offsetkorrektur, jedoch messen die F
 
   - Die Steigungskorrektur verteilt die Anpassung gleichmäßig über gerade und ungerade Zyklen, um eine gleichmäßige Frequenzanpassung zu gewährleisten. Dadurch wird verhindert, dass die Steigungskorrektur wie eine zusätzliche Offsetkorrektur wirkt.
 
-## Kritische Betrachtung und Genauigkeit
-
-Die beschriebenen Verfahren sind sorgfältig konzipiert, um eine robuste und präzise Synchronisation zu gewährleisten. Es ist jedoch wichtig, dass die Implementierung dieser Mechanismen sorgfältig erfolgt, um mögliche Ungenauigkeiten oder Fehler zu minimieren. Insbesondere bei der Anwendung des FTM-Algorithmus müssen die Werte korrekt sortiert und die Extremwerte präzise entfernt werden, um eine zuverlässige Mittelwertbildung zu erreichen.
-
-## Zusammenfassung
-
-Die Synchronisation in einem FlexRay Cluster ist ein komplexer, aber gut durchdachter Prozess, der durch die Verwendung von Sync-Botschaften und den FTM-Algorithmus eine hohe Genauigkeit und Fehlertoleranz bietet. Durch die sorgfältige Anpassung von Offset und Steigung können alle Knoten im Cluster synchronisiert arbeiten, was für die zuverlässige Kommunikation und den sicheren Betrieb von Fahrzeugsystemen essenziell ist. Die präzise Umsetzung dieser Verfahren stellt sicher, dass FlexRay als robustes Netzwerkprotokoll in der modernen Fahrzeugelektronik eine Schlüsselrolle spielt.

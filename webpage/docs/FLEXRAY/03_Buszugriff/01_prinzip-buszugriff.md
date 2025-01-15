@@ -2,9 +2,7 @@
 
 FlexRay ist ein hochperformantes und deterministisches Bussystem, das speziell für die Anforderungen der modernen Fahrzeugelektronik entwickelt wurde. Es bietet eine zuverlässige Plattform für die Kommunikation zwischen den verschiedenen elektronischen Steuergeräten (ECUs) in einem Fahrzeug. In diesem Tutorial werden wir die Funktionsweise von FlexRay detailliert erläutern, wobei ein besonderer Fokus auf den Mechanismen TDMA (Time Division Multiple Access) und FTDMA (Flexible Time Division Multiple Access) liegt. Wir werden auch kritische Aspekte und potenzielle Ungenauigkeiten in der gängigen Literatur und den bereitgestellten Informationen besprechen.
 
-## Grundlagen der FlexRay-Kommunikation
-
-### FlexRay-Cluster und Kommunikationszyklus
+## FlexRay-Cluster und Kommunikationszyklus
 
 Ein FlexRay-Cluster besteht aus mehreren FlexRay-Knoten (ECUs), die über einen gemeinsamen Bus kommunizieren. Der Kommunikationszyklus ist das Herzstück der FlexRay-Kommunikation und gliedert sich in verschiedene Segmente, um sowohl deterministische als auch dynamische Datenübertragungen zu ermöglichen.
 

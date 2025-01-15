@@ -21,9 +21,7 @@
 
 - **Activation Line**: Die Aktivierungslinie bei der Diagnose über das Internetprotokoll (DoIP) bezeichnet den spezifischen Kommunikationskanal, der zwischen einem Diagnosegerät und einem Fahrzeug eingerichtet wird, um die Übertragung von Diagnosedaten sowie die Aktivierung von Diagnosefunktionen zu ermöglichen, wobei sie eine virtuelle Verbindung darstellt, die es dem Diagnosegerät ermöglicht, Befehle an das Fahrzeug zu senden und relevante Daten für Diagnosezwecke zu empfangen.
 
-# Glossar
 
-## A
 
 ### ACK
 
@@ -230,9 +228,6 @@ Ein Botschaftszähler (engl. Message Counter) ist ein wichtiges Konzept bei der 
 ### CAN-FD
 
 **CAN-FD** steht für "Controller Area Network - Flexible Data-Rate" und ist eine Erweiterung des klassischen CAN-Protokolls. CAN-FD bietet höhere Datenübertragungsraten und größere Nutzlasten im Vergleich zum herkömmlichen CAN.
-
-
-
 
 
 ### EOF

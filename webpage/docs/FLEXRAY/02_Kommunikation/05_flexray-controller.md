@@ -1,4 +1,4 @@
-# FlexRay Controller
+# Controller
 
 ## Einführung in FlexRay
 

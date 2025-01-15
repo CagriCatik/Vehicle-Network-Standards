@@ -5,11 +5,11 @@ FlexRay ist ein hochentwickeltes Bussystem, das in der modernen Fahrzeugelektron
 
 Das dynamische Segment von FlexRay ist optional und wird verwendet, um bedarfsorientierte Botschaften zu übertragen, was asynchrone Vorgänge unterstützt. Im Gegensatz zum statischen Segment, das deterministische Übertragung garantiert, bietet das dynamische Segment eine flexible Kommunikationsmöglichkeit, um den aktuellen Bedarf zu decken.
 
-### Struktur und Funktionsweise
+## Struktur und Funktionsweise
 
 Das dynamische Segment folgt immer auf das statische Segment und weist immer die gleiche Länge auf, um die deterministische Datenübertragung im statischen Segment nicht zu beeinflussen. Die Kommunikationsstrategie im dynamischen Segment basiert auf dem Flexible Time Division Multiple Access (FTDMA)-Verfahren. Dieses Verfahren ermöglicht trotz des Grundprinzips des Time Division Multiple Access (TDMA) einen flexiblen Kommunikationsablauf.
 
-## Ablauf im dynamischen Segment
+### Ablauf im dynamischen Segment
 
 1. **Zählerinkrementierung**: Zu Beginn des dynamischen Segments inkrementieren alle FlexRay-Knoten ihre lokalen Zähler. Der aktuelle Zählerwert ist dabei einem Knoten und einer dynamischen Botschaft zugeordnet.
 2. **Minislot-Prinzip**: Wenn keine Sendeanforderung für die dynamische Botschaft vorliegt, die dem aktuellen Zählerwert entspricht, inkrementieren die Knoten ihre Zähler um die Länge eines Minislots. Ein Minislot repräsentiert die minimale Zeiteinheit im dynamischen Segment.

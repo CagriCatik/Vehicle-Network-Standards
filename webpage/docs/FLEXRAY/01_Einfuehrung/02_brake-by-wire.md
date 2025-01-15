@@ -6,6 +6,8 @@ Die Elektronifizierung des Automobils umfasst heute auch Bereiche, die tradition
 
 Bei der elektrohydraulischen Bremse erfolgt die Betätigung der Bremssättel weiterhin hydraulisch, während bei der elektromechanischen Bremse die Bremskräfte direkt durch Elektromotoren an den Rädern erzeugt werden. Diese Elektromotoren werden von einer elektronischen Regeleinheit gesteuert, die ihre Eingaben über ein elektronisches Bremspedal mit einem Pedalgefühlssimulator erhält. Die Steuer- und Sensorsignale werden über Kommunikationsleitungen übertragen.
 
+![emb](../images/emb.png)
+
 ## Komponenten eines EMB-Systems
 
 Basierend auf dem bereitgestellten Diagramm können wir die folgenden Hauptkomponenten eines EMB-Systems identifizieren:

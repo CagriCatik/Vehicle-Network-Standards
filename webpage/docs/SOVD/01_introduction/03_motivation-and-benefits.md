@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Motivation and Benefits
 
 ## Motivation for SOVD

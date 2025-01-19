@@ -1,8 +1,3 @@
----
-sidebar_position: 3
----
-
-
 # Schema-Based Description
 
 ## Overview of Schema-Based Architecture

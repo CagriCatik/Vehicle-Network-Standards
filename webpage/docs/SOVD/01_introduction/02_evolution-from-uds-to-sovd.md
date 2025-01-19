@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Evolution from UDS to SOVD
 
 The automotive industry has witnessed significant advancements over the past few decades, particularly in vehicle diagnostics. Unified Diagnostic Services (UDS) has been a cornerstone in this domain, providing a standardized framework for diagnosing vehicle issues. However, with the advent of more complex vehicle architectures and the increasing integration of high-performance computing (HPC) systems, there arose a need for a more flexible and scalable diagnostic standard. This necessity led to the development of Service-Oriented Vehicle Diagnostics (SOVD), representing a fundamental shift from traditional diagnostic paradigms.

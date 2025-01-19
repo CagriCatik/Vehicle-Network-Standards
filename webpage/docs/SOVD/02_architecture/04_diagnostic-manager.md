@@ -1,8 +1,3 @@
----
-sidebar_position: 4
----
-
-
 # Diagnostic Manager
 
 ## Introduction
@@ -209,24 +204,6 @@ The **Diagnostic Manager** is poised for continuous evolution, with several prom
 - **Enhanced Interoperability:** Deeper integration with AUTOSAR will improve interoperability with a broader range of automotive software components, fostering a more unified diagnostic ecosystem.
 - **Leveraging New Technologies:** Utilizing AUTOSAR’s advancements to incorporate cutting-edge features and functionalities, ensuring the Diagnostic Manager remains at the forefront of automotive diagnostics.
 
----
-
-## Glossary
-
-- **SOVD:** Service-Oriented Vehicle Diagnostics.
-- **ECU:** Electronic Control Unit.
-- **HPC:** High-Performance Computer.
-- **UDS:** Unified Diagnostic Services.
-- **ODX:** Open Diagnostic data eXchange.
-- **DEXT:** Diagnostic EXchange Technology.
-- **mDNS:** Multicast Domain Name System.
-- **HTTP/REST:** Hypertext Transfer Protocol / Representational State Transfer.
-- **OAuth2:** Open Authorization 2.0.
-- **AUTOSAR:** AUTomotive Open System ARchitecture.
-- **SSE:** Server-Sent Events.
-- **TPS_Manifest:** Transport Protocol Stack Manifest.
-
----
 
 ## Conclusion
 

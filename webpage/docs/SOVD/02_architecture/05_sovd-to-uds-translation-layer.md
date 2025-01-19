@@ -1,8 +1,3 @@
----
-sidebar_position: 5
----
-
-
 # SOVD-to-UDS Translation Layer
 
 ## Introduction to SOVD and UDS
@@ -381,68 +376,6 @@ This implementation example demonstrates the practical viability and performance
 
 ---
 
-## Future Directions
-
-As automotive technologies continue to evolve, the **SOVD-to-UDS Translation Layer** must adapt to emerging trends and requirements. The following future directions outline potential enhancements and expansions to further bolster its capabilities:
-
-1. **Event-Based Diagnostics**:
-   - **Integration of Server-Sent Events (SSE)**:
-     - **Objective**: Enable asynchronous diagnostic updates, allowing clients to receive real-time notifications without polling.
-     - **Benefits**:
-       - **Reduced Latency**: Immediate delivery of diagnostic events enhances responsiveness.
-       - **Bandwidth Efficiency**: Minimizes unnecessary data transmission by only sending relevant updates.
-       - **Enhanced User Experience**: Provides a more interactive and real-time diagnostic interface for clients.
-
-2. **Enhanced Security Measures**:
-   - **Implementation of OAuth2 and TLS**:
-     - **Objective**: Strengthen authentication and encryption protocols to safeguard diagnostic communications.
-     - **Benefits**:
-       - **Improved Security Posture**: Protects against unauthorized access and data breaches.
-       - **Compliance with Industry Standards**: Ensures adherence to automotive cybersecurity requirements.
-       - **Scalability**: Facilitates secure interactions as the number of connected diagnostic clients grows.
-
-3. **Broader Compatibility and Standards Support**:
-   - **Extension to AUTOSAR Adaptive**:
-     - **Objective**: Integrate support for the AUTOSAR Adaptive platform, enhancing compatibility with a wider range of automotive systems.
-     - **Benefits**:
-       - **Standardization**: Aligns with widely adopted automotive software architectures.
-       - **Interoperability**: Facilitates seamless integration with diverse vehicle platforms and ECUs.
-       - **Future-Proofing**: Prepares the Translation Layer for adoption of upcoming automotive standards and technologies.
-
-4. **Artificial Intelligence and Machine Learning Integration**:
-   - **Predictive Diagnostics**:
-     - **Objective**: Utilize AI/ML algorithms to predict potential ECU failures based on diagnostic data trends.
-     - **Benefits**:
-       - **Proactive Maintenance**: Enables early detection of issues, reducing downtime and maintenance costs.
-       - **Enhanced Diagnostic Accuracy**: Improves fault detection through pattern recognition and anomaly detection.
-       - **Data-Driven Insights**: Provides valuable insights for continuous improvement of vehicle systems.
-
-5. **Advanced Data Analytics and Visualization**:
-   - **Comprehensive Dashboard Development**:
-     - **Objective**: Develop intuitive dashboards for visualizing diagnostic data and system performance metrics.
-     - **Benefits**:
-       - **Enhanced Usability**: Simplifies data interpretation for technicians and engineers.
-       - **Real-Time Monitoring**: Provides immediate visibility into diagnostic operations and system health.
-       - **Customizable Reports**: Allows tailored reporting to meet specific diagnostic and operational needs.
-
-6. **Integration with Blockchain for Immutable Logging**:
-   - **Objective**: Employ blockchain technology to create immutable logs of diagnostic operations.
-   - **Benefits**:
-       - **Data Integrity**: Ensures that diagnostic records cannot be tampered with or altered post-recording.
-       - **Auditability**: Facilitates transparent and verifiable audit trails for compliance and quality assurance.
-       - **Security Enhancement**: Adds an additional layer of security against malicious data manipulation.
-
-7. **Support for Over-the-Air (OTA) Diagnostics**:
-   - **Objective**: Enable remote diagnostics and updates via Over-the-Air communication channels.
-   - **Benefits**:
-       - **Convenience**: Allows diagnostics and updates to be performed without physical access to the vehicle.
-       - **Scalability**: Supports large-scale deployments of diagnostic operations across fleets.
-       - **Timeliness**: Facilitates rapid response to emerging issues and software vulnerabilities.
-
-By pursuing these future directions, the **SOVD-to-UDS Translation Layer** will continue to evolve, maintaining its relevance and effectiveness in the face of advancing automotive technologies and diagnostic requirements.
-
----
-
 ## Conclusion
 
 The **SOVD-to-UDS Translation Layer** stands as a pivotal component in the modern automotive diagnostic ecosystem, bridging the gap between innovative, service-oriented diagnostic frameworks and established, legacy UDS-based ECU systems. By facilitating seamless communication and interoperability between these disparate paradigms, the Translation Layer ensures that vehicle diagnostics remain robust, flexible, and scalable in the face of evolving technological landscapes.
@@ -457,24 +390,3 @@ Key strengths of the Translation Layer include:
 
 By leveraging state-of-the-art technologies and robust translation mechanisms, the **SOVD-to-UDS Translation Layer** addresses the dynamic needs of connected vehicles, ensuring that modern diagnostic capabilities coexist harmoniously with traditional ECU systems. This balance not only preserves legacy support but also paves the way for future advancements in vehicle diagnostics, ultimately contributing to safer, more reliable, and technologically advanced automotive solutions.
 
----
-
-## References
-
-1. ISO 14229-1:2020 - *Unified Diagnostic Services (UDS) - Part 1: Specification and requirements*. International Organization for Standardization.
-2. ASAM SOVD Standard v1.0 - *Service-Oriented Vehicle Diagnostics*. Association for Standardisation of Automation and Measuring Systems.
-3. "SOVD Hands-On: SOVD in Practice," Vector Informatik GmbH, 2022. [Link](https://www.vector.com/int/en/products/products-a-z/service-oriented-vehicle-diagnostics-sovd/)
-4. "Explanation of Service-Oriented Vehicle Diagnostics," AUTOSAR AP R22-11. [Link](https://www.autosar.org/fileadmin/user_upload/standards/classic/application_protocols/SOVD_APR22-11.pdf)
-5. "Diagnostics over IP (DoIP) Specification," ISO 13400. [Link](https://www.iso.org/standard/68406.html)
-6. "OAuth 2.0 Authorization Framework," RFC 6749. [Link](https://tools.ietf.org/html/rfc6749)
-7. "Transport Layer Security (TLS) Protocol Version 1.3," RFC 8446. [Link](https://tools.ietf.org/html/rfc8446)
-8. "RapidJSON: A Fast JSON Parser and Generator for C++," Tencent. [Link](https://rapidjson.org/)
-9. "OpenSSL: Secure Sockets Layer Toolkit," OpenSSL Project. [Link](https://www.openssl.org/)
-10. "AUTOSAR Adaptive Platform Overview," AUTOSAR. [Link](https://www.autosar.org/standards/adaptive-platform/)
-11. "NVIDIA Jetson TX2 Developer Kit," NVIDIA. [Link](https://developer.nvidia.com/embedded/jetson-tx2)
-12. "Winston: A Simple, Versatile Logging Library for Node.js," Winston Documentation. [Link](https://github.com/winstonjs/winston)
-13. "Express.js Web Application Framework," Express Documentation. [Link](https://expressjs.com/)
-14. "ISO 14229-4:2020 - Unified Diagnostic Services (UDS) - Part 4: Network Layer Services," International Organization for Standardization.
-15. "ASAM MCD-3 MC," ASAM. [Link](https://www.asam.net/standards/detail/mcd-3-mc/)
-16. "Controller Area Network (CAN) Specifications," Bosch. [Link](https://www.bosch-mobility-solutions.com/en/products-and-services/networked-vehicle-systems/controller-area-network-can/)
-17. "SOVD Integration with AUTOSAR Adaptive," AUTOSAR Documentation. [Link](https://www.autosar.org/fileadmin/user_upload/standards/classic/application_protocols/SOVD_APR22-11.pdf)

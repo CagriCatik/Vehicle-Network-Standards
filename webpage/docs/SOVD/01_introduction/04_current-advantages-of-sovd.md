@@ -1,8 +1,3 @@
----
-sidebar_position: 4
----
-
-
 # Current Advantages of Service-Oriented Vehicle Diagnostics
 
 ## Unified API for Modern and Traditional Systems

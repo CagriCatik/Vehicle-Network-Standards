@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Service-Oriented Vehicle Diagnostics
 
 Service-Oriented Vehicle Diagnostics (SOVD) represents a transformative approach to vehicle diagnostics, addressing the complexities introduced by modern automotive systems. Developed under the auspices of ASAM (Association for Standardization of Automation and Measuring Systems), SOVD leverages cutting-edge web technologies to provide a unified, flexible, and secure diagnostic framework suitable for both traditional Electronic Control Units (ECUs) and contemporary High-Performance Computers (HPCs).

@@ -10,7 +10,6 @@ Während auf der physikalischen Schicht von Symbolen und Symbolraten gesprochen 
 
 ![1712318298889](/img/eth/1712317719827.png)
 
-
 ## Buszugriffsverfahren
 
 Der Ethernet Controller lauscht zunächst auf dem physikalischen Medium, bevor eine Botschaft gesendet wird (Carrier Sense). Dies vermeidet das Überschreiben einer Nachricht, falls ein anderer Teilnehmer im Netzwerk bereits sendet. Ist das Medium frei, kann der Ethernet Controller seinen eigenen Sendevorgang beginnen.

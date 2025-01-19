@@ -6,10 +6,7 @@ Im Ethernet-Netzwerk kommt die Teilnehmeradressierung für die gezielte Zustellu
 
 ![1712318298889](/img/eth/1712317769475.png)
 
-
-
 ![1712318298889](/img/eth/1712317744832.png)
-
 
 ## Unicast
 

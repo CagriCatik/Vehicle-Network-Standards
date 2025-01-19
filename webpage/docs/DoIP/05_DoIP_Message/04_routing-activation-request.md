@@ -2,8 +2,6 @@
 
 Die **Routing Activation Request** ist eine zentrale Nachricht im DoIP-Protokoll (Diagnostics over Internet Protocol). Sie wird verwendet, um den Zugriff auf interne Fahrzeugnetzwerke (z. B. CAN-Busse) zu aktivieren, sodass Diagnosetests und andere Steuergerätekommunikationen über das Gateway ermöglicht werden.
 
----
-
 ## Nachrichtenstruktur
 
 Die Nachricht besteht aus den folgenden Feldern:
@@ -19,7 +17,6 @@ Die Nachricht besteht aus den folgenden Feldern:
 | **Reserved by ISO 13400**  | 4 Bytes     | Reserviert für zukünftige Verwendungen (Standard: `0x00000000`). |
 | **Reserved for OEM-specific use** | 4 Bytes | Optional, für herstellerspezifische Informationen.            |
 
----
 
 ## Beschreibung der Felder
 
@@ -27,8 +24,6 @@ Die Nachricht besteht aus den folgenden Feldern:
 - **Länge**: 2 Bytes.  
 - **Beschreibung**: Eindeutige logische Adresse des externen Diagnosetesters.  
 - **Beispiel**: `0x0203` (Adresse des Testers).
-
----
 
 ### **Activation Type**
 - **Länge**: 1 Byte.  
@@ -38,21 +33,15 @@ Die Nachricht besteht aus den folgenden Feldern:
   - `0x01`: WWH-OBD (Worldwide Harmonized OBD).  
   - `0x02`: Central Security.  
 
----
-
 ### **Reserved by ISO 13400**
 - **Länge**: 4 Bytes.  
 - **Beschreibung**: Reservierter Bereich für zukünftige Spezifikationen durch die ISO 13400.  
 - **Standardwert**: `0x00000000`.
 
----
-
 ### **Reserved for OEM-specific use**
 - **Länge**: 4 Bytes.  
 - **Beschreibung**: Optionales Feld für OEM-spezifische Informationen.  
 - **Beispiel**: Sicherheits- oder Konfigurationsdaten, die von Fahrzeugherstellern benötigt werden.
-
----
 
 ## Ablauf der Routing Activation Request
 
@@ -64,8 +53,6 @@ Die Nachricht besteht aus den folgenden Feldern:
 
 3. **Antwort durch das Gateway**:  
    Das Gateway antwortet mit einer **Routing Activation Response**, um den Erfolg oder mögliche Fehler zu bestätigen.
-
----
 
 ## Beispielnachrichten
 
@@ -80,8 +67,6 @@ Activation Type: 0x00 (Default)
 Reserved by ISO 13400: 0x00000000
 Reserved for OEM-specific use: 0x00000000
 ```
-
----
 
 ## Relevante Codebeispiele
 
@@ -112,8 +97,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
 print("Empfangene Antwort:", response.hex())
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

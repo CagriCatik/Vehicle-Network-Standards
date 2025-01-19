@@ -2,11 +2,11 @@
 
 Die Sequenzdiagramme zeigen den Ablauf der IP-Adresskonfiguration mittels DHCP (Dynamic Host Configuration Protocol) in einem DoIP (Diagnostics over IP) Netzwerk. Dieses Netzwerk besteht aus drei Hauptkomponenten: dem Tester, dem DHCP-Server und dem Fahrzeug-Gateway (GW). Der Prozess wird für beide Komponenten, den Tester und das Fahrzeug-Gateway, parallel dargestellt. Im Folgenden wird der Ablauf detailliert beschrieben und analysiert.
 
-## 1. Verbindung und Aktivierung
+## Verbindung und Aktivierung
 
 Bevor der DHCP-Prozess beginnt, muss eine physische Verbindung zwischen den Komponenten hergestellt werden, und die Aktivierungsleitung muss Spannung führen. Dies stellt sicher, dass alle Geräte betriebsbereit sind und eine Kommunikation im Netzwerk möglich ist.
 
-## 2. DHCP-Prozess für den Tester
+## DHCP-Prozess für den Tester
 
 ### T1. DHCP: Discover
 
@@ -24,7 +24,7 @@ Der Tester sendet daraufhin eine DHCP-Request-Nachricht, in der er die angeboten
 
 Der DHCP-Server bestätigt die Zuweisung der IP-Adresse mit einer DHCP-Ack-Nachricht. Damit wird dem Tester mitgeteilt, dass die IP-Adresse erfolgreich zugewiesen wurde und nun verwendet werden kann.
 
-## 3. DHCP-Prozess für das Fahrzeug-Gateway (GW)
+## DHCP-Prozess für das Fahrzeug-Gateway (GW)
 
 ### V1. DHCP: Discover
 

@@ -2,11 +2,11 @@
 
 ## Beschreibung des Prozesses
 
-### 1. Fahrzeugankündigung (Vehicle Announcement)
+### Fahrzeugankündigung (Vehicle Announcement)
 
 Sobald einem Fahrzeuggateway (DoIP edge node) eine IP-Adresse zugewiesen wurde, sendet das Gateway dreimal eine Fahrzeugankündigung (Vehicle Announcement) als Broadcast im Netzwerk. Diese Ankündigungen dienen dazu, das Fahrzeug im Netzwerk bekannt zu machen, sodass ein Diagnosetester es erkennen und mit ihm kommunizieren kann.
 
-### 2. Beispiel einer Fahrzeugankündigung
+### Beispiel einer Fahrzeugankündigung
 
 - **Src. MAC:** 00:A4:DF:1E:08:00
 - **Dst. MAC:** FF:FF:FF:FF:FF:FF (Broadcast)
@@ -53,11 +53,11 @@ Nach der erfolgreichen Fahrzeugankündigung speichert der Diagnosetester die DoI
 
 Die bereitgestellten Informationen sind weitgehend korrekt, jedoch gibt es einige Punkte, die näher erläutert werden sollten:
 
-### 1. MAC-Adresse
+### MAC-Adresse
 - Die Verwendung einer Broadcast-MAC-Adresse (FF:FF:FF:FF:FF:FF) sollte detaillierter erklärt werden, insbesondere im Hinblick darauf, wie sie sicherstellt, dass alle Geräte im Netzwerk die Ankündigung empfangen können. Die Rolle der Broadcast-Adresse in Netzwerken könnte präziser dargestellt werden.
 
-### 2. Ports
+### Ports
 - Der Zielport 13400 ist standardmäßig für UDP_DISCOVERY reserviert. Es sollte jedoch darauf hingewiesen werden, dass dieser Port konfigurierbar ist und je nach Netzwerkumgebung angepasst werden kann.
 
-### 3. GID (Group Identifier)
+### GID (Group Identifier)
 - Der GID ist in diesem Beispiel leer. Es wäre hilfreich, ein Szenario zu beschreiben, in dem der GID nicht leer ist und wie dies die Kommunikation im Netzwerk beeinflusst. Der GID könnte verwendet werden, um Gruppen von Fahrzeugen oder Gateways zu identifizieren, was in komplexeren Netzwerken nützlich sein kann.

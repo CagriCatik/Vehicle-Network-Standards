@@ -2,7 +2,7 @@
 
 Der **TCP Verbindungsaufbau** ist ein essenzieller Prozess innerhalb des DoIP-Protokolls (Diagnostics over Internet Protocol), der die zuverlässige und stabile Kommunikation zwischen einem Tester und einem Gateway (GW) ermöglicht. Der Aufbau erfolgt über das standardisierte **Three-Way-Handshake-Verfahren**, welches sicherstellt, dass beide Kommunikationspartner synchronisiert sind und Daten korrekt übertragen werden können.
 
----
+
 
 ## Ablauf des TCP Verbindungsaufbaus
 
@@ -24,7 +24,7 @@ Tester → Gateway:
 SYN (SeqNo A)
 ```
 
----
+
 
 ### Schritt 2: Verbindungsanfrage mit Bestätigung
 - Nach Erhalt der Verbindungsanfrage antwortet das Gateway mit einer `SYN-ACK`-Nachricht (Synchronize-Acknowledge).  
@@ -45,7 +45,7 @@ Gateway → Tester:
 SYN-ACK (SeqNo B, AckNo A+1)
 ```
 
----
+
 
 ### Schritt 3: Bestätigung der Verbindung
 - Der Tester bestätigt die Verbindung, indem er eine `ACK`-Nachricht (Acknowledgement) zurücksendet.  
@@ -61,7 +61,7 @@ Tester → Gateway:
 ACK (SeqNo A+1, AckNo B+1)
 ```
 
----
+
 
 ## Zusammenfassung des Prozesses
 
@@ -76,7 +76,7 @@ Dieses Verfahren gewährleistet:
 - Die Verlässlichkeit der Verbindung.
 - Die Korrektheit der Datenübertragung.
 
----
+
 
 ## Relevante Codebeispiele
 
@@ -112,7 +112,7 @@ Die folgende Beschreibung zeigt, wie die einzelnen Schritte des Verbindungsaufba
    - SYN-ACK des Gateways.
    - ACK-Paket des Testers.
 
----
+
 
 ## Häufige Probleme und Lösungen
 

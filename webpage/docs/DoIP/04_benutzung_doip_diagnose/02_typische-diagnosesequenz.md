@@ -2,8 +2,6 @@
 
 Die **typische Diagnosesequenz** beschreibt den Ablauf einer Kommunikation zwischen einem Diagnosetester und einem Fahrzeugsteuergerät (ECU) im Rahmen von DoIP (Diagnostics over Internet Protocol). Diese Sequenz stellt sicher, dass Diagnoseanfragen zuverlässig verarbeitet und Antworten korrekt übermittelt werden.
 
----
-
 ## Ablauf der Diagnosesequenz
 
 Die Diagnosesequenz umfasst vier Hauptschritte:
@@ -27,8 +25,6 @@ Diagnoseanfrage
 #### Erklärung:
 Der Tester fordert bestimmte Daten von der ECU an, indem er die logische Adresse und den UDS-Service in der Nachricht spezifiziert. Diese Anfrage wird vom Gateway weitergeleitet.
 
----
-
 ### Schritt 2: DoIP-Bestätigung (DoIP Ack)
 Das Gateway bestätigt den Empfang der Diagnoseanfrage und leitet diese an die Ziel-ECU weiter. Die Bestätigung (DoIP Ack) enthält keine Diagnosedaten, sondern dient lediglich der Kommunikation, dass die Anfrage erfolgreich empfangen wurde.
 
@@ -43,8 +39,6 @@ DoIP-Bestätigung (DoIP Ack)
 
 #### Bedeutung:
 Die Bestätigung zeigt an, dass die Anfrage korrekt verarbeitet wird und das Gateway mit der Ziel-ECU kommuniziert.
-
----
 
 ### Schritt 3: Diagnose-Response
 Die Ziel-ECU verarbeitet die Diagnoseanfrage und generiert eine Antwort. Diese Antwort wird über das Gateway an den Tester zurückgeleitet.
@@ -63,8 +57,6 @@ Diagnose-Response
 #### Erklärung:
 Die Antwort enthält die vom Tester angeforderten Daten oder Statusinformationen und wird innerhalb des festgelegten UDS-Timeouts (P6) zurückgesendet.
 
----
-
 ### Schritt 4: Empfang der Antwort
 Der Diagnosetester erwartet die Antwort vor Ablauf des P6-Intervalls. Dieses Intervall ist ein UDS-spezifischer Timeout für die Kommunikation mit der Ziel-ECU.
 
@@ -79,16 +71,12 @@ Tester → Empfang der Antwort innerhalb von P6
 #### Bedeutung:
 Das P6-Timeout stellt sicher, dass die Kommunikation in einem vordefinierten Zeitrahmen erfolgt und bei Verzögerungen Fehler gemeldet werden.
 
----
-
 ## Ablaufdiagramm der Diagnosesequenz
 
 1. **Diagnoseanfrage**: Der Tester sendet die Anfrage über TCP an das Gateway.
 2. **DoIP-Bestätigung**: Das Gateway bestätigt den Empfang und leitet die Anfrage weiter.
 3. **Diagnose-Response**: Die ECU verarbeitet die Anfrage und antwortet über das Gateway.
 4. **Empfang der Antwort**: Der Tester erhält die Antwort innerhalb des festgelegten Zeitrahmens (P6).
-
----
 
 ## Relevante Codebeispiele
 
@@ -139,8 +127,6 @@ try:
 except socket.timeout:
     print("Keine Antwort innerhalb des P6-Timeouts.")
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

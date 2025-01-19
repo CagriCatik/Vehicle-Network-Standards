@@ -2,8 +2,6 @@
 
 Die **Routing Activation Response** ist eine wichtige Antwortnachricht im DoIP-Protokoll (Diagnostics over Internet Protocol). Sie wird vom Gateway an den Diagnosetester gesendet, um den Status der angeforderten Routing-Aktivierung zu bestätigen. Diese Nachricht zeigt an, ob die Aktivierung interner Fahrzeugnetzwerke erfolgreich war oder nicht.
 
----
-
 ## Nachrichtenstruktur
 
 Die Routing Activation Response-Nachricht besteht aus folgenden Feldern:
@@ -20,8 +18,6 @@ Die Routing Activation Response-Nachricht besteht aus folgenden Feldern:
 | **Reserved by ISO 13400**  | 4 Bytes     | Reserviert für zukünftige Verwendungen (Standard: `0x00000000`). |
 | **Reserved for OEM-specific use** | 4 Bytes | Optional, für herstellerspezifische Informationen.            |
 
----
-
 ## Beschreibung der Felder
 
 ### **Logical Address of Tester**
@@ -29,14 +25,10 @@ Die Routing Activation Response-Nachricht besteht aus folgenden Feldern:
 - **Beschreibung**: Eindeutige logische Adresse des Diagnosetesters.  
 - **Beispiel**: `0x0203` (Adresse des Testers).  
 
----
-
 ### **Logical Address of DoIP Entity**
 - **Länge**: 2 Bytes.  
 - **Beschreibung**: Logische Adresse des Gateways oder der spezifischen DoIP-Einheit im Fahrzeug.  
 - **Beispiel**: `0x0201` (Adresse des Gateways).
-
----
 
 ### **Routing Activation Response Code**
 - **Länge**: 1 Byte.  
@@ -46,21 +38,15 @@ Die Routing Activation Response-Nachricht besteht aus folgenden Feldern:
   - `0x01`: Aktivierung fehlgeschlagen (z. B. Sicherheitsprobleme).  
   - `0x02`: Unbekannter Activation Type.  
 
----
-
 ### **Reserved by ISO 13400**
 - **Länge**: 4 Bytes.  
 - **Beschreibung**: Reservierter Bereich für zukünftige Spezifikationen durch die ISO 13400.  
 - **Standardwert**: `0x00000000`.
 
----
-
 ### **Reserved for OEM-specific use**
 - **Länge**: 4 Bytes.  
 - **Beschreibung**: Optionales Feld für OEM-spezifische Informationen.  
 - **Beispiel**: Zusätzliche Statusinformationen oder herstellerspezifische Fehlercodes.
-
----
 
 ## Ablauf der Routing Activation Response
 
@@ -72,8 +58,6 @@ Die Routing Activation Response-Nachricht besteht aus folgenden Feldern:
 
 3. **Antwort an den Tester**:  
    Das Gateway sendet die Routing Activation Response zurück an den Tester, um den Status der Anfrage zu bestätigen.
-
----
 
 ## Beispielnachrichten
 
@@ -102,8 +86,6 @@ Routing Activation Response Code: 0x01 (Fehler)
 Reserved by ISO 13400: 0x00000000
 Reserved for OEM-specific use: 0x00000000
 ```
-
----
 
 ## Relevante Codebeispiele
 
@@ -141,8 +123,6 @@ else:
     print("Keine Antwort erhalten.")
 ```
 
----
-
 ## Häufige Probleme und Lösungen
 
 ### Problem 1: Keine Antwort vom Gateway
@@ -156,4 +136,3 @@ else:
 ### Problem 3: Unerwarteter Response Code
 - **Ursache**: Kommunikationsfehler oder falsche Einstellungen.  
 - **Lösung**: Prüfen Sie die Fehlermeldung im Response Code und debuggen Sie die Anfrage.
-

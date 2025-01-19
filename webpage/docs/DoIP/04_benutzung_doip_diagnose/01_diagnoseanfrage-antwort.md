@@ -2,8 +2,6 @@
 
 Die **Diagnoseanfrage und -antwort** ist ein zentraler Bestandteil des Kommunikationsprozesses im Rahmen von DoIP (Diagnostics over Internet Protocol). Dieser Prozess ermöglicht es einem Diagnosetester, Informationen von Steuergeräten (ECUs) im Fahrzeug zu erhalten, Diagnosen durchzuführen und Fehlercodes auszulesen oder Steuergeräte zu programmieren.
 
----
-
 ## Ablauf einer Diagnoseanfrage und -antwort
 
 Der Prozess besteht aus zwei Hauptschritten:
@@ -33,8 +31,6 @@ SID: 0x22 (Read Data by Identifier)
 DID: 0x1234 (Requested Data)
 ```
 
----
-
 ### Schritt 2: Diagnoseantwort (Diagnostic Response)
 
 Das Gateway leitet die Diagnoseanfrage an die entsprechende ECU weiter. Nachdem die ECU die Anfrage verarbeitet hat, sendet sie eine Antwort zurück, die über das Gateway an den Tester weitergeleitet wird.
@@ -56,8 +52,6 @@ Data: 0x5678 (Requested Data)
 Status: Success
 ```
 
----
-
 ## Typische Diagnosefunktionen
 
 Die Diagnoseanfrage und -antwort basiert auf standardisierten Diensten, die im UDS-Protokoll (Unified Diagnostic Services, ISO 14229) definiert sind. Hier sind einige der häufig verwendeten Dienste:
@@ -76,8 +70,6 @@ Die Diagnoseanfrage und -antwort basiert auf standardisierten Diensten, die im U
 4. **Datenprogrammierung (Write Data by Identifier, SID: 0x2E)**:
    - Zweck: Schreiben neuer Daten in eine ECU, z. B. Kalibrierungswerte.
 
----
-
 ## Ablaufdiagramm einer Diagnoseanfrage und -antwort
 
 1. **Diagnosetester (Tester)**:
@@ -93,8 +85,6 @@ Die Diagnoseanfrage und -antwort basiert auf standardisierten Diensten, die im U
    - Verarbeitet die Anfrage.
    - Stellt die angeforderten Daten bereit oder führt den angeforderten Befehl aus.
    - Sendet eine Antwort mit den Ergebnissen zurück.
-
----
 
 ## Relevante Codebeispiele
 
@@ -140,8 +130,6 @@ def parse_diagnostic_response(response):
 response = bytearray([0x62, 0x56, 0x78])
 parse_diagnostic_response(response)
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

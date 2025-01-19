@@ -2,9 +2,7 @@
 
 Die **Vehicle Announcement** und die **Vehicle Identification Response** sind essenzielle Nachrichten im DoIP-Protokoll (Diagnostics over Internet Protocol). Sie dienen der Identifikation des Fahrzeugs durch den Diagnosetester und ermöglichen den Aufbau einer spezifischen Kommunikationsverbindung zwischen Tester und Fahrzeug.
 
----
-
-## 1. Vehicle Announcement (Fahrzeugerkennung)
+## Vehicle Announcement (Fahrzeugerkennung)
 
 Die **Vehicle Announcement-Nachricht** wird vom Gateway des Fahrzeugs ausgesendet, um dem Diagnosetester die Erreichbarkeit des Fahrzeugs mitzuteilen. Diese Nachricht enthält grundlegende Informationen über das Fahrzeug und wird typischerweise per UDP übertragen.
 
@@ -24,7 +22,6 @@ Die Vehicle Announcement-Nachricht umfasst die folgenden Felder:
 | **Further Action Required** | 1 Byte     | OEM-spezifische Anforderungen, z. B. Sicherheitsmethoden.      |
 | **VIN/GID Sync. Status**   | 1 Byte      | Synchronisationsstatus der VIN/GID-Informationen.              |
 
----
 
 ### Ablauf
 1. **Aussendung der Nachricht**:  
@@ -39,9 +36,7 @@ Die Vehicle Announcement-Nachricht umfasst die folgenden Felder:
 3. **Reaktion des Testers**:  
    Der Diagnosetester nutzt die erhaltenen Informationen, um eine gezielte Diagnosekommunikation mit dem Fahrzeug aufzubauen.
 
----
-
-## 2. Vehicle Identification Response (Fahrzeugidentifikationsantwort)
+## Vehicle Identification Response (Fahrzeugidentifikationsantwort)
 
 Die **Vehicle Identification Response** wird vom Gateway als Antwort auf eine spezifische Fahrzeugidentifikationsanfrage (Vehicle Identification Request) des Testers gesendet. Sie dient der Bestätigung und Übermittlung detaillierter Fahrzeuginformationen.
 
@@ -61,7 +56,6 @@ Die Vehicle Identification Response hat eine ähnliche Struktur wie die Vehicle 
 | **Further Action Required** | 1 Byte     | OEM-spezifische Aktionen (z. B. Sicherheitsmethoden).          |
 | **VIN/GID Sync. Status**   | 1 Byte      | Synchronisationsstatus.                                        |
 
----
 
 ### Ablauf
 1. **Anfrage durch den Tester**:  
@@ -76,9 +70,7 @@ Die Vehicle Identification Response hat eine ähnliche Struktur wie die Vehicle 
    - Logische Adresse des Gateways.
    - Sicherheitsstatus und Synchronisationsinformationen.
 
----
-
-## 3. Anwendungsfälle
+## Anwendungsfälle
 
 ### Fahrzeugerkennung bei Mehrfachverbindungen
 In Szenarien mit mehreren Fahrzeugen im selben Netzwerk ermöglicht die Vehicle Announcement-Nachricht dem Tester, gezielt ein spezifisches Fahrzeug basierend auf dessen VIN oder logischer Adresse auszuwählen.
@@ -89,9 +81,7 @@ Die Synchronisation von VIN/GID und die Angabe von weiteren Sicherheitsanforderu
 ### Diagnoseaufbau
 Nach der Identifikation des Fahrzeugs leitet der Tester die nächsten Schritte wie Routing-Aktivierung oder Diagnoseanfragen ein.
 
----
-
-## 4. Beispielnachrichten
+## Beispielnachrichten
 
 ### Vehicle Announcement (UDP)
 ```plaintext
@@ -121,9 +111,7 @@ Further Action Required: 0x01
 VIN/GID Sync. Status: 0x01
 ```
 
----
-
-## 5. Relevanter Code
+## Relevanter Code
 
 ### Beispiel: Empfang einer Vehicle Announcement-Nachricht
 ```python

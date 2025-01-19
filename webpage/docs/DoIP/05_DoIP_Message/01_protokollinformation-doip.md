@@ -2,8 +2,6 @@
 
 Diagnostics over Internet Protocol (DoIP) ist ein standardisiertes Kommunikationsprotokoll, das Diagnoseanfragen und -antworten zwischen einem Tester und Fahrzeugsteuergeräten (ECUs) über IP-basierte Netzwerke ermöglicht. Es basiert auf den ISO-Standards 13400-2 und 13400-3 und wird verwendet, um Fahrzeugdiagnosen über Ethernet effizient und zuverlässig durchzuführen.
 
----
-
 ## Grundlegende Merkmale von DoIP
 
 ### 1. Kommunikationsstruktur
@@ -12,7 +10,6 @@ Diagnostics over Internet Protocol (DoIP) ist ein standardisiertes Kommunikation
 - **Einsatz von Ethernet und TCP/IP**:  
   DoIP nutzt Ethernet für die physische Verbindung und TCP/IP für die Datenübertragung.
 
----
 
 ### 2. Adressierung
 - **Logische Adressen**:  
@@ -23,15 +20,12 @@ Diagnostics over Internet Protocol (DoIP) ist ein standardisiertes Kommunikation
 - **MAC-Adressen und IP-Adressen**:  
   Die Kommunikation erfolgt über MAC- und IP-Adressen, die den physischen Netzwerkadaptern zugewiesen sind.
 
----
 
 ### 3. Transportprotokolle
 - **TCP (Transmission Control Protocol)**:  
   Verwendet für verlässliche Diagnoseanfragen und -antworten.
 - **UDP (User Datagram Protocol)**:  
   Wird für die Erkennung (Discovery) von Steuergeräten im Netzwerk genutzt.
-
----
 
 ## DoIP-Nachrichtenstruktur
 
@@ -45,7 +39,6 @@ Jede DoIP-Nachricht besteht aus mehreren Abschnitten, die die Kommunikation eind
 | **Payload-Länge**   | 4 Bytes    | Länge des Nutzdatenfeldes in Bytes.              |
 | **Nutzdaten (Payload)** | Variabel | Die eigentlichen Diagnose- oder Steuerdaten.     |
 
----
 
 ### 2. Wichtige Payload-Typen
 Die wichtigsten Payload-Typen sind im ISO-Standard definiert und bestimmen die Art der Nachricht:
@@ -53,8 +46,6 @@ Die wichtigsten Payload-Typen sind im ISO-Standard definiert und bestimmen die A
 - **0x0005**: Routing Activation Request (Aktivierung von Netzwerken).
 - **0x8001**: Diagnoseanfrage.
 - **0x8002**: Diagnoseantwort.
-
----
 
 ## Ablauf einer typischen DoIP-Kommunikation
 
@@ -73,8 +64,6 @@ Die wichtigsten Payload-Typen sind im ISO-Standard definiert und bestimmen die A
 - Die ECU verarbeitet die Anfrage und sendet die **Diagnoseantwort (Diagnostic Response)** zurück.
 - Nachrichtentyp: `0x8002`
 
----
-
 ## Sicherheitsaspekte
 
 ### 1. Authentifizierung
@@ -88,8 +77,6 @@ Die Zielsteuergeräte können nur auf autorisierte Anfragen reagieren, basierend
 - Sicherheitslevel.
 - Berechtigungsdaten.
 
----
-
 ## Netzwerkkonfiguration
 
 ### 1. Physikalische Verbindung
@@ -102,8 +89,6 @@ DoIP unterstützt sowohl IPv4 als auch IPv6:
 - **IPv4-Subnetztyp**: 192.168.x.x/24
 - **Portnummern**: Standardmäßig `13400` für TCP und UDP.
 
----
-
 ## Vorteile von DoIP
 
 1. **Höhere Geschwindigkeit**:  
@@ -114,8 +99,6 @@ DoIP unterstützt sowohl IPv4 als auch IPv6:
 
 3. **Zukunftssicherheit**:  
    Dank der Unterstützung moderner Netzwerktechnologien ist DoIP ein skalierbarer Standard.
-
----
 
 ## Relevante Codebeispiele
 
@@ -145,8 +128,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
 print("Empfangene Antwort:", response.hex())
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

@@ -2,8 +2,6 @@
 
 Das Diagnostic over Internet Protocol (DoIP) ermöglicht eine räumlich ungebundene Fahrzeugdiagnose, indem eine Verbindung zwischen Diagnosetools und Fahrzeugen über Ethernet- und IP-Netzwerke hergestellt wird. In diesem Leitfaden werden die allgemeinen Konzepte und die Funktionsweise von DoIP basierend auf den relevanten Informationen erläutert.
 
-## Allgemeine Konzepte von DoIP
-
 1. **Räumlich ungebundene Diagnosesitzungen:**
    
    - DoIP ermöglicht es, Diagnosesitzungen durchzuführen, ohne dass der Diagnosetester physisch in der Nähe des Fahrzeugs sein muss. Dies bietet enorme Flexibilität und ermöglicht es Technikern, Diagnosen remote durchzuführen.

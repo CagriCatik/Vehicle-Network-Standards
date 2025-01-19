@@ -1,10 +1,8 @@
 # DoIP Fahrzeugerkennung durch den Diagnosetester
 
-## Einführung
-
 Die DoIP (Diagnostics over Internet Protocol) Fahrzeugerkennung ermöglicht es einem Diagnosetester, verfügbare Fahrzeuge im Netzwerk zu identifizieren. Der Prozess besteht aus zwei Hauptschritten: der **Vehicle Identification Request** und der **Vehicle Identification Response**. In diesem Tutorial werden diese Schritte detailliert erklärt und wichtige technische Details sowie mögliche Unstimmigkeiten kritisch beleuchtet.
 
-## 1. Fahrzeuganfrage durch den Diagnosetester
+## Fahrzeuganfrage durch den Diagnosetester
 
 ### Schritt 1: Vehicle Identification Request
 
@@ -29,7 +27,7 @@ Nach dem Senden der Anfrage wartet der Diagnosetester auf Antworten der im Netzw
 
 In diesem Schritt speichert der Diagnosetester die empfangenen DoIP-Informationen für die weitere Verarbeitung und um eine stabile Kommunikation mit den Fahrzeugen sicherzustellen.
 
-## 2. Fahrzeugantwort vom Gateway (Vehicle GW)
+## Fahrzeugantwort vom Gateway (Vehicle GW)
 
 ### Schritt 2: Vehicle Identification Response
 
@@ -63,14 +61,14 @@ Die Antwort enthält außerdem spezifische Fahrzeuginformationen:
 
 Die Abbildung beschreibt den Prozess der Fahrzeugerkennung korrekt, dennoch gibt es einige Punkte, die genauer betrachtet werden sollten:
 
-### 1. MAC- und IP-Adressen
+### MAC- und IP-Adressen
 
 Die Verwendung von Broadcast-MAC- und IP-Adressen ist korrekt dargestellt. In realen Netzwerken müssen jedoch die spezifischen MAC- und IP-Adressen für jedes Gerät korrekt konfiguriert sein, um sicherzustellen, dass keine Konflikte oder Kommunikationsprobleme auftreten. Es wäre hilfreich, auf mögliche IP-Konflikte in einem realen Netzwerk hinzuweisen.
 
-### 2. Ports
+### Ports
 
 Die zufällige Wahl der Quellports (wie 52306 und 61824) ist üblich. Allerdings sollten Sicherheitsaspekte berücksichtigt werden, um Port-Scanning-Angriffe oder ähnliche Bedrohungen zu vermeiden. Zudem ist es wichtig, auf die korrekte Handhabung der Ports durch den Diagnosetester und das Gateway zu achten.
 
-### 3. DoIP-Protokoll
+### DoIP-Protokoll
 
 Das DoIP-Protokoll ist speziell für die Fahrzeugdiagnose entwickelt worden und bietet eine effiziente Möglichkeit, Fahrzeuge im Netzwerk zu identifizieren und zu diagnostizieren. Es ist jedoch wichtig, die spezifischen Implementierungsdetails des Herstellers zu berücksichtigen, da diese je nach Fahrzeugtyp oder Netzwerkarchitektur variieren können. Erweiterte Sicherheitsmaßnahmen oder Anpassungen für spezifische Netzwerktopologien könnten notwendig sein.

@@ -2,8 +2,6 @@
 
 Das DoIP-Protokoll (Diagnostics over Internet Protocol) ermöglicht die Übertragung von UDS-Diagnoseinformationen (Unified Diagnostic Services) über IP-basierte Netzwerke. Diese Kommunikation erfolgt zwischen einem Diagnosetester und einem Zielgerät (ECU), indem UDS-Diagnosebotschaften in die DoIP-Nachrichten eingebettet werden.
 
----
-
 ## Nachrichtenstruktur
 
 Die DoIP-Nachricht mit UDS-Diagnoseinformation besteht aus folgenden Feldern:
@@ -18,7 +16,6 @@ Die DoIP-Nachricht mit UDS-Diagnoseinformation besteht aus folgenden Feldern:
 | **Logical Target Address** | 2 Bytes     | Logische Adresse des Zielgeräts (ECU).                       |
 | **User Data**              | Variabel    | Enthält die UDS-Diagnoseinformationen, wie SID und DID.       |
 
----
 
 ## Beschreibung der Felder
 
@@ -27,14 +24,11 @@ Die DoIP-Nachricht mit UDS-Diagnoseinformation besteht aus folgenden Feldern:
 - **Beschreibung**: Gibt die Version des DoIP-Protokolls an.  
 - **Beispiel**: `0x02` (Version 2).
 
----
-
 ### **Inverse Protocol Version**
 - **Länge**: 1 Byte.  
 - **Beschreibung**: Sicherheitsprüfung, die die Inverse der Protokollversion darstellt.  
 - **Beispiel**: `0xFD` (Komplement von `0x02`).
 
----
 
 ### **Payload Type**
 - **Länge**: 2 Bytes.  
@@ -43,36 +37,26 @@ Die DoIP-Nachricht mit UDS-Diagnoseinformation besteht aus folgenden Feldern:
   - `0x8001`: Diagnoseanfrage (Diagnostic Request).  
   - `0x8002`: Diagnoseantwort (Diagnostic Response).
 
----
-
 ### **Payload Length**
 - **Länge**: 4 Bytes.  
 - **Beschreibung**: Gibt die Länge des Nutzdatenfeldes (Payload) in Bytes an.  
 - **Beispiel**: `0x00000008` (8 Bytes).
-
----
 
 ### **Logical Source Address**
 - **Länge**: 2 Bytes.  
 - **Beschreibung**: Die logische Adresse des Diagnosetesters, der die Anfrage sendet.  
 - **Beispiel**: `0x0203`.
 
----
-
 ### **Logical Target Address**
 - **Länge**: 2 Bytes.  
 - **Beschreibung**: Die logische Adresse des Zielgeräts (ECU), an das die Diagnoseanfrage gerichtet ist.  
 - **Beispiel**: `0x0201`.
-
----
 
 ### **User Data**
 - **Länge**: Variabel (abhängig vom UDS-Dienst).  
 - **Beschreibung**: Enthält die UDS-Diagnoseinformationen, z. B.:
   - **SID (Service Identifier)**: Gibt den UDS-Dienst an, z. B. `0x22` für `ReadDataByIdentifier`.
   - **DID (Data Identifier)**: Gibt die angeforderten Daten an, z. B. `0x1234` für spezifische Fahrzeugdaten.
-
----
 
 ## Beispiel für eine UDS-Diagnosebotschaft
 
@@ -84,7 +68,6 @@ Eine Diagnoseanfrage, die Sensordaten oder Fahrzeuginformationen abruft.
 | **SID (Service Identifier)** | `0x22`       | UDS-Dienst: `ReadDataByIdentifier`.         |
 | **DID (Data Identifier)**   | `0x1234`     | Angeforderte Daten, z. B. Fahrzeugstatus.   |
 
----
 
 ## Ablauf der DoIP-Nachricht mit UDS-Diagnoseinformation
 
@@ -99,8 +82,6 @@ Eine Diagnoseanfrage, die Sensordaten oder Fahrzeuginformationen abruft.
 
 4. **Antwort an den Tester**:  
    Die Diagnoseantwort wird vom Gateway zurück an den Diagnosetester gesendet.
-
----
 
 ## Beispielnachrichten
 
@@ -125,8 +106,6 @@ Logical Source Address: 0x0201
 Logical Target Address: 0x0203
 User Data: 0x62 0x12 0x34 0x56 0x78
 ```
-
----
 
 ## Relevante Codebeispiele
 
@@ -156,8 +135,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
 print("Empfangene Antwort:", response.hex())
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

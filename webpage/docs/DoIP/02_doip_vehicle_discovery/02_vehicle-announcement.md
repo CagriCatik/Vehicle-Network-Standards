@@ -2,7 +2,7 @@
 
 Die Diagnose über Internetprotokoll (DoIP) ist eine wesentliche Technologie in der modernen Fahrzeugdiagnose, die Ethernet als Kommunikationsmedium nutzt. DoIP ermöglicht eine schnellere und effizientere Kommunikation zwischen Diagnosetestern und den Steuergeräten im Fahrzeug. In diesem Leitfaden werden die Konzepte der **Fahrzeugankündigung** (Vehicle Announcement) und **Fahrzeugidentifikation** (Vehicle Identification) detailliert erläutert.
 
-## 1. Fahrzeugankündigung (Vehicle Announcement)
+## Fahrzeugankündigung (Vehicle Announcement)
 
 ### Beschreibung
 
@@ -16,7 +16,7 @@ Die Fahrzeugankündigung ist der erste Schritt im DoIP-Kommunikationsprozess. Da
 
 Die Fahrzeugankündigung wird dreimal gesendet, um sicherzustellen, dass die Nachricht auch bei möglichen Übertragungsfehlern oder Paketverlusten empfangen wird. Dies ist besonders wichtig in Umgebungen mit hohem Netzwerkverkehr, wo Datenpakete verloren gehen können. Die Verwendung von UDP als Transportprotokoll ermöglicht eine schnelle und effiziente Übertragung, da es keinen Overhead für Verbindungsaufbau und -abbau wie TCP erfordert.
 
-## 2. Fahrzeugidentifikation (Vehicle Identification)
+## Fahrzeugidentifikation (Vehicle Identification)
 
 ### Beschreibung
 

@@ -2,8 +2,6 @@
 
 Die **Vehicle Identification Request** ist eine essenzielle Nachricht im DoIP-Protokoll (Diagnostics over Internet Protocol). Sie ermöglicht es einem Diagnosetester, spezifische Informationen über ein Fahrzeug anzufordern, wie die Fahrzeug-Identifikationsnummer (VIN) oder die Entity ID (EID). Dies ist der erste Schritt zur Identifikation eines Fahrzeugs und zur Etablierung einer Diagnosekommunikation.
 
----
-
 ## Nachrichtenstruktur
 
 Die Vehicle Identification Request-Nachricht enthält die folgenden Felder:
@@ -15,8 +13,6 @@ Die Vehicle Identification Request-Nachricht enthält die folgenden Felder:
 | **Payload Type**           | 2 Bytes     | Typ der Nachricht (`0x0002`, `0x0003` oder `0x0001`).         |
 | **Payload Length**         | 4 Bytes     | Länge des Nutzdatenfeldes in Bytes.                          |
 | **Payload**                | 0–17 Bytes  | VIN, EID oder leer (abhängig vom Payload Type).               |
-
----
 
 ## Beschreibung der Payload Types
 
@@ -33,8 +29,6 @@ Payload Length: 6 Bytes
 Payload (EID): "00:16:81:00:62:E0"
 ```
 
----
-
 ### **Payload Type = 0x0003**: Anfrage mit VIN
 - **Einsatzbereich**: Wird verwendet, um ein Fahrzeug anhand seiner Fahrzeug-Identifikationsnummer (VIN) zu identifizieren.
 - **Payload-Länge**: 17 Bytes.
@@ -48,8 +42,6 @@ Payload Length: 17 Bytes
 Payload (VIN): "1HGBH41JXMN109186"
 ```
 
----
-
 ### **Payload Type = 0x0001**: Anfrage ohne EID oder VIN
 - **Einsatzbereich**: Wird verwendet, wenn weder VIN noch EID bekannt sind.
 - **Payload-Länge**: 0 Bytes.
@@ -62,8 +54,6 @@ Payload Length: 0 Bytes
 Payload: Keine
 ```
 
----
-
 ## Ablauf der Vehicle Identification Request
 
 1. **Senden der Anfrage**:  
@@ -75,8 +65,6 @@ Payload: Keine
 3. **Antwort des Gateways**:  
    Das Gateway verarbeitet die Anfrage und antwortet mit einer **Vehicle Identification Response**, die die angeforderten Informationen enthält.
 
----
-
 ## Anwendungsfälle
 
 ### 1. Fahrzeugerkennung in einem Netzwerk
@@ -84,8 +72,6 @@ Payload: Keine
 
 ### 2. Initialisierung einer Diagnoseverbindung
 - Vor der Durchführung einer Diagnose ist es notwendig, das Ziel-Fahrzeug zu identifizieren. Die Vehicle Identification Request stellt diesen Schritt sicher.
-
----
 
 ## Beispielnachrichten
 
@@ -115,9 +101,6 @@ Payload Type: 0x0001
 Payload Length: 0 Bytes
 Payload: Keine
 ```
-
----
-
 ## Relevante Codebeispiele
 
 ### Beispiel: Senden einer Vehicle Identification Request
@@ -149,8 +132,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 print("Empfangene Antwort:", response.hex())
 ```
 
----
-
 ## Häufige Probleme und Lösungen
 
 ### Problem 1: Keine Antwort vom Gateway
@@ -164,4 +145,3 @@ print("Empfangene Antwort:", response.hex())
 ### Problem 3: Zeitüberschreitung
 - **Ursache**: Das Gateway reagiert nicht rechtzeitig.
 - **Lösung**: Erhöhen Sie den Timeout-Wert und prüfen Sie die Verbindung.
-

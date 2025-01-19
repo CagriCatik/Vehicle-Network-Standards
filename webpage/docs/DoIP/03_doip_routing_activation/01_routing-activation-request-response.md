@@ -2,9 +2,7 @@
 
 Die Routing-Aktivierung ist ein zentraler Prozess im Rahmen von Diagnostics over Internet Protocol (DoIP), der die Kommunikation zwischen einem Diagnosetester und den Steuergeräten (ECUs) eines Fahrzeugs über ein Gateway ermöglicht. Dieser Prozess stellt sicher, dass Diagnosebefehle die vorgesehenen Netzwerke, wie z. B. CAN-Busse im Fahrzeug, erreichen.
 
----
-
-## 1. Übersicht über die Routing-Aktivierung
+## Übersicht über die Routing-Aktivierung
 
 Der Prozess der **Routing-Aktivierungsanfrage/-antwort** umfasst drei Hauptschritte:
 
@@ -17,9 +15,9 @@ Der Prozess der **Routing-Aktivierungsanfrage/-antwort** umfasst drei Hauptschri
 3. **Routing-Aktivierungsantwort**:  
    Das Gateway bestätigt die Anfrage, indem es eine Antwort mit wichtigen Informationen wie den logischen Adressen des Testers und des Gateways zurücksendet.
 
----
 
-## 2. Prozessablauf der Routing-Aktivierung
+
+## Prozessablauf der Routing-Aktivierung
 
 ### Schritt 1: Routing-Aktivierungsanfrage
 - Der Diagnosetester sendet eine **Routing-Aktivierungsanfrage** an das Gateway über TCP. 
@@ -38,7 +36,7 @@ Der Tester benötigt Zugriff auf nachgelagerte fahrzeuginterne Netzwerke (z. B. 
    Authentifizierungsdaten: (Optional, abhängig vom Sicherheitsniveau)
    ```
 
----
+
 
 ### Schritt 2: Netzwerkaktivierung durch das Gateway
 - Nach Empfang der **Routing-Aktivierungsanfrage** aktiviert das Gateway gegebenenfalls die erforderlichen nachgelagerten Netzwerke, wie z. B. CAN-Busse.
@@ -48,7 +46,7 @@ Der Tester benötigt Zugriff auf nachgelagerte fahrzeuginterne Netzwerke (z. B. 
 - **CAN-Bus-Aktivierung**: Das Gateway ermöglicht die Kommunikation mit Steuergeräten auf dem CAN-Bus.
 - **Energiemanagement**: Das Gateway stellt sicher, dass Steuergeräte im Energiesparmodus aufgeweckt werden, um auf Diagnoseanfragen zu reagieren.
 
----
+
 
 ### Schritt 3: Routing-Aktivierungsantwort
 - Das Gateway sendet eine **Routing-Aktivierungsantwort** zurück an den Diagnosetester über TCP.
@@ -72,9 +70,9 @@ Der Tester benötigt Zugriff auf nachgelagerte fahrzeuginterne Netzwerke (z. B. 
   - Nicht verfügbare nachgelagerte Netzwerke.
   - Interne Gateway-Fehler.
 
----
 
-## 3. Erklärung der Abbildung
+
+## Erklärung der Abbildung
 
 Die bereitgestellte Abbildung veranschaulicht den Prozess der Routing-Aktivierung wie folgt:
 
@@ -87,9 +85,8 @@ Die bereitgestellte Abbildung veranschaulicht den Prozess der Routing-Aktivierun
 3. **Schritt 3 (Blaues Feld)**:  
    Das Gateway antwortet mit einer `Routing-Aktivierungsantwort` und bestätigt dabei die logischen Adressen des Testers und des Gateways.
 
----
 
-## 4. Wichtige Konzepte und praktische Implikationen
+## Wichtige Konzepte und praktische Implikationen
 
 ### Logische Adressen
 Logische Adressen sind eindeutige Identifikatoren, die im Rahmen von DoIP verwendet werden, um verschiedene Entitäten (z. B. Tester, Gateway und Steuergeräte) zu unterscheiden. Sie ermöglichen ein präzises Routing von Diagnose-Nachrichten.
@@ -109,9 +106,8 @@ Die Routing-Aktivierung kann Authentifizierungsmechanismen erfordern, um sicherz
 - **TCP/IP** dient als Transportprotokoll für die Kommunikation über DoIP.
 - Das Gateway kann für die Kommunikation mit nachgelagerten Netzwerken auf **Ethernet**, **CAN** oder andere fahrzeugspezifische Netzwerke zurückgreifen.
 
----
 
-## 5. Herausforderungen und Lösungen
+##  Herausforderungen und Lösungen
 
 ### Herausforderung 1: Netzwerklatenz
 - **Problem**: Hohe Latenzen bei der TCP/IP-Kommunikation können die Routing-Aktivierung verzögern.
@@ -125,9 +121,9 @@ Die Routing-Aktivierung kann Authentifizierungsmechanismen erfordern, um sicherz
 - **Problem**: CAN- oder andere Netzwerke sind möglicherweise inaktiv.
 - **Lösung**: Verwendung von Aufwachmechanismen im Gateway oder erneutes Senden der Anfrage.
 
----
 
-## 6. Codebeispiele zur Implementierung
+
+## Codebeispiele zur Implementierung
 
 ### Beispiel: Senden einer Routing-Aktivierungsanfrage
 ```python

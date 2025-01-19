@@ -2,8 +2,6 @@
 
 Die **Routing Activation Sequenz** im Rahmen von Diagnostics over Internet Protocol (DoIP) beschreibt den Prozess, durch den ein Tester das Gateway anweist, den Datenverkehr für nachgelagerte Netzwerke im Fahrzeug zu aktivieren. Dieser Prozess gewährleistet den Zugriff auf Fahrzeugsteuergeräte, die über Netzwerke wie CAN-Busse verbunden sind.
 
----
-
 ## Ablauf der Routing Activation Sequenz
 
 Die Routing Activation Sequenz besteht aus zwei Hauptschritten: 
@@ -34,8 +32,6 @@ Tester → Gateway:
 Routing Activation Request
 ```
 
----
-
 ### Schritt 2: Routing Activation Response
 
 Nachdem das Gateway die Routing Activation Request empfangen hat, prüft es die Anforderung und aktiviert gegebenenfalls die nachgelagerten Netzwerke (z. B. CAN). Anschließend wird eine **Routing Activation Response** zurück an den Tester gesendet.
@@ -63,8 +59,6 @@ Gateway → Tester:
 Routing Activation Response
 ```
 
----
-
 ## Zusammenfassung der Sequenz
 
 1. **Routing Activation Request**: Der Tester fordert das Gateway auf, den Zugriff auf weitere Netzwerke im Fahrzeug (z. B. CAN) zu aktivieren.
@@ -72,8 +66,6 @@ Routing Activation Response
 3. **Routing Activation Response**: Das Gateway bestätigt dem Tester, dass die Aktivierung erfolgreich durchgeführt wurde.
 
 Diese Sequenz stellt sicher, dass Diagnosedaten über das Gateway an die richtigen Netzwerke weitergeleitet werden.
-
----
 
 ## Codebeispiel zur Umsetzung
 
@@ -106,8 +98,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
 print("Routing Activation Response erhalten:", response.decode('utf-8'))
 ```
-
----
 
 ## Häufige Probleme und Lösungen
 

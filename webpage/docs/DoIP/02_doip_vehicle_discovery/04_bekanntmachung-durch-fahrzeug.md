@@ -61,7 +61,3 @@ Die bereitgestellten Informationen sind weitgehend korrekt, jedoch gibt es einig
 
 ### 3. GID (Group Identifier)
 - Der GID ist in diesem Beispiel leer. Es wäre hilfreich, ein Szenario zu beschreiben, in dem der GID nicht leer ist und wie dies die Kommunikation im Netzwerk beeinflusst. Der GID könnte verwendet werden, um Gruppen von Fahrzeugen oder Gateways zu identifizieren, was in komplexeren Netzwerken nützlich sein kann.
-
-## Fazit
-
-Die Fahrzeugankündigung ist ein wichtiger Schritt im DoIP-Kommunikationsprozess, der sicherstellt, dass der Diagnosetester das Fahrzeug im Netzwerk erkennt und die Kommunikation beginnt. Die Verwendung von Broadcast-Adressen und standardisierten Ports sorgt für eine effiziente und zuverlässige Kommunikation im Netzwerk. Eine präzise Konfiguration und Verwaltung der Ankündigungsinformationen ist entscheidend für eine erfolgreiche Diagnose.

@@ -1,6 +1,4 @@
-# Einführung in die allgemeinen Konzepte von DoIP
-
-## Übersicht
+# Allgemeine Konzepte von DoIP
 
 Das Diagnostic over Internet Protocol (DoIP) ermöglicht eine räumlich ungebundene Fahrzeugdiagnose, indem eine Verbindung zwischen Diagnosetools und Fahrzeugen über Ethernet- und IP-Netzwerke hergestellt wird. In diesem Leitfaden werden die allgemeinen Konzepte und die Funktionsweise von DoIP basierend auf den relevanten Informationen erläutert.
 

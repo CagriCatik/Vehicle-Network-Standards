@@ -1,4 +1,4 @@
-# Einführung in Diagnose-Gateways (Edge Nodes) im Fahrzeug
+# Diagnose-Gateway (Edge Nodes) im Fahrzeug
 
 ## Rolle des Diagnose-Gateways
 
@@ -39,7 +39,3 @@ Das Diagnose-Gateway (GW) ist über das Fahrzeugnetzwerk mit verschiedenen Steue
 
 - **Netzwerktopologie:** Das Schaubild zeigt die Verbindungen zwischen dem Diagnose-Gateway und den Steuergeräten.
 - **Kommunikationsbus:** Die interne Kommunikation zwischen den Steuergeräten erfolgt über den CAN-Bus.
-
-## Zusammenfassung
-
-Das Diagnose-Gateway ist von zentraler Bedeutung für die Fahrzeugdiagnose, da es die Kommunikation zwischen den internen Steuergeräten und externen Diagnosetools ermöglicht. Durch die Nutzung von Ethernet, eindeutigen logischen Adressen und standardisierten Protokollen wie UDP/IP und TCP/IP wird eine effiziente und zuverlässige Fahrzeugdiagnose sichergestellt. 

@@ -74,7 +74,3 @@ Die zufällige Wahl der Quellports (wie 52306 und 61824) ist üblich. Allerdings
 ### 3. DoIP-Protokoll
 
 Das DoIP-Protokoll ist speziell für die Fahrzeugdiagnose entwickelt worden und bietet eine effiziente Möglichkeit, Fahrzeuge im Netzwerk zu identifizieren und zu diagnostizieren. Es ist jedoch wichtig, die spezifischen Implementierungsdetails des Herstellers zu berücksichtigen, da diese je nach Fahrzeugtyp oder Netzwerkarchitektur variieren können. Erweiterte Sicherheitsmaßnahmen oder Anpassungen für spezifische Netzwerktopologien könnten notwendig sein.
-
-## Fazit
-
-Der Prozess der Fahrzeugerkennung durch den Diagnosetester im DoIP-Netzwerk ist gut strukturiert und ermöglicht eine effiziente Identifikation von Fahrzeugen im Netzwerk. Durch die Broadcast-Kommunikation wird sichergestellt, dass alle relevanten Geräte im Netzwerk erreicht werden. Es ist jedoch wichtig, Sicherheitsaspekte zu berücksichtigen und die Konfiguration des Netzwerks und der Adressen präzise durchzuführen, um einen störungsfreien Diagnoseprozess zu gewährleisten.

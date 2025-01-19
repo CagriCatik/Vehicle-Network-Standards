@@ -1,4 +1,4 @@
-# DoIP Fahrzeug-Entdeckung: Konfiguration der IP-Adressen
+# Konfiguration der IP-Adressen
 
 Die Sequenzdiagramme zeigen den Ablauf der IP-Adresskonfiguration mittels DHCP (Dynamic Host Configuration Protocol) in einem DoIP (Diagnostics over IP) Netzwerk. Dieses Netzwerk besteht aus drei Hauptkomponenten: dem Tester, dem DHCP-Server und dem Fahrzeug-Gateway (GW). Der Prozess wird für beide Komponenten, den Tester und das Fahrzeug-Gateway, parallel dargestellt. Im Folgenden wird der Ablauf detailliert beschrieben und analysiert.
 
@@ -52,7 +52,3 @@ Der DHCP-Server bestätigt die Zuweisung der IP-Adresse mit einer DHCP-Ack-Nachr
 
 3. **Erweiterte Konfigurationsoptionen:**
    - Neben der Zuweisung der IP-Adresse können weitere DHCP-Optionen konfiguriert werden, wie z. B. DNS-Server, NTP-Server und andere Netzwerkdienste, um eine vollständige Netzwerkkonfiguration sicherzustellen.
-
-### Fazit
-
-Der DHCP-Prozess für die Konfiguration der IP-Adressen in einem DoIP-Netzwerk ist ein wesentlicher Schritt, um die Kommunikation zwischen Diagnosetestern und Fahrzeug-Gateways zu ermöglichen. Durch die korrekte Implementierung dieses Prozesses wird sichergestellt, dass alle beteiligten Geräte eindeutige IP-Adressen erhalten und effektiv im Netzwerk kommunizieren können. Sicherheitsmechanismen und die Vermeidung von IP-Konflikten sollten ebenfalls berücksichtigt werden, um eine reibungslose und sichere Netzwerkkonfiguration zu gewährleisten.

@@ -1,4 +1,4 @@
-# Einführung in die Rolle des Diagnosetesters im Fahrzeug
+# Diagnosetester im Fahrzeug
 
 ## Beschreibung der Rolle
 
@@ -31,7 +31,3 @@ Die Kommunikation zwischen dem Diagnosetester und den Steuergeräten erfolgt in 
 
 - **Schicht 4: UDP/TCP-Ports**
   - Ports werden verwendet, um verschiedene Kommunikationskanäle auf derselben IP-Adresse zu unterscheiden. Ein Beispiel für einen Port wäre `13400`. Durch die Verwendung unterschiedlicher Ports kann ein Gerät mehrere Dienste parallel betreiben, ohne dass es zu Konflikten kommt.
-
-### Fazit
-
-Der Diagnosetester ist ein unverzichtbares Werkzeug für die moderne Fahrzeugdiagnose. Mit Hilfe von Beschreibungsdateien wie CDD und ODX, eindeutigen logischen Adressen und der Kommunikation über IP-basierte Netzwerke kann der Diagnosetester eine präzise und effiziente Fahrzeugdiagnose gewährleisten. Die Möglichkeit, auf verschiedene Steuergeräte gleichzeitig zuzugreifen, macht ihn zu einem flexiblen und leistungsstarken Instrument in der Fahrzeugwartung.

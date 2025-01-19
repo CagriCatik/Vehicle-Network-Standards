@@ -1,7 +1,5 @@
 # Einführung in DoIP
 
-## Übersicht
-
 Das Diagnostic over Internet Protocol (DoIP) ist eine wesentliche Komponente moderner Fahrzeugdiagnosesysteme. Diese Technologie ermöglicht die Diagnose und das Flashen von Steuergeräten (ECUs) über Ethernet- und IP-Netzwerke. In diesem Leitfaden werden die grundlegenden Aspekte und Anwendungen von DoIP ausführlich erläutert.
 
 ## Anwendungsbereiche von DoIP

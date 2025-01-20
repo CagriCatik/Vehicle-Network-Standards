@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvns=self.webpackChunkvns||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/Vehicle-Network-Standards/blog","blogTitle":"Blog","authorsListPath":"/Vehicle-Network-Standards/blog/authors"}')}}]);

@@ -1,7 +1,5 @@
 # Struktur und Funktion von Data Frames im CAN-Netzwerk
 
-## Einleitung
-
 Der Controller Area Network (CAN)-Bus ist ein wesentlicher Bestandteil moderner Automobile, der eine zuverlässige Kommunikation zwischen verschiedenen elektronischen Steuergeräten (ECUs) ermöglicht. In diesem Kontext nehmen Data Frames eine zentrale Rolle ein, da sie die Nutzdaten übertragen. Dieser Leitfaden beschreibt detailliert den Aufbau und die Funktion jedes Elements eines CAN Data Frames, um ein tiefgehendes Verständnis für dessen Mechanismen und Anwendungen zu vermitteln.
 
 ![CAN-Knoten](/img/can/1712276346227.png)

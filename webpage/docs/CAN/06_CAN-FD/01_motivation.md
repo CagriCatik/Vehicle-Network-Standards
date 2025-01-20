@@ -1,8 +1,6 @@
 # Motivation
 
-## Einleitung
-
-Der Controller Area Network ist seit Jahrzehnten ein grundlegendes Kommunikationsprotokoll in der Automobilindustrie. Ursprünglich eingeführt, um einige hundert Signale innerhalb eines Fahrzeugs zu verarbeiten, hat sich die Anzahl der Signale mit der Evolution eingebetteter Systeme im Automobilbereich erheblich erhöht und erreicht nun fünfstellige Bereiche. Dieses Tutorial behandelt die Feinheiten von CAN mit einem Fokus auf CAN-FD (Flexible Data-Rate), geht auf die Einschränkungen des klassischen CAN ein und erläutert, wie CAN-FD diese Herausforderungen zu überwinden versucht.
+Der Controller Area Network ist seit Jahrzehnten ein grundlegendes Kommunikationsprotokoll in der Automobilindustrie. Ursprünglich eingeführt, um einige hundert Signale innerhalb eines Fahrzeugs zu verarbeiten, hat sich die Anzahl der Signale mit der Evolution eingebetteter Systeme im Automobilbereich erheblich erhöht und erreicht nun fünfstellige Bereiche. Dieser Teil behandelt die Feinheiten von CAN mit einem Fokus auf CAN-FD (Flexible Data-Rate), geht auf die Einschränkungen des klassischen CAN ein und erläutert, wie CAN-FD diese Herausforderungen zu überwinden versucht.
 
 ## Die Entwicklung eingebetteter Systeme in Fahrzeugen
 

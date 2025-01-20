@@ -47,7 +47,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Local Interconnect Networ)',
+    title: 'Local Interconnect Network',
     description: (
       <>
         Explore the simplicity and efficiency of the <a href="/Vehicle-Network-Standards/docs/LIN/getting_started" target="_self" style={{ textDecoration: 'underline', color: '#007acc' }}>LIN</a> protocol, ideal for low-cost, low-speed vehicle networks.

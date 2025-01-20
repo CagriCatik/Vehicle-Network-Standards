@@ -1,7 +1,5 @@
 # Synchronisation und Resynchronisation
 
-## Einführung in die Synchronisation
-
 Für eine korrekte und zuverlässige Datenübertragung im CAN-Bus (Controller Area Network) ist die Synchronisation der Kommunikationspartner von entscheidender Bedeutung. Eine präzise Synchronisation gewährleistet, dass alle Knoten im Netzwerk die Datenbits korrekt empfangen und interpretieren können.
 
 ## Synchronisation der Kommunikationspartner

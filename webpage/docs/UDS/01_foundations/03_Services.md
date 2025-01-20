@@ -1,8 +1,4 @@
----
-sidebar_position: 3
----
-
-# Services in UDS
+# Services
 
 ## What is a Service in UDS?
 

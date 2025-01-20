@@ -227,7 +227,7 @@ const config = {
               },
               {
                 label: 'Glossary',
-                to: '/docs/GLOSSARY/info',
+                to: '/docs/Glossary/Getting-Started',
               },
               {
                 label: 'GitHub',

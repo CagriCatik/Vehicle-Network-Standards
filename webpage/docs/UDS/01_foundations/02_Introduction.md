@@ -1,8 +1,4 @@
----
-sidebar_position: 2
----
-
-# Introduction to UDS
+# Introduction
 
 ## What is Diagnostics?
 

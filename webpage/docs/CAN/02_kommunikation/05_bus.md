@@ -1,7 +1,5 @@
 # CAN-Bus
 
-## Einleitung
-
 Die CAN-Kommunikation (Controller Area Network) ist ein weit verbreitetes Netzwerkprotokoll in der Automobilindustrie, das eine robuste und effiziente Datenübertragung zwischen verschiedenen Steuergeräten ermöglicht. Dieses Tutorial bietet eine detaillierte Übersicht über die physikalische Signalübertragung in einem CAN-Netzwerk und erläutert die wesentlichen Komponenten und Prinzipien.
 
 ### Differenzsignalübertragung

@@ -1,7 +1,5 @@
 # Symmetrische Signalübertragung
 
-## Einführung in die symmetrische Signalübertragung
-
 Symmetrische Signalübertragung ist eine Methode, die häufig im Automobilbereich verwendet wird, um die Übertragung von Daten robust gegenüber elektromagnetischen Störungen zu machen. Diese Methode ist besonders wichtig in Systemen wie dem Controller Area Network (CAN), das als Rückgrat für die Kommunikation zwischen verschiedenen Steuergeräten in modernen Fahrzeugen dient.
 
 ![CAN-Netzwerk](/img/can/1712276652085.png)

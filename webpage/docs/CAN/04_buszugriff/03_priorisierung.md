@@ -1,7 +1,4 @@
-
 # Prioritäten und Arbitrierung
-
-## Einführung
 
 Der CAN-Bus (Controller Area Network) ist ein wesentliches Netzwerkprotokoll im Automobilbereich, das für die Kommunikation zwischen verschiedenen Steuergeräten (ECUs) verwendet wird. Ein zentrales Element des CAN-Bus ist die Priorisierung von Nachrichten, die durch den Identifier festgelegt wird. Dieses Tutorial bietet eine tiefgehende Analyse der Prioritätensteuerung und der Auswirkungen auf die Echtzeitfähigkeit und Buslast des CAN-Netzwerks.
 

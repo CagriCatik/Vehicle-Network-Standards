@@ -1,7 +1,5 @@
 # Anforderung von Daten im CAN-Netzwerk
 
-## Einleitung
-
 Im Bereich der automobilen Netzwerktechnik spielt das Controller Area Network (CAN) eine zentrale Rolle bei der Kommunikation zwischen verschiedenen elektronischen Steuergeräten (ECUs). Dieses Tutorial beleuchtet die Funktion und Anwendung von Remote Frames zur Anforderung von Daten innerhalb eines CAN-Netzwerks. Besondere Aufmerksamkeit wird den Unterschieden zu Data Frames, der Rolle des RTR-Bits und der Implementierung in realen Anwendungen gewidmet.
 
 ## Überblick über CAN-Frames

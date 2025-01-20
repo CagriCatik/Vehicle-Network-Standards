@@ -1,76 +1,99 @@
-# Getting Started
-
-## 1. Fundamentals and Context
-   - 1.1 Evolution of Mobility: Towards Software-Driven Vehicles  
-   - 1.2 Fundamentals of Service-Oriented Vehicle Architecture  
-   - 1.3 Transition to a New World: Automotive E/E Architecture and Connectivity  
-   - 1.4 Current Network Architectures  
-   - 1.5 Transition to Service-Oriented Architecture  
+# SOVA
 
 ---
 
-## 2. Architecture-Specific Implementations
-   - 2.1 Distributed Architecture  
-      - Overview of distributed systems in vehicle architecture  
-      - Benefits and challenges of distributed systems  
-   - 2.2 Centralized Architecture  
-      - Transition from distributed to centralized systems  
-      - Use cases and performance improvements in centralized architecture  
-   - 2.3 Domain-Centralized Architecture  
-      - Functional segregation into domains (e.g., powertrain, infotainment)  
-      - Integration challenges and solutions  
-   - 2.4 Zonal Architecture  
-      - Transition from domain to zonal systems  
-      - Benefits of reduced wiring and enhanced scalability  
+## 1. **Fundamentals and Context**
+Dieser Abschnitt bietet eine Einführung in die Grundlagen und den Kontext der serviceorientierten Fahrzeugarchitektur.
+
+- **Wichtige Inhalte:**
+  - Evolution of Mobility: Towards Software-Driven Vehicles
+  - Fundamentals of Service-Oriented Vehicle Architecture
+  - Transition to a New World: Automotive E/E Architecture and Connectivity
+  - Current Network Architectures
+  - Transition to Service-Oriented Architecture
 
 ---
 
-## 3. Core Concepts of Service-Oriented Architectures
-   - 3.1 Principles Behind Service-Oriented Vehicle Architecture  
-   - 3.2 Service Providers Overview  
-   - 3.3 Use Cases for Service-Oriented Vehicle Architecture  
-   - 3.4 Goals of a Service-Oriented Architecture  
-   - 3.5 Onboard Vehicle API  
-   - 3.6 Communication Patterns and Architectures  
-   - 3.7 Goals and Benefits of the Architecture  
+## 2. **Architecture-Specific Implementations**
+In diesem Kapitel werden verschiedene Architekturansätze in Fahrzeugen und deren spezifische Implementierungen beschrieben.
+
+- **Wichtige Inhalte:**
+  - Distributed Architecture
+    - Überblick über verteilte Systeme in der Fahrzeugarchitektur
+    - Vorteile und Herausforderungen verteilter Systeme
+  - Centralized Architecture
+    - Übergang von verteilten zu zentralisierten Systemen
+    - Anwendungsfälle und Leistungsverbesserungen in zentralisierten Architekturen
+  - Domain-Centralized Architecture
+    - Funktionale Segmentierung in Domänen (z. B. Antriebsstrang, Infotainment)
+    - Integrationsherausforderungen und Lösungen
+  - Zonal Architecture
+    - Übergang von Domänen- zu zonalen Systemen
+    - Vorteile reduzierter Verkabelung und verbesserter Skalierbarkeit
 
 ---
 
-## 4. Technical Frameworks and Protocols
-   - 4.1 Overview of SOME/IP  
-   - 4.2 Data Exchange Between Service Providers and Clients  
-   - 4.3 Definition and Explanation of "Service"  
-   - 4.4 Service-Oriented Communication: Terminology  
-   - 4.5 Onboard Vehicle API: Interface Design and Documentation  
+## 3. **Core Concepts of Service-Oriented Architectures**
+Dieser Abschnitt behandelt die zentralen Konzepte und Prinzipien der serviceorientierten Fahrzeugarchitektur.
+
+- **Wichtige Inhalte:**
+  - Principles Behind Service-Oriented Vehicle Architecture
+  - Überblick über Service Providers
+  - Anwendungsfälle der Service-Oriented Vehicle Architecture
+  - Ziele der Service-Oriented Architecture
+  - Onboard Vehicle API
+  - Kommunikationsmuster und -architekturen
+  - Ziele und Vorteile der Architektur
 
 ---
 
-## 5. Design Patterns for Vehicle Communication
-   - 5.1 Service Design Patterns  
-   - 5.2 SOME/IP and Client-Server Communication in SOA  
-   - 5.3 Categorization of Methods in the Onboard Vehicle API  
-   - 5.4 Response Design Patterns (e.g., Return PDU)  
-   - 5.5 Handling State Events in Onboard Vehicle API  
-   - 5.6 Structuring Events in Onboard Vehicle API  
+## 4. **Technical Frameworks and Protocols**
+In diesem Kapitel werden die technischen Rahmenwerke und Protokolle erläutert, die für SOVA relevant sind.
+
+- **Wichtige Inhalte:**
+  - Überblick über SOME/IP
+  - Datenaustausch zwischen Service Providers und Clients
+  - Definition und Erklärung von "Service"
+  - Service-Oriented Communication: Terminologie
+  - Onboard Vehicle API: Interface Design und Dokumentation
 
 ---
 
-## 6. State Management and Resource Control
-   - 6.1 Design Goals of State Events for Efficiency  
-   - 6.2 Fire-and-Forget Methods in Client-Server Communication  
-   - 6.3 Modifications to Vehicle Resources  
-   - 6.4 Server Responses to Resource Changes  
-   - 6.5 Differentiating Resource Feedback in Onboard API  
-   - 6.6 Standards for Managing Vehicle Resources  
+## 5. **Design Patterns for Vehicle Communication**
+Dieser Abschnitt konzentriert sich auf Designmuster für die Fahrzeugkommunikation.
+
+- **Wichtige Inhalte:**
+  - Service Design Patterns
+  - SOME/IP und Client-Server-Kommunikation in SOA
+  - Kategorisierung von Methoden in der Onboard Vehicle API
+  - Response Design Patterns (z. B. Return PDU)
+  - Umgang mit State Events in der Onboard Vehicle API
+  - Strukturierung von Events in der Onboard Vehicle API
 
 ---
 
-## 7. Access Control and Coordination Patterns
-   - 7.1 Client Categorization for Authorization  
-   - 7.2 Universally Unique Categories (UUCategory)  
-   - 7.3 Client Whitelisting for Authorization  
-   - 7.4 Types and Management of Whitelists  
-   - 7.5 Access Coordination for Multi-Client Scenarios  
-   - 7.6 Coordinating Resource Access  
-   - 7.7 Layering Patterns for Resource Management  
-   - 7.8 Access Coordination Design Layers  
+## 6. **State Management and Resource Control**
+Dieser Abschnitt behandelt das Zustandsmanagement und die Kontrolle von Ressourcen in der Fahrzeugarchitektur.
+
+- **Wichtige Inhalte:**
+  - Designziele von State Events für Effizienz
+  - Fire-and-Forget-Methoden in der Client-Server-Kommunikation
+  - Änderungen an Fahrzeugressourcen
+  - Serverantworten auf Ressourcenauswirkungen
+  - Unterscheidung von Ressourcen-Feedback in der Onboard API
+  - Standards für das Ressourcenmanagement im Fahrzeug
+
+---
+
+## 7. **Access Control and Coordination Patterns**
+In diesem Kapitel werden Zugriffssteuerungs- und Koordinationsmuster behandelt.
+
+- **Wichtige Inhalte:**
+  - Client Categorization for Authorization
+  - Universally Unique Categories (UUCategory)
+  - Client Whitelisting for Authorization
+  - Typen und Verwaltung von Whitelists
+  - Access Coordination for Multi-Client Scenarios
+  - Koordination des Ressourcenzugriffs
+  - Layering Patterns for Resource Management
+  - Access Coordination Design Layers

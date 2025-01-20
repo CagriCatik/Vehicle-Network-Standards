@@ -1,18 +1,8 @@
-# Erste Schritte mit DoIP
-
-DoIP Protokoll ermöglicht die moderne Fahrzeugdiagnose über Ethernet-basierte Netzwerke, was eine schnellere, effizientere und standardisierte Kommunikation zwischen Diagnosetestern und Steuergeräten gewährleistet.
+# DoIP
 
 ---
 
-## Was ist DoIP?
-
-Diagnostics over Internet Protocol (DoIP) ist ein standardisiertes Kommunikationsprotokoll, das auf Ethernet basiert und speziell für die Fahrzeugdiagnose entwickelt wurde. Es ermöglicht die Übertragung von Diagnoseinformationen, Steuerbefehlen und Sensordaten in modernen Fahrzeugen, die zunehmend auf komplexe elektronische Systeme angewiesen sind.
-
----
-
-## Struktur des Kapitels
-
-### 1. **Einführung**
+## 1. **Einführung**
 Dieses Kapitel bietet eine grundlegende Einführung in DoIP. Es erklärt die Konzepte, die Rolle des Diagnosetesters und des Gateways (Edge Nodes) im Fahrzeug.
 
 - **Wichtige Inhalte:**
@@ -23,7 +13,7 @@ Dieses Kapitel bietet eine grundlegende Einführung in DoIP. Es erklärt die Kon
 
 ---
 
-### 2. **DoIP Vehicle Discovery**
+## 2. **DoIP Vehicle Discovery**
 Der Prozess der Fahrzeugerkennung ermöglicht es Diagnosetestern, Fahrzeuge im Netzwerk zu identifizieren und eine Verbindung aufzubauen.
 
 - **Wichtige Inhalte:**
@@ -34,7 +24,7 @@ Der Prozess der Fahrzeugerkennung ermöglicht es Diagnosetestern, Fahrzeuge im N
 
 ---
 
-### 3. **DoIP Routing Activation**
+## 3. **DoIP Routing Activation**
 In diesem Abschnitt wird der Prozess der Routing-Aktivierung beschrieben, der den Zugriff auf interne Fahrzeugnetzwerke (z. B. CAN) ermöglicht.
 
 - **Wichtige Inhalte:**
@@ -44,7 +34,7 @@ In diesem Abschnitt wird der Prozess der Routing-Aktivierung beschrieben, der de
 
 ---
 
-### 4. **Benutzung von DoIP Diagnose**
+## 4. **Benutzung von DoIP Diagnose**
 Hier wird erklärt, wie DoIP für Diagnosezwecke verwendet wird, einschließlich der Erstellung von Diagnoseanfragen und der Interpretation von Antworten.
 
 - **Wichtige Inhalte:**
@@ -53,7 +43,7 @@ Hier wird erklärt, wie DoIP für Diagnosezwecke verwendet wird, einschließlich
 
 ---
 
-### 5. **DoIP Message**
+## 5. **DoIP Message**
 Dieser Abschnitt konzentriert sich auf die Struktur und den Aufbau der verschiedenen Nachrichtenformate im DoIP-Protokoll.
 
 - **Wichtige Inhalte:**

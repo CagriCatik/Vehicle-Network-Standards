@@ -1,7 +1,4 @@
-
 # Bitweise Arbitrierung
-
-## Einleitung
 
 Die bitweise Arbitrierung ist ein wesentliches Element des Controller Area Network (CAN), das in der ISO 11898-1 normiert ist. Diese Technik ermöglicht es mehreren Steuergeräten (ECUs) in einem Fahrzeug, über ein gemeinsames Netzwerk zu kommunizieren, ohne dass es zu Datenkollisionen kommt. In diesem detaillierten und wissenschaftlich fundierten Tutorial werden die Mechanismen und Abläufe der bitweisen Arbitrierung im CAN-Netzwerk erläutert, basierend auf der bereitgestellten Abbildung und ergänzenden Informationen.
 

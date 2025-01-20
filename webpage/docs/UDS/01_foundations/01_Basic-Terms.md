@@ -1,7 +1,4 @@
----
-sidebar_position: 1
----
-# Basic Terms in UDS
+# Basic Terms
 
 ## Introduction to UDS
 

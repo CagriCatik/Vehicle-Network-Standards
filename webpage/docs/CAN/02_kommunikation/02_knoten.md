@@ -1,7 +1,5 @@
 # CAN-Knoten
 
-## Einleitung
-
 Die fortschreitende Elektronifizierung des Automobils führt zu einer rasanten Zunahme der Quantität und Komplexität der Software. Moderne Fahrzeuge, insbesondere in der Oberklasse, verfügen über mehr als 1000 Software-Funktionen, die auf über 70 elektronischen Steuergeräten (Electronic Control Units – ECUs) in verschiedenen Bussystemen ausgeführt werden. Ein elektronisches Steuergerät in einem CAN-Netzwerk wird als CAN-Knoten bezeichnet.
 
 ## Steigende Komplexität in der Steuergerätevernetzung

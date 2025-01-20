@@ -1,10 +1,8 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global CSS for both light and dark modes.
  */
 
-/* You can override the default Infima variables here. */
+/* Default light mode styles */
 :root {
   --ifm-color-primary: #303846;
   --ifm-color-primary-dark: #29784c;
@@ -16,19 +14,6 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
 
 .features-grid {
   display: grid;
@@ -70,4 +55,35 @@
 .container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .features-grid .feature-box p {
+  color: #fff; /* White color for better readability in dark mode */
+}
+
+[data-theme='dark'] .features-grid .feature-box h3 {
+  color: #fff; /* White color for better readability in dark mode */
+  font-weight: bold; /* Ensure it stands out */
+}
+
+[data-theme='dark'] .feature-box {
+  background-color: #333; /* Darker background for the boxes in dark mode */
+  border: 1px solid #444; /* Subtle border color for dark mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Adjusted shadow for dark mode */
+}
+
+[data-theme='dark'] .feature-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Enhanced hover effect for dark mode */
 }

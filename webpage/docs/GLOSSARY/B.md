@@ -1,22 +1,14 @@
-# Glossar
+# B
 
-## A
+- **Bitstuffing** ist eine Methode zur Fehlererkennung und -korrektur in der Datenübertragung. Dabei werden spezielle Bits in die Daten eingefügt, um sicherzustellen, dass das empfangene Signal korrekt interpretiert wird. Dies geschieht durch das Einfügen zusätzlicher Bits, wenn eine bestimmte Bitfolge im Datenstrom auftritt, um zu verhindern, dass diese Bitfolge fälschlicherweise als Steuerzeichen interpretiert wird.
 
-## B
+- **Botschaftszähler** Ein Botschaftszähler (engl. Message Counter) ist ein wichtiges Konzept bei der Buskommunikation, wie beispielsweise beim CAN-Bus (Controller Area Network). Der Botschaftszähler dient dazu, doppelte oder verlorene Nachrichten zu erkennen und somit die Datenkonsistenz zu gewährleisten. Jede Nachricht, die über den Bus gesendet wird, erhält eine fortlaufende Nummer (den Botschaftszähler). Der Empfänger kann anhand dieser Nummer erkennen, ob eine Nachricht doppelt empfangen wurde (gleiche Nummer wie zuvor) oder ob eine Nachricht verloren ging (es fehlt eine Nummer in der Reihenfolge). Durch den Botschaftszähler können Fehler erkannt und behoben werden, indem z.B. verlorene Nachrichten erneut angefordert werden. Dies erhöht die Integrität und Zuverlässigkeit der Datenkommunikation über den Bus erheblich. Der Botschaftszähler ist besonders wichtig in sicherheitskritischen Systemen, wo eine korrekte Datenübertragung zwischen den verschiedenen Steuergeräten essentiell ist.
 
-## C
+- BRS Bit Rate Switch
 
-### CDD
 
-CANdelaStudio diagnostic description
 
-### CRC
-
-**CRC** steht für "Cyclic Redundancy Check" und ist ein Verfahren zur Fehlererkennung in Datenübertragungen.
-
-### CSMA/CR
-
-CSMA/CR (Carrier Sense Multiple Access with Collision Resolution) ist ein Zugriffsprotokoll, das in Netzwerken verwendet wird, um den Zugriff auf das gemeinsam genutzte Übertragungsmedium zu regulieren. Das Protokoll funktioniert, indem es zuerst den Zustand des Übertragungsmediums überwacht, um festzustellen, ob es frei ist oder von anderen Teilnehmern genutzt wird. Wenn das Medium frei ist, sendet der Sender seine Daten. Allerdings kann es vorkommen, dass mehrere Teilnehmer gleichzeitig versuchen, Daten zu senden, was zu einer Kollision führt. In solchen Fällen erkennt CSMA/CR die Kollision und löst sie auf, indem es einen Mechanismus zur Wiederholung der Übertragung oder zur Neuplanung einführt. Dies ermöglicht es den beteiligten Teilnehmern, ihre Daten erneut zu senden, um die Kollision zu beheben und die korrekte Übertragung sicherzustellen.
+### 
 
 ### CSMA/CA
 
@@ -96,9 +88,7 @@ Receive Error Counter
 
 ## T
 
-### TEC
-
-Transmit Error Counter
+### 
 
 ## U
 

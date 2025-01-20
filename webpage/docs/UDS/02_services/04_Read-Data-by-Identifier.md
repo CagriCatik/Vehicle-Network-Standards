@@ -1,10 +1,6 @@
----
-sidebar_position: 4
----
+
 
 # Read Data By Identifier - 0x22
-
-## Introduction
 
 The **Read Data By Identifier** (RDBI) service, identified by **0x22**, is an integral part of the **Unified Diagnostic Services (UDS)** protocol, which is outlined in **ISO 14229**. This service is used to request specific data from an ECU (Electronic Control Unit) by providing an identifier corresponding to the desired data or parameter. The ability to read data from the ECU is crucial for diagnostics, vehicle maintenance, ECU calibration, and software validation.
 

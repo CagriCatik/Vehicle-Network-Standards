@@ -1,11 +1,4 @@
----
-sidebar_position: 1
----
-
-
 # Diagnostic Session Control - 0x10
-
-## Introduction
 
 The **Diagnostic Session Control (0x10)** service plays a vital role in the Unified Diagnostic Services (UDS) protocol, managing the access levels to various diagnostic functions in an ECU. It controls the initiation, switching, and termination of diagnostic sessions, thus regulating the type of operations the tester can perform. The UDS protocol is pivotal in vehicle diagnostics, allowing for efficient access to critical vehicle systems, performing in-depth diagnostics, and facilitating ECU reprogramming. This document explains the structure, function, and application of Diagnostic Session Control, providing a deep dive into the different session types, error handling, and real-world use cases.
 

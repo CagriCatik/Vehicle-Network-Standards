@@ -1,6 +1,3 @@
----
-sidebar_position: 17
----
 
 # I/O Control - 0x2F
 

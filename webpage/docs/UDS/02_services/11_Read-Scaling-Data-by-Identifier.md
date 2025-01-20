@@ -1,10 +1,6 @@
----
-sidebar_position: 11
----
+
 
 # Read Scaling Data by Identifier - 0x24
-
-## Introduction to Scaling Data
 
 In automotive diagnostics, scaling data refers to a set of parameters or constants used to convert raw sensor data (often in analog form) into meaningful digital values. Sensors in vehicles generate raw signals, such as voltage levels or current readings, which are typically used to represent physical quantities like temperature, pressure, speed, or other environmental factors. To interpret these values correctly, a scaling process is applied to convert them into their actual physical representations.
 

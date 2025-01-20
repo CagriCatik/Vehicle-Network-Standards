@@ -1,10 +1,6 @@
----
-sidebar_position: 5
----
+
 
 # Write Data By Identifier - 0x2E
-
-## Introduction
 
 The **Write Data By Identifier (0x2E)** service is an essential diagnostic function defined within the Unified Diagnostic Services (UDS) protocol, as per ISO 14229. This service is used primarily to write or modify data stored in an Electronic Control Unit (ECU) based on a unique identifier. UDS services, such as the **Write Data By Identifier**, facilitate the management of configuration settings, calibration data, software updates, and other parameters that are stored in the ECU’s non-volatile memory.
 

@@ -1,6 +1,3 @@
----
-sidebar_position: 16
----
 
 
 # Request Transfer Exit - 0x37

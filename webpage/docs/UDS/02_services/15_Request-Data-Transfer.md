@@ -1,7 +1,3 @@
----
-sidebar_position: 15
----
-
 
 # Transfer Data - 0x36
 

@@ -1,7 +1,3 @@
----
-sidebar_position: 12
----
-
 
 # Request File Transfer - 0x38
 

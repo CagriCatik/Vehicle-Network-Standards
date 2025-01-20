@@ -1,7 +1,5 @@
 # R
 
-
-
 ## REC
 
 Receive Error Counter

@@ -1,7 +1,3 @@
----
-sidebar_position: 13
----
-
 
 # Request Download - 0x34
 

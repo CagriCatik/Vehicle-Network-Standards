@@ -1,7 +1,5 @@
 # Clear DTC Information - 0x14
 
-
-
 ## **1. Introduction**
 The **Clear Diagnostic Information (Service 0x14)** is a key diagnostic service in the **Unified Diagnostic Services (UDS)** protocol. It allows a diagnostic tool (or client) to instruct the ECU (Electronic Control Unit) to erase Diagnostic Trouble Codes (DTCs) from its memory. Clearing DTCs is essential in ensuring that the vehicle’s diagnostic system accurately reflects the current status of its components, especially after a fault has been identified and repaired. This service, however, only clears the fault codes in the ECU’s memory and does not address the underlying issues that caused the faults.
 

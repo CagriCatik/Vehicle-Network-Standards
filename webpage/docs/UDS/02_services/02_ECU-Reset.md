@@ -1,11 +1,5 @@
----
-sidebar_position: 2
----
-
 
 # ECU Reset - 0x11
-
-## Introduction
 
 The **ECU Reset** service is a critical part of the vehicle diagnostics and maintenance process. This service allows for the reset of Electronic Control Units (ECUs) within a vehicle, facilitating recovery, post-update reboots, and diagnostic tasks. The service is vital in maintaining the stability and operational efficiency of ECUs, particularly in situations involving errors, software updates, or system testing.
 

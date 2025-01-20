@@ -1,10 +1,6 @@
----
-sidebar_position: 6
----
+
 
 # Read Memory by Address - 0x23 
-
-## Introduction
 
 The **Read Memory by Address** (RMB) service, identified by Service ID (SID) 0x23 in the Unified Diagnostic Services (UDS) protocol, allows a diagnostic tool or client to request data from a specific memory location in an Electronic Control Unit (ECU). This functionality is essential for diagnostics, calibration, and firmware updates, enabling the retrieval of specific memory regions like firmware, configuration settings, or calibration data in automotive ECUs.
 

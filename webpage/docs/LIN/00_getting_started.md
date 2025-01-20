@@ -2,7 +2,7 @@
 
 ---
 
-## 1. **Erste Schritte**
+## 1. **Einführung**
 Dieser Abschnitt gibt eine Einführung in LIN und seine Entwicklungsgeschichte.
 
 - **Wichtige Inhalte:**

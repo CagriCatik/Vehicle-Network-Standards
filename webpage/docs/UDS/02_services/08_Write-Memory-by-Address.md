@@ -1,10 +1,6 @@
----
-sidebar_position: 8
----
+
 
 # Write Memory by Address - 0x3D
-
-## Overview
 
 The *Write Memory by Address* service (SID 0x3D) in Unified Diagnostic Services (UDS) allows a diagnostic tool (client) to write or modify specific regions of memory within an ECU (Electronic Control Unit). This service is often used for tasks such as updating calibration data, modifying ECU configurations, or clearing non-volatile memory.
 

@@ -1,10 +1,4 @@
----
-sidebar_position: 9
----
-
 # Tester Present Service - 0x03
-
-## Introduction
 
 The **Tester Present** service is a fundamental diagnostic service defined in the **Unified Diagnostic Services (UDS)** protocol, standardized under **ISO 14229**. UDS is extensively utilized in the automotive industry for **ECU (Electronic Control Unit)** diagnostics, enabling communication between diagnostic testers (tools) and vehicle ECUs. The Tester Present service, identified by **Service ID 0x03**, plays a critical role in maintaining active and stable communication sessions between the tester and the ECU, especially during complex diagnostic operations.
 

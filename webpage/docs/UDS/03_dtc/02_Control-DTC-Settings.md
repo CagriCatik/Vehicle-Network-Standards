@@ -1,6 +1,4 @@
----
-sidebar_position: 2
----
+
 
 # Control DTC Settings - 0x19
 

@@ -1,10 +1,5 @@
----
-sidebar_position: 3
----
 
 # Security Access - Service 0x27
-
-## Introduction
 
 As automotive technology evolves and vehicles become more connected, the need for robust security in diagnostic communications has never been greater. The Security Access service, defined as Service 0x27 in the ISO 14229 standard (Unified Diagnostic Services or UDS), plays a pivotal role in safeguarding the vehicle’s Electronic Control Units (ECUs). This service is essential for protecting critical ECU functions from unauthorized access, thus ensuring vehicle safety, security, and privacy.
 

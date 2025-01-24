@@ -1,11 +1,11 @@
-# **OTX (Open Test sequence eXchange)**
+# OTX
 
-**Definition**:  
+## **Definition**:  
 OTX is an international standard (ISO 13209) for describing and exchanging diagnostic test sequences in the automotive domain. It provides a structured and vendor-independent way to define workflows and test sequences, making it a powerful tool for managing diagnostic processes based on **UDS (Unified Diagnostic Services)**.
 
 ---
 
-**Key Features of OTX in UDS Diagnostics**:
+## **Key Features of OTX in UDS Diagnostics**:
 1. **Standardized Workflow Description**:
    - OTX provides a formal way to document diagnostic sequences, such as reading diagnostic trouble codes (DTCs), performing ECU resets, or executing end-of-line (EoL) tests.
 
@@ -24,7 +24,7 @@ OTX is an international standard (ISO 13209) for describing and exchanging diagn
 
 ---
 
-**Structure of OTX Documents**:
+## **Structure of OTX Documents**:
 - **Global Definitions**: Shared data and parameters used across multiple sequences.
 - **Procedures**: Individual diagnostic workflows or test steps.
 - **Variables and Parameters**: Inputs, outputs, and intermediate values used in test sequences.
@@ -32,7 +32,7 @@ OTX is an international standard (ISO 13209) for describing and exchanging diagn
 
 ---
 
-**Applications in UDS Diagnostics**:
+## **Applications in UDS Diagnostics**:
 1. **EoL Testing**:
    - Automating complex sequences for ECU testing during manufacturing.
 2. **Diagnostic Routine Execution**:
@@ -46,7 +46,7 @@ OTX is an international standard (ISO 13209) for describing and exchanging diagn
 
 ---
 
-**Advantages**:
+## **Advantages**:
 - **Consistency**: Ensures all test engineers and systems use a standardized sequence format.
 - **Traceability**: Clear documentation of test logic and procedures improves debugging and compliance.
 - **Scalability**: Facilitates the reuse and modification of sequences for different ECUs or vehicle platforms.
@@ -54,7 +54,7 @@ OTX is an international standard (ISO 13209) for describing and exchanging diagn
 
 ---
 
-**Example Use Case**:
+## **Example Use Case**:
 A typical OTX workflow for a UDS diagnostic session might include:
 1. Establishing communication with an ECU (e.g., tester presents a diagnostic session request using Service 0x10).
 2. Reading specific data (e.g., VIN using Service 0x22).

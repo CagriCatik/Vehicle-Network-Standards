@@ -4,16 +4,13 @@ sidebar_position: 5
 
 # Examples - 0x22 
 
-
-Below are practical examples of how to implement the **Read Data By Identifier (0x22)** service, based on the UDS protocol (ISO 14229). These examples will include code snippets to simulate the service request and response using different tools, including Python and CAPL.
-
 ---
 
-## 1. **Python Example: Using `python-uds` Library**
+## **Python Example: Using `python-uds` Library**
 
 We will use the `python-uds` library, an open-source Python package that allows you to send and receive UDS messages. The example demonstrates how to send a **Read Data By Identifier** request to an ECU and interpret the response.
 
-### 1.1. Install the `python-uds` Library
+### Install the `python-uds` Library
 
 First, install the `python-uds` library:
 
@@ -21,7 +18,7 @@ First, install the `python-uds` library:
 pip install python-uds
 ```
 
-### 1.2. Python Code to Read Data by Identifier
+### Python Code to Read Data by Identifier
 
 In this example, we’ll use the `python-uds` library to send a **Read Data By Identifier (0x22)** request for the ECU software version (identifier `0x01`) and retrieve the response.
 
@@ -70,11 +67,11 @@ else:
 
 ---
 
-## 2. **CAPL Example: Simulating RDBI Request**
+## **CAPL Example: Simulating RDBI Request**
 
 In **CAPL** (CAN Application Protocol Language), which is used in **Vector CANoe** and **CANalyzer**, you can implement UDS services directly for CAN simulation and testing.
 
-### 2.1. CAPL Code to Read Data by Identifier (0x22)
+### CAPL Code to Read Data by Identifier (0x22)
 
 This example demonstrates how to implement a **Read Data By Identifier** request for the software version (identifier `0x01`).
 

@@ -148,7 +148,18 @@ const config = {
             position: 'right',
             label: 'SecOC',
           },
-
+          {
+            type: 'docSidebar',
+            sidebarId: 'iso26262Sidebar',
+            position: 'right',
+            label: 'ISO26262',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'fmeaSidebar',
+            position: 'right',
+            label: 'FMEA',
+          },
           {
             to: '/blog', 
             label: 'Blog', 

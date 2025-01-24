@@ -1,10 +1,10 @@
-### **OTX Process (Open Test sequence eXchange Process)**
+# OTX Process
 
 An **OTX Process** refers to the structured execution of diagnostic and test sequences defined according to the OTX standard (ISO 13209). It provides a standardized and logical workflow for performing specific tasks such as troubleshooting, configuring, or validating automotive systems, particularly in the context of **UDS (Unified Diagnostic Services)**.
 
 ---
 
-### **Key Components of an OTX Process**:
+## **Key Components of an OTX Process**:
 
 1. **Procedures**:
    - These are the core building blocks of an OTX process, defining a sequence of actions.
@@ -38,7 +38,7 @@ An **OTX Process** refers to the structured execution of diagnostic and test seq
 
 ---
 
-### **Structure of an OTX Process**:
+## **Structure of an OTX Process**:
 
 An OTX Process is typically defined in **XML format**, which includes the following components:
 
@@ -56,7 +56,7 @@ An OTX Process is typically defined in **XML format**, which includes the follow
 
 ---
 
-### **Example of an OTX Process**:
+## **Example of an OTX Process**:
 
 Here’s a simplified example of an OTX process for reading and clearing diagnostic trouble codes (DTCs):
 
@@ -78,7 +78,7 @@ Here’s a simplified example of an OTX process for reading and clearing diagnos
 
 ---
 
-### **Benefits of an OTX Process**:
+## **Benefits of an OTX Process**:
 
 1. **Standardization**:
    - Ensures consistency in diagnostic workflows across different tools, teams, and environments.
@@ -97,7 +97,7 @@ Here’s a simplified example of an OTX process for reading and clearing diagnos
 
 ---
 
-### **Applications of OTX Processes in UDS Diagnostics**:
+## **Applications of OTX Processes in UDS Diagnostics**:
 
 1. **End-of-Line (EoL) Testing**:
    - Automates testing and validation of ECUs during the production phase.

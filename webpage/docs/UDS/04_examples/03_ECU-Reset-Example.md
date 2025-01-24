@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Examples - 0x11 
 
-## 1.1 Example 1: Soft Reset Request (Sub-function 0x01)
+## Example 1: Soft Reset Request (Sub-function 0x01)
 
 In this case, we send a soft reset request to the ECU, which will reinitialize the ECU's internal software without powering it off.
 
@@ -18,7 +18,7 @@ Request Message Format:
 
 This request asks the ECU to perform a soft reset. The ECU will clear internal states and reinitialize its software.
 
-## 1.2 Example 2: Hard Reset Request (Sub-function 0x02)
+## Example 2: Hard Reset Request (Sub-function 0x02)
 
 In this case, we send a hard reset request to the ECU. This would involve a complete power cycle of the ECU to restart its hardware and software.
 
@@ -34,9 +34,9 @@ This request instructs the ECU to perform a hard reset. It will power cycle the 
 
 ---
 
-# 2. ECU Reset Response Examples
+# ECU Reset Response Examples
 
-## 2.1 Example 1: Positive Response (0x00)
+## Example 1: Positive Response (0x00)
 
 If the ECU successfully processes the reset request (either soft or hard), it sends a positive response back to the diagnostic tool.
 
@@ -50,7 +50,7 @@ Response Message Format:
 
 This message indicates that the reset was successfully executed. The ECU is now either soft or hard reset, depending on the request.
 
-## 2.2 Example 2: Negative Response with Error Code (0x11)
+## Example 2: Negative Response with Error Code (0x11)
 
 If the ECU cannot perform the reset, it sends a negative response with an appropriate error code. The error code will help identify the reason for the failure.
 
@@ -68,11 +68,11 @@ Explanation of Error Code (0x22):
 
 ---
 
-# 3. Error Handling Example
+# Error Handling Example
 
 When a diagnostic tool receives a negative response, it must handle the error appropriately. Below is an example of how the tool might respond to a timeout error or incorrect state.
 
-## 3.1 Example 1: Timeout Error (0x33)
+## Example 1: Timeout Error (0x33)
 
 If there’s a timeout in communication between the diagnostic tool and the ECU, a timeout error (`0x33`) might be returned. This error typically occurs if the ECU does not respond within the expected timeframe.
 
@@ -88,7 +88,7 @@ Response Message Format:
 Explanation of Error Code (0x33):
 - 0x33: "ECU Communication Timeout." This error happens when the ECU fails to respond to the reset request within the specified time window, often due to ECU malfunctions or communication issues.
 
-## 3.2 Example 2: Invalid Reset Sub-function (0x12)
+## Example 2: Invalid Reset Sub-function (0x12)
 
 If the diagnostic tool requests a reset type (sub-function) that the ECU does not support, an error code `0x12` may be returned.
 
@@ -106,9 +106,9 @@ Explanation of Error Code (0x12):
 
 ---
 
-# 4. Practical Use Cases for ECU Reset
+#  Practical Use Cases for ECU Reset
 
-## 4.1 Use Case 1: Post-Update ECU Reset
+## Use Case 1: Post-Update ECU Reset
 
 In this scenario, the ECU has just been flashed with a firmware update. A hard reset is required to apply the update and restart the ECU with the new software.
 
@@ -124,7 +124,7 @@ Response Example: The ECU responds with:
 ```
 This indicates that the hard reset was successfully performed and the ECU has rebooted with the new software.
 
-## 4.2 Use Case 2: Error Recovery
+## Use Case 2: Error Recovery
 
 The ECU has entered an error state due to a software issue. A soft reset is requested to restore it to normal operation.
 
@@ -140,7 +140,7 @@ Response Example: The ECU successfully resets:
 ```
 The ECU reinitializes its software, clears error states, and returns to normal operation.
 
-## 4.3 Use Case 3: Diagnostic Testing
+## Use Case 3: Diagnostic Testing
 
 During diagnostic testing, the ECU may be reset to verify that it can handle errors, recover from failures, and perform properly after a reset.
 
@@ -157,7 +157,7 @@ The test confirms that the ECU is able to return to a functional state after the
 
 ---
 
-# 5. Example of a Full Diagnostic Session for ECU Reset
+#  Example of a Full Diagnostic Session for ECU Reset
 
 Here’s an example of a full diagnostic session involving an ECU reset, starting from the initial session request to the final reset request and response.
 
@@ -189,11 +189,11 @@ This full sequence illustrates a typical ECU reset scenario, including starting 
 
 ---
 
-# 6. Using UDS Libraries to Implement ECU Reset in Python
+#  Using UDS Libraries to Implement ECU Reset in Python
 
 If you're implementing a custom diagnostic tool to interact with ECUs, libraries like `python-uds` can be used to send and receive ECU reset requests.
 
-## 6.1 Example Code to Send ECU Reset Request in Python
+## Example Code to Send ECU Reset Request in Python
 
 Here is a simple Python code snippet to send a soft reset request using the `python-uds` library:
 
@@ -216,4 +216,3 @@ else:
 ```
 
 This script connects to the ECU over the CAN network, sends a soft reset request (0x01), and prints the result based on the response.
-

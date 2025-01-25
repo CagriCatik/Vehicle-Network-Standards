@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ASPICE/06/01" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Process Capability Levels of ISO/IEC 33020:2015: Level 2 - Managed Process | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ASPICE/06/01"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Process Capability Levels of ISO/IEC 33020:2015: Level 2 - Managed Process | Vehicle Network Standards"><meta data-rh="true" name="description" content="At Level 2 of the ISO/IEC 33020:2015 standard, the focus is on establishing a Managed Process. This level ensures that processes are not only defined but also consistently executed and controlled to meet specific objectives. In Automotive SPICE (ASPICE), this level is crucial for building a robust foundation for process capability, laying the groundwork for continuous improvement and higher process maturity levels. Here, we explore the key elements of Performance Management (PA 2.1) and Work Product Management (PA 2.2), along with the associated generic practices (GP 2.1.x)."><meta data-rh="true" property="og:description" content="At Level 2 of the ISO/IEC 33020:2015 standard, the focus is on establishing a Managed Process. This level ensures that processes are not only defined but also consistently executed and controlled to meet specific objectives. In Automotive SPICE (ASPICE), this level is crucial for building a robust foundation for process capability, laying the groundwork for continuous improvement and higher process maturity levels. Here, we explore the key elements of Performance Management (PA 2.1) and Work Product Management (PA 2.2), along with the associated generic practices (GP 2.1.x)."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ASPICE/06/01"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ASPICE/06/01" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ASPICE/06/01" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.2f02647a.css">
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.9c258e3d.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/main.ac03ca49.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/getting_started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/getting_started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/getting_started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting_started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/getting_started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/getting_started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/getting_started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started">SOME/IP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/XCP/getting_started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/getting_started">SecOC</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">ISO26262</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FMEA/introduction">FMEA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Process Capability Levels of ISO/IEC 33020:2015: Level 2 - Managed Process</h1></header>
+<p>At Level 2 of the ISO/IEC 33020:2015 standard, the focus is on establishing a <strong>Managed Process</strong>. This level ensures that processes are not only defined but also consistently executed and controlled to meet specific objectives. In Automotive SPICE (ASPICE), this level is crucial for building a robust foundation for process capability, laying the groundwork for continuous improvement and higher process maturity levels. Here, we explore the key elements of <strong>Performance Management</strong> (PA 2.1) and <strong>Work Product Management</strong> (PA 2.2), along with the associated generic practices (GP 2.1.x).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pa-21-performance-management"><strong>PA 2.1: Performance Management</strong><a href="#pa-21-performance-management" class="hash-link" aria-label="Direct link to pa-21-performance-management" title="Direct link to pa-21-performance-management">​</a></h2>
+<p><strong>Performance Management</strong> is central to achieving a Managed Process. It involves systematically managing process performance to ensure that objectives related to time, cost, and quality are met. This management is achieved through several key activities:</p>
+<ol>
+<li>
+<p><strong>Identifying Process Objectives:</strong></p>
+<ul>
+<li>Objectives related to time, cost, and quality are clearly defined. These objectives are aligned with overall project goals and are used to guide the execution and assessment of the process.</li>
+</ul>
+</li>
+<li>
+<p><strong>Resource Management:</strong></p>
+<ul>
+<li>Resources and information necessary for the process are identified, made available, allocated, and utilized effectively. This includes managing the availability of personnel, tools, and infrastructure required for process execution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Planning and Monitoring:</strong></p>
+<ul>
+<li>Functionality, cost, and time are planned and monitored throughout the process. This ensures that the process stays on track and any deviations from the plan are identified and addressed promptly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Process Performance Adjustment:</strong></p>
+<ul>
+<li>As the process is monitored, performance adjustments are made as necessary to align with the established plans. This involves taking corrective actions to ensure that objectives are met despite any unforeseen challenges.</li>
+</ul>
+</li>
+<li>
+<p><strong>Management of Interfaces:</strong></p>
+<ul>
+<li>The interfaces between involved parties (e.g., different teams or departments) are managed to ensure smooth communication and collaboration. This is crucial in complex automotive projects where multiple stakeholders are involved.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authority and Responsibility Management:</strong></p>
+<ul>
+<li>Authorities and responsibilities are clearly defined, assigned, and communicated to all relevant parties. This ensures that everyone involved in the process knows their roles and can be held accountable for their contributions.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gp-21x-generic-practices-for-performance-management"><strong>GP 2.1.x: Generic Practices for Performance Management</strong><a href="#gp-21x-generic-practices-for-performance-management" class="hash-link" aria-label="Direct link to gp-21x-generic-practices-for-performance-management" title="Direct link to gp-21x-generic-practices-for-performance-management">​</a></h2>
+<p>The generic practices associated with Performance Management (GP 2.1.x) provide a more detailed framework for implementing the above activities. These practices include:</p>
+<ol>
+<li>
+<p><strong>GP 2.1.1: Identify Objectives:</strong></p>
+<ul>
+<li>Interpretation: Objectives are related to achieving milestones, respecting constraints (such as time, cost, and quality), and adhering to standards and procedures. Resource usage is defined to ensure that the process is executed efficiently.</li>
+<li>Implementation: This involves setting clear targets for what the process should achieve and ensuring that all stakeholders are aligned with these goals.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.2: Plan Performance:</strong></p>
+<ul>
+<li>Interpretation: Planning involves comparing expected results with time and resource constraints. Tools like Work Breakdown Structure (WBS) and capacity planning are used to allocate effort and resources effectively.</li>
+<li>Implementation: Detailed plans are created, specifying the effort required per time unit and per costing position. This helps in budgeting and resource allocation.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.3: Monitor Performance:</strong></p>
+<ul>
+<li>Interpretation: Monitoring involves tracking the process against the plan, identifying deviations, and taking corrective actions.</li>
+<li>Implementation: Regular reviews are conducted to assess progress, with adjustments made as needed to stay on course.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.4: Adjust Performance:</strong></p>
+<ul>
+<li>Interpretation: Adjustments are made based on monitoring results to align the process with its objectives.</li>
+<li>Implementation: This could involve re-allocating resources, revising plans, or taking other actions to correct course.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.5: Define Responsibilities:</strong></p>
+<ul>
+<li>Interpretation: Responsibilities and authorities are defined, allocated, and communicated. This includes responsibilities for quality assurance (QA), configuration management, and change management.</li>
+<li>Implementation: Clear escalation paths are established, ensuring that issues can be resolved efficiently.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.6: Manage Resources:</strong></p>
+<ul>
+<li>Interpretation: Resources are identified and made available according to the plan. This includes training, budgeting, and providing necessary tools and infrastructure.</li>
+<li>Implementation: The organization ensures that all necessary resources are available when needed and that they are used effectively.</li>
+</ul>
+</li>
+<li>
+<p><strong>GP 2.1.7: Manage Interfaces:</strong></p>
+<ul>
+<li>Interpretation: Interfaces between involved parties are managed to ensure effective communication and collaboration.</li>
+<li>Implementation: Stakeholders’ responsibilities, information needs, and communication paths are clearly defined.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pa-22-work-product-management"><strong>PA 2.2: Work Product Management</strong><a href="#pa-22-work-product-management" class="hash-link" aria-label="Direct link to pa-22-work-product-management" title="Direct link to pa-22-work-product-management">​</a></h2>
+<p><strong>Work Product Management</strong> (PA 2.2) is the second key area of focus at Level 2. It ensures that work products (the outputs of the process) are managed effectively. This involves:</p>
+<ol>
+<li>
+<p><strong>Defining Requirements:</strong></p>
+<ul>
+<li>Requirements for work products, documentation, and control are clearly defined. This ensures that the outputs of the process meet the necessary standards and are traceable.</li>
+</ul>
+</li>
+<li>
+<p><strong>Review and Adjustment:</strong></p>
+<ul>
+<li>Work products are regularly reviewed and adjusted as necessary to ensure they remain aligned with the process objectives and quality standards.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identification and Control:</strong></p>
+<ul>
+<li>Work products are appropriately identified, documented, and controlled throughout the process lifecycle. This ensures that they can be tracked, audited, and modified as needed.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>At <strong>Level 2 - Managed Process</strong> of the ISO/IEC 33020:2015 standard, the focus is on ensuring that processes are not only defined but also systematically managed and controlled. The key areas of Performance Management (PA 2.1) and Work Product Management (PA 2.2) provide a framework for achieving this by establishing clear objectives, managing resources, monitoring progress, and ensuring the quality of work products.</p>
+<p>By adhering to these practices, organizations can ensure that their processes are consistently executed, meet their objectives, and are capable of continuous improvement. This level of process capability is crucial for building a strong foundation for more advanced process maturity levels, ultimately leading to higher quality and more reliable outcomes in automotive software development.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/ASPICE/06/01.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#pa-21-performance-management" class="table-of-contents__link toc-highlight"><strong>PA 2.1: Performance Management</strong></a></li><li><a href="#gp-21x-generic-practices-for-performance-management" class="table-of-contents__link toc-highlight"><strong>GP 2.1.x: Generic Practices for Performance Management</strong></a></li><li><a href="#pa-22-work-product-management" class="table-of-contents__link toc-highlight"><strong>PA 2.2: Work Product Management</strong></a></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/Glossary/Getting-Started">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</body>
+</html>

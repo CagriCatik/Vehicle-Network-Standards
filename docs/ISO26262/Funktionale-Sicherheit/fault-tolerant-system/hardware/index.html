@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Hardware safety analyses | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Hardware safety analyses | Vehicle Network Standards"><meta data-rh="true" name="description" content="In the automotive industry&#x27;s pursuit of functional safety, hardware safety analysis stands as a pivotal activity, second only to hazard analysis and risk assessment. ISO 26262, the international standard for functional safety of electrical and electronic systems in road vehicles, provides comprehensive guidelines to ensure that hardware components perform reliably and safely under all conditions. This documentation offers an in-depth exploration of hardware safety analyses as outlined by ISO 26262, complete with clear explanations, practical examples, and best practices to guide automotive engineers in designing robust and safe hardware systems."><meta data-rh="true" property="og:description" content="In the automotive industry&#x27;s pursuit of functional safety, hardware safety analysis stands as a pivotal activity, second only to hazard analysis and risk assessment. ISO 26262, the international standard for functional safety of electrical and electronic systems in road vehicles, provides comprehensive guidelines to ensure that hardware components perform reliably and safely under all conditions. This documentation offers an in-depth exploration of hardware safety analyses as outlined by ISO 26262, complete with clear explanations, practical examples, and best practices to guide automotive engineers in designing robust and safe hardware systems."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.2f02647a.css">
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.9c258e3d.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/main.ac03ca49.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/getting_started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/getting_started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/getting_started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting_started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/getting_started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/getting_started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/getting_started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started">SOME/IP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/XCP/getting_started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/getting_started">SecOC</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">ISO26262</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FMEA/introduction">FMEA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">Funktionale Sicherheit</a><button aria-label="Collapse sidebar category &#x27;Funktionale Sicherheit&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/iso-26262">ISO 26262</a><button aria-label="Expand sidebar category &#x27;ISO 26262&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/fusi-management">FuSi Management</a><button aria-label="Expand sidebar category &#x27;FuSi Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/vehicle-systems">Vehicle Systems</a><button aria-label="Expand sidebar category &#x27;Vehicle Systems&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Vehicle-Network-Standards/docs/category/fault-tolerant-system">Fault Tolerant System</a><button aria-label="Collapse sidebar category &#x27;Fault Tolerant System&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/intro">Introduction</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/specify">Specify and design hardware and software</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/faults">Faults and failures</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/safety">Safety Analyses for concept, system, software</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/hardware">Hardware safety analyses</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/integrate">Integrate, verify and validate the hardware and software</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-uebersicht">Funktionale-Sicherheit-Uebersicht</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Uebersicht&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-systementwicklung">Funktionale-Sicherheit-Systementwicklung</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Systementwicklung&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-management">Funktionale-Sicherheit-Management</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/functional-safety-e2e-communication">Functional Safety E2E Communication</a><button aria-label="Expand sidebar category &#x27;Functional Safety E2E Communication&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit"><span itemprop="name">Funktionale Sicherheit</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/fault-tolerant-system"><span itemprop="name">Fault Tolerant System</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Hardware safety analyses</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Hardware safety analyses</h1></header>
+<p>In the automotive industry&#x27;s pursuit of functional safety, hardware safety analysis stands as a pivotal activity, second only to hazard analysis and risk assessment. ISO 26262, the international standard for functional safety of electrical and electronic systems in road vehicles, provides comprehensive guidelines to ensure that hardware components perform reliably and safely under all conditions. This documentation offers an in-depth exploration of hardware safety analyses as outlined by ISO 26262, complete with clear explanations, practical examples, and best practices to guide automotive engineers in designing robust and safe hardware systems.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="importance-of-hardware-safety-analysis">Importance of Hardware Safety Analysis<a href="#importance-of-hardware-safety-analysis" class="hash-link" aria-label="Direct link to Importance of Hardware Safety Analysis" title="Direct link to Importance of Hardware Safety Analysis">​</a></h2>
+<p>Hardware safety analysis is critical for several reasons:</p>
+<ul>
+<li><strong>Dual Nature of Faults</strong>: The hardware domain encompasses both systematic and random faults, necessitating comprehensive coverage of both failure types.</li>
+<li><strong>Safety Goal Protection</strong>: Ensures that potential hardware faults do not lead to the violation of safety goals.</li>
+<li><strong>Compliance Assurance</strong>: Facilitates adherence to ISO 26262 standards, ensuring that safety requirements are systematically met.</li>
+<li><strong>Risk Mitigation</strong>: Identifies and mitigates risks associated with hardware failures, enhancing overall system reliability and safety.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-faults-and-failures">Types of Faults and Failures<a href="#types-of-faults-and-failures" class="hash-link" aria-label="Direct link to Types of Faults and Failures" title="Direct link to Types of Faults and Failures">​</a></h2>
+<p>Understanding the different types of faults and failures is fundamental to effective hardware safety analysis. ISO 26262 classifies faults based on their origin, behavior, and impact on safety goals.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-single-point-faults">1. Single Point Faults<a href="#1-single-point-faults" class="hash-link" aria-label="Direct link to 1. Single Point Faults" title="Direct link to 1. Single Point Faults">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Faults in a single hardware element without any safety mechanism, directly leading to the violation of a safety goal.</li>
+<li><strong>Example</strong>: A resistor stuck in an open state disrupting the steering mechanism.</li>
+<li><strong>Impact</strong>: Can render the system non-compliant with ISO 26262 if not properly mitigated.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-residual-faults">2. Residual Faults<a href="#2-residual-faults" class="hash-link" aria-label="Direct link to 2. Residual Faults" title="Direct link to 2. Residual Faults">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Portions of random hardware faults not covered by safety mechanisms, potentially leading to safety goal violations.</li>
+<li><strong>Example</strong>: A torque sensor with a safety mechanism that only detects &quot;stuck at open&quot; faults, leaving &quot;stuck at short&quot; faults as residual.</li>
+<li><strong>Impact</strong>: Residual faults require additional safety measures to prevent safety goal violations.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-latent-dual-point-faults-latent-faults">3. Latent Dual Point Faults (Latent Faults)<a href="#3-latent-dual-point-faults-latent-faults" class="hash-link" aria-label="Direct link to 3. Latent Dual Point Faults (Latent Faults)" title="Direct link to 3. Latent Dual Point Faults (Latent Faults)">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Multiple faults that are neither detected by safety mechanisms nor perceived by the driver within a specified time interval, leading to safety goal violations only when combined.</li>
+<li><strong>Example</strong>: A microcontroller and its watchdog timer both fail, preventing the system from detecting and responding to a critical sensor fault.</li>
+<li><strong>Impact</strong>: These faults are particularly dangerous as they bypass existing safety mechanisms.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-detected-dual-point-faults">4. Detected Dual Point Faults<a href="#4-detected-dual-point-faults" class="hash-link" aria-label="Direct link to 4. Detected Dual Point Faults" title="Direct link to 4. Detected Dual Point Faults">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Multiple faults where at least one fault is detected by a safety mechanism, preventing the combination from violating safety goals.</li>
+<li><strong>Example</strong>: A flash memory protected by ECC (Error Correction Code) fails, but the ECC logic detects the fault and triggers a safe state transition.</li>
+<li><strong>Impact</strong>: Enhances system reliability by ensuring that combined faults do not compromise safety goals.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-perceived-dual-point-faults">5. Perceived Dual Point Faults<a href="#5-perceived-dual-point-faults" class="hash-link" aria-label="Direct link to 5. Perceived Dual Point Faults" title="Direct link to 5. Perceived Dual Point Faults">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Multiple faults detected or perceived by the driver within a specified time interval, preventing the combination from violating safety goals.</li>
+<li><strong>Example</strong>: Both a steering sensor and its safety mechanism fail, but the driver perceives the steering issue and takes corrective action.</li>
+<li><strong>Impact</strong>: Allows the driver to intervene, maintaining system safety despite multiple faults.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-safe-faults">6. Safe Faults<a href="#6-safe-faults" class="hash-link" aria-label="Direct link to 6. Safe Faults" title="Direct link to 6. Safe Faults">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Faults that do not significantly increase the probability of violating a safety goal.</li>
+<li><strong>Characteristics</strong>:<!-- -->
+<ul>
+<li>Can occur in both safety-relevant and non-safety-relevant hardware elements.</li>
+<li>Typically, non-safety-relevant components should only exhibit safe faults.</li>
+</ul>
+</li>
+<li><strong>Exception</strong>: Triple Point Faults are considered safe due to their low probability.</li>
+<li><strong>Impact</strong>: Do not compromise system safety, ensuring smooth and reliable operation.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-permanent-vs-transient-faults">7. Permanent vs. Transient Faults<a href="#7-permanent-vs-transient-faults" class="hash-link" aria-label="Direct link to 7. Permanent vs. Transient Faults" title="Direct link to 7. Permanent vs. Transient Faults">​</a></h3>
+<ul>
+<li>
+<p><strong>Permanent Faults</strong>:</p>
+<ul>
+<li><strong>Definition</strong>: Faults that occur and remain until they are removed or repaired.</li>
+<li><strong>Examples</strong>: &quot;Stuck at,&quot; &quot;open,&quot; &quot;short,&quot; &quot;drift.&quot;</li>
+<li><strong>Handling</strong>: Require mechanisms for detection and mitigation to prevent safety goal violations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Transient Faults</strong>:</p>
+<ul>
+<li><strong>Definition</strong>: Faults that occur temporarily and disappear without intervention.</li>
+<li><strong>Examples</strong>: Bit flips, electromagnetic interference (EMI) issues.</li>
+<li><strong>Handling</strong>: Implement safety mechanisms to detect and react to transient faults promptly.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="safety-analysis-methods">Safety Analysis Methods<a href="#safety-analysis-methods" class="hash-link" aria-label="Direct link to Safety Analysis Methods" title="Direct link to Safety Analysis Methods">​</a></h2>
+<p>ISO 26262 recommends several safety analysis methods, each suited to different aspects of hardware development. These methods can be categorized based on their analytical approach and whether they are qualitative or quantitative.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-qualitative-safety-analysis">1. Qualitative Safety Analysis<a href="#1-qualitative-safety-analysis" class="hash-link" aria-label="Direct link to 1. Qualitative Safety Analysis" title="Direct link to 1. Qualitative Safety Analysis">​</a></h3>
+<p>Qualitative analysis focuses on identifying potential failures and their effects without quantifying their probabilities. This approach is essential during the early design phases to ensure comprehensive hazard identification and mitigation.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="failure-mode-and-effects-analysis-fmea">Failure Mode and Effects Analysis (FMEA)<a href="#failure-mode-and-effects-analysis-fmea" class="hash-link" aria-label="Direct link to Failure Mode and Effects Analysis (FMEA)" title="Direct link to Failure Mode and Effects Analysis (FMEA)">​</a></h4>
+<ul>
+<li><strong>Definition</strong>: An inductive, bottom-up analysis method used to identify potential failure modes, their effects, and causes within a system.</li>
+<li><strong>Standards</strong>:<!-- -->
+<ul>
+<li><strong>FMEA Handbook</strong>: Released by VDA (Germany) and AIAG (USA), available online.</li>
+</ul>
+</li>
+<li><strong>Types</strong>:<!-- -->
+<ul>
+<li><strong>Design FMEA (DFMEA)</strong>: Focuses on technical designs.</li>
+<li><strong>Process FMEA (PFMEA)</strong>: Analyzes manufacturing and assembly processes.</li>
+<li><strong>FMEA for Monitoring and System Response (FMEA-MSR)</strong>: Evaluates failure causes under customer operating conditions.</li>
+</ul>
+</li>
+<li><strong>Best Practices</strong>:<!-- -->
+<ul>
+<li><strong>Use Dedicated Tools</strong>: Employ tools like Isograph or APIS-IQ for structured analysis.</li>
+<li><strong>Iterative Process</strong>: Repeat the eight-step process to refine analysis outcomes.</li>
+<li><strong>Comprehensive Coverage</strong>: Ensure all functions and processes are analyzed for potential failures.</li>
+</ul>
+</li>
+<li><strong>Practical Example</strong>:<!-- -->
+<ul>
+<li><strong>Steer-by-Wire System</strong>:<!-- -->
+<ul>
+<li><strong>Functions</strong>: Steering input detection, actuator control.</li>
+<li><strong>Failure Modes</strong>: Sensor stuck-at, actuator malfunction.</li>
+<li><strong>Effects</strong>: Unintended steering maneuvers, loss of steering control.</li>
+<li><strong>Causes</strong>: Electrical faults, software bugs.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fault-tree-analysis-fta">Fault Tree Analysis (FTA)<a href="#fault-tree-analysis-fta" class="hash-link" aria-label="Direct link to Fault Tree Analysis (FTA)" title="Direct link to Fault Tree Analysis (FTA)">​</a></h4>
+<ul>
+<li><strong>Definition</strong>: A deductive, top-down analysis method that starts with an undesired event and systematically identifies its root causes through a logical tree structure.</li>
+<li><strong>Components</strong>:<!-- -->
+<ul>
+<li><strong>Top Event</strong>: The undesired event (e.g., violation of a safety goal).</li>
+<li><strong>Intermediate Events</strong>: Conditions that contribute to the top event.</li>
+<li><strong>Basic Events</strong>: Fundamental causes leading to intermediate events.</li>
+</ul>
+</li>
+<li><strong>Best Practices</strong>:<!-- -->
+<ul>
+<li><strong>Structured Approach</strong>: Use standardized symbols and logical gates for clarity.</li>
+<li><strong>Comprehensive Coverage</strong>: Analyze all possible pathways leading to the top event.</li>
+<li><strong>Tool Utilization</strong>: Employ software tools like Isograph for efficient tree construction.</li>
+</ul>
+</li>
+<li><strong>Practical Example</strong>:<!-- -->
+<ul>
+<li><strong>Steer-by-Wire System</strong>:<!-- -->
+<ul>
+<li><strong>Top Event</strong>: Unintended steering maneuver.</li>
+<li><strong>Intermediate Events</strong>: Sensor failure, actuator failure.</li>
+<li><strong>Basic Events</strong>: Power supply disruption, software bug.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hazard-and-operability-study-hazop">Hazard and Operability Study (HAZOP)<a href="#hazard-and-operability-study-hazop" class="hash-link" aria-label="Direct link to Hazard and Operability Study (HAZOP)" title="Direct link to Hazard and Operability Study (HAZOP)">​</a></h4>
+<ul>
+<li><strong>Definition</strong>: A qualitative, inductive analysis method aimed at identifying potential hazards and operability issues by examining deviations from design intentions.</li>
+<li><strong>Standards</strong>:<!-- -->
+<ul>
+<li><strong>IEC 61882</strong>: Provides guidelines for conducting HAZOP.</li>
+</ul>
+</li>
+<li><strong>Best Practices</strong>:<!-- -->
+<ul>
+<li><strong>Use Guide Words</strong>: Apply systematic guide words to explore deviations (e.g., No, More, Less, As well as).</li>
+<li><strong>Team-Based Approach</strong>: Involve cross-functional teams to enhance analysis comprehensiveness.</li>
+<li><strong>Documentation</strong>: Maintain detailed records of identified hazards and proposed mitigations.</li>
+</ul>
+</li>
+<li><strong>Practical Example</strong>:<!-- -->
+<ul>
+<li><strong>Steer-by-Wire System</strong>:<!-- -->
+<ul>
+<li><strong>Deviation</strong>: &quot;No&quot; steering input detected.</li>
+<li><strong>Hazard</strong>: Loss of steering control.</li>
+<li><strong>Mitigation</strong>: Implement redundant sensors and fail-safe mechanisms.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-quantitative-safety-analysis">2. Quantitative Safety Analysis<a href="#2-quantitative-safety-analysis" class="hash-link" aria-label="Direct link to 2. Quantitative Safety Analysis" title="Direct link to 2. Quantitative Safety Analysis">​</a></h3>
+<p>Quantitative analysis involves numerical evaluation of failure rates and probabilities, providing a measurable assessment of system reliability and safety.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="failure-modes-effects-and-diagnostic-analysis-fmeda">Failure Modes, Effects, and Diagnostic Analysis (FMEDA)<a href="#failure-modes-effects-and-diagnostic-analysis-fmeda" class="hash-link" aria-label="Direct link to Failure Modes, Effects, and Diagnostic Analysis (FMEDA)" title="Direct link to Failure Modes, Effects, and Diagnostic Analysis (FMEDA)">​</a></h4>
+<ul>
+<li><strong>Definition</strong>: An extension of FMEA that incorporates quantitative aspects, such as failure rates and diagnostic coverage, to assess the reliability of safety mechanisms.</li>
+<li><strong>Developed By</strong>: Exida, a global leader in functional safety.</li>
+<li><strong>Best Practices</strong>:<!-- -->
+<ul>
+<li><strong>Integrate with FMEA</strong>: Combine FMEDA with FMEA to enhance depth of analysis.</li>
+<li><strong>Use Reliable Data Sources</strong>: Refer to standards like IEC 61709 for accurate failure rates.</li>
+<li><strong>Focus on Random Failures</strong>: Specifically analyze random hardware failures and their detection.</li>
+</ul>
+</li>
+<li><strong>Practical Example</strong>:<!-- -->
+<ul>
+<li><strong>Steer-by-Wire System</strong>:<!-- -->
+<ul>
+<li><strong>Failure Rate</strong>: Calculate failure rates for steering sensors.</li>
+<li><strong>Diagnostic Coverage</strong>: Assess how effectively CRC checks detect sensor faults.</li>
+<li><strong>Residual FIT</strong>: Determine the remaining failure rate after safety mechanisms are applied.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hardware-metrics">Hardware Metrics<a href="#hardware-metrics" class="hash-link" aria-label="Direct link to Hardware Metrics" title="Direct link to Hardware Metrics">​</a></h2>
+<p>Hardware metrics are essential for quantifying the resilience of hardware systems against various faults, ensuring that safety goals are met.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="single-point-fault-metric-spfm">Single Point Fault Metric (SPFm)<a href="#single-point-fault-metric-spfm" class="hash-link" aria-label="Direct link to Single Point Fault Metric (SPFm)" title="Direct link to Single Point Fault Metric (SPFm)">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Measures the system&#x27;s ability to detect and prevent single point faults that could violate safety goals.</li>
+<li><strong>Calculation</strong>:<!-- -->
+<ul>
+<li>Sum all failure rates of safety-relevant hardware elements.</li>
+<li>Calculate the diagnostic coverage provided by safety mechanisms.</li>
+<li>Expressed as a percentage.</li>
+</ul>
+</li>
+<li><strong>Application</strong>:<!-- -->
+<ul>
+<li>Required for safety goals rated with ASIL B, C, and D.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>Calculated SPFm</strong>: 93.2% for an ASIL B safety goal, exceeding the 90% requirement.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="latent-fault-metric-lfm">Latent Fault Metric (LFm)<a href="#latent-fault-metric-lfm" class="hash-link" aria-label="Direct link to Latent Fault Metric (LFm)" title="Direct link to Latent Fault Metric (LFm)">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Measures the system&#x27;s ability to detect and prevent latent dual point faults that could violate safety goals.</li>
+<li><strong>Calculation</strong>:<!-- -->
+<ul>
+<li>Sum residual failure rates for multiple point faults.</li>
+<li>Apply diagnostic coverage rates.</li>
+<li>Expressed as a percentage.</li>
+</ul>
+</li>
+<li><strong>Application</strong>:<!-- -->
+<ul>
+<li>Required for safety goals rated with ASIL B, C, and D.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>Calculated LFm</strong>: 90% for an ASIL B safety goal, exceeding the 60% requirement.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="probabilistic-metric-for-random-hardware-failures-pmhf">Probabilistic Metric for Random Hardware Failures (PMHF)<a href="#probabilistic-metric-for-random-hardware-failures-pmhf" class="hash-link" aria-label="Direct link to Probabilistic Metric for Random Hardware Failures (PMHF)" title="Direct link to Probabilistic Metric for Random Hardware Failures (PMHF)">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Evaluates the residual risk of safety goal violations due to random hardware failures.</li>
+<li><strong>Calculation</strong>:<!-- -->
+<ul>
+<li>Sum all failure rates multiplied by the vehicle&#x27;s lifetime (in hours).</li>
+<li>Expressed in FIT (Failures In Time).</li>
+</ul>
+</li>
+<li><strong>Compliance</strong>:<!-- -->
+<ul>
+<li><strong>ASIL B</strong>: Residual FIT ≤ 100 FIT.</li>
+<li><strong>ASIL D</strong>: Residual FIT ≤ 10 FIT.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>ECU with 3000 Components</strong>:<!-- -->
+<ul>
+<li><strong>Total FIT</strong>: 3000 FIT.</li>
+<li><strong>Relevant FIT</strong>: 1500 FIT (50% relevance).</li>
+<li><strong>Residual FIT</strong>: 10 FIT allowed for ASIL D.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-example-fmeda-calculation">Practical Example: FMEDA Calculation<a href="#practical-example-fmeda-calculation" class="hash-link" aria-label="Direct link to Practical Example: FMEDA Calculation" title="Direct link to Practical Example: FMEDA Calculation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenario-steer-by-wire-system">Scenario: Steer-by-Wire System<a href="#scenario-steer-by-wire-system" class="hash-link" aria-label="Direct link to Scenario: Steer-by-Wire System" title="Direct link to Scenario: Steer-by-Wire System">​</a></h3>
+<ol>
+<li>
+<p><strong>System Overview</strong>:</p>
+<ul>
+<li><strong>Function</strong>: Open Valve 2 when temperature &gt; 90°C.</li>
+<li><strong>Safety Goal</strong>: Valve 2 must not remain closed longer than 100 ms when temperature &gt; 100°C.</li>
+<li><strong>ASIL Level</strong>: ASIL B.</li>
+<li><strong>Safe State</strong>: Valve 2 = open.</li>
+<li><strong>Components</strong>:<!-- -->
+<ul>
+<li><strong>R3</strong>: Temperature Sensor.</li>
+<li><strong>I71</strong>: Actuator Control Unit.</li>
+<li><strong>InADC1</strong>: Analog Input monitoring the output stage.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>FMEDA Table Structure</strong>:</p>
+</li>
+</ol>
+<table><thead><tr><th>Hardware Component</th><th>Failure Rate (FIT)</th><th>Effect on System</th><th>Safety Relevant</th><th>Failure Mode</th><th>Failure Distribution (%)</th><th>Allocated FIT</th><th>Relevant for SPF</th><th>Safety Mechanism</th><th>Diagnostic Coverage (%)</th><th>Residual FIT</th><th>Dual Point Faults</th><th>Detected Dual Point Faults</th><th>Perceived Dual Point Faults</th><th>Safe Faults</th></tr></thead><tbody><tr><td>R3 (Sensor)</td><td>2 FIT</td><td>Incorrect temperature read</td><td>Yes</td><td>Stuck-at-open</td><td>50%</td><td>1 FIT</td><td>Yes</td><td>CRC</td><td>80%</td><td>0.8 FIT</td><td></td><td></td><td></td><td></td></tr><tr><td>I71 (Actuator)</td><td>1 FIT</td><td>Valve fails to open</td><td>Yes</td><td>Stuck-at-short</td><td>50%</td><td>0.5 FIT</td><td>Yes</td><td>Watchdog Timer</td><td>60%</td><td>0.3 FIT</td><td></td><td></td><td></td><td></td></tr><tr><td>InADC1 (Monitor)</td><td>1 FIT</td><td>Monitoring failure</td><td>Yes</td><td>Failure to detect</td><td>100%</td><td>1 FIT</td><td>No</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<ol start="3">
+<li><strong>Metric Calculations</strong>:</li>
+</ol>
+<ul>
+<li>
+<p><strong>Single Point Fault Metric (SPFm)</strong>:</p>
+<ul>
+<li><strong>Relevant FIT</strong>: Sum of failure rates for safety-relevant components = 2 + 1 + 1 = 4 FIT.</li>
+<li><strong>Residual FIT</strong>: Sum of residual FITs = 0.8 + 0.3 = 1.1 FIT.</li>
+<li><strong>SPFm</strong> = (1.1 / 4) * 100 = 27.5%</li>
+<li><strong>Compliance</strong>: For ASIL B, SPFm should be ≥ 60%. In this case, additional safety mechanisms are required.</li>
+</ul>
+</li>
+<li>
+<p><strong>Latent Fault Metric (LFm)</strong>:</p>
+<ul>
+<li><strong>Residual FIT for Latent Faults</strong>: 0 FIT (no latent faults identified).</li>
+<li><strong>LFm</strong> = 0%</li>
+<li><strong>Compliance</strong>: For ASIL B, LFm should be ≥ 60%. In this case, no issues.</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li><strong>Interpretation</strong>:</li>
+</ol>
+<ul>
+<li><strong>SPFm</strong>: 27.5% &lt; 60% → <strong>Non-compliant</strong>. Additional safety mechanisms needed.</li>
+<li><strong>LFm</strong>: 0% ≥ 60% → <strong>Compliant</strong>.</li>
+</ul>
+<ol start="5">
+<li><strong>Actions</strong>:</li>
+</ol>
+<ul>
+<li><strong>Enhance Safety Mechanisms</strong>:<!-- -->
+<ul>
+<li>Increase diagnostic coverage for R3 (e.g., implement redundant sensors).</li>
+<li>Enhance watchdog timer capabilities or introduce additional monitoring mechanisms for I71.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-for-conducting-hardware-safety-analyses">Best Practices for Conducting Hardware Safety Analyses<a href="#best-practices-for-conducting-hardware-safety-analyses" class="hash-link" aria-label="Direct link to Best Practices for Conducting Hardware Safety Analyses" title="Direct link to Best Practices for Conducting Hardware Safety Analyses">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comprehensive-documentation">Comprehensive Documentation<a href="#comprehensive-documentation" class="hash-link" aria-label="Direct link to Comprehensive Documentation" title="Direct link to Comprehensive Documentation">​</a></h3>
+<ul>
+<li><strong>Detailed Records</strong>:<!-- -->
+<ul>
+<li>Document all safety goals, identified hazards, analysis methods, and mitigation strategies.</li>
+</ul>
+</li>
+<li><strong>Traceability</strong>:<!-- -->
+<ul>
+<li>Maintain clear linkage between safety goals, requirements, analysis findings, and implemented safety measures.</li>
+</ul>
+</li>
+<li><strong>Standardized Formats</strong>:<!-- -->
+<ul>
+<li>Use consistent documentation templates to enhance clarity and facilitate audits.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="early-and-continuous-safety-integration">Early and Continuous Safety Integration<a href="#early-and-continuous-safety-integration" class="hash-link" aria-label="Direct link to Early and Continuous Safety Integration" title="Direct link to Early and Continuous Safety Integration">​</a></h3>
+<ul>
+<li><strong>Safety from the Outset</strong>:<!-- -->
+<ul>
+<li>Integrate safety considerations during initial design phases to identify and mitigate risks early.</li>
+</ul>
+</li>
+<li><strong>Ongoing Assessments</strong>:<!-- -->
+<ul>
+<li>Continuously update safety analyses based on new insights, design changes, and testing feedback.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iterative-development-and-refinement">Iterative Development and Refinement<a href="#iterative-development-and-refinement" class="hash-link" aria-label="Direct link to Iterative Development and Refinement" title="Direct link to Iterative Development and Refinement">​</a></h3>
+<ul>
+<li><strong>Design-Analyze-Verify Cycle</strong>:<!-- -->
+<ul>
+<li>Adopt an iterative approach, refining designs based on continuous analysis and verification feedback.</li>
+</ul>
+</li>
+<li><strong>Responsive to Feedback</strong>:<!-- -->
+<ul>
+<li>Incorporate findings from testing and validation activities to enhance system safety and performance.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cross-functional-collaboration">Cross-Functional Collaboration<a href="#cross-functional-collaboration" class="hash-link" aria-label="Direct link to Cross-Functional Collaboration" title="Direct link to Cross-Functional Collaboration">​</a></h3>
+<ul>
+<li><strong>Unified Safety Approach</strong>:<!-- -->
+<ul>
+<li>Foster collaboration among hardware engineers, software developers, safety analysts, and other stakeholders.</li>
+</ul>
+</li>
+<li><strong>Joint Reviews</strong>:<!-- -->
+<ul>
+<li>Conduct joint design and safety reviews to identify and address cross-domain risks effectively.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="adherence-to-standards">Adherence to Standards<a href="#adherence-to-standards" class="hash-link" aria-label="Direct link to Adherence to Standards" title="Direct link to Adherence to Standards">​</a></h3>
+<ul>
+<li><strong>Strict Compliance</strong>:<!-- -->
+<ul>
+<li>Follow ISO 26262 guidelines meticulously to ensure all safety requirements are met.</li>
+</ul>
+</li>
+<li><strong>Leverage Best Practices</strong>:<!-- -->
+<ul>
+<li>Incorporate industry best practices in safety analysis to enhance system reliability and safety.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="utilize-advanced-tools">Utilize Advanced Tools<a href="#utilize-advanced-tools" class="hash-link" aria-label="Direct link to Utilize Advanced Tools" title="Direct link to Utilize Advanced Tools">​</a></h3>
+<ul>
+<li><strong>Application Lifecycle Management (ALM) Tools</strong>:<!-- -->
+<ul>
+<li>Use tools like CodeBeamer ALM or IBM Suite to manage requirements, traceability, and safety analysis activities.</li>
+</ul>
+</li>
+<li><strong>Modeling and Simulation Tools</strong>:<!-- -->
+<ul>
+<li>Employ UML, SysML, or HIL simulation tools to visualize system architecture and validate behavior under fault conditions.</li>
+</ul>
+</li>
+<li><strong>Automated Analysis Tools</strong>:<!-- -->
+<ul>
+<li>Implement tools like Isograph for FMEA and FTA to streamline analysis processes and improve accuracy.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-example-steer-by-wire-system-fmeda">Practical Example: Steer-by-Wire System FMEDA<a href="#practical-example-steer-by-wire-system-fmeda" class="hash-link" aria-label="Direct link to Practical Example: Steer-by-Wire System FMEDA" title="Direct link to Practical Example: Steer-by-Wire System FMEDA">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="system-overview">System Overview<a href="#system-overview" class="hash-link" aria-label="Direct link to System Overview" title="Direct link to System Overview">​</a></h3>
+<p>A steer-by-wire system replaces traditional mechanical steering connections with electronic controls, enhancing precision and enabling advanced driver assistance features.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fmeda-steps">FMEDA Steps<a href="#fmeda-steps" class="hash-link" aria-label="Direct link to FMEDA Steps" title="Direct link to FMEDA Steps">​</a></h3>
+<ol>
+<li>
+<p><strong>Establish Bill of Materials (BOM)</strong>:</p>
+<ul>
+<li>List all hardware elements involved in the steer-by-wire system, including sensors, actuators, microcontrollers, and monitoring units.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identify Failure Modes and Rates</strong>:</p>
+<ul>
+<li>For each hardware element, determine potential failure modes and assign failure rates based on standards like IEC 61709.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 (Temperature Sensor)</strong>:<!-- -->
+<ul>
+<li><strong>Failure Modes</strong>: Stuck-at-open, drift.</li>
+<li><strong>Failure Rate</strong>: 2 FIT (1 FIT for each failure mode).</li>
+</ul>
+</li>
+<li><strong>I71 (Actuator Control Unit)</strong>:<!-- -->
+<ul>
+<li><strong>Failure Modes</strong>: Stuck-at-short, failure to respond.</li>
+<li><strong>Failure Rate</strong>: 1 FIT (0.5 FIT for each failure mode).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Determine Failure Distribution</strong>:</p>
+<ul>
+<li>Allocate the failure rate of each hardware element to its failure modes based on standard distributions.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3</strong>:<!-- -->
+<ul>
+<li>Stuck-at-open: 50% (1 FIT)</li>
+<li>Drift: 50% (1 FIT)</li>
+</ul>
+</li>
+<li><strong>I71</strong>:<!-- -->
+<ul>
+<li>Stuck-at-short: 50% (0.5 FIT)</li>
+<li>Failure to respond: 50% (0.5 FIT)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Assign Safety Mechanisms</strong>:</p>
+<ul>
+<li>Link each failure mode to relevant safety mechanisms and assign diagnostic coverage rates.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 Stuck-at-open</strong>:<!-- -->
+<ul>
+<li><strong>Safety Mechanism</strong>: CRC (80% diagnostic coverage)</li>
+</ul>
+</li>
+<li><strong>I71 Stuck-at-short</strong>:<!-- -->
+<ul>
+<li><strong>Safety Mechanism</strong>: Watchdog Timer (60% diagnostic coverage)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculate Residual FIT</strong>:</p>
+<ul>
+<li>For each failure mode, calculate the residual FIT after applying diagnostic coverage.</li>
+<li><strong>Formula</strong>: Residual FIT = Failure Rate × (1 - Diagnostic Coverage)</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 Stuck-at-open</strong>: 1 FIT × (1 - 0.8) = 0.2 FIT</li>
+<li><strong>I71 Stuck-at-short</strong>: 0.5 FIT × (1 - 0.6) = 0.2 FIT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Evaluate Metrics</strong>:</p>
+<ul>
+<li><strong>Single Point Fault Metric (SPFm)</strong>:<!-- -->
+<ul>
+<li>SPFm = (Total Residual FIT for SPFs / Total FIT for Safety-Related Components) × 100</li>
+<li>SPFm = (0.2 + 0.2) / 4 × 100 = 10%</li>
+<li><strong>Compliance</strong>: For ASIL B, SPFm should be ≥ 60%. This indicates non-compliance, necessitating additional safety measures.</li>
+</ul>
+</li>
+<li><strong>Latent Fault Metric (LFm)</strong>:<!-- -->
+<ul>
+<li>LFm = (Total Residual FIT for Latent Faults / Total FIT for Safety-Related Components) × 100</li>
+<li>LFm = 0% (no latent faults identified)</li>
+<li><strong>Compliance</strong>: For ASIL B, LFm should be ≥ 60%. This indicates compliance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Mitigations</strong>:</p>
+<ul>
+<li>Based on metric evaluations, enhance safety mechanisms to achieve compliance.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>Increase CRC Diagnostic Coverage</strong>: Upgrade CRC to 90% for R3.</li>
+<li><strong>Enhance Watchdog Timer</strong>: Improve diagnostic coverage to 80% for I71.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Recalculate Metrics</strong>:</p>
+<ul>
+<li><strong>SPFm</strong> = (0.2 × 1 + 0.2 × 1) / 4 × 100 = 10% (Still non-compliant)</li>
+<li><strong>Additional Measures</strong>:<!-- -->
+<ul>
+<li>Introduce redundant sensors or implement fail-safe mechanisms to further reduce residual FIT.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="handling-random-failures">Handling Random Failures<a href="#handling-random-failures" class="hash-link" aria-label="Direct link to Handling Random Failures" title="Direct link to Handling Random Failures">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="designing-safety-mechanisms">Designing Safety Mechanisms<a href="#designing-safety-mechanisms" class="hash-link" aria-label="Direct link to Designing Safety Mechanisms" title="Direct link to Designing Safety Mechanisms">​</a></h3>
+<p>To effectively handle random failures, implement safety mechanisms that can:</p>
+<ul>
+<li><strong>Detect Faults</strong>: Real-time monitoring systems to identify faults as they occur.</li>
+<li><strong>Mitigate Faults</strong>: Transition the system to a safe state within the Fault Tolerant Time Interval (FTTI) once a fault is detected.</li>
+<li><strong>Examples</strong>:<!-- -->
+<ul>
+<li><strong>Cyclic Redundancy Check (CRC)</strong>: Ensures data integrity.</li>
+<li><strong>Watchdog Timers</strong>: Detect unresponsive components.</li>
+<li><strong>Redundant Sensors</strong>: Provide backup data to prevent single sensor failures from compromising safety.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-fault-injection-testing">Example: Fault Injection Testing<a href="#example-fault-injection-testing" class="hash-link" aria-label="Direct link to Example: Fault Injection Testing" title="Direct link to Example: Fault Injection Testing">​</a></h3>
+<ul>
+<li><strong>Objective</strong>: Verify the effectiveness of safety mechanisms by simulating faults.</li>
+<li><strong>Procedure</strong>:<!-- -->
+<ul>
+<li>Introduce voltage anomalies to sensor inputs (e.g., apply +5.5V to a sensor for 10 seconds).</li>
+<li>Assess if the monitoring mechanism detects the anomaly (e.g., detects voltages at 6V, 7V, 8V).</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>: Confirm that safety mechanisms respond appropriately to simulated faults.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="root-cause-based-classification">Root Cause-Based Classification<a href="#root-cause-based-classification" class="hash-link" aria-label="Direct link to Root Cause-Based Classification" title="Direct link to Root Cause-Based Classification">​</a></h2>
+<p>Understanding the root causes of failures aids in implementing effective safety measures.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-cause-failures">Common Cause Failures<a href="#common-cause-failures" class="hash-link" aria-label="Direct link to Common Cause Failures" title="Direct link to Common Cause Failures">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Failures of two or more elements resulting directly from a specific event or root cause.</li>
+<li><strong>Example</strong>: A fault in the cooling system leading to multiple systemic failures due to overtemperature.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cascading-failures">Cascading Failures<a href="#cascading-failures" class="hash-link" aria-label="Direct link to Cascading Failures" title="Direct link to Cascading Failures">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: A failure in one element causes a failure in another element.</li>
+<li><strong>Example</strong>: Failure of one transistor in a parallel configuration causing excessive load on another, leading to its failure.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dependent-failures">Dependent Failures<a href="#dependent-failures" class="hash-link" aria-label="Direct link to Dependent Failures" title="Direct link to Dependent Failures">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Failures that are not statistically independent, where the combined probability of failure is not the product of individual probabilities.</li>
+<li><strong>Includes</strong>:<!-- -->
+<ul>
+<li>Common Cause Failures</li>
+<li>Cascading Failures</li>
+</ul>
+</li>
+<li><strong>Impact</strong>: Increases the likelihood of multiple simultaneous failures, posing significant safety risks.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-for-hardware-safety-analysis">Best Practices for Hardware Safety Analysis<a href="#best-practices-for-hardware-safety-analysis" class="hash-link" aria-label="Direct link to Best Practices for Hardware Safety Analysis" title="Direct link to Best Practices for Hardware Safety Analysis">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comprehensive-documentation-1">Comprehensive Documentation<a href="#comprehensive-documentation-1" class="hash-link" aria-label="Direct link to Comprehensive Documentation" title="Direct link to Comprehensive Documentation">​</a></h3>
+<ul>
+<li><strong>Detailed Records</strong>:<!-- -->
+<ul>
+<li>Document all types of faults, their rates, modes, and associated safety mechanisms.</li>
+</ul>
+</li>
+<li><strong>Traceability</strong>:<!-- -->
+<ul>
+<li>Maintain clear linkage between safety goals, requirements, design elements, and verification activities.</li>
+</ul>
+</li>
+<li><strong>Standardized Formats</strong>:<!-- -->
+<ul>
+<li>Use consistent documentation formats to enhance clarity and facilitate audits.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="early-and-continuous-safety-integration-1">Early and Continuous Safety Integration<a href="#early-and-continuous-safety-integration-1" class="hash-link" aria-label="Direct link to Early and Continuous Safety Integration" title="Direct link to Early and Continuous Safety Integration">​</a></h3>
+<ul>
+<li><strong>Safety from the Outset</strong>:<!-- -->
+<ul>
+<li>Incorporate safety considerations during initial design phases to identify and mitigate risks early.</li>
+</ul>
+</li>
+<li><strong>Ongoing Assessments</strong>:<!-- -->
+<ul>
+<li>Continuously assess and update safety measures based on new insights, design changes, and testing feedback.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iterative-development-and-refinement-1">Iterative Development and Refinement<a href="#iterative-development-and-refinement-1" class="hash-link" aria-label="Direct link to Iterative Development and Refinement" title="Direct link to Iterative Development and Refinement">​</a></h3>
+<ul>
+<li><strong>Design-Analyze-Verify Cycle</strong>:<!-- -->
+<ul>
+<li>Adopt an iterative approach, refining designs based on continuous analysis and verification feedback.</li>
+</ul>
+</li>
+<li><strong>Responsive to Feedback</strong>:<!-- -->
+<ul>
+<li>Incorporate findings from testing and validation activities to enhance system safety and performance.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cross-functional-collaboration-1">Cross-Functional Collaboration<a href="#cross-functional-collaboration-1" class="hash-link" aria-label="Direct link to Cross-Functional Collaboration" title="Direct link to Cross-Functional Collaboration">​</a></h3>
+<ul>
+<li><strong>Unified Safety Approach</strong>:<!-- -->
+<ul>
+<li>Foster collaboration among hardware engineers, software developers, safety analysts, and other stakeholders.</li>
+</ul>
+</li>
+<li><strong>Joint Reviews</strong>:<!-- -->
+<ul>
+<li>Conduct joint design and safety reviews to identify and address cross-domain risks effectively.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="adherence-to-standards-1">Adherence to Standards<a href="#adherence-to-standards-1" class="hash-link" aria-label="Direct link to Adherence to Standards" title="Direct link to Adherence to Standards">​</a></h3>
+<ul>
+<li><strong>Strict Compliance</strong>:<!-- -->
+<ul>
+<li>Follow ISO 26262 guidelines meticulously to ensure all safety requirements are met.</li>
+</ul>
+</li>
+<li><strong>Leverage Best Practices</strong>:<!-- -->
+<ul>
+<li>Incorporate industry best practices in safety analysis to enhance system reliability and safety.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="utilize-advanced-tools-1">Utilize Advanced Tools<a href="#utilize-advanced-tools-1" class="hash-link" aria-label="Direct link to Utilize Advanced Tools" title="Direct link to Utilize Advanced Tools">​</a></h3>
+<ul>
+<li><strong>Application Lifecycle Management (ALM) Tools</strong>:<!-- -->
+<ul>
+<li>Use tools like CodeBeamer ALM or IBM Suite to manage requirements, traceability, and safety analysis activities.</li>
+</ul>
+</li>
+<li><strong>Modeling and Simulation Tools</strong>:<!-- -->
+<ul>
+<li>Employ UML, SysML, or HIL simulation tools to visualize system architecture and validate behavior under fault conditions.</li>
+</ul>
+</li>
+<li><strong>Automated Analysis Tools</strong>:<!-- -->
+<ul>
+<li>Implement tools like Isograph for FMEA and FTA to streamline analysis processes and improve accuracy.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-example-steer-by-wire-system-fmeda-1">Practical Example: Steer-by-Wire System FMEDA<a href="#practical-example-steer-by-wire-system-fmeda-1" class="hash-link" aria-label="Direct link to Practical Example: Steer-by-Wire System FMEDA" title="Direct link to Practical Example: Steer-by-Wire System FMEDA">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="system-overview-1">System Overview<a href="#system-overview-1" class="hash-link" aria-label="Direct link to System Overview" title="Direct link to System Overview">​</a></h3>
+<p>A steer-by-wire system replaces traditional mechanical steering connections with electronic controls, enhancing precision and enabling advanced driver assistance features.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fmeda-steps-1">FMEDA Steps<a href="#fmeda-steps-1" class="hash-link" aria-label="Direct link to FMEDA Steps" title="Direct link to FMEDA Steps">​</a></h3>
+<ol>
+<li>
+<p><strong>Establish Bill of Materials (BOM)</strong>:</p>
+<ul>
+<li>List all hardware elements involved in the steer-by-wire system, including sensors, actuators, microcontrollers, and monitoring units.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identify Failure Modes and Rates</strong>:</p>
+<ul>
+<li>For each hardware element, determine potential failure modes and assign failure rates based on standards like IEC 61709.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 (Temperature Sensor)</strong>:<!-- -->
+<ul>
+<li><strong>Failure Modes</strong>: Stuck-at-open, drift.</li>
+<li><strong>Failure Rate</strong>: 2 FIT (1 FIT for each failure mode).</li>
+</ul>
+</li>
+<li><strong>I71 (Actuator Control Unit)</strong>:<!-- -->
+<ul>
+<li><strong>Failure Modes</strong>: Stuck-at-short, failure to respond.</li>
+<li><strong>Failure Rate</strong>: 1 FIT (0.5 FIT for each failure mode).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Determine Failure Distribution</strong>:</p>
+<ul>
+<li>Allocate the failure rate of each hardware element to its failure modes based on standard distributions.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3</strong>:<!-- -->
+<ul>
+<li>Stuck-at-open: 50% (1 FIT)</li>
+<li>Drift: 50% (1 FIT)</li>
+</ul>
+</li>
+<li><strong>I71</strong>:<!-- -->
+<ul>
+<li>Stuck-at-short: 50% (0.5 FIT)</li>
+<li>Failure to respond: 50% (0.5 FIT)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Assign Safety Mechanisms</strong>:</p>
+<ul>
+<li>Link each failure mode to relevant safety mechanisms and assign diagnostic coverage rates.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 Stuck-at-open</strong>:<!-- -->
+<ul>
+<li><strong>Safety Mechanism</strong>: CRC (80% diagnostic coverage)</li>
+</ul>
+</li>
+<li><strong>I71 Stuck-at-short</strong>:<!-- -->
+<ul>
+<li><strong>Safety Mechanism</strong>: Watchdog Timer (60% diagnostic coverage)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Calculate Residual FIT</strong>:</p>
+<ul>
+<li>For each failure mode, calculate the residual FIT after applying diagnostic coverage.</li>
+<li><strong>Formula</strong>: Residual FIT = Failure Rate × (1 - Diagnostic Coverage)</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>R3 Stuck-at-open</strong>: 1 FIT × (1 - 0.8) = 0.2 FIT</li>
+<li><strong>I71 Stuck-at-short</strong>: 0.5 FIT × (1 - 0.6) = 0.2 FIT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Evaluate Metrics</strong>:</p>
+<ul>
+<li><strong>Single Point Fault Metric (SPFm)</strong>:<!-- -->
+<ul>
+<li><strong>Formula</strong>: (Total Residual FIT for SPFs / Total FIT for Safety-Related Components) × 100</li>
+<li><strong>Calculation</strong>: (0.2 + 0.2) / 4 × 100 = 10%</li>
+<li><strong>Compliance</strong>: For ASIL B, SPFm should be ≥ 60%. This indicates non-compliance, necessitating additional safety measures.</li>
+</ul>
+</li>
+<li><strong>Latent Fault Metric (LFm)</strong>:<!-- -->
+<ul>
+<li><strong>Formula</strong>: (Total Residual FIT for Latent Faults / Total FIT for Safety-Related Components) × 100</li>
+<li><strong>Calculation</strong>: 0% / 4 × 100 = 0%</li>
+<li><strong>Compliance</strong>: For ASIL B, LFm should be ≥ 60%. This indicates compliance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Mitigations</strong>:</p>
+<ul>
+<li>Based on metric evaluations, enhance safety mechanisms to achieve compliance.</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>Increase CRC Diagnostic Coverage</strong>: Upgrade CRC to 90% for R3.</li>
+<li><strong>Enhance Watchdog Timer</strong>: Improve diagnostic coverage to 80% for I71.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Recalculate Metrics</strong>:</p>
+<ul>
+<li><strong>SPFm</strong> = (0.2 × 1 + 0.2 × 1) / 4 × 100 = 10% (Still non-compliant)</li>
+<li><strong>Additional Measures</strong>:<!-- -->
+<ul>
+<li>Introduce redundant sensors or implement fail-safe mechanisms to further reduce residual FIT.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="handling-residual-risks-and-compliance">Handling Residual Risks and Compliance<a href="#handling-residual-risks-and-compliance" class="hash-link" aria-label="Direct link to Handling Residual Risks and Compliance" title="Direct link to Handling Residual Risks and Compliance">​</a></h2>
+<p>Ensuring that residual risks are sufficiently low is crucial for compliance with ISO 26262. This involves evaluating whether the residual FIT after safety mechanisms is acceptable based on the ASIL level of the safety goals.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="probabilistic-metric-for-random-hardware-failures-pmhf-1">Probabilistic Metric for Random Hardware Failures (PMHF)<a href="#probabilistic-metric-for-random-hardware-failures-pmhf-1" class="hash-link" aria-label="Direct link to Probabilistic Metric for Random Hardware Failures (PMHF)" title="Direct link to Probabilistic Metric for Random Hardware Failures (PMHF)">​</a></h3>
+<ul>
+<li><strong>Definition</strong>: Evaluates the residual risk of safety goal violations due to random hardware failures.</li>
+<li><strong>Calculation</strong>:<!-- -->
+<ul>
+<li><strong>Formula</strong>: PMHF = Σ (Failure Rate × Vehicle Lifetime)</li>
+<li><strong>Expressed in FIT</strong>: Failures In Time.</li>
+</ul>
+</li>
+<li><strong>Compliance</strong>:<!-- -->
+<ul>
+<li><strong>ASIL B</strong>: Residual FIT ≤ 100 FIT.</li>
+<li><strong>ASIL D</strong>: Residual FIT ≤ 10 FIT.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:<!-- -->
+<ul>
+<li><strong>ECU with 3000 Components</strong>:<!-- -->
+<ul>
+<li><strong>Total FIT</strong>: 3000 FIT.</li>
+<li><strong>Relevant FIT</strong>: 1500 FIT (50% relevance).</li>
+<li><strong>Residual FIT</strong>: 10 FIT allowed for ASIL D.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-for-hardware-safety-analysis-1">Best Practices for Hardware Safety Analysis<a href="#best-practices-for-hardware-safety-analysis-1" class="hash-link" aria-label="Direct link to Best Practices for Hardware Safety Analysis" title="Direct link to Best Practices for Hardware Safety Analysis">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comprehensive-documentation-2">Comprehensive Documentation<a href="#comprehensive-documentation-2" class="hash-link" aria-label="Direct link to Comprehensive Documentation" title="Direct link to Comprehensive Documentation">​</a></h3>
+<ul>
+<li><strong>Detailed Records</strong>:<!-- -->
+<ul>
+<li>Document all safety goals, identified hazards, analysis methods, and mitigation strategies.</li>
+</ul>
+</li>
+<li><strong>Traceability</strong>:<!-- -->
+<ul>
+<li>Maintain clear linkage between safety goals, requirements, analysis findings, and implemented safety measures.</li>
+</ul>
+</li>
+<li><strong>Standardized Formats</strong>:<!-- -->
+<ul>
+<li>Use consistent documentation templates to enhance clarity and facilitate audits.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="early-and-continuous-safety-integration-2">Early and Continuous Safety Integration<a href="#early-and-continuous-safety-integration-2" class="hash-link" aria-label="Direct link to Early and Continuous Safety Integration" title="Direct link to Early and Continuous Safety Integration">​</a></h3>
+<ul>
+<li><strong>Safety from the Outset</strong>:<!-- -->
+<ul>
+<li>Incorporate safety considerations during initial design phases to identify and mitigate risks early.</li>
+</ul>
+</li>
+<li><strong>Ongoing Assessments</strong>:<!-- -->
+<ul>
+<li>Continuously assess and update safety measures based on new insights, design changes, and testing feedback.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iterative-development-and-refinement-2">Iterative Development and Refinement<a href="#iterative-development-and-refinement-2" class="hash-link" aria-label="Direct link to Iterative Development and Refinement" title="Direct link to Iterative Development and Refinement">​</a></h3>
+<ul>
+<li><strong>Design-Analyze-Verify Cycle</strong>:<!-- -->
+<ul>
+<li>Adopt an iterative approach, refining designs based on continuous analysis and verification feedback.</li>
+</ul>
+</li>
+<li><strong>Responsive to Feedback</strong>:<!-- -->
+<ul>
+<li>Incorporate findings from testing and validation activities to enhance system safety and performance.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cross-functional-collaboration-2">Cross-Functional Collaboration<a href="#cross-functional-collaboration-2" class="hash-link" aria-label="Direct link to Cross-Functional Collaboration" title="Direct link to Cross-Functional Collaboration">​</a></h3>
+<ul>
+<li><strong>Unified Safety Approach</strong>:<!-- -->
+<ul>
+<li>Foster collaboration among hardware engineers, software developers, safety analysts, and other stakeholders.</li>
+</ul>
+</li>
+<li><strong>Joint Reviews</strong>:<!-- -->
+<ul>
+<li>Conduct joint design and safety reviews to identify and address cross-domain risks effectively.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="adherence-to-standards-2">Adherence to Standards<a href="#adherence-to-standards-2" class="hash-link" aria-label="Direct link to Adherence to Standards" title="Direct link to Adherence to Standards">​</a></h3>
+<ul>
+<li><strong>Strict Compliance</strong>:<!-- -->
+<ul>
+<li>Follow ISO 26262 guidelines meticulously to ensure all safety requirements are met.</li>
+</ul>
+</li>
+<li><strong>Leverage Best Practices</strong>:<!-- -->
+<ul>
+<li>Incorporate industry best practices in safety analysis to enhance system reliability and safety.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="utilize-advanced-tools-2">Utilize Advanced Tools<a href="#utilize-advanced-tools-2" class="hash-link" aria-label="Direct link to Utilize Advanced Tools" title="Direct link to Utilize Advanced Tools">​</a></h3>
+<ul>
+<li><strong>Application Lifecycle Management (ALM) Tools</strong>:<!-- -->
+<ul>
+<li>Use tools like CodeBeamer ALM or IBM Suite to manage requirements, traceability, and safety analysis activities.</li>
+</ul>
+</li>
+<li><strong>Modeling and Simulation Tools</strong>:<!-- -->
+<ul>
+<li>Employ UML, SysML, or HIL simulation tools to visualize system architecture and validate behavior under fault conditions.</li>
+</ul>
+</li>
+<li><strong>Automated Analysis Tools</strong>:<!-- -->
+<ul>
+<li>Implement tools like Isograph for FMEA and FTA to streamline analysis processes and improve accuracy.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>Hardware safety analysis is a cornerstone of achieving functional safety in automotive systems as defined by ISO 26262. By meticulously identifying and categorizing faults, evaluating their impacts, and implementing robust safety mechanisms, automotive engineers can ensure that safety goals are met and that vehicles operate reliably and safely under all conditions. Adhering to best practices, leveraging advanced tools, and fostering cross-functional collaboration are essential for conducting effective hardware safety analyses at the concept, system, and software levels. Comprehensive documentation, traceability, and continuous safety assessments further reinforce the integrity and safety of automotive systems throughout their lifecycle.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-resources">Recommended Resources<a href="#recommended-resources" class="hash-link" aria-label="Direct link to Recommended Resources" title="Direct link to Recommended Resources">​</a></h2>
+<ul>
+<li><strong>The Risks Digest</strong>:<!-- -->
+<ul>
+<li>An online forum moderated by Peter Neumann, focused on the security and safety of computers, software, and technological systems.</li>
+</ul>
+</li>
+<li><strong>Electropedia</strong>:<!-- -->
+<ul>
+<li>The world&#x27;s online electrotechnical vocabulary, as defined by IEC 60050, providing comprehensive definitions and explanations of technical terms related to electronics and safety.</li>
+</ul>
+</li>
+<li><strong>IEC 61508</strong>:<!-- -->
+<ul>
+<li>A broader functional safety standard applicable to various industries, offering principles that complement ISO 26262.</li>
+</ul>
+</li>
+<li><strong>FMEA Handbook by VDA and AIAG</strong>:<!-- -->
+<ul>
+<li>Comprehensive guide on conducting FMEA, available online for reference.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<p>In the upcoming session, we will delve deeper into specific hardware safety analysis methods, exploring detailed methodologies and techniques to enhance your ability to conduct thorough safety assessments. Topics will include advanced Failure Tree Analysis (FTA), enhanced FMEA techniques, and integrating safety analyses into the overall system development lifecycle to achieve full compliance with ISO 26262.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/ISO26262/Funktionale-Sicherheit/04_fault-tolerant-system/04_hardware.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/safety"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Safety Analyses for concept, system, software</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/fault-tolerant-system/integrate"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Integrate, verify and validate the hardware and software</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#importance-of-hardware-safety-analysis" class="table-of-contents__link toc-highlight">Importance of Hardware Safety Analysis</a></li><li><a href="#types-of-faults-and-failures" class="table-of-contents__link toc-highlight">Types of Faults and Failures</a><ul><li><a href="#1-single-point-faults" class="table-of-contents__link toc-highlight">1. Single Point Faults</a></li><li><a href="#2-residual-faults" class="table-of-contents__link toc-highlight">2. Residual Faults</a></li><li><a href="#3-latent-dual-point-faults-latent-faults" class="table-of-contents__link toc-highlight">3. Latent Dual Point Faults (Latent Faults)</a></li><li><a href="#4-detected-dual-point-faults" class="table-of-contents__link toc-highlight">4. Detected Dual Point Faults</a></li><li><a href="#5-perceived-dual-point-faults" class="table-of-contents__link toc-highlight">5. Perceived Dual Point Faults</a></li><li><a href="#6-safe-faults" class="table-of-contents__link toc-highlight">6. Safe Faults</a></li><li><a href="#7-permanent-vs-transient-faults" class="table-of-contents__link toc-highlight">7. Permanent vs. Transient Faults</a></li></ul></li><li><a href="#safety-analysis-methods" class="table-of-contents__link toc-highlight">Safety Analysis Methods</a><ul><li><a href="#1-qualitative-safety-analysis" class="table-of-contents__link toc-highlight">1. Qualitative Safety Analysis</a></li><li><a href="#2-quantitative-safety-analysis" class="table-of-contents__link toc-highlight">2. Quantitative Safety Analysis</a></li></ul></li><li><a href="#hardware-metrics" class="table-of-contents__link toc-highlight">Hardware Metrics</a><ul><li><a href="#single-point-fault-metric-spfm" class="table-of-contents__link toc-highlight">Single Point Fault Metric (SPFm)</a></li><li><a href="#latent-fault-metric-lfm" class="table-of-contents__link toc-highlight">Latent Fault Metric (LFm)</a></li><li><a href="#probabilistic-metric-for-random-hardware-failures-pmhf" class="table-of-contents__link toc-highlight">Probabilistic Metric for Random Hardware Failures (PMHF)</a></li></ul></li><li><a href="#practical-example-fmeda-calculation" class="table-of-contents__link toc-highlight">Practical Example: FMEDA Calculation</a><ul><li><a href="#scenario-steer-by-wire-system" class="table-of-contents__link toc-highlight">Scenario: Steer-by-Wire System</a></li></ul></li><li><a href="#best-practices-for-conducting-hardware-safety-analyses" class="table-of-contents__link toc-highlight">Best Practices for Conducting Hardware Safety Analyses</a><ul><li><a href="#comprehensive-documentation" class="table-of-contents__link toc-highlight">Comprehensive Documentation</a></li><li><a href="#early-and-continuous-safety-integration" class="table-of-contents__link toc-highlight">Early and Continuous Safety Integration</a></li><li><a href="#iterative-development-and-refinement" class="table-of-contents__link toc-highlight">Iterative Development and Refinement</a></li><li><a href="#cross-functional-collaboration" class="table-of-contents__link toc-highlight">Cross-Functional Collaboration</a></li><li><a href="#adherence-to-standards" class="table-of-contents__link toc-highlight">Adherence to Standards</a></li><li><a href="#utilize-advanced-tools" class="table-of-contents__link toc-highlight">Utilize Advanced Tools</a></li></ul></li><li><a href="#practical-example-steer-by-wire-system-fmeda" class="table-of-contents__link toc-highlight">Practical Example: Steer-by-Wire System FMEDA</a><ul><li><a href="#system-overview" class="table-of-contents__link toc-highlight">System Overview</a></li><li><a href="#fmeda-steps" class="table-of-contents__link toc-highlight">FMEDA Steps</a></li></ul></li><li><a href="#handling-random-failures" class="table-of-contents__link toc-highlight">Handling Random Failures</a><ul><li><a href="#designing-safety-mechanisms" class="table-of-contents__link toc-highlight">Designing Safety Mechanisms</a></li><li><a href="#example-fault-injection-testing" class="table-of-contents__link toc-highlight">Example: Fault Injection Testing</a></li></ul></li><li><a href="#root-cause-based-classification" class="table-of-contents__link toc-highlight">Root Cause-Based Classification</a><ul><li><a href="#common-cause-failures" class="table-of-contents__link toc-highlight">Common Cause Failures</a></li><li><a href="#cascading-failures" class="table-of-contents__link toc-highlight">Cascading Failures</a></li><li><a href="#dependent-failures" class="table-of-contents__link toc-highlight">Dependent Failures</a></li></ul></li><li><a href="#best-practices-for-hardware-safety-analysis" class="table-of-contents__link toc-highlight">Best Practices for Hardware Safety Analysis</a><ul><li><a href="#comprehensive-documentation-1" class="table-of-contents__link toc-highlight">Comprehensive Documentation</a></li><li><a href="#early-and-continuous-safety-integration-1" class="table-of-contents__link toc-highlight">Early and Continuous Safety Integration</a></li><li><a href="#iterative-development-and-refinement-1" class="table-of-contents__link toc-highlight">Iterative Development and Refinement</a></li><li><a href="#cross-functional-collaboration-1" class="table-of-contents__link toc-highlight">Cross-Functional Collaboration</a></li><li><a href="#adherence-to-standards-1" class="table-of-contents__link toc-highlight">Adherence to Standards</a></li><li><a href="#utilize-advanced-tools-1" class="table-of-contents__link toc-highlight">Utilize Advanced Tools</a></li></ul></li><li><a href="#practical-example-steer-by-wire-system-fmeda-1" class="table-of-contents__link toc-highlight">Practical Example: Steer-by-Wire System FMEDA</a><ul><li><a href="#system-overview-1" class="table-of-contents__link toc-highlight">System Overview</a></li><li><a href="#fmeda-steps-1" class="table-of-contents__link toc-highlight">FMEDA Steps</a></li></ul></li><li><a href="#handling-residual-risks-and-compliance" class="table-of-contents__link toc-highlight">Handling Residual Risks and Compliance</a><ul><li><a href="#probabilistic-metric-for-random-hardware-failures-pmhf-1" class="table-of-contents__link toc-highlight">Probabilistic Metric for Random Hardware Failures (PMHF)</a></li></ul></li><li><a href="#best-practices-for-hardware-safety-analysis-1" class="table-of-contents__link toc-highlight">Best Practices for Hardware Safety Analysis</a><ul><li><a href="#comprehensive-documentation-2" class="table-of-contents__link toc-highlight">Comprehensive Documentation</a></li><li><a href="#early-and-continuous-safety-integration-2" class="table-of-contents__link toc-highlight">Early and Continuous Safety Integration</a></li><li><a href="#iterative-development-and-refinement-2" class="table-of-contents__link toc-highlight">Iterative Development and Refinement</a></li><li><a href="#cross-functional-collaboration-2" class="table-of-contents__link toc-highlight">Cross-Functional Collaboration</a></li><li><a href="#adherence-to-standards-2" class="table-of-contents__link toc-highlight">Adherence to Standards</a></li><li><a href="#utilize-advanced-tools-2" class="table-of-contents__link toc-highlight">Utilize Advanced Tools</a></li></ul></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li><li><a href="#recommended-resources" class="table-of-contents__link toc-highlight">Recommended Resources</a></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/Glossary/Getting-Started">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</body>
+</html>

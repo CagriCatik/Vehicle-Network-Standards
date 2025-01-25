@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ISO26262/Funktionale-Sicherheit/iso26262/standard" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Evolution and ISO 26262 Standards | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/standard"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Evolution and ISO 26262 Standards | Vehicle Network Standards"><meta data-rh="true" name="description" content="Functional safety is a cornerstone of modern automotive engineering, ensuring that electrical and electronic systems within vehicles operate reliably and safely. Understanding the historical evolution of functional safety and the development of relevant standards is essential for professionals aiming to design and implement safe automotive systems. This documentation provides an in-depth exploration of the history of functional safety, the establishment of key standards like IEC 61508 and ISO 26262, and practical insights into applying these standards within the automotive industry."><meta data-rh="true" property="og:description" content="Functional safety is a cornerstone of modern automotive engineering, ensuring that electrical and electronic systems within vehicles operate reliably and safely. Understanding the historical evolution of functional safety and the development of relevant standards is essential for professionals aiming to design and implement safe automotive systems. This documentation provides an in-depth exploration of the history of functional safety, the establishment of key standards like IEC 61508 and ISO 26262, and practical insights into applying these standards within the automotive industry."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/standard"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/standard" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/standard" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.2f02647a.css">
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.9c258e3d.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/main.ac03ca49.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/getting_started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/getting_started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/getting_started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting_started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/getting_started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/getting_started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/getting_started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started">SOME/IP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/XCP/getting_started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/getting_started">SecOC</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">ISO26262</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FMEA/introduction">FMEA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">Funktionale Sicherheit</a><button aria-label="Collapse sidebar category &#x27;Funktionale Sicherheit&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Vehicle-Network-Standards/docs/category/iso-26262">ISO 26262</a><button aria-label="Collapse sidebar category &#x27;ISO 26262&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/introduction">Introduction to Functional Safety</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/history">History of Functional Safety</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/standard">Evolution and ISO 26262 Standards</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/assignment">Assignment</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/fusi-management">FuSi Management</a><button aria-label="Expand sidebar category &#x27;FuSi Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/vehicle-systems">Vehicle Systems</a><button aria-label="Expand sidebar category &#x27;Vehicle Systems&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/Vehicle-Network-Standards/docs/category/fault-tolerant-system">Fault Tolerant System</a><button aria-label="Expand sidebar category &#x27;Fault Tolerant System&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-uebersicht">Funktionale-Sicherheit-Uebersicht</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Uebersicht&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-systementwicklung">Funktionale-Sicherheit-Systementwicklung</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Systementwicklung&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit-management">Funktionale-Sicherheit-Management</a><button aria-label="Expand sidebar category &#x27;Funktionale-Sicherheit-Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/functional-safety-e2e-communication">Functional Safety E2E Communication</a><button aria-label="Expand sidebar category &#x27;Functional Safety E2E Communication&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit"><span itemprop="name">Funktionale Sicherheit</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/iso-26262"><span itemprop="name">ISO 26262</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Evolution and ISO 26262 Standards</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Evolution and ISO 26262 Standards</h1></header>
+<p>Functional safety is a cornerstone of modern automotive engineering, ensuring that electrical and electronic systems within vehicles operate reliably and safely. Understanding the historical evolution of functional safety and the development of relevant standards is essential for professionals aiming to design and implement safe automotive systems. This documentation provides an in-depth exploration of the history of functional safety, the establishment of key standards like IEC 61508 and ISO 26262, and practical insights into applying these standards within the automotive industry.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="historical-evolution-of-functional-safety">Historical Evolution of Functional Safety<a href="#historical-evolution-of-functional-safety" class="hash-link" aria-label="Direct link to Historical Evolution of Functional Safety" title="Direct link to Historical Evolution of Functional Safety">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="early-developments-1940s-1960s">Early Developments (1940s-1960s)<a href="#early-developments-1940s-1960s" class="hash-link" aria-label="Direct link to Early Developments (1940s-1960s)" title="Direct link to Early Developments (1940s-1960s)">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="emergence-of-semiconductor-technology">Emergence of Semiconductor Technology<a href="#emergence-of-semiconductor-technology" class="hash-link" aria-label="Direct link to Emergence of Semiconductor Technology" title="Direct link to Emergence of Semiconductor Technology">​</a></h4>
+<ul>
+<li><strong>Discovery of Key Components:</strong>
+<ul>
+<li><strong>Transistors, Diodes, Triodes:</strong> Fundamental building blocks of electronic systems.</li>
+<li><strong>Impact:</strong> Enabled the development of more sophisticated electrical and electromechanical control systems.</li>
+</ul>
+</li>
+<li><strong>First Commercial Transistor Production:</strong>
+<ul>
+<li><strong>Location:</strong> Western Electric Plant, Union Boulevard, Pennsylvania.</li>
+<li><strong>Date:</strong> October 1, 1951.</li>
+<li><strong>Significance:</strong> Marked the beginning of mass production and integration of semiconductors into various industries.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="integration-into-control-systems">Integration into Control Systems<a href="#integration-into-control-systems" class="hash-link" aria-label="Direct link to Integration into Control Systems" title="Direct link to Integration into Control Systems">​</a></h4>
+<ul>
+<li><strong>Supervision and Control Systems:</strong>
+<ul>
+<li><strong>Application:</strong> Used in industries such as manufacturing, telecommunications, and automotive for monitoring and controlling processes.</li>
+<li><strong>Advancement:</strong> Enhanced the precision and reliability of industrial operations through electronic supervision.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rise-of-electronic-components-and-safety-concerns-1970s">Rise of Electronic Components and Safety Concerns (1970s)<a href="#rise-of-electronic-components-and-safety-concerns-1970s" class="hash-link" aria-label="Direct link to Rise of Electronic Components and Safety Concerns (1970s)" title="Direct link to Rise of Electronic Components and Safety Concerns (1970s)">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="increasing-complexity-of-electronics">Increasing Complexity of Electronics<a href="#increasing-complexity-of-electronics" class="hash-link" aria-label="Direct link to Increasing Complexity of Electronics" title="Direct link to Increasing Complexity of Electronics">​</a></h4>
+<ul>
+<li><strong>Trend:</strong> Proliferation of more complex electronic components in various systems.</li>
+<li><strong>Challenge:</strong> Limited understanding of failure modes and their effects, leading to increased risk of accidents.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="regulatory-responses-to-safety-incidents">Regulatory Responses to Safety Incidents<a href="#regulatory-responses-to-safety-incidents" class="hash-link" aria-label="Direct link to Regulatory Responses to Safety Incidents" title="Direct link to Regulatory Responses to Safety Incidents">​</a></h4>
+<ul>
+<li><strong>Occupational Safety and Health Act of 1970 (USA):</strong>
+<ul>
+<li><strong>Purpose:</strong> Established comprehensive workplace safety and health regulations.</li>
+<li><strong>Impact:</strong> Set the stage for the development of safety standards in various industries.</li>
+</ul>
+</li>
+<li><strong>Health and Safety at Work Act of 1974 (UK):</strong>
+<ul>
+<li><strong>Objective:</strong> Enhanced safety regulations to protect workers and the public from industrial hazards.</li>
+</ul>
+</li>
+<li><strong>Seveso Disaster (1976):</strong>
+<ul>
+<li><strong>Incident:</strong> Chemical factory accident in Italy caused widespread environmental and human harm.</li>
+<li><strong>Outcome:</strong> Prompted the European Union to introduce stringent safety standards for electronic, electrical, and electromechanical components.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="standardization-of-functional-safety">Standardization of Functional Safety<a href="#standardization-of-functional-safety" class="hash-link" aria-label="Direct link to Standardization of Functional Safety" title="Direct link to Standardization of Functional Safety">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="german-vde-0801-1990">German VDE 0801 (1990)<a href="#german-vde-0801-1990" class="hash-link" aria-label="Direct link to German VDE 0801 (1990)" title="Direct link to German VDE 0801 (1990)">​</a></h4>
+<ul>
+<li><strong>Overview:</strong>
+<ul>
+<li><strong>Description:</strong> One of the first comprehensive documents addressing functional safety.</li>
+<li><strong>Legacy:</strong> Considered the &quot;grandfather&quot; of functional safety standards, laying the groundwork for future developments.</li>
+</ul>
+</li>
+<li><strong>Key Features:</strong>
+<ul>
+<li><strong>Guidelines:</strong> Provided structured approaches to ensure safety in electrical and electronic systems.</li>
+<li><strong>Influence:</strong> Served as a foundational reference for the development of IEC 61508.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="iec-61508-1998">IEC 61508 (1998)<a href="#iec-61508-1998" class="hash-link" aria-label="Direct link to IEC 61508 (1998)" title="Direct link to IEC 61508 (1998)">​</a></h4>
+<ul>
+<li><strong>Foundation of Functional Safety:</strong>
+<ul>
+<li><strong>Overview:</strong> International standard for the functional safety of electrical, electronic, and programmable electronic safety-related systems.</li>
+<li><strong>Scope:</strong> Applicable across multiple industries, including automotive, railway, medical, nuclear, and aerospace.</li>
+</ul>
+</li>
+<li><strong>Impact on Industries:</strong>
+<ul>
+<li><strong>Standardization:</strong> Provided a universal framework for managing functional safety.</li>
+<li><strong>Adoption:</strong> Influenced the creation of sector-specific standards tailored to individual industry needs.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="iso-26262-2011">ISO 26262 (2011)<a href="#iso-26262-2011" class="hash-link" aria-label="Direct link to ISO 26262 (2011)" title="Direct link to ISO 26262 (2011)">​</a></h4>
+<ul>
+<li><strong>Introduction to Automotive Functional Safety:</strong>
+<ul>
+<li><strong>Development:</strong> Based on IEC 61508, specifically tailored for the automotive industry.</li>
+<li><strong>Publication Date:</strong> 2011, with the second edition released in 2018.</li>
+</ul>
+</li>
+<li><strong>Second Edition Enhancements:</strong>
+<ul>
+<li><strong>Expansion:</strong> Included more detailed guidelines and addressed additional vehicle types.</li>
+<li><strong>SOTIF Integration:</strong> Introduced the Safety Of The Intended Functionality (SOTIF) standard to complement functional safety.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="functional-safety-standards-across-industries">Functional Safety Standards Across Industries<a href="#functional-safety-standards-across-industries" class="hash-link" aria-label="Direct link to Functional Safety Standards Across Industries" title="Direct link to Functional Safety Standards Across Industries">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sector-specific-standards">Sector-Specific Standards<a href="#sector-specific-standards" class="hash-link" aria-label="Direct link to Sector-Specific Standards" title="Direct link to Sector-Specific Standards">​</a></h3>
+<ul>
+<li><strong>Railway, Medical, Nuclear, Aerospace:</strong>
+<ul>
+<li><strong>Adaptation:</strong> Each sector developed its own functional safety standards based on IEC 61508 principles.</li>
+<li><strong>Customization:</strong> Addressed unique risks and operational requirements inherent to each industry.</li>
+</ul>
+</li>
+<li><strong>Agricultural Vehicles (ISO 25119):</strong>
+<ul>
+<li><strong>Description:</strong> Functional safety standard for agricultural machinery, launched in 2018.</li>
+<li><strong>Scope:</strong> Covers non-road vehicles, ensuring safety in agricultural operations.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-from-other-industries">Best Practices from Other Industries<a href="#best-practices-from-other-industries" class="hash-link" aria-label="Direct link to Best Practices from Other Industries" title="Direct link to Best Practices from Other Industries">​</a></h3>
+<ul>
+<li><strong>Cross-Industry Learning:</strong>
+<ul>
+<li><strong>Adoption of Best Practices:</strong> Automotive engineers can benefit from safety methodologies developed in other sectors.</li>
+<li><strong>Innovation:</strong> Integrating diverse safety strategies enhances overall functional safety approaches.</li>
+</ul>
+</li>
+<li><strong>Collaborative Development:</strong>
+<ul>
+<li><strong>Engagement:</strong> Participating in multi-industry safety forums fosters knowledge exchange.</li>
+<li><strong>Advancement:</strong> Collaborative efforts drive the evolution of robust safety standards and technologies.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-iso-26262-second-edition">Understanding ISO 26262 Second Edition<a href="#understanding-iso-26262-second-edition" class="hash-link" aria-label="Direct link to Understanding ISO 26262 Second Edition" title="Direct link to Understanding ISO 26262 Second Edition">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overview-of-iso-26262">Overview of ISO 26262<a href="#overview-of-iso-26262" class="hash-link" aria-label="Direct link to Overview of ISO 26262" title="Direct link to Overview of ISO 26262">​</a></h3>
+<ul>
+<li><strong>Structure:</strong>
+<ul>
+<li><strong>Parts:</strong> The standard is divided into twelve parts, each focusing on different domains of functional safety.</li>
+<li><strong>Stand-Alone Documents:</strong> Each part functions independently, allowing for tailored application based on project needs.</li>
+</ul>
+</li>
+<li><strong>Legal Perspective:</strong>
+<ul>
+<li><strong>Recommendation Status:</strong> Viewed as guidelines rather than legally binding requirements.</li>
+<li><strong>UNECE Influence:</strong> The United Nations Economic Commission for Europe (UNECE) links vehicle approvals to standard compliance, potentially making ISO 26262 relevant in legal contexts.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="applicability">Applicability<a href="#applicability" class="hash-link" aria-label="Direct link to Applicability" title="Direct link to Applicability">​</a></h3>
+<ul>
+<li><strong>Vehicle Types:</strong>
+<ul>
+<li><strong>Covered:</strong> Passenger vehicles, buses, trucks, trailers, semitrailers, and motorcycles.</li>
+<li><strong>Excluded:</strong> Machinery-related vehicles, which are addressed by other standards like ISO 25119.</li>
+</ul>
+</li>
+<li><strong>Development Models:</strong>
+<ul>
+<li><strong>V-Cycle Adoption:</strong> ISO 26262 primarily supports the V-Cycle development model.</li>
+<li><strong>Agile Integration:</strong> Agile methodologies can be combined with the V-Cycle to enhance flexibility in development processes.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-features-of-the-second-edition">Key Features of the Second Edition<a href="#key-features-of-the-second-edition" class="hash-link" aria-label="Direct link to Key Features of the Second Edition" title="Direct link to Key Features of the Second Edition">​</a></h3>
+<ul>
+<li><strong>Hazard Analysis and Risk Assessment:</strong>
+<ul>
+<li><strong>Methods:</strong> Includes ISO 26262-specific methodologies for classifying and assessing risks.</li>
+<li><strong>Risk Classification:</strong> Utilizes Automotive Safety Integrity Levels (ASIL) to prioritize safety measures.</li>
+</ul>
+</li>
+<li><strong>Interface with Machinery Domain:</strong>
+<ul>
+<li><strong>Part 8 (Supporting Processes), Clause 15:</strong> Provides guidelines for interacting with machinery-related standards.</li>
+<li><strong>Example:</strong> Managing safety for components like dust carts in trucks by applying both ISO 26262 and machinery standards.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="structure-and-content">Structure and Content<a href="#structure-and-content" class="hash-link" aria-label="Direct link to Structure and Content" title="Direct link to Structure and Content">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="normative-vs-informative-content">Normative vs Informative Content<a href="#normative-vs-informative-content" class="hash-link" aria-label="Direct link to Normative vs Informative Content" title="Direct link to Normative vs Informative Content">​</a></h4>
+<ul>
+<li><strong>Normative Content:</strong>
+<ul>
+<li><strong>Definition:</strong> Mandatory requirements that must be tailored and applied to comply with the standard.</li>
+<li><strong>Usage:</strong> Essential for building the safety case and claiming compliance.</li>
+</ul>
+</li>
+<li><strong>Informative Content:</strong>
+<ul>
+<li><strong>Definition:</strong> Supplementary information that aids in understanding normative requirements.</li>
+<li><strong>Usage:</strong> Provides context and explanations but is not mandatory for compliance.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tables-with-methods">Tables with Methods<a href="#tables-with-methods" class="hash-link" aria-label="Direct link to Tables with Methods" title="Direct link to Tables with Methods">​</a></h4>
+<ul>
+<li><strong>Numbering System:</strong>
+<ul>
+<li><strong>Alternative Entries:</strong> Labeled as 1a, 1b, 1c, etc., allowing for tailored application based on project strategies.</li>
+<li><strong>Consecutive Entries:</strong> Numbered sequentially (1, 2, 3, etc.) and recommended for use according to ASIL-based guidelines.</li>
+</ul>
+</li>
+<li><strong>ASIL Recommendations:</strong>
+<ul>
+<li><strong>Categories:</strong> High recommended, recommended, or no recommendation.</li>
+<li><strong>Tailoring:</strong> Projects may substitute recommended methods with alternatives by providing rationales that demonstrate compliance with corresponding requirements.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="specific-considerations-for-vehicle-types">Specific Considerations for Vehicle Types<a href="#specific-considerations-for-vehicle-types" class="hash-link" aria-label="Direct link to Specific Considerations for Vehicle Types" title="Direct link to Specific Considerations for Vehicle Types">​</a></h4>
+<ul>
+<li><strong>Motorcycles:</strong>
+<ul>
+<li><strong>Applicability:</strong> Parts 1 to 11 apply unless superseded by specific requirements in Part 12.</li>
+<li><strong>Exclusions:</strong> Certain aspects unique to motorcycles are addressed only in Part 12.</li>
+</ul>
+</li>
+<li><strong>Trucks and Buses:</strong>
+<ul>
+<li><strong>Applicability:</strong> All requirements from Parts 1 to 11 apply, with additional requirements marked as (T&amp;B) for trucks and buses.</li>
+<li><strong>Exclusions:</strong> Requirements specific to trucks and buses are not necessary for passenger vehicles or motorcycles.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="legal-and-compliance-considerations">Legal and Compliance Considerations<a href="#legal-and-compliance-considerations" class="hash-link" aria-label="Direct link to Legal and Compliance Considerations" title="Direct link to Legal and Compliance Considerations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iso-26262-as-a-legal-reference">ISO 26262 as a Legal Reference<a href="#iso-26262-as-a-legal-reference" class="hash-link" aria-label="Direct link to ISO 26262 as a Legal Reference" title="Direct link to ISO 26262 as a Legal Reference">​</a></h3>
+<ul>
+<li><strong>Non-Binding Nature:</strong> ISO 26262 is not a legal requirement and cannot be directly enforced in court.</li>
+<li><strong>Potential Legal Relevance:</strong>
+<ul>
+<li><strong>UNECE Integration:</strong> Vehicle approvals linked to standard compliance may make ISO 26262 relevant in legal disputes.</li>
+<li><strong>Future Implications:</strong> Compliance with ISO 26262 could be used as supporting evidence in lawsuits under certain conditions.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="industry-adoption-and-compliance">Industry Adoption and Compliance<a href="#industry-adoption-and-compliance" class="hash-link" aria-label="Direct link to Industry Adoption and Compliance" title="Direct link to Industry Adoption and Compliance">​</a></h3>
+<ul>
+<li><strong>State-of-the-Art Standard:</strong> ISO 26262 is widely recognized as the benchmark for functional safety in the automotive industry.</li>
+<li><strong>Regulatory Alignment:</strong> Adhering to ISO 26262 ensures alignment with industry best practices and facilitates smoother regulatory approvals.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-in-implementing-iso-26262">Best Practices in Implementing ISO 26262<a href="#best-practices-in-implementing-iso-26262" class="hash-link" aria-label="Direct link to Best Practices in Implementing ISO 26262" title="Direct link to Best Practices in Implementing ISO 26262">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="early-hazard-analysis">Early Hazard Analysis<a href="#early-hazard-analysis" class="hash-link" aria-label="Direct link to Early Hazard Analysis" title="Direct link to Early Hazard Analysis">​</a></h3>
+<ul>
+<li><strong>Proactive Identification:</strong>
+<ul>
+<li><strong>Action:</strong> Conduct hazard analyses early in the design process.</li>
+<li><strong>Benefit:</strong> Enables timely implementation of safety measures to mitigate identified risks.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="safety-lifecycle-management">Safety Lifecycle Management<a href="#safety-lifecycle-management" class="hash-link" aria-label="Direct link to Safety Lifecycle Management" title="Direct link to Safety Lifecycle Management">​</a></h3>
+<ul>
+<li><strong>Adherence to ISO 26262 Lifecycle:</strong>
+<ul>
+<li><strong>Phases:</strong> Planning, development, validation, production, and operation.</li>
+<li><strong>Continuous Assessment:</strong> Regular safety evaluations throughout the system’s lifecycle.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="robust-system-design">Robust System Design<a href="#robust-system-design" class="hash-link" aria-label="Direct link to Robust System Design" title="Direct link to Robust System Design">​</a></h3>
+<ul>
+<li><strong>Redundancy and Fail-Safes:</strong>
+<ul>
+<li><strong>Incorporation:</strong> Design systems with multiple layers of safety to enhance resilience against failures.</li>
+<li><strong>Example:</strong> Implementing redundant sensors to ensure reliable system performance.</li>
+</ul>
+</li>
+<li><strong>Fault-Tolerant Architectures:</strong>
+<ul>
+<li><strong>Design Strategy:</strong> Create architectures that can handle and recover from faults without compromising safety.</li>
+<li><strong>Benefit:</strong> Minimizes the impact of component failures on overall system safety.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comprehensive-testing-and-validation">Comprehensive Testing and Validation<a href="#comprehensive-testing-and-validation" class="hash-link" aria-label="Direct link to Comprehensive Testing and Validation" title="Direct link to Comprehensive Testing and Validation">​</a></h3>
+<ul>
+<li><strong>Simulations and Real-World Scenarios:</strong>
+<ul>
+<li><strong>Approach:</strong> Validate safety systems through extensive simulations and real-world testing.</li>
+<li><strong>Objective:</strong> Ensure systems perform reliably under diverse operating conditions.</li>
+</ul>
+</li>
+<li><strong>Iterative Testing:</strong>
+<ul>
+<li><strong>Process:</strong> Continuously refine systems based on test outcomes to enhance safety and performance.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="documentation-and-traceability">Documentation and Traceability<a href="#documentation-and-traceability" class="hash-link" aria-label="Direct link to Documentation and Traceability" title="Direct link to Documentation and Traceability">​</a></h3>
+<ul>
+<li><strong>Detailed Records:</strong>
+<ul>
+<li><strong>Requirement:</strong> Maintain thorough documentation of safety requirements, design decisions, and testing procedures.</li>
+<li><strong>Purpose:</strong> Facilitates traceability and ensures all safety aspects are comprehensively addressed.</li>
+</ul>
+</li>
+<li><strong>Traceability:</strong>
+<ul>
+<li><strong>Implementation:</strong> Ensure that every safety requirement is traceable through the development process, from design to validation.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="continuous-improvement">Continuous Improvement<a href="#continuous-improvement" class="hash-link" aria-label="Direct link to Continuous Improvement" title="Direct link to Continuous Improvement">​</a></h3>
+<ul>
+<li><strong>Feedback Integration:</strong>
+<ul>
+<li><strong>Action:</strong> Update safety measures based on new insights, technological advancements, and field feedback.</li>
+<li><strong>Benefit:</strong> Enhances system safety and keeps pace with evolving industry standards.</li>
+</ul>
+</li>
+<li><strong>Adaptability:</strong>
+<ul>
+<li><strong>Strategy:</strong> Adjust safety practices to accommodate changes in system design or operational contexts.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-examples">Practical Examples<a href="#practical-examples" class="hash-link" aria-label="Direct link to Practical Examples" title="Direct link to Practical Examples">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="application-to-passenger-vehicles">Application to Passenger Vehicles<a href="#application-to-passenger-vehicles" class="hash-link" aria-label="Direct link to Application to Passenger Vehicles" title="Direct link to Application to Passenger Vehicles">​</a></h3>
+<ul>
+<li><strong>Passenger Vehicles:</strong>
+<ul>
+<li><strong>Focus:</strong> Comprehensive application of ISO 26262 requirements to ensure safety.</li>
+<li><strong>Example Systems:</strong> Anti-lock Braking Systems (ABS), Electronic Stability Control (ESC), Advanced Driver Assistance Systems (ADAS).</li>
+</ul>
+</li>
+<li><strong>Safety Measures:</strong>
+<ul>
+<li><strong>Redundancy:</strong> Implementing multiple sensors for critical functions like braking and steering.</li>
+<li><strong>Fail-Safe Mechanisms:</strong> Ensuring that systems default to a safe state in the event of a malfunction.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interaction-with-machinery-domain">Interaction with Machinery Domain<a href="#interaction-with-machinery-domain" class="hash-link" aria-label="Direct link to Interaction with Machinery Domain" title="Direct link to Interaction with Machinery Domain">​</a></h3>
+<ul>
+<li><strong>Trucks and Buses:</strong>
+<ul>
+<li><strong>Integration:</strong> Combining ISO 26262 with machinery-specific standards like ISO 25119.</li>
+<li><strong>Example:</strong> Managing safety for components such as dust carts by applying both automotive and machinery safety standards.</li>
+</ul>
+</li>
+<li><strong>Chassis and Body Treatment:</strong>
+<ul>
+<li><strong>Chassis:</strong> Treated under ISO 26262 for functional safety.</li>
+<li><strong>Body Components:</strong> Addressed by machinery-specific standards to ensure comprehensive safety coverage.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<p>Functional safety has undergone significant evolution, driven by technological advancements and the necessity to mitigate risks associated with complex electrical and electronic systems. Standards like IEC 61508 and ISO 26262 have provided structured frameworks for managing functional safety across various industries, with ISO 26262 specifically tailored to the automotive sector. By understanding the historical context, adhering to established standards, and implementing best practices, automotive engineers can design and develop systems that prioritize safety and reliability. Continuous improvement and integration with other safety disciplines further enhance the robustness of modern automotive safety systems, ultimately protecting lives and fostering trust in automotive technologies.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="knowledge-check">Knowledge Check<a href="#knowledge-check" class="hash-link" aria-label="Direct link to Knowledge Check" title="Direct link to Knowledge Check">​</a></h2>
+<p>To reinforce your understanding of the historical context and standards of functional safety, consider the following questions:</p>
+<ol>
+<li><strong>What was the significance of the German VDE 0801 standard in the development of functional safety?</strong></li>
+<li><strong>How does ISO 26262 differ from IEC 61508 in terms of industry application?</strong></li>
+<li><strong>Why might ISO 26262 compliance be relevant in legal disputes, despite it not being a legally binding document?</strong></li>
+<li><strong>What are the key differences in applying ISO 26262 to passenger vehicles versus trucks and buses?</strong></li>
+<li><strong>List some best practices for implementing functional safety according to ISO 26262.</strong></li>
+</ol>
+<p>Reflecting on these questions will help solidify your grasp of the key concepts in functional safety and their practical applications in the automotive industry.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/ISO26262/Funktionale-Sicherheit/01_iso26262/03_standard.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/history"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">History of Functional Safety</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/ISO26262/Funktionale-Sicherheit/iso26262/assignment"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Assignment</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#historical-evolution-of-functional-safety" class="table-of-contents__link toc-highlight">Historical Evolution of Functional Safety</a><ul><li><a href="#early-developments-1940s-1960s" class="table-of-contents__link toc-highlight">Early Developments (1940s-1960s)</a></li><li><a href="#rise-of-electronic-components-and-safety-concerns-1970s" class="table-of-contents__link toc-highlight">Rise of Electronic Components and Safety Concerns (1970s)</a></li><li><a href="#standardization-of-functional-safety" class="table-of-contents__link toc-highlight">Standardization of Functional Safety</a></li></ul></li><li><a href="#functional-safety-standards-across-industries" class="table-of-contents__link toc-highlight">Functional Safety Standards Across Industries</a><ul><li><a href="#sector-specific-standards" class="table-of-contents__link toc-highlight">Sector-Specific Standards</a></li><li><a href="#best-practices-from-other-industries" class="table-of-contents__link toc-highlight">Best Practices from Other Industries</a></li></ul></li><li><a href="#understanding-iso-26262-second-edition" class="table-of-contents__link toc-highlight">Understanding ISO 26262 Second Edition</a><ul><li><a href="#overview-of-iso-26262" class="table-of-contents__link toc-highlight">Overview of ISO 26262</a></li><li><a href="#applicability" class="table-of-contents__link toc-highlight">Applicability</a></li><li><a href="#key-features-of-the-second-edition" class="table-of-contents__link toc-highlight">Key Features of the Second Edition</a></li><li><a href="#structure-and-content" class="table-of-contents__link toc-highlight">Structure and Content</a></li></ul></li><li><a href="#legal-and-compliance-considerations" class="table-of-contents__link toc-highlight">Legal and Compliance Considerations</a><ul><li><a href="#iso-26262-as-a-legal-reference" class="table-of-contents__link toc-highlight">ISO 26262 as a Legal Reference</a></li><li><a href="#industry-adoption-and-compliance" class="table-of-contents__link toc-highlight">Industry Adoption and Compliance</a></li></ul></li><li><a href="#best-practices-in-implementing-iso-26262" class="table-of-contents__link toc-highlight">Best Practices in Implementing ISO 26262</a><ul><li><a href="#early-hazard-analysis" class="table-of-contents__link toc-highlight">Early Hazard Analysis</a></li><li><a href="#safety-lifecycle-management" class="table-of-contents__link toc-highlight">Safety Lifecycle Management</a></li><li><a href="#robust-system-design" class="table-of-contents__link toc-highlight">Robust System Design</a></li><li><a href="#comprehensive-testing-and-validation" class="table-of-contents__link toc-highlight">Comprehensive Testing and Validation</a></li><li><a href="#documentation-and-traceability" class="table-of-contents__link toc-highlight">Documentation and Traceability</a></li><li><a href="#continuous-improvement" class="table-of-contents__link toc-highlight">Continuous Improvement</a></li></ul></li><li><a href="#practical-examples" class="table-of-contents__link toc-highlight">Practical Examples</a><ul><li><a href="#application-to-passenger-vehicles" class="table-of-contents__link toc-highlight">Application to Passenger Vehicles</a></li><li><a href="#interaction-with-machinery-domain" class="table-of-contents__link toc-highlight">Interaction with Machinery Domain</a></li></ul></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li><li><a href="#knowledge-check" class="table-of-contents__link toc-highlight">Knowledge Check</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/Glossary/Getting-Started">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</body>
+</html>

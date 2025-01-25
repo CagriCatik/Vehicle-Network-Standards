@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkvns=self.webpackChunkvns||[]).push([[66632],{49568:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/Vehicle-Network-Standards/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

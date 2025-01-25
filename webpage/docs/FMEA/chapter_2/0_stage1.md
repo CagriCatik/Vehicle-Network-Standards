@@ -1,1 +1,0 @@
-# 2: Stage 01: Identifying the Failure Mode and Specifying its Severity

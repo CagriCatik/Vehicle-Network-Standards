@@ -1,5 +1,5 @@
 ---
-slug: welcome
+slug: sovd
 title: WTF SOVD?
 authors: [ccatik]
 tags: [SOVD, API, SOA, Diagnostics]

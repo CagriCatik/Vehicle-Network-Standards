@@ -2,77 +2,77 @@
 
 ---
 
-## 1. **Übersicht**
-Dieser Abschnitt bietet eine Einführung in die Geschichte, Herausforderungen und Vorteile von AUTOSAR.
+## 1. **Overview**
+This section provides an introduction to the history, challenges, and advantages of AUTOSAR.
 
-- **Wichtige Inhalte:**
-  - Überblick über die AUTOSAR-Release-Historie
-  - Aktuelle Herausforderungen in AUTOSAR
-  - Vor AUTOSAR
-  - Grundprinzipien und Vorteile von AUTOSAR
-  - Ziele von AUTOSAR
-  - Wiederverwendbarkeit von Softwarefunktionen
-  - AUTOSAR Slogan
-
----
-
-## 2. **Grundlagen**
-In diesem Kapitel werden die Grundlagen von AUTOSAR und seine Rolle in der Fahrzeug-E/E-Entwicklung erläutert.
-
-- **Wichtige Inhalte:**
-  - AUTOSAR in der Fahrzeug-E/E-Entwicklung
-  - Konzept
-  - Schichtenmodell
-  - AUTOSAR-Schnittstellen
+- **Key Topics:**
+  - Overview of AUTOSAR release history
+  - Current challenges in AUTOSAR
+  - Before AUTOSAR
+  - Core principles and benefits of AUTOSAR
+  - Objectives of AUTOSAR
+  - Reusability of software functions
+  - AUTOSAR slogan
 
 ---
 
-## 3. **Methodik**
-Hier werden die methodischen Ansätze von AUTOSAR beleuchtet.
+## 2. **Fundamentals**
+This chapter explains the basics of AUTOSAR and its role in vehicle E/E development.
+
+- **Key Topics:**
+  - AUTOSAR in vehicle E/E development
+  - Concept
+  - Layered architecture
+  - AUTOSAR interfaces
 
 ---
 
-## 4. **Applikation**
-Dieser Abschnitt beschreibt die Software-Layers und deren Anwendungen.
-
-- **Wichtige Inhalte:**
-  - Übersicht der Software Layers
-  - Beispiel: Komponentenansicht für Beleuchtung
+## 3. **Methodology**
+This section explores the methodological approaches in AUTOSAR.
 
 ---
 
-## 5. **Funktionssoftware**
-Dieser Abschnitt behandelt die Arbeitsprodukte und den Aufbau der Funktionssoftware.
+## 4. **Application**
+This section describes the software layers and their applications.
 
-- **Wichtige Inhalte:**
-  - Arbeitsprodukte
-  - Funktionssoftware
-
----
-
-## 6. **SW-Layer**
-In diesem Kapitel wird die Architektur der Software-Schichten beschrieben.
+- **Key Topics:**
+  - Overview of software layers
+  - Example: Component view for lighting
 
 ---
 
-## 7. **Basissoftware-RTE**
-Dieser Abschnitt konzentriert sich auf die Runtime Environment (RTE) und die Basissoftware.
+## 5. **Functional Software**
+This section addresses the work products and structure of the functional software.
 
-- **Wichtige Inhalte:**
-  - Aufgabenbereiche
-  - Rolle von RTE
-  - Architektur
-  - Eigenschaften
+- **Key Topics:**
+  - Work products
+  - Functional software
+
+---
+
+## 6. **SW Layers**
+This chapter describes the architecture of the software layers.
+
+---
+
+## 7. **Basic Software - RTE**
+This section focuses on the Runtime Environment (RTE) and the basic software.
+
+- **Key Topics:**
+  - Areas of responsibility
+  - Role of RTE
+  - Architecture
+  - Characteristics
   - RTE
-  - OEM-Abhängigkeiten
-  - Basissoftware
+  - OEM dependencies
+  - Basic software
 
 ---
 
-## 8. **Werkzeuge**
-Hier werden die verfügbaren Tools, Migrationslösungen und Testmethoden im AUTOSAR-Kontext vorgestellt.
+## 8. **Tools**
+This section presents the available tools, migration solutions, and testing methods in the AUTOSAR context.
 
-- **Wichtige Inhalte:**
-  - Werkzeuge, Umstieg und Test
-  - Migrationslösungen
-  - Test von AUTOSAR-Steuergeräten
+- **Key Topics:**
+  - Tools, migration, and testing
+  - Migration solutions
+  - Testing of AUTOSAR ECUs

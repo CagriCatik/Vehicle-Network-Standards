@@ -1,1 +1,0 @@
-# Beispiel: Komponentensicht für Beleuchtung

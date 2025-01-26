@@ -1,7 +1,10 @@
 # Vehicle Network Standards
 
+![Deploy Docusaurus](https://github.com/CagriCatik/Vehicle-Network-Standards/actions/workflows/deploy.yml/badge.svg)
+
 This repository serves as a knowledge base for [**Vehicle Network Standards**](https://cagricatik.github.io/Vehicle-Network-Standards/). It provides structured information on widely-used protocols in the automotive industry, organized into the following categories:
 
+- **AUTOSAR**
 - **CAN** 
 - **LIN** 
 - **FlexRay**
@@ -13,8 +16,11 @@ This repository serves as a knowledge base for [**Vehicle Network Standards**](h
 - **SOVD**
 - **SOVA**
 - **SecOC**
+- **FuSa**
+- **FMEA**
 
-## About the Project
+
+## About the Knowledge-Base
 
 The content in this repository is the foundation of a Docusaurus-powered website that offers in-depth documentation, tutorials, and examples for these protocols. The website aims to provide clear, concise, and organized information for developers, engineers, and anyone interested in automotive communication standards.
 
@@ -49,8 +55,7 @@ To view the documentation locally or contribute to the project, follow these ste
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/) or npm
+- [Yarn](https://yarnpkg.com/)
 
 ### Installation
 
@@ -60,7 +65,7 @@ To view the documentation locally or contribute to the project, follow these ste
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Vehicle-Network-Standards
+   cd Vehicle-Network-Standards/webpage
    ```
 3. Install dependencies:
    ```bash
@@ -80,9 +85,3 @@ We welcome contributions to improve the documentation and examples. To contribut
 3. Commit your changes (`git commit -m "Add my feature"`).
 4. Push to the branch (`git push origin feature/my-feature`).
 5. Open a pull request.
-
-
-## Acknowledgements
-
-- [Docusaurus](https://docusaurus.io/) for making documentation simple and accessible.
-- The automotive community for their continued contributions and innovations.

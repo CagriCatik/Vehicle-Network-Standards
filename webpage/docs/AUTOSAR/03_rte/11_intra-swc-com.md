@@ -191,24 +191,25 @@ void RunnableA(void) {
 
 ### **4.3 Sequence Diagram**
 
-```plaintext
-Runnable A                      RTE                       Shared Variable
-    |                              |                            |
-    |--- Enter Exclusive Area --->|                            |
-    |                              |                            |
-    |--- Rte_Write_Port_X(X + 2) -->|                            |
-    |                              |--- Update X atomically -->|
-    |                              |                            |
-    |<--- Exit Exclusive Area -----|                            |
-    |                              |                            |
-Runnable B                      RTE                       Shared Variable
-    |                              |                            |
-    |--- Rte_Read_Port_X(&X) ------>|                            |
-    |                              |--- Atomic Read of X ------>|
-    |<--- Receive X value ----------|                            |
-    |                              |                            |
-    |--- Process X ----------------|                            |
-    |                              |                            |
+```mermaid
+sequenceDiagram
+    participant RunnableA as Runnable A
+    participant RTE
+    participant SharedVariable as Shared Variable
+    participant RunnableB as Runnable B
+
+    %% Runnable A interactions
+    RunnableA->>RTE: Enter Exclusive Area
+    RunnableA->>RTE: Rte_Write_Port_X(X + 2)
+    RTE->>SharedVariable: Update X atomically
+    RTE-->>RunnableA: Exit Exclusive Area
+
+    %% Runnable B interactions
+    RunnableB->>RTE: Rte_Read_Port_X(&X)
+    RTE->>SharedVariable: Atomic Read of X
+    RTE-->>RunnableB: Receive X value
+    RunnableB->>RunnableB: Process X
+
 ```
 
 **Explanation**:

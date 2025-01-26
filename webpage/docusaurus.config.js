@@ -67,6 +67,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
 
+      // Add the Mermaid theme to your themes
+      themes: ['@docusaurus/theme-mermaid'],
+
+      // Customize Mermaid options if necessary
+      mermaid: {
+        theme: {light: 'neutral', dark: 'forest'},
+      },
+
       navbar: {
         title: 'VNS',
         logo: {

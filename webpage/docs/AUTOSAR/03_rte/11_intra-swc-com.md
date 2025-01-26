@@ -1,4 +1,4 @@
-# **Intra-SWC Communication in AUTOSAR**
+# Intra-SWC Communication
 
 ## **Definition and Problem Context**
 

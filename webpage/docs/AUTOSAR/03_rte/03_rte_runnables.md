@@ -1,4 +1,4 @@
-# RTE as Runtime Environment for Runnables
+# Runnables
 
 The **Runtime Environment (RTE)** is the middleware layer in AUTOSAR that ensures seamless interaction between Software Components (SWCs), the Operating System (OS), and the Basic Software (BSW). Its primary role is to manage **Runnables**—the smallest executable units in AUTOSAR—by triggering them based on predefined events and facilitating communication between SWCs.
 

@@ -1,4 +1,4 @@
-# **Client/Server Communication in AUTOSAR**
+# Client/Server Communication in AUTOSAR
 
 Client/Server communication is one of the key paradigms in AUTOSAR used to facilitate interaction between Software Components (SWCs). It enables the execution of server-side operations invoked by clients.
 

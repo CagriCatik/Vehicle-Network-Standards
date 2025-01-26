@@ -1,4 +1,4 @@
-# Sender/Receiver Communication: Inter-ECU
+# Inter-ECU
 
 The **Sender/Receiver (S/R)** communication paradigm in AUTOSAR facilitates the asynchronous exchange of data between Software Components (SWCs). When operating across multiple ECUs, this mechanism is supported by the **Runtime Environment (RTE)** and the **Communication Stack (COM)** in the Basic Software (BSW). The provided diagram illustrates the interaction between two SWCs located on different ECUs via Inter-ECU communication.
 

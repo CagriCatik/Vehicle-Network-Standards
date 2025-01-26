@@ -1,4 +1,4 @@
-# RTE as a Communication Interface
+# Communication Interface
 
 The **Runtime Environment (RTE)** acts as the central communication interface in AUTOSAR, enabling seamless data exchange between **Software Components (SWCs)** and between SWCs and the **Basic Software (BSW)**. It facilitates various communication mechanisms, abstracts the complexity of the Virtual Functional Bus (VFB), and ensures data consistency across the system.
 

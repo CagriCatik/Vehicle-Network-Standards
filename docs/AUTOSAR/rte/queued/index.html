@@ -3,162 +3,637 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
-<title data-rh="true">Sender/Receiver Communication: Queued | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Sender/Receiver Communication: Queued | Vehicle Network Standards"><meta data-rh="true" name="description" content="This documentation focuses on Queued Sender/Receiver Communication within AUTOSAR, which uses an event-based semantic mechanism (isQueued=true) for data exchange. This approach relies on receive queues for managing multiple data instances, providing flexibility in scenarios requiring event-based communication."><meta data-rh="true" property="og:description" content="This documentation focuses on Queued Sender/Receiver Communication within AUTOSAR, which uses an event-based semantic mechanism (isQueued=true) for data exchange. This approach relies on receive queues for managing multiple data instances, providing flexibility in scenarios requiring event-based communication."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
+<title data-rh="true">Sender/Receiver Communication: Queued | Vehicle Network Standards</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Sender/Receiver Communication: Queued | Vehicle Network Standards"><meta data-rh="true" name="description" content="In the AUTOSAR (AUTomotive Open System ARchitecture) framework, Queued Sender/Receiver (S/R) Communication represents a sophisticated communication paradigm designed to handle event-driven data exchanges between Software Components (SWCs). Leveraging an event-based semantic (isQueued=true), this mechanism employs receive queues to manage multiple data instances, ensuring data consistency and deterministic behavior. Queued S/R Communication is particularly suited for scenarios requiring reliable event handling and the preservation of data sequences, such as sensor data streams and interrupt-driven systems."><meta data-rh="true" property="og:description" content="In the AUTOSAR (AUTomotive Open System ARchitecture) framework, Queued Sender/Receiver (S/R) Communication represents a sophisticated communication paradigm designed to handle event-driven data exchanges between Software Components (SWCs). Leveraging an event-based semantic (isQueued=true), this mechanism employs receive queues to manage multiple data instances, ensuring data consistency and deterministic behavior. Queued S/R Communication is particularly suited for scenarios requiring reliable event handling and the preservation of data sequences, such as sensor data streams and interrupt-driven systems."><link data-rh="true" rel="icon" href="/Vehicle-Network-Standards/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued" hreflang="en"><link data-rh="true" rel="alternate" href="https://CagriCatik.github.io/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Vehicle-Network-Standards/blog/rss.xml" title="Vehicle Network Standards RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/Vehicle-Network-Standards/blog/atom.xml" title="Vehicle Network Standards Atom Feed"><link rel="stylesheet" href="/Vehicle-Network-Standards/assets/css/styles.2f02647a.css">
-<script src="/Vehicle-Network-Standards/assets/js/runtime~main.151e5f2c.js" defer="defer"></script>
+<script src="/Vehicle-Network-Standards/assets/js/runtime~main.347dd24f.js" defer="defer"></script>
 <script src="/Vehicle-Network-Standards/assets/js/main.f54239ae.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
-<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/getting_started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/getting_started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/getting_started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting_started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/getting_started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/getting_started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/getting_started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started">SOME/IP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/XCP/getting_started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/getting_started">SecOC</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">ISO26262</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FMEA/introduction">FMEA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/overview">Overview</a><button aria-label="Expand sidebar category &#x27;Overview&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/application">Application</a><button aria-label="Expand sidebar category &#x27;Application&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/Vehicle-Network-Standards/docs/category/rte">RTE</a><button aria-label="Collapse sidebar category &#x27;RTE&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/role_rte">Runtime Environment</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/architecture">Layered Framework Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/rte_runnables">Runnables</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/rte_com_interface">Communication Interface</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/inter_ecu">Inter-ECU</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/direct">Sender/Receiver Communication: Direct</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/buffered">Sender/Receiver Communication: Buffered</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued">Sender/Receiver Communication: Queued</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/sender-receiver-com">Sender/Receiver Communication: Data Element Invalidation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/client-server-com">Client/Server Communication in AUTOSAR</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/intra-swc-com">Intra-SWC Communication</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/interfaces">AUTOSAR Interfaces</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/standardized_interface">Standardized AUTOSAR Interface</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/bsw">BSW</a><button aria-label="Expand sidebar category &#x27;BSW&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/methodology">Methodology</a><button aria-label="Expand sidebar category &#x27;Methodology&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/practice">Practice</a><button aria-label="Expand sidebar category &#x27;Practice&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/appendix">Appendix</a><button aria-label="Expand sidebar category &#x27;Appendix&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/rte"><span itemprop="name">RTE</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Sender/Receiver Communication: Queued</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Sender/Receiver Communication: Queued</h1></header>
-<p>This documentation focuses on <strong>Queued Sender/Receiver Communication</strong> within AUTOSAR, which uses an <strong>event-based semantic</strong> mechanism (<code>isQueued=true</code>) for data exchange. This approach relies on receive queues for managing multiple data instances, providing flexibility in scenarios requiring event-based communication.</p>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Vehicle-Network-Standards/img/car.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Vehicle-Network-Standards/"><div class="navbar__logo"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Vehicle-Network-Standards/img/car.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">VNS</b></a></div><div class="navbar__items navbar__items--right"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVA/getting_started">SOVA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOVD/getting_started">SOVD</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/UDS/getting_started">UDS</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/CAN/getting_started">CAN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/LIN/getting_started">LIN</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FLEXRAY/getting_started">FlexRay</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/ETHERNET/getting_started">Ethernet</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/DoIP/getting_started">DoIP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SOME-IP/getting_started">SOME/IP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/XCP/getting_started">XCP</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/SecOC/getting_started">SecOC</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/category/funktionale-sicherheit">ISO26262</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/docs/FMEA/introduction">FMEA</a><a class="navbar__item navbar__link" href="/Vehicle-Network-Standards/blog">Blog</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Vehicle-Network-Standards/docs/AUTOSAR/getting_started">AUTOSAR</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/overview">Overview</a><button aria-label="Expand sidebar category &#x27;Overview&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/application">Application</a><button aria-label="Expand sidebar category &#x27;Application&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/Vehicle-Network-Standards/docs/category/rte">RTE</a><button aria-label="Collapse sidebar category &#x27;RTE&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/role_rte">AUTOSAR Runtime Environment</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/architecture">Layered Framework Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/rte_runnables">Runnables</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/rte_com_interface">Communication Interface</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/inter_ecu">Inter-ECU Communication</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/direct">Sender/Receiver Communication: Direct</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/buffered">Sender/Receiver Communication: Buffered</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/queued">Sender/Receiver Communication: Queued</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/sender-receiver-com">Sender/Receiver Communication: Data Element Invalidation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/client-server-com">Client/Server Communication in AUTOSAR</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/intra-swc-com">Intra-SWC Communication</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/interfaces">AUTOSAR Interfaces</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/standardized_interface">Standardized AUTOSAR Interface</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/bsw">BSW</a><button aria-label="Expand sidebar category &#x27;BSW&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/methodology">Methodology</a><button aria-label="Expand sidebar category &#x27;Methodology&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/practice">Practice</a><button aria-label="Expand sidebar category &#x27;Practice&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/Vehicle-Network-Standards/docs/category/appendix">Appendix</a><button aria-label="Expand sidebar category &#x27;Appendix&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Vehicle-Network-Standards/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/Vehicle-Network-Standards/docs/category/rte"><span itemprop="name">RTE</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Sender/Receiver Communication: Queued</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Sender/Receiver Communication: Queued</h1></header>
+<p>In the <strong>AUTOSAR (AUTomotive Open System ARchitecture)</strong> framework, <strong>Queued Sender/Receiver (S/R) Communication</strong> represents a sophisticated communication paradigm designed to handle event-driven data exchanges between Software Components (SWCs). Leveraging an <strong>event-based semantic</strong> (<code>isQueued=true</code>), this mechanism employs receive queues to manage multiple data instances, ensuring data consistency and deterministic behavior. Queued S/R Communication is particularly suited for scenarios requiring reliable event handling and the preservation of data sequences, such as sensor data streams and interrupt-driven systems.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-key-features-of-queued-communication"><strong>1. Key Features of Queued Communication</strong><a href="#1-key-features-of-queued-communication" class="hash-link" aria-label="Direct link to 1-key-features-of-queued-communication" title="Direct link to 1-key-features-of-queued-communication">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-event-semantic"><strong>1.1 Event Semantic</strong><a href="#11-event-semantic" class="hash-link" aria-label="Direct link to 11-event-semantic" title="Direct link to 11-event-semantic">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-key-features-of-queued-communication">1. Key Features of Queued Communication<a href="#1-key-features-of-queued-communication" class="hash-link" aria-label="Direct link to 1. Key Features of Queued Communication" title="Direct link to 1. Key Features of Queued Communication">​</a></h2>
+<p>Queued Sender/Receiver Communication introduces several key features that enhance the robustness and flexibility of data exchanges within AUTOSAR-based automotive systems. These features ensure that data is handled efficiently and predictably, catering to complex communication requirements.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-event-semantic">1.1 Event Semantic<a href="#11-event-semantic" class="hash-link" aria-label="Direct link to 1.1 Event Semantic" title="Direct link to 1.1 Event Semantic">​</a></h3>
+<p><strong>Event semantic</strong> defines how data exchanges are managed and processed within the communication paradigm. In Queued S/R Communication, the event semantic is pivotal for ensuring that data is handled in an orderly and reliable manner.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="polling-receive"><strong>Polling Receive</strong><a href="#polling-receive" class="hash-link" aria-label="Direct link to polling-receive" title="Direct link to polling-receive">​</a></h4>
 <ul>
-<li><strong>Polling Receive:</strong>
+<li><strong>Description:</strong>
 <ul>
-<li>The receiver actively checks the queue for new data.</li>
+<li>In polling receive, the receiver SWC actively checks the receive queue for new data.</li>
+<li>The receiver periodically invokes the <code>Rte_Receive</code> API to fetch available data.</li>
 </ul>
 </li>
-<li><strong>Waiting Receive:</strong>
+<li><strong>Advantages:</strong>
 <ul>
-<li>The receiver blocks and waits for data until a timeout occurs (if defined).</li>
+<li><strong>Control Over Execution:</strong> The receiver determines when to check for new data, allowing for optimized scheduling.</li>
+<li><strong>Flexibility:</strong> Suitable for scenarios where data arrival is unpredictable or infrequent.</li>
 </ul>
 </li>
-<li><strong>Queue Management:</strong>
+<li><strong>Example Use Case:</strong>
 <ul>
-<li>RTE reads data from a <strong>dedicated receive queue</strong>, ensuring ordered processing of events.</li>
+<li>A diagnostic module that periodically checks for fault codes without continuous monitoring.</li>
 </ul>
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-data-consistency"><strong>1.2 Data Consistency</strong><a href="#12-data-consistency" class="hash-link" aria-label="Direct link to 12-data-consistency" title="Direct link to 12-data-consistency">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="waiting-receive"><strong>Waiting Receive</strong><a href="#waiting-receive" class="hash-link" aria-label="Direct link to waiting-receive" title="Direct link to waiting-receive">​</a></h4>
 <ul>
-<li>Each data instance in the queue is handled as a separate event, ensuring no overwrites or loss of intermediate data values.</li>
-<li>Data remains available in the queue until consumed.</li>
+<li><strong>Description:</strong>
+<ul>
+<li>In waiting receive, the receiver SWC blocks and waits for new data to arrive in the receive queue until a predefined timeout occurs.</li>
+<li>The receiver invokes the <code>Rte_Receive</code> API and remains in a blocked state until data is available or the timeout is reached.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="13-timeout-handling"><strong>1.3 Timeout Handling</strong><a href="#13-timeout-handling" class="hash-link" aria-label="Direct link to 13-timeout-handling" title="Direct link to 13-timeout-handling">​</a></h3>
+</li>
+<li><strong>Advantages:</strong>
 <ul>
-<li>Waiting receive operations can be configured with a timeout to ensure system responsiveness.</li>
-<li>Enables robust handling of real-time systems where delays in data reception could occur.</li>
+<li><strong>Efficiency:</strong> Reduces unnecessary polling by waiting for data, conserving processing resources.</li>
+<li><strong>Deterministic Behavior:</strong> Ensures that data is processed as soon as it becomes available, enhancing responsiveness.</li>
+</ul>
+</li>
+<li><strong>Example Use Case:</strong>
+<ul>
+<li>An emergency braking system that must react immediately upon receiving a brake signal.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="queue-management"><strong>Queue Management</strong><a href="#queue-management" class="hash-link" aria-label="Direct link to queue-management" title="Direct link to queue-management">​</a></h4>
+<ul>
+<li><strong>Description:</strong>
+<ul>
+<li>The RTE manages a <strong>dedicated receive queue</strong> for each receiver SWC, ensuring that data instances are processed in the order they were received.</li>
+<li>The queue maintains the sequence of events, allowing receivers to process data deterministically.</li>
+</ul>
+</li>
+<li><strong>Advantages:</strong>
+<ul>
+<li><strong>Ordered Processing:</strong> Preserves the sequence of data, which is essential for maintaining data integrity.</li>
+<li><strong>Concurrent Access:</strong> Supports multiple senders and receivers without data loss or corruption.</li>
+</ul>
+</li>
+<li><strong>Example Use Case:</strong>
+<ul>
+<li>A navigation system processing a stream of location updates from multiple GPS modules.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-data-consistency">1.2 Data Consistency<a href="#12-data-consistency" class="hash-link" aria-label="Direct link to 1.2 Data Consistency" title="Direct link to 1.2 Data Consistency">​</a></h3>
+<p>Data consistency is paramount in ensuring that SWCs operate on reliable and accurate information. Queued S/R Communication implements mechanisms to maintain data integrity across multiple data instances and SWCs.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="separate-event-handling"><strong>Separate Event Handling</strong><a href="#separate-event-handling" class="hash-link" aria-label="Direct link to separate-event-handling" title="Direct link to separate-event-handling">​</a></h4>
+<ul>
+<li><strong>Description:</strong>
+<ul>
+<li>Each data instance in the receive queue is treated as a distinct event, ensuring that no data overwrites or intermediate values are lost.</li>
+</ul>
+</li>
+<li><strong>Advantages:</strong>
+<ul>
+<li><strong>Integrity:</strong> Prevents data corruption by maintaining discrete data instances.</li>
+<li><strong>Traceability:</strong> Facilitates tracking and debugging by preserving the history of data exchanges.</li>
+</ul>
+</li>
+<li><strong>Example Use Case:</strong>
+<ul>
+<li>An airbag deployment system that processes multiple crash event signals sequentially.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-availability-until-consumption"><strong>Data Availability Until Consumption</strong><a href="#data-availability-until-consumption" class="hash-link" aria-label="Direct link to data-availability-until-consumption" title="Direct link to data-availability-until-consumption">​</a></h4>
+<ul>
+<li><strong>Description:</strong>
+<ul>
+<li>Data remains in the receive queue until it is explicitly consumed by the receiver SWC.</li>
+<li>This guarantees that all data instances are processed, even if multiple events occur in rapid succession.</li>
+</ul>
+</li>
+<li><strong>Advantages:</strong>
+<ul>
+<li><strong>Reliability:</strong> Ensures that no data is inadvertently discarded, maintaining comprehensive data processing.</li>
+<li><strong>Flexibility:</strong> Allows receivers to process data at their own pace without missing critical information.</li>
+</ul>
+</li>
+<li><strong>Example Use Case:</strong>
+<ul>
+<li>A vehicle stability control system that processes a series of sensor inputs over time.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="13-timeout-handling">1.3 Timeout Handling<a href="#13-timeout-handling" class="hash-link" aria-label="Direct link to 1.3 Timeout Handling" title="Direct link to 1.3 Timeout Handling">​</a></h3>
+<p>Timeout handling is a critical feature that ensures system responsiveness and prevents indefinite blocking in waiting receive scenarios.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="configurable-timeouts"><strong>Configurable Timeouts</strong><a href="#configurable-timeouts" class="hash-link" aria-label="Direct link to configurable-timeouts" title="Direct link to configurable-timeouts">​</a></h4>
+<ul>
+<li><strong>Description:</strong>
+<ul>
+<li>Waiting receive operations can be configured with specific timeout values, defining how long the receiver SWC should wait for data before proceeding.</li>
+</ul>
+</li>
+<li><strong>Advantages:</strong>
+<ul>
+<li><strong>System Responsiveness:</strong> Prevents the receiver from being blocked indefinitely, ensuring that the system can handle situations where data may not arrive as expected.</li>
+<li><strong>Error Handling:</strong> Enables the implementation of fallback mechanisms or error reporting when data is not received within the stipulated time.</li>
+</ul>
+</li>
+<li><strong>Example Use Case:</strong>
+<ul>
+<li>A backup camera system that alerts the driver if no image data is received within a certain timeframe.</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-communication-workflow"><strong>2. Communication Workflow</strong><a href="#2-communication-workflow" class="hash-link" aria-label="Direct link to 2-communication-workflow" title="Direct link to 2-communication-workflow">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-send-operation"><strong>2.1 Send Operation</strong><a href="#21-send-operation" class="hash-link" aria-label="Direct link to 21-send-operation" title="Direct link to 21-send-operation">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-communication-workflow">2. Communication Workflow<a href="#2-communication-workflow" class="hash-link" aria-label="Direct link to 2. Communication Workflow" title="Direct link to 2. Communication Workflow">​</a></h2>
+<p>Understanding the communication workflow is essential for implementing Queued Sender/Receiver Communication effectively. The workflow delineates the interactions between sender and receiver SWCs, the RTE, and the Communication Stack (COM) within the Basic Software (BSW).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-send-operation">2.1 Send Operation<a href="#21-send-operation" class="hash-link" aria-label="Direct link to 2.1 Send Operation" title="Direct link to 2.1 Send Operation">​</a></h3>
+<p>The send operation involves the sender SWC generating and transmitting data to the receiver SWC via the RTE and COM stack.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="process-flow"><strong>Process Flow:</strong><a href="#process-flow" class="hash-link" aria-label="Direct link to process-flow" title="Direct link to process-flow">​</a></h4>
+<ol>
+<li>
+<p><strong>Sender Runnable Execution:</strong></p>
 <ul>
-<li>The sender Runnable uses the <code>Rte_Send</code> API to push data into the queue.</li>
-<li>The RTE appends the data to the tail of the queue.</li>
+<li>The sender SWC&#x27;s Runnable generates or updates the data that needs to be communicated.</li>
+<li>It invokes the <code>Rte_Send</code> API to enqueue the data into the receive queue.</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="code-example">Code Example:<a href="#code-example" class="hash-link" aria-label="Direct link to Code Example:" title="Direct link to Code Example:">​</a></h4>
-<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType Rte_Send_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">p</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain">_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">d</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">IN </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">DataType</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> data</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-receive-operation"><strong>2.2 Receive Operation</strong><a href="#22-receive-operation" class="hash-link" aria-label="Direct link to 22-receive-operation" title="Direct link to 22-receive-operation">​</a></h3>
+</li>
+<li>
+<p><strong>RTE Processing:</strong></p>
 <ul>
-<li>The receiver Runnable retrieves data from the queue using the <code>Rte_Receive</code> API.</li>
-<li>The RTE pops data from the head of the queue.</li>
+<li>The RTE appends the new data instance to the tail of the dedicated receive queue.</li>
+<li>Ensures that the data is stored in the correct sequence for ordered processing.</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="code-example-1">Code Example:<a href="#code-example-1" class="hash-link" aria-label="Direct link to Code Example:" title="Direct link to Code Example:">​</a></h4>
-<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType Rte_Receive_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">p</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain">_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">d</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">OUT </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">DataType</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">data</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>COM Stack Transmission:</strong></p>
+<ul>
+<li>The COM module in the BSW of the sender ECU handles the transmission of the queued data over the network bus (e.g., CAN, LIN, Ethernet).</li>
+<li>Manages protocol-specific tasks to ensure reliable data delivery to the target ECU.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-sender-code"><strong>Example Sender Code:</strong><a href="#example-sender-code" class="hash-link" aria-label="Direct link to example-sender-code" title="Direct link to example-sender-code">​</a></h4>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Sender SWC writes temperature data to the receive queue</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">SendTemperatureData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token class-name">int32_t</span><span class="token plain"> temperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Std_ReturnType status </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Rte_Send_TemperatureSensor_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">temperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">status </span><span class="token operator" style="color:#393A34">!=</span><span class="token plain"> E_OK</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token comment" style="color:#999988;font-style:italic">// Handle send failure (e.g., log error, implement retry mechanism)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The sender SWC calculates the current temperature and sends it to the RTE using <code>Rte_Send_TemperatureSensor_Temperature</code>.</li>
+<li>Error handling ensures that any issues during the send operation are appropriately managed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-receive-operation">2.2 Receive Operation<a href="#22-receive-operation" class="hash-link" aria-label="Direct link to 2.2 Receive Operation" title="Direct link to 2.2 Receive Operation">​</a></h3>
+<p>The receive operation involves the receiver SWC retrieving and processing data from the receive queue managed by the RTE.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="process-flow-1"><strong>Process Flow:</strong><a href="#process-flow-1" class="hash-link" aria-label="Direct link to process-flow-1" title="Direct link to process-flow-1">​</a></h4>
+<ol>
+<li>
+<p><strong>Receiver Runnable Invocation:</strong></p>
+<ul>
+<li>The receiver SWC&#x27;s Runnable is triggered based on predefined events (e.g., timer interrupts, data reception events).</li>
+<li>Depending on the receive mode (polling or waiting), the Runnable either periodically checks the queue or blocks until data arrives.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Retrieval:</strong></p>
+<ul>
+<li>The Runnable invokes the <code>Rte_Receive</code> API to dequeue the next available data instance from the receive queue.</li>
+<li>The RTE pops the data from the head of the queue, ensuring ordered processing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Processing:</strong></p>
+<ul>
+<li>The receiver SWC processes the retrieved data to perform its designated function (e.g., adjusting climate control settings based on temperature data).</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-receiver-code"><strong>Example Receiver Code:</strong><a href="#example-receiver-code" class="hash-link" aria-label="Direct link to example-receiver-code" title="Direct link to example-receiver-code">​</a></h4>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Receiver SWC reads temperature data from the receive queue</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">ReceiveAndProcessTemperatureData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword" style="color:#00009f">void</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name">int32_t</span><span class="token plain"> receivedTemperature</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Std_ReturnType status </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Rte_Receive_TemperatureSensor_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">receivedTemperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">status </span><span class="token operator" style="color:#393A34">==</span><span class="token plain"> E_OK</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token comment" style="color:#999988;font-style:italic">// Adjust climate control based on received temperature</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">AdjustClimateControl</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">receivedTemperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">else</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token comment" style="color:#999988;font-style:italic">// Handle receive failure (e.g., default behavior, log error)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The receiver SWC reads the latest temperature data from the RTE using <code>Rte_Receive_TemperatureSensor_Temperature</code>.</li>
+<li>Upon successful retrieval, it adjusts the climate control system accordingly.</li>
+<li>Error handling ensures that any issues during the receive operation are appropriately managed.</li>
+</ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-function-prototypes"><strong>3. Function Prototypes</strong><a href="#3-function-prototypes" class="hash-link" aria-label="Direct link to 3-function-prototypes" title="Direct link to 3-function-prototypes">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rte_send"><strong>Rte_Send</strong><a href="#rte_send" class="hash-link" aria-label="Direct link to rte_send" title="Direct link to rte_send">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-function-prototypes">3. Function Prototypes<a href="#3-function-prototypes" class="hash-link" aria-label="Direct link to 3. Function Prototypes" title="Direct link to 3. Function Prototypes">​</a></h2>
+<p>AUTOSAR&#x27;s RTE provides standardized APIs for Queued Sender/Receiver Communication, enabling SWCs to send and receive data through well-defined interfaces. These APIs abstract the underlying communication complexities, allowing developers to focus on application logic.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-rte_send">3.1 Rte_Send<a href="#31-rte_send" class="hash-link" aria-label="Direct link to 3.1 Rte_Send" title="Direct link to 3.1 Rte_Send">​</a></h3>
 <div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType Rte_Send_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">p</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain">_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">d</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">IN </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">DataType</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> data</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><code>data</code>: The value to send into the queue.</li>
+<li><code>data</code>: The value to be sent into the receive queue. This can be a primitive type (e.g., <code>int32_t</code>, <code>boolean</code>) or a complex type (e.g., structures).</li>
 </ul>
 </li>
 <li><strong>Usage:</strong>
 <ul>
-<li>Called by the sender Runnable to enqueue data for the receiver.</li>
+<li>Called by the sender Runnable to enqueue data for the receiver SWC.</li>
 </ul>
 </li>
-<li><strong>Return:</strong>
+<li><strong>Returns:</strong>
 <ul>
-<li><code>E_OK</code>: Successful operation.</li>
-<li><code>E_NOT_OK</code>: Queue is full, and data cannot be enqueued.</li>
+<li><code>E_OK</code>: Indicates that the data was successfully enqueued.</li>
+<li><code>E_NOT_OK</code>: Indicates that the queue is full or the operation failed.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example">Example:<a href="#example" class="hash-link" aria-label="Direct link to Example:" title="Direct link to Example:">​</a></h4>
-<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">Rte_Send_SensorModule_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token number" style="color:#36acaa">25</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rte_receive"><strong>Rte_Receive</strong><a href="#rte_receive" class="hash-link" aria-label="Direct link to rte_receive" title="Direct link to rte_receive">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example"><strong>Example:</strong><a href="#example" class="hash-link" aria-label="Direct link to example" title="Direct link to example">​</a></h4>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Sending temperature data to the receive queue</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name">int32_t</span><span class="token plain"> currentTemperature </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">25</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType status </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Rte_Send_TemperatureSensor_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">currentTemperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">status </span><span class="token operator" style="color:#393A34">!=</span><span class="token plain"> E_OK</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// Handle send failure (e.g., log error, implement retry mechanism)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The sender SWC sends the current temperature to the receive queue using <code>Rte_Send_TemperatureSensor_Temperature</code>.</li>
+<li>Error handling ensures that any issues during the send operation are appropriately managed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-rte_receive">3.2 Rte_Receive<a href="#32-rte_receive" class="hash-link" aria-label="Direct link to 3.2 Rte_Receive" title="Direct link to 3.2 Rte_Receive">​</a></h3>
 <div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType Rte_Receive_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">p</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain">_</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">d</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">OUT </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">DataType</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">data</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <ul>
 <li><strong>Parameters:</strong>
 <ul>
-<li><code>data</code>: Pointer to the variable where dequeued data will be stored.</li>
+<li><code>data</code>: Pointer to the variable where the dequeued data will be stored.</li>
 </ul>
 </li>
 <li><strong>Usage:</strong>
 <ul>
-<li>Called by the receiver Runnable to retrieve the next queued data instance.</li>
+<li>Called by the receiver Runnable to retrieve the next available data instance from the receive queue.</li>
 </ul>
 </li>
-<li><strong>Return:</strong>
+<li><strong>Returns:</strong>
 <ul>
-<li><code>E_OK</code>: Successful operation.</li>
-<li><code>E_NOT_OK</code>: Queue is empty.</li>
+<li><code>E_OK</code>: Indicates that data was successfully dequeued and stored in the provided variable.</li>
+<li><code>E_NOT_OK</code>: Indicates that the queue is empty or the operation failed.</li>
 </ul>
 </li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-1">Example:<a href="#example-1" class="hash-link" aria-label="Direct link to Example:" title="Direct link to Example:">​</a></h4>
-<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name">int32_t</span><span class="token plain"> receivedTemp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType status </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Rte_Receive_SensorModule_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">receivedTemp</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-1"><strong>Example:</strong><a href="#example-1" class="hash-link" aria-label="Direct link to example-1" title="Direct link to example-1">​</a></h4>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Receiving temperature data from the receive queue</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name">int32_t</span><span class="token plain"> receivedTemperature</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Std_ReturnType status </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Rte_Receive_TemperatureSensor_Temperature</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">receivedTemperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">status </span><span class="token operator" style="color:#393A34">==</span><span class="token plain"> E_OK</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// Use the received temperature to adjust climate control</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token function" style="color:#d73a49">AdjustClimateControl</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">receivedTemperature</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">else</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// Handle receive failure (e.g., default behavior, log error)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The receiver SWC reads the latest temperature data from the receive queue using <code>Rte_Receive_TemperatureSensor_Temperature</code>.</li>
+<li>Upon successful retrieval, it adjusts the climate control system accordingly.</li>
+<li>Error handling ensures that any issues during the receive operation are appropriately managed.</li>
+</ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-advantages-of-queued-communication"><strong>4. Advantages of Queued Communication</strong><a href="#4-advantages-of-queued-communication" class="hash-link" aria-label="Direct link to 4-advantages-of-queued-communication" title="Direct link to 4-advantages-of-queued-communication">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-data-flow">4. Data Flow<a href="#4-data-flow" class="hash-link" aria-label="Direct link to 4. Data Flow" title="Direct link to 4. Data Flow">​</a></h2>
+<p>A clear understanding of the data flow is essential for designing and implementing Queued Sender/Receiver Communication effectively. The following table and diagram illustrate the sequential actions and components involved in the data exchange process.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-flow-table">Data Flow Table<a href="#data-flow-table" class="hash-link" aria-label="Direct link to Data Flow Table" title="Direct link to Data Flow Table">​</a></h3>
+<table><thead><tr><th><strong>Action</strong></th><th><strong>Component</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr><td><strong>Write Operation</strong></td><td>SWC1 (Runnable)</td><td>SWC1&#x27;s Runnable writes data to the receive queue using <code>Rte_Send</code>.</td></tr><tr><td><strong>Data Enqueue</strong></td><td>RTE</td><td>RTE appends the data to the tail of the dedicated receive queue.</td></tr><tr><td><strong>Signal Transmission</strong></td><td>COM (BSW, ECU1)</td><td>COM module transmits the queued data over the network bus to the target ECU (ECU2).</td></tr><tr><td><strong>Signal Reception</strong></td><td>COM (BSW, ECU2)</td><td>COM module on ECU2 receives the signal and forwards it to the RTE.</td></tr><tr><td><strong>Data Dequeue</strong></td><td>RTE (ECU2)</td><td>RTE removes the data from the head of the receive queue and provides it to SWC2.</td></tr><tr><td><strong>Read Operation</strong></td><td>SWC2 (Runnable)</td><td>SWC2&#x27;s Runnable reads data from the receive queue using <code>Rte_Receive</code>.</td></tr><tr><td><strong>Action Execution</strong></td><td>SWC2 (Runnable)</td><td>SWC2 processes the received data to perform its designated function.</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-flow-diagram">Data Flow Diagram<a href="#data-flow-diagram" class="hash-link" aria-label="Direct link to Data Flow Diagram" title="Direct link to Data Flow Diagram">​</a></h3>
+<div class="language-plaintext codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-plaintext codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[SWC1: Sender Runnable]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[Rte_Send_TemperatureSensor_Temperature]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[RTE: Receive Queue (ECU1)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[COM Stack (ECU1)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |--[Network Bus]--|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[COM Stack (ECU2)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[RTE: Receive Queue (ECU2)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[Rte_Receive_TemperatureSensor_Temperature]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[SWC2: Receiver Runnable]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        V</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[AdjustClimateControl(receivedTemperature)]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Explanation:</strong></p>
 <ol>
-<li><strong>Event-Based Communication:</strong>
+<li><strong>Sender Runnable:</strong> Executes and sends temperature data to the RTE using <code>Rte_Send</code>.</li>
+<li><strong>RTE:</strong> Enqueues the data into the receive queue managed by the RTE in ECU1.</li>
+<li><strong>COM Stack (ECU1):</strong> Transmits the queued data over the network bus to ECU2.</li>
+<li><strong>COM Stack (ECU2):</strong> Receives the transmitted data and forwards it to the RTE in ECU2.</li>
+<li><strong>RTE (ECU2):</strong> Dequeues the data from the receive queue and makes it available to SWC2.</li>
+<li><strong>Receiver Runnable:</strong> Reads the dequeued data using <code>Rte_Receive</code> and adjusts the climate control system accordingly.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-advantages-of-queued-communication">5. Advantages of Queued Communication<a href="#5-advantages-of-queued-communication" class="hash-link" aria-label="Direct link to 5. Advantages of Queued Communication" title="Direct link to 5. Advantages of Queued Communication">​</a></h2>
+<p>Queued Sender/Receiver Communication offers numerous benefits that enhance the efficiency, reliability, and scalability of automotive systems. These advantages make it a preferred choice for complex and event-driven communication scenarios.</p>
+<ol>
+<li>
+<p><strong>Event-Based Communication:</strong></p>
 <ul>
-<li>Ideal for systems requiring event-driven data handling.</li>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Facilitates communication based on discrete events, allowing SWCs to react to specific triggers or data changes.</li>
 </ul>
 </li>
-<li><strong>Lossless Data Transmission:</strong>
+<li><strong>Benefit:</strong>
 <ul>
-<li>Prevents overwrites and ensures every data instance is processed.</li>
+<li>Enables responsive and dynamic system behavior, essential for applications that rely on real-time event handling.</li>
 </ul>
 </li>
-<li><strong>Scalability:</strong>
+</ul>
+</li>
+<li>
+<p><strong>Lossless Data Transmission:</strong></p>
 <ul>
-<li>Multiple data instances can be stored and processed sequentially.</li>
+<li><strong>Explanation:</strong>
+<ul>
+<li>The use of dedicated receive queues ensures that all data instances are retained and processed, preventing data loss.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Guarantees that critical data is not missed, enhancing system reliability and integrity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Scalability:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Supports multiple data instances and can handle high-frequency data exchanges without performance degradation.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Accommodates the growing complexity of modern automotive systems, allowing for the integration of additional SWCs and data streams seamlessly.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Deterministic Behavior:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Ensures predictable processing order of data instances, crucial for safety-critical applications.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Enhances system predictability and reliability, meeting stringent automotive safety standards.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Synchronization:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Maintains synchronized data exchanges between multiple SWCs, ensuring consistency across the system.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Facilitates coordinated operations and interdependent functionalities, promoting overall system coherence.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Modularity:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Separates data handling from application logic, allowing SWCs to interact through well-defined interfaces.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Promotes reusable and maintainable software components, simplifying development and integration processes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Robust Error Handling:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Queued communication allows for systematic error detection and handling mechanisms, such as queue overflow management.</li>
+</ul>
+</li>
+<li><strong>Benefit:</strong>
+<ul>
+<li>Improves system resilience, ensuring continued operation even in the face of communication anomalies.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-limitations"><strong>5. Limitations</strong><a href="#5-limitations" class="hash-link" aria-label="Direct link to 5-limitations" title="Direct link to 5-limitations">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-limitations">6. Limitations<a href="#6-limitations" class="hash-link" aria-label="Direct link to 6. Limitations" title="Direct link to 6. Limitations">​</a></h2>
+<p>Despite its numerous advantages, Queued Sender/Receiver Communication comes with certain limitations that developers must consider when designing and implementing automotive systems.</p>
 <ol>
-<li><strong>Queue Management Overhead:</strong>
+<li>
+<p><strong>Queue Management Overhead:</strong></p>
 <ul>
-<li>Additional memory and processing overhead due to queue handling.</li>
+<li><strong>Explanation:</strong>
+<ul>
+<li>The RTE must manage the receive queues, involving additional memory and processing resources for enqueueing and dequeueing operations.</li>
 </ul>
 </li>
-<li><strong>Queue Size Constraints:</strong>
+<li><strong>Impact:</strong>
 <ul>
-<li>Limited by the size of the receive queue; excessive data can cause overflow.</li>
+<li>Can lead to increased computational overhead, potentially affecting system performance, especially in resource-constrained environments.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Queue Size Constraints:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Receive queues have finite sizes defined during system configuration. Excessive data can lead to queue overflow.</li>
+</ul>
+</li>
+<li><strong>Impact:</strong>
+<ul>
+<li>Risk of data loss if the queue becomes full, necessitating careful sizing and management to accommodate peak data rates.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Increased Complexity in Configuration:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Managing multiple queues and ensuring their proper synchronization adds complexity to the system configuration process.</li>
+</ul>
+</li>
+<li><strong>Impact:</strong>
+<ul>
+<li>Requires meticulous planning and validation to prevent configuration errors, increasing the effort required during development.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Latency Considerations:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>While generally efficient, the process of enqueueing and dequeueing data can introduce slight delays.</li>
+</ul>
+</li>
+<li><strong>Impact:</strong>
+<ul>
+<li>In ultra-low-latency applications, these delays might be critical, necessitating optimization or alternative communication paradigms.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>No Historical Data Retention:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Similar to Direct S/R Communication, Queued S/R Communication does not retain a history of data values beyond the queue capacity.</li>
+</ul>
+</li>
+<li><strong>Impact:</strong>
+<ul>
+<li>Unsuitable for applications that require access to historical data for trend analysis or long-term decision-making.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Potential for Data Duplication:</strong></p>
+<ul>
+<li><strong>Explanation:</strong>
+<ul>
+<li>Multiple enqueueing of the same data value can lead to data duplication within the queue.</li>
+</ul>
+</li>
+<li><strong>Impact:</strong>
+<ul>
+<li>May result in redundant processing, increasing computational load and memory usage.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-use-cases"><strong>6. Use Cases</strong><a href="#6-use-cases" class="hash-link" aria-label="Direct link to 6-use-cases" title="Direct link to 6-use-cases">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-use-cases">7. Use Cases<a href="#7-use-cases" class="hash-link" aria-label="Direct link to 7. Use Cases" title="Direct link to 7. Use Cases">​</a></h2>
+<p>Queued Sender/Receiver Communication is particularly effective in scenarios that demand reliable, ordered, and event-driven data exchanges. The following use cases highlight the practical applications where Queued S/R Communication excels within automotive systems.</p>
 <ol>
-<li><strong>Sensor Data Streams:</strong>
+<li>
+<p><strong>Sensor Data Streams:</strong></p>
 <ul>
-<li>Applications where periodic sensor readings must be processed as discrete events.</li>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Multiple Vehicle Sensors:</strong> Continuously sending data from various sensors (e.g., temperature, pressure, speed) to different SWCs for real-time processing.</li>
 </ul>
 </li>
-<li><strong>Interrupt-Driven Systems:</strong>
+<li><strong>Rationale:</strong>
 <ul>
-<li>Event-driven communication for scenarios like button presses or fault notifications.</li>
+<li>Ensures that all sensor readings are processed in the order they are received, maintaining data integrity and system responsiveness.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Interrupt-Driven Systems:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Emergency Braking Systems:</strong> Handling multiple brake pedal presses or sensor inputs that trigger braking actions.</li>
+</ul>
+</li>
+<li><strong>Rationale:</strong>
+<ul>
+<li>Allows the system to queue and process each braking event reliably, ensuring safe and consistent braking responses.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Diagnostic and Logging Systems:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Fault Code Logging:</strong> Recording and transmitting diagnostic trouble codes (DTCs) from various ECUs for analysis and reporting.</li>
+</ul>
+</li>
+<li><strong>Rationale:</strong>
+<ul>
+<li>Guarantees that all fault events are logged and processed without loss, aiding in accurate diagnostics and maintenance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Communication Between Multiple ECUs:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Infotainment to Climate Control:</strong> Transferring user preferences from the infotainment system to the climate control system.</li>
+</ul>
+</li>
+<li><strong>Rationale:</strong>
+<ul>
+<li>Facilitates organized and sequential data exchange between distinct ECUs, enhancing user experience through synchronized system behavior.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-Time Data Processing:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Engine Control Units (ECUs):</strong> Managing a stream of real-time engine performance data for optimal fuel injection and ignition timing.</li>
+</ul>
+</li>
+<li><strong>Rationale:</strong>
+<ul>
+<li>Ensures that all performance data is processed in the correct sequence, maintaining engine efficiency and performance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Event Logging and Analysis:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li><strong>Event Recorder Modules:</strong> Capturing and storing a series of events for post-drive analysis and system optimization.</li>
+</ul>
+</li>
+<li><strong>Rationale:</strong>
+<ul>
+<li>Maintains an ordered log of events, enabling comprehensive analysis and informed decision-making for system improvements.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-summary"><strong>7. Summary</strong><a href="#7-summary" class="hash-link" aria-label="Direct link to 7-summary" title="Direct link to 7-summary">​</a></h2>
-<p>Queued Sender/Receiver Communication in AUTOSAR provides an efficient mechanism for handling <strong>event-based data exchange</strong>. By employing <strong>dedicated queues</strong> for data transmission, this approach ensures lossless communication and supports robust event handling.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-summary">8. Summary<a href="#8-summary" class="hash-link" aria-label="Direct link to 8. Summary" title="Direct link to 8. Summary">​</a></h2>
+<p><strong>Queued Sender/Receiver (S/R) Communication</strong> in AUTOSAR provides a robust and deterministic mechanism for exchanging data between SWCs, leveraging an <strong>event-based semantic</strong> and dedicated receive queues. This communication paradigm ensures data consistency, reliable event handling, and scalability, making it indispensable for complex and safety-critical automotive applications. By utilizing <code>Rte_Send</code> and <code>Rte_Receive</code> APIs, developers can implement efficient data exchanges that maintain the integrity and order of transmitted data.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-takeaways"><strong>Key Takeaways:</strong><a href="#key-takeaways" class="hash-link" aria-label="Direct link to key-takeaways" title="Direct link to key-takeaways">​</a></h3>
+<ol>
+<li>
+<p><strong>Event Semantic:</strong></p>
 <ul>
-<li>APIs include <code>Rte_Send</code> and <code>Rte_Receive</code> for enqueueing and dequeueing data.</li>
-<li>Ensures ordered, event-based communication.</li>
-<li>Suitable for scenarios requiring discrete event processing.</li>
+<li><strong>Polling Receive:</strong> Receiver SWC actively checks the queue for new data.</li>
+<li><strong>Waiting Receive:</strong> Receiver SWC blocks and waits for new data until a timeout occurs.</li>
+<li><strong>Queue Management:</strong> RTE manages dedicated receive queues to ensure ordered and reliable data processing.</li>
 </ul>
-<p>This mechanism is indispensable in real-time systems requiring robust and deterministic communication. For further details, refer to the AUTOSAR specification or consult your system architect.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/AUTOSAR/03_rte/08_queued.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/buffered"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Sender/Receiver Communication: Buffered</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/sender-receiver-com"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Sender/Receiver Communication: Data Element Invalidation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-key-features-of-queued-communication" class="table-of-contents__link toc-highlight"><strong>1. Key Features of Queued Communication</strong></a><ul><li><a href="#11-event-semantic" class="table-of-contents__link toc-highlight"><strong>1.1 Event Semantic</strong></a></li><li><a href="#12-data-consistency" class="table-of-contents__link toc-highlight"><strong>1.2 Data Consistency</strong></a></li><li><a href="#13-timeout-handling" class="table-of-contents__link toc-highlight"><strong>1.3 Timeout Handling</strong></a></li></ul></li><li><a href="#2-communication-workflow" class="table-of-contents__link toc-highlight"><strong>2. Communication Workflow</strong></a><ul><li><a href="#21-send-operation" class="table-of-contents__link toc-highlight"><strong>2.1 Send Operation</strong></a></li><li><a href="#22-receive-operation" class="table-of-contents__link toc-highlight"><strong>2.2 Receive Operation</strong></a></li></ul></li><li><a href="#3-function-prototypes" class="table-of-contents__link toc-highlight"><strong>3. Function Prototypes</strong></a><ul><li><a href="#rte_send" class="table-of-contents__link toc-highlight"><strong>Rte_Send</strong></a></li><li><a href="#rte_receive" class="table-of-contents__link toc-highlight"><strong>Rte_Receive</strong></a></li></ul></li><li><a href="#4-advantages-of-queued-communication" class="table-of-contents__link toc-highlight"><strong>4. Advantages of Queued Communication</strong></a></li><li><a href="#5-limitations" class="table-of-contents__link toc-highlight"><strong>5. Limitations</strong></a></li><li><a href="#6-use-cases" class="table-of-contents__link toc-highlight"><strong>6. Use Cases</strong></a></li><li><a href="#7-summary" class="table-of-contents__link toc-highlight"><strong>7. Summary</strong></a><ul><li><a href="#key-takeaways" class="table-of-contents__link toc-highlight"><strong>Key Takeaways:</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/Glossary/Getting-Started">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
+</li>
+<li>
+<p><strong>Data Consistency:</strong></p>
+<ul>
+<li><strong>Separate Event Handling:</strong> Each data instance is treated as a distinct event, preventing data overwrites.</li>
+<li><strong>Data Availability Until Consumption:</strong> Data remains in the queue until it is explicitly consumed by the receiver SWC.</li>
+</ul>
+</li>
+<li>
+<p><strong>Functionality with <code>Rte_Send</code> and <code>Rte_Receive</code>:</strong></p>
+<ul>
+<li><strong><code>Rte_Send</code>:</strong> Used by sender SWCs to enqueue data into the receive queue.</li>
+<li><strong><code>Rte_Receive</code>:</strong> Used by receiver SWCs to dequeue and process data from the receive queue.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Event-Based Communication:</strong> Facilitates responsive and dynamic system behavior.</li>
+<li><strong>Lossless Data Transmission:</strong> Ensures that all data instances are retained and processed.</li>
+<li><strong>Scalability:</strong> Supports complex and large-scale automotive system architectures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li><strong>Queue Management Overhead:</strong> Additional memory and processing resources are required for managing queues.</li>
+<li><strong>Queue Size Constraints:</strong> Limited by the configured size of the receive queue, risking data loss if exceeded.</li>
+<li><strong>Configuration Complexity:</strong> Increased complexity in setting up and managing multiple queues.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimal Use Cases:</strong></p>
+<ul>
+<li>Best suited for sensor data streams, interrupt-driven systems, diagnostic and logging systems, communication between multiple ECUs, real-time data processing, and event logging and analysis.</li>
+</ul>
+</li>
+</ol>
+<p>By comprehensively understanding the strengths and constraints of Queued Sender/Receiver Communication, developers can effectively implement this paradigm within their AUTOSAR-based automotive systems. This ensures that data exchanges are handled efficiently, reliably, and in a manner that meets the stringent demands of modern vehicle architectures.</p>
+<hr>
+<h1>Conclusion</h1>
+<p>This chapter has provided a comprehensive exploration of <strong>Queued Sender/Receiver (S/R) Communication</strong> within the AUTOSAR framework. By elucidating key features such as the <strong>event semantic</strong>, <strong>data consistency</strong>, and <strong>timeout handling</strong>, detailing the communication workflow, presenting function prototypes, outlining data flow, and discussing the advantages and limitations, this guide equips developers with the necessary knowledge to implement efficient and reliable Queued S/R Communication in their automotive systems.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/AUTOSAR/03_rte/08_queued.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/buffered"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Sender/Receiver Communication: Buffered</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Vehicle-Network-Standards/docs/AUTOSAR/rte/sender-receiver-com"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Sender/Receiver Communication: Data Element Invalidation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-key-features-of-queued-communication" class="table-of-contents__link toc-highlight">1. Key Features of Queued Communication</a><ul><li><a href="#11-event-semantic" class="table-of-contents__link toc-highlight">1.1 Event Semantic</a></li><li><a href="#12-data-consistency" class="table-of-contents__link toc-highlight">1.2 Data Consistency</a></li><li><a href="#13-timeout-handling" class="table-of-contents__link toc-highlight">1.3 Timeout Handling</a></li></ul></li><li><a href="#2-communication-workflow" class="table-of-contents__link toc-highlight">2. Communication Workflow</a><ul><li><a href="#21-send-operation" class="table-of-contents__link toc-highlight">2.1 Send Operation</a></li><li><a href="#22-receive-operation" class="table-of-contents__link toc-highlight">2.2 Receive Operation</a></li></ul></li><li><a href="#3-function-prototypes" class="table-of-contents__link toc-highlight">3. Function Prototypes</a><ul><li><a href="#31-rte_send" class="table-of-contents__link toc-highlight">3.1 Rte_Send</a></li><li><a href="#32-rte_receive" class="table-of-contents__link toc-highlight">3.2 Rte_Receive</a></li></ul></li><li><a href="#4-data-flow" class="table-of-contents__link toc-highlight">4. Data Flow</a><ul><li><a href="#data-flow-table" class="table-of-contents__link toc-highlight">Data Flow Table</a></li><li><a href="#data-flow-diagram" class="table-of-contents__link toc-highlight">Data Flow Diagram</a></li></ul></li><li><a href="#5-advantages-of-queued-communication" class="table-of-contents__link toc-highlight">5. Advantages of Queued Communication</a></li><li><a href="#6-limitations" class="table-of-contents__link toc-highlight">6. Limitations</a></li><li><a href="#7-use-cases" class="table-of-contents__link toc-highlight">7. Use Cases</a></li><li><a href="#8-summary" class="table-of-contents__link toc-highlight">8. Summary</a><ul><li><a href="#key-takeaways" class="table-of-contents__link toc-highlight"><strong>Key Takeaways:</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Protocols</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">CAN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">LIN</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">FlexRay</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/intro">Ethernet</a></li></ul></div><div class="col footer__col"><div class="footer__title">Diagnostic</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">UDS</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">DoIP</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/UDS/Getting-Started">SOVD</a></li></ul></div><div class="col footer__col"><div class="footer__title">Architecture</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/AUTOSAR/Getting-Started">AUTOSAR</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOVA/Getting-Started">SOVA</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOME-IP/Getting-Started">SOME/IP</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/SOURCES/info">Sources</a></li><li class="footer__item"><a class="footer__link-item" href="/Vehicle-Network-Standards/docs/Glossary/Getting-Started">Glossary</a></li><li class="footer__item"><a href="https://github.com/CagriCatik/Vehicle-Network-Standards" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Vehicle Network Standards.</div></div></div></footer></div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# AUTOSAR Partnership  
+# Partnership  
 
 AUTOSAR (Automotive Open System Architecture) is a global development partnership established to create and standardize open software architectures for automotive electronic control units (ECUs). By fostering collaboration among automotive manufacturers, suppliers, and technology providers, AUTOSAR aims to enhance scalability, reusability, and interoperability of software across vehicles. This documentation outlines the partnership’s structure, member roles, benefits, and industry impact.  
 

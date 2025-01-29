@@ -1,4 +1,4 @@
-# Overview of Software Layers in AUTOSAR Classic Platform
+# Overview of Software Layers
 
 The AUTOSAR (AUTomotive Open System ARchitecture) Classic Platform is a standardized software architecture tailored to support the development of embedded systems within vehicles. By emphasizing compatibility, scalability, and modularity, AUTOSAR facilitates reusability and diminishes development complexity. This documentation provides a comprehensive overview of the key layers in the AUTOSAR Classic Platform, detailing their functionalities, features, and interrelationships.
 

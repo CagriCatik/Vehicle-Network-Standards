@@ -153,6 +153,13 @@ const config = {
             position: 'right',
             label: 'FMEA',
           },
+
+          {
+            type: 'docSidebar',
+            sidebarId: 'otaSidebar',
+            position: 'right',
+            label: 'OTA',
+          },
           {
             to: '/blog', 
             label: 'Blog', 

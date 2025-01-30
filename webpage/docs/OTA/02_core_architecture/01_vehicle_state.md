@@ -1,4 +1,4 @@
-# Vehicle State in Over-the-Air (OTA) Updates
+# Vehicle State in OTA Updates
 
 ## Importance of Vehicle Preconditions
 

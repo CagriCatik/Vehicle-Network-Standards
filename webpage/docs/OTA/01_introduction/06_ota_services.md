@@ -1,4 +1,4 @@
-# Over-the-Air Services in the Automotive Industry
+# Services
 
 Over-the-Air (OTA) services have emerged as a crucial enabler in the automotive sector, allowing manufacturers to remotely manage vehicle software, enhance functionalities, and optimize system performance. These capabilities extend beyond mere updates, providing comprehensive services that improve vehicle safety, performance, and the overall user experience. This chapter delves into the various OTA services in the automotive industry, highlighting their features, benefits, and technical implementations.
 
@@ -713,12 +713,4 @@ OTA services have revolutionized the automotive industry, enabling seamless soft
 
 Advanced technical solutions, such as differential updates, robust encryption protocols, multi-layer authentication, and comprehensive compliance frameworks, are essential for overcoming these challenges. As the automotive landscape continues to evolve with advancements in autonomous driving, shared mobility, and connected vehicle technologies, the integration of OTA services will play an increasingly vital role in shaping the future of mobility. Ensuring secure, reliable, and efficient OTA implementations will not only drive innovation but also maintain the trust and satisfaction of consumers in an increasingly software-driven automotive ecosystem.
 
-# References
-
-- **UNECE Regulation No. 156:** [UNECE R156 Documentation](https://unece.org/transport/documents/2021/03/standards/un-regulation-no-156-software-update-and-software-update)
-- **ISO/SAE 21434:** Road Vehicles – Cybersecurity Engineering
-- **GDPR:** General Data Protection Regulation
-- **CCPA:** California Consumer Privacy Act
-- **Uptane Framework:** [Uptane Documentation](https://uptane.github.io/)
-- **ISO 26262:** Road Vehicles – Functional Safety
 

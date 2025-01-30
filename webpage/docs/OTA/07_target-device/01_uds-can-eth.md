@@ -1,4 +1,4 @@
-# UDS over CAN vs. UDS over Ethernet in Automotive OTA Update Systems
+# UDS over CAN vs. UDS over Ethernet in OTA
 
 In the rapidly evolving automotive landscape, **Unified Diagnostic Services (UDS)** has become a cornerstone for vehicle diagnostics and firmware updates. As vehicles transition towards more complex electronic architectures, the underlying communication protocols that facilitate UDS—**Controller Area Network (CAN)** and **Ethernet**—play pivotal roles in ensuring efficient and reliable Over-the-Air (OTA) updates. This documentation provides a comprehensive analysis of **UDS over CAN** versus **UDS over Ethernet**, highlighting their architectural differences, advantages, limitations, and practical implementations. Advanced users and industry professionals will gain in-depth insights into optimizing diagnostic and update processes within modern vehicles.
 

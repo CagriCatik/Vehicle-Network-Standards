@@ -1,4 +1,4 @@
-# Target Device Memory in OTA Updates
+# Target Device Memory
 
 Over-The-Air (OTA) updates have revolutionized the automotive industry by enabling seamless software enhancements and bug fixes without requiring physical access to the vehicle. Central to the efficacy of OTA updates is the management of target device memory within Electronic Control Units (ECUs). This documentation delves into the intricacies of target device memory architectures, focusing on single bank and dual bank systems, their operational workflows, advantages, disadvantages, and the considerations OEMs must account for when implementing OTA updates.
 

@@ -1,6 +1,6 @@
 {
-  "label": "Remote Diagnostics",
-  "position": 10,
+  "label": "SUMS",
+  "position": 14,
   "link": {
     "type": "generated-index",
     "description": " "

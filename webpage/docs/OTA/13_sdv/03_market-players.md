@@ -1,12 +1,10 @@
 # Market Players in the Automotive Industry
 
-### Introduction
-
 The automotive industry is undergoing a profound transformation with the advent of Software Defined Vehicles (SDVs). This shift leverages advanced software, high-performance computing, and seamless connectivity to redefine vehicle functionalities and user experiences. A diverse ecosystem of market players, including automakers, cloud service providers, chip manufacturers, and cybersecurity firms, are pivotal in driving the SDV revolution. This documentation provides an in-depth analysis of these key players, their contributions, and the technologies they employ to achieve SDV integration.
 
-### Automotive OEMs and Innovators Leading SDV Adoption
+## Automotive OEMs and Innovators Leading SDV Adoption
 
-#### Tesla
+### Tesla
 
 **Overview:**
 Tesla, a leading US automaker, is at the forefront of SDV innovation. Renowned for its electric vehicles (EVs) and autonomous driving capabilities, Tesla has established a comprehensive software ecosystem that continuously evolves through Over-The-Air (OTA) updates.
@@ -47,7 +45,7 @@ else:
     rollback_update()
 ```
 
-#### Rivian
+### Rivian
 
 **Overview:**
 Rivian, another prominent US automaker, specializes in electric adventure vehicles. The company emphasizes intelligent energy management and robust OTA update capabilities to enhance vehicle performance and user experience.
@@ -80,7 +78,7 @@ int main() {
 }
 ```
 
-#### Polestar
+### Polestar
 
 **Overview:**
 Polestar, a Swedish electric performance brand owned by Volvo and Geely, is dedicated to producing high-performance electric vehicles with a strong emphasis on sustainability and cutting-edge technology.
@@ -115,7 +113,7 @@ async function setClimateSettings(vehicleId, temperature, mode) {
 setClimateSettings('POL12345', 22.5, 'AUTO');
 ```
 
-#### Chinese OEMs: Li Auto, Xpeng, Nio
+### Chinese OEMs: Li Auto, Xpeng, Nio
 
 **Overview:**
 Chinese Original Equipment Manufacturers (OEMs) such as Li Auto, Xpeng, and Nio are rapidly advancing in the SDV space. These companies are leveraging robust SDV platforms to enhance autonomous driving capabilities, smart cabin integrations, and cloud-based vehicle management systems.
@@ -152,9 +150,9 @@ objects = process_sensor_data(lidar, camera)
 print("Detected Objects:", objects)
 ```
 
-### Cloud Platform Providers Enhancing SDV Capabilities
+## Cloud Platform Providers Enhancing SDV Capabilities
 
-#### Microsoft Azure
+### Microsoft Azure
 
 **Overview:**
 Microsoft Azure plays a crucial role in the SDV ecosystem by providing scalable cloud infrastructure, data analytics, and connected vehicle solutions. Azure's comprehensive suite of services enables OEMs to manage vehicle data, deploy OTA updates, and implement advanced AI-driven features.
@@ -199,7 +197,7 @@ class Program
 }
 ```
 
-#### Google Cloud
+### Google Cloud
 
 **Overview:**
 Google Cloud offers robust infrastructure and advanced analytics tools that empower automotive companies to build and manage SDV ecosystems. Google's expertise in machine learning, data analytics, and cloud computing provides the backbone for innovative vehicle features and services.
@@ -238,9 +236,9 @@ vehicle_data = {
 publish_vehicle_data('VEH12345', vehicle_data)
 ```
 
-### Chip and SoC Providers Powering SDV Technologies
+## Chip and SoC Providers Powering SDV Technologies
 
-#### Infineon
+### Infineon
 
 **Overview:**
 Infineon Technologies is a key player in the semiconductor industry, providing high-performance microcontrollers and sensor solutions essential for SDV applications. Infineon's chips enable efficient data processing, connectivity, and energy management in modern vehicles.
@@ -274,7 +272,7 @@ int main() {
 }
 ```
 
-#### Qualcomm
+### Qualcomm
 
 **Overview:**
 Qualcomm is renowned for its advanced System on Chips (SoCs) that deliver high-performance computing and connectivity solutions for SDVs. Qualcomm's Snapdragon platforms are integral to enabling real-time data processing, seamless connectivity, and enhanced user experiences in modern vehicles.
@@ -310,7 +308,7 @@ int main() {
 }
 ```
 
-#### Nvidia
+### Nvidia
 
 **Overview:**
 Nvidia is a leader in high-performance computing and artificial intelligence, providing the foundational hardware and software platforms necessary for advanced SDV functionalities. Nvidia's Drive platform is pivotal in enabling autonomous driving, real-time data processing, and sophisticated AI-driven applications.
@@ -345,9 +343,9 @@ prediction = process_image(sensor_image)
 print("AI Prediction:", prediction)
 ```
 
-### Cybersecurity Providers Ensuring SDV Integrity
+## Cybersecurity Providers Ensuring SDV Integrity
 
-#### Palo Alto Networks
+### Palo Alto Networks
 
 **Overview:**
 Palo Alto Networks is a leading cybersecurity firm that plays a critical role in safeguarding SDV ecosystems. By providing advanced security solutions, Palo Alto Networks ensures that vehicle communications, OTA updates, and data exchanges remain secure against emerging cyber threats.
@@ -408,9 +406,9 @@ else:
     rollback_update()
 ```
 
-### Cloud Platform Providers Making Significant Impacts on SDVs
+## Cloud Platform Providers Making Significant Impacts on SDVs
 
-#### Microsoft Azure and Google Cloud
+### Microsoft Azure and Google Cloud
 
 **Overview:**
 Cloud platforms like Microsoft Azure and Google Cloud are instrumental in providing the infrastructure and services necessary for SDV functionalities. They offer scalable computing resources, data storage solutions, and advanced analytics tools that enable OEMs to manage vehicle data, deploy OTA updates, and implement AI-driven features.
@@ -450,9 +448,9 @@ twin_props = {
 create_digital_twin('VEH12345', twin_props)
 ```
 
-### Chip and SoC Providers Facilitating SDV Technologies
+## Chip and SoC Providers Facilitating SDV Technologies
 
-#### Infineon, Qualcomm, Nvidia
+### Infineon, Qualcomm, Nvidia
 
 **Overview:**
 Chip and System on Chip (SoC) providers like Infineon, Qualcomm, and Nvidia are essential in delivering the processing power and connectivity solutions required for SDVs. These companies supply the foundational hardware that supports advanced vehicle functionalities, including ADAS, autonomous driving, and real-time data processing.
@@ -488,9 +486,9 @@ int main() {
 }
 ```
 
-### Cybersecurity Providers Ensuring Secure SDV Ecosystems
+## Cybersecurity Providers Ensuring Secure SDV Ecosystems
 
-#### Palo Alto Networks
+### Palo Alto Networks
 
 **Overview:**
 Palo Alto Networks is pivotal in securing SDV ecosystems against evolving cyber threats. By providing advanced cybersecurity solutions, Palo Alto Networks safeguards vehicle communications, OTA updates, and data exchanges, ensuring the integrity and safety of SDV operations.
@@ -551,9 +549,9 @@ else:
     rollback_update()
 ```
 
-### Challenges in SDV Implementation
+## Challenges in SDV Implementation
 
-#### Security and Upgradation
+### Security and Upgradation
 
 One of the primary challenges in SDV adoption is ensuring robust security and reliable software upgradation mechanisms. As vehicles become increasingly software-dependent, vulnerabilities in software can have critical implications for vehicle safety and user trust.
 
@@ -589,7 +587,7 @@ else
 fi
 ```
 
-### Conclusion
+## Conclusion
 
 The evolution of Software Defined Vehicles is propelled by a collaborative ecosystem of automotive OEMs, cloud service providers, chip manufacturers, and cybersecurity firms. Companies like Tesla, Rivian, Polestar, and prominent Chinese OEMs are pioneering SDV integration through advanced software development, intelligent energy management, and robust autonomous driving capabilities. Cloud platforms such as Microsoft Azure and Google Cloud provide the necessary infrastructure for data management, OTA updates, and AI-driven features. Chip and SoC providers like Infineon, Qualcomm, and Nvidia supply the high-performance hardware essential for real-time data processing and connectivity. Meanwhile, cybersecurity firms like Palo Alto Networks ensure the integrity and security of SDV ecosystems against emerging threats.
 

@@ -1,10 +1,8 @@
 # Software Defined Vehicle Level 2 
 
-### Introduction
-
 Building upon the foundational aspects of SDV Level 1, Software Defined Vehicle (SDV) Level 2 represents a significant advancement in the integration of software-driven functionalities within modern vehicles. This level emphasizes the seamless implementation of Over-The-Air (OTA) updates, enabling Original Equipment Manufacturers (OEMs) to push software enhancements directly to vehicles without necessitating physical recalls. By embedding OTA capabilities into critical vehicle systems such as infotainment and telematics, SDV Level 2 not only enhances user experience but also optimizes operational efficiencies for manufacturers.
 
-### Key Features of SDV Level 2
+## Key Features of SDV Level 2
 
 1. **Seamless Over-The-Air (OTA) Updates:**
    - **Integration by OEMs:** Unlike Level 1, where OTA updates are non-existent, Level 2 introduces the capability for OEMs to integrate OTA functionalities directly into the vehicle’s software architecture during the production phase.
@@ -22,11 +20,11 @@ Building upon the foundational aspects of SDV Level 1, Software Defined Vehicle 
    - **Dedicated Cloud Backend:** OEMs maintain proprietary cloud infrastructures that manage OTA updates, including file systems, access definitions, and campaign management.
    - **Exclusive Control:** These infrastructures ensure that only authorized updates from the OEM are deployed, preventing third-party interference and maintaining system integrity.
 
-### Technical Implementation of OTA Updates in SDV Level 2
+## Technical Implementation of OTA Updates in SDV Level 2
 
 Implementing OTA updates in SDV Level 2 involves a sophisticated interplay between vehicle hardware, software, and cloud services managed by OEMs. The following sections delve into the technical aspects of this implementation, highlighting the critical components and security measures necessary to ensure seamless and secure updates.
 
-#### Integration of OTA in Infotainment and Telematics
+### Integration of OTA in Infotainment and Telematics
 
 OEMs embed OTA capabilities within the vehicle’s infotainment and telematics systems during the manufacturing process. This integration ensures that these systems can communicate with the OEM’s cloud backend to receive and apply updates autonomously.
 
@@ -76,7 +74,7 @@ expected_hash = "abcdef1234567890abcdef1234567890abcdef1234567890abcdef123456789
 initiate_ota_update(update_url, destination_path, expected_hash)
 ```
 
-#### OEM Cloud Backend Infrastructure
+### OEM Cloud Backend Infrastructure
 
 The OEM’s cloud backend is the cornerstone of SDV Level 2’s OTA capabilities. It manages the distribution of updates, authentication of vehicles, and ensures that updates are securely and efficiently deployed.
 
@@ -109,7 +107,7 @@ cloud_backend:
       previous_version: v1.9.5
 ```
 
-#### Secure OTA Update Mechanism
+### Secure OTA Update Mechanism
 
 Security is paramount in SDV Level 2 to prevent unauthorized access and ensure that only legitimate updates are applied. This involves robust encryption, signature verification, and rollback mechanisms.
 
@@ -179,9 +177,9 @@ previous_version_path = "/vehicle/system/update_v1.9.5.bin"
 secure_ota_update(update_url, signature_url, public_key_path, destination_path, signature_destination, previous_version_path)
 ```
 
-### Infrastructure Components for SDV Level 2
+## Infrastructure Components for SDV Level 2
 
-#### OEM Cloud Backend
+### OEM Cloud Backend
 
 The OEM’s cloud backend infrastructure is integral to managing and deploying OTA updates. It encompasses file storage, access control, update management, and security protocols.
 
@@ -190,25 +188,25 @@ The OEM’s cloud backend infrastructure is integral to managing and deploying O
 - **OTA Push Management:** Orchestrates the deployment of updates through defined campaigns targeting specific vehicle IDs.
 - **Security Protocols:** Implements encryption, digital signatures, and rollback mechanisms to maintain the integrity and reliability of updates.
 
-#### Vehicle Control Units
+### Vehicle Control Units
 
 In SDV Level 2, vehicle control units such as infotainment systems and telematics units are equipped with the necessary hardware and software to receive, verify, and apply OTA updates.
 
 - **Infotainment Systems:** Serve as the primary interface for OTA updates, enabling user interactions and managing multimedia functionalities.
 - **Telematics Units:** Handle data communication between the vehicle and the OEM’s cloud backend, facilitating remote diagnostics and feature updates.
 
-#### Smartphone Integration
+### Smartphone Integration
 
 Smartphones act as the user interface for interacting with vehicle functionalities. Dedicated OEM applications enable users to control and monitor their vehicles remotely.
 
 - **Dedicated Applications:** Developed and maintained by OEMs, these applications provide access to remote control features and vehicle status information.
 - **Secure Communication:** Ensures that data transmitted between the smartphone and the vehicle is encrypted and authenticated.
 
-### Security Enhancements in SDV Level 2
+## Security Enhancements in SDV Level 2
 
 Security is significantly enhanced in SDV Level 2 compared to Level 1, addressing the increased complexity and connectivity of software-defined functionalities.
 
-#### Advanced Encryption
+### Advanced Encryption
 
 - **Purpose:** Protects data in transit between the vehicle, smartphone, and OEM cloud backend.
 - **Implementation:** Utilizes robust encryption algorithms (e.g., AES-256) to secure all communication channels.
@@ -228,7 +226,7 @@ Security is significantly enhanced in SDV Level 2 compared to Level 1, addressin
   print(encrypted)
   ```
 
-#### Enhanced Software Integrity
+### Enhanced Software Integrity
 
 - **Purpose:** Ensures that only verified and authentic software updates are applied to the vehicle’s systems.
 - **Implementation:** Incorporates digital signatures and hashing algorithms to validate update files before application.
@@ -239,7 +237,7 @@ Security is significantly enhanced in SDV Level 2 compared to Level 1, addressin
   # Compare the output with the expected hash value
   ```
 
-#### Robust Firewall Configurations
+### Robust Firewall Configurations
 
 - **Purpose:** Prevents unauthorized access to vehicle networks and control systems.
 - **Implementation:** Configures firewalls to allow only trusted connections and block all unauthorized traffic.
@@ -258,7 +256,7 @@ Security is significantly enhanced in SDV Level 2 compared to Level 1, addressin
         action: block
   ```
 
-#### Rollback Mechanism
+### Rollback Mechanism
 
 - **Purpose:** Provides a fallback option in case an OTA update fails or introduces issues.
 - **Implementation:** Maintains a backup of the previous stable software version and automatically reverts if the new update fails integrity checks.
@@ -288,7 +286,7 @@ Security is significantly enhanced in SDV Level 2 compared to Level 1, addressin
   fi
   ```
 
-#### Access Control
+### Access Control
 
 - **Purpose:** Restricts who can initiate and manage OTA updates, ensuring that only authorized personnel and systems can perform critical operations.
 - **Implementation:** Utilizes role-based access control (RBAC) and secure authentication protocols to manage permissions.
@@ -306,11 +304,11 @@ Security is significantly enhanced in SDV Level 2 compared to Level 1, addressin
         - read
   ```
 
-### Example Implementation: Hyundai Bluelink OTA Update
+## Example Implementation: Hyundai Bluelink OTA Update
 
 Hyundai’s Bluelink application exemplifies the practical implementation of SDV Level 2 functionalities, integrating OTA updates with user-facing applications to enhance vehicle capabilities seamlessly.
 
-#### Workflow
+### Workflow
 
 1. **User Initiates Update:**
    - The user receives a notification via the Bluelink app indicating the availability of a new software update.
@@ -327,7 +325,7 @@ Hyundai’s Bluelink application exemplifies the practical implementation of SDV
 5. **Rollback if Necessary:**
    - If the update fails verification or encounters issues during application, the system automatically rolls back to the previous stable version to maintain vehicle operability.
 
-#### Example Code Snippet: Bluelink OTA Update Integration
+### Example Code Snippet: Bluelink OTA Update Integration
 
 ```javascript
 // JavaScript code for Bluelink OTA update process
@@ -389,9 +387,9 @@ const previousVersionPath = "/vehicle/system/update_v1.9.5.bin";
 initiateBluelinkUpdate(updateUrl, destinationPath, expectedHash, previousVersionPath);
 ```
 
-### Infrastructure Considerations for SDV Level 2
+## Infrastructure Considerations for SDV Level 2
 
-#### OEM Cloud Backend
+### OEM Cloud Backend
 
 The OEM cloud backend infrastructure for SDV Level 2 encompasses several critical components to manage and deploy OTA updates effectively:
 
@@ -412,7 +410,7 @@ The OEM cloud backend infrastructure for SDV Level 2 encompasses several critica
    - **Digital Signatures:** Utilizes digital signatures to verify the authenticity and integrity of update files.
    - **Rollback Mechanisms:** Maintains backups of previous software versions to facilitate automatic rollback in case of update failures.
 
-#### Vehicle Control Units
+### Vehicle Control Units
 
 Vehicle control units, particularly infotainment and telematics systems, are equipped to handle OTA updates securely and efficiently:
 
@@ -424,11 +422,11 @@ Vehicle control units, particularly infotainment and telematics systems, are equ
    - **Connectivity:** Maintains a stable connection with the OEM’s cloud backend to receive updates and send diagnostic data.
    - **Data Handling:** Processes incoming update data and ensures that it is correctly applied to the vehicle’s systems.
 
-### Security Enhancements in SDV Level 2
+## Security Enhancements in SDV Level 2
 
 Security is a critical focus in SDV Level 2, given the increased connectivity and software integration. The following measures are implemented to ensure robust protection against cyber threats:
 
-#### Advanced Encryption Techniques
+### Advanced Encryption Techniques
 
 - **Data Transmission:** All data transmitted between the vehicle, smartphone, and OEM cloud backend is encrypted using advanced algorithms such as AES-256.
   
@@ -447,7 +445,7 @@ Security is a critical focus in SDV Level 2, given the increased connectivity an
   print(encrypted)
   ```
 
-#### Enhanced Software Integrity
+### Enhanced Software Integrity
 
 - **Digital Signatures:** Updates are digitally signed by the OEM to verify their authenticity before being applied to the vehicle.
   
@@ -456,7 +454,7 @@ Security is a critical focus in SDV Level 2, given the increased connectivity an
   openssl dgst -sha256 -verify public_key.pem -signature update_v2.0.1.sig update_v2.0.1.bin
   ```
 
-#### Robust Firewall Configurations
+### Robust Firewall Configurations
 
 - **Traffic Filtering:** Firewalls are configured to allow only trusted connections and block all unauthorized traffic, protecting the vehicle’s internal networks.
   
@@ -474,7 +472,7 @@ Security is a critical focus in SDV Level 2, given the increased connectivity an
         action: block
   ```
 
-#### Rollback Mechanism
+### Rollback Mechanism
 
 - **Automatic Reversion:** In the event of a failed update verification or application, the system automatically reverts to the previous stable software version to maintain vehicle operability.
   
@@ -503,7 +501,7 @@ Security is a critical focus in SDV Level 2, given the increased connectivity an
   fi
   ```
 
-#### Access Control
+### Access Control
 
 - **Role-Based Access Control (RBAC):** Defines specific roles and permissions to manage who can initiate and manage OTA updates, ensuring that only authorized personnel can perform critical operations.
   
@@ -520,10 +518,10 @@ Security is a critical focus in SDV Level 2, given the increased connectivity an
         - read
   ```
 
-### Summary of SDV Level 2
+## Summary of SDV Level 2
 
 SDV Level 2 marks a pivotal advancement in the evolution of software-defined vehicles by introducing seamless OTA update capabilities managed exclusively by OEMs. This level enhances user convenience by enabling remote control of essential vehicle functions and ensures that software updates can be deployed without the need for physical recalls, thereby reducing costs and improving operational efficiency. The integration of robust security measures, including advanced encryption, digital signatures, firewall configurations, rollback mechanisms, and strict access controls, safeguards the vehicle’s systems against potential cyber threats. Additionally, the OEM-managed cloud infrastructure ensures that updates are securely and reliably distributed, maintaining the integrity and performance of the vehicle’s software ecosystem.
 
-### Conclusion
+## Conclusion
 
 As the automotive industry continues to embrace the Software Defined Vehicle paradigm, categorizing SDV levels provides a structured framework for understanding and implementing software-driven functionalities. SDV Level 2, with its emphasis on seamless OTA updates and enhanced security, represents a significant step towards more intelligent, adaptable, and user-centric vehicles. By leveraging advanced cloud infrastructures and robust security protocols, OEMs can deliver continuous improvements and personalized experiences to vehicle owners, setting the stage for subsequent levels of SDV integration that promise even greater automation and functionality.

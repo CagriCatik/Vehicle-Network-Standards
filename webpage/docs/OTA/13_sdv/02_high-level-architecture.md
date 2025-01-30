@@ -1,14 +1,12 @@
 # High-Level Architecture for Software Defined Vehicles
 
-### Introduction
-
 The automotive industry is undergoing a significant transformation with the advent of Software Defined Vehicles (SDVs). SDVs represent a paradigm shift from traditional hardware-centric vehicle architectures to software-centric ecosystems. This transition leverages advanced computing power, enhanced connectivity, and Over-The-Air (OTA) updates to deliver unparalleled capabilities and personalized experiences. This documentation delves into the high-level architecture of components suitable for SDVs, contrasting traditional architectures with modern SDV frameworks, and exploring the critical elements that enable seamless functionality and scalability.
 
-### Traditional Automotive Architecture
+## Traditional Automotive Architecture
 
 In traditional vehicle architectures, the control and functionality of various vehicle systems are predominantly managed by tightly integrated hardware and software layers. Understanding this baseline is essential to appreciate the advancements introduced by SDVs.
 
-#### Layers of Traditional Architecture
+### Layers of Traditional Architecture
 
 1. **Hardware Abstraction Layer (HAL):**
    - **Function:** Provides a consistent interface between the hardware components and the higher-level software layers, ensuring that application software remains independent of specific hardware details.
@@ -26,17 +24,17 @@ In traditional vehicle architectures, the control and functionality of various v
    - **Function:** Comprises the high-level functionalities offered to customers, such as engine control, ABS, airbag deployment, and infotainment services.
    - **Example:** Engine Control Units (ECUs) manage engine performance, while ABS modules ensure braking efficiency and safety.
 
-#### Challenges in Traditional Architecture
+### Challenges in Traditional Architecture
 
 - **Tight Coupling:** The close integration of hardware and software layers makes it challenging to extend features or upgrade systems without significant modifications.
 - **Scalability Issues:** Adding new functionalities often requires substantial hardware changes, limiting the ability to quickly adapt to evolving technological demands.
 - **Maintenance Complexity:** Troubleshooting and maintaining systems become more complex due to the interdependent nature of tightly coupled components.
 
-### Shift to Software Defined Vehicles (SDV) Architecture
+## Shift to Software Defined Vehicles (SDV) Architecture
 
 SDV architecture addresses the limitations of traditional systems by decoupling software from hardware, enabling greater flexibility, scalability, and ease of maintenance. The high-level architecture of SDVs encompasses several critical components designed to support advanced functionalities and seamless updates.
 
-#### Core Components of SDV Architecture
+### Core Components of SDV Architecture
 
 1. **High-Performing Computers:**
    - **Function:** Serve as the central processing units capable of handling extensive computational workloads required by modern vehicle software systems.
@@ -79,16 +77,16 @@ SDV architecture addresses the limitations of traditional systems by decoupling 
      - Integration of artificial intelligence for intelligent decision-making and performance optimization.
    - **Example:** OTA updates allow OEMs to deploy new navigation features or security patches without requiring the vehicle to visit a service center.
 
-#### Benefits of SDV Architecture
+### Benefits of SDV Architecture
 
 - **Enhanced Flexibility:** Decoupled software and hardware layers allow for easy addition of new features and functionalities.
 - **Scalability:** Unified computing platforms and middleware enable the integration of diverse applications and sensors without significant hardware changes.
 - **Simplified Maintenance:** Remote diagnostics and OTA updates streamline maintenance processes, reducing the need for manual interventions.
 - **Improved Security:** Isolation of critical systems through hypervisors enhances overall vehicle security, protecting against potential cyber threats.
 
-### Detailed Component Descriptions
+## Detailed Component Descriptions
 
-#### High-Performing Computers
+### High-Performing Computers
 
 High-performing computers are the backbone of SDV architectures, providing the necessary computational resources to handle complex software operations and data processing tasks.
 
@@ -107,7 +105,7 @@ High-performing computers are the backbone of SDV architectures, providing the n
   scheduleTask(driveSoc, adasTask);
   ```
 
-#### Middleware Controller Layer (MCL)
+### Middleware Controller Layer (MCL)
 
 The MCL enhances communication and interoperability among various vehicle components, ensuring that diverse hardware platforms can seamlessly integrate and communicate.
 
@@ -142,7 +140,7 @@ The MCL enhances communication and interoperability among various vehicle compon
       raise Exception("Sensor not compatible with the platform")
   ```
 
-#### Automotive Operating System (Automotive OS)
+### Automotive Operating System (Automotive OS)
 
 Automotive OS is a specialized operating system designed to meet the stringent requirements of vehicle applications, offering real-time processing, multi-core support, and robust security features.
 
@@ -165,7 +163,7 @@ Automotive OS is a specialized operating system designed to meet the stringent r
   }
   ```
 
-#### Hypervisor
+### Hypervisor
 
 The hypervisor plays a critical role in managing multiple operating systems and applications on a single processor, ensuring efficient resource utilization and system isolation.
 
@@ -187,7 +185,7 @@ The hypervisor plays a critical role in managing multiple operating systems and 
   }
   ```
 
-#### Middleware Stack Enhancements
+### Middleware Stack Enhancements
 
 Modern middleware stacks in SDVs leverage advanced communication protocols to support high-speed data transmission and interoperability among various vehicle systems.
 
@@ -223,7 +221,7 @@ Modern middleware stacks in SDVs leverage advanced communication protocols to su
   configure_ethernet("1Gbps", "full")
   ```
 
-#### Cloud Services Integration
+### Cloud Services Integration
 
 Integrating cloud services with SDV architectures enables OTA updates, remote diagnostics, and the addition of new features without requiring physical interventions.
 
@@ -266,11 +264,11 @@ Integrating cloud services with SDV architectures enables OTA updates, remote di
   update_navigation("VEH12345", "Location A", "Location B")
   ```
 
-### Implementation Considerations
+## Implementation Considerations
 
 Implementing SDV architectures requires careful consideration of various factors to ensure system reliability, security, and scalability.
 
-#### Security
+### Security
 
 - **Encryption:** Ensures that all data transmissions between the vehicle and cloud services are secure.
   ```python
@@ -308,7 +306,7 @@ Implementing SDV architectures requires careful consideration of various factors
         - read
   ```
 
-#### Scalability
+### Scalability
 
 - **Modular Design:** Ensures that the architecture can accommodate the addition of new features and components without significant restructuring.
   ```c
@@ -331,7 +329,7 @@ Implementing SDV architectures requires careful consideration of various factors
   }
   ```
 
-#### Compatibility
+### Compatibility
 
 - **Cross-Platform Support:** Ensures that software components can operate seamlessly across different hardware platforms and vehicle models.
   ```json
@@ -360,7 +358,7 @@ Implementing SDV architectures requires careful consideration of various factors
           raise ValueError("Unsupported sensor type")
   ```
 
-### Example Implementation: Tesla Model 3
+## Example Implementation: Tesla Model 3
 
 Tesla Model 3 serves as a prime example of an SDV implementation, showcasing the integration of automotive OS, hypervisor, and advanced middleware stacks to deliver a seamless and secure driving experience.
 
@@ -369,6 +367,6 @@ Tesla Model 3 serves as a prime example of an SDV implementation, showcasing the
 - **Middleware Stack:** Employs Ethernet-based communication protocols to handle high-speed data transmission required for real-time processing of sensor data and vehicle controls.
 - **Cloud Integration:** Facilitates OTA updates, allowing Tesla to deploy new features, security patches, and performance enhancements remotely without requiring physical service visits.
 
-### Conclusion
+## Conclusion
 
 The transition to Software Defined Vehicles marks a pivotal evolution in the automotive industry, driven by advancements in software technology, high-performance computing, and seamless connectivity. By decoupling software from hardware, SDV architectures offer enhanced flexibility, scalability, and ease of maintenance, enabling continuous innovation and personalized user experiences. Critical components such as high-performing computers, middleware controller layers, automotive OS, hypervisors, and robust middleware stacks form the backbone of SDVs, ensuring that vehicles remain adaptable to emerging technologies and evolving market demands. As the industry continues to embrace SDV paradigms, the potential for innovation and enhanced functionality positions SDVs at the forefront of future automotive advancements.

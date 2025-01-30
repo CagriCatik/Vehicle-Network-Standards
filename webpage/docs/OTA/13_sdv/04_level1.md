@@ -1,16 +1,14 @@
 # Software Defined Vehicle Levels
 
-### Introduction
-
 As the automotive industry transitions towards Software Defined Vehicles (SDVs), it becomes imperative to establish standardized levels that categorize the progression and capabilities of these technologically advanced vehicles. This classification mirrors the historical approach taken with Advanced Driver Assistance Systems (ADAS), where defining levels from basic assistance to full automation provided clarity and uniformity across manufacturers and stakeholders. Similarly, categorizing SDV levels facilitates a structured understanding of the evolution, implementation, and capabilities of software-centric vehicle functionalities.
 
-### Importance of Categorizing SDV Levels
+## Importance of Categorizing SDV Levels
 
-#### Historical Context: ADAS Levels
+### Historical Context: ADAS Levels
 
 Approximately fifteen years ago, ADAS emerged as a significant advancement in vehicle safety and automation. Early ADAS implementations varied widely across manufacturers, each offering different definitions and feature sets. This lack of standardization led to confusion and hindered the broader adoption of these technologies. To address this, the automotive industry adopted a tiered classification system, delineating ADAS capabilities from Level 0 (no assistance) to Level 5 (full automation). This structured approach enabled manufacturers, regulators, and consumers to have a common framework for understanding and evaluating ADAS functionalities.
 
-#### Parallel Necessity for SDV Levels
+### Parallel Necessity for SDV Levels
 
 In the wake of ADAS, the emergence of SDVs brings forth a similar need for standardized levels. As manufacturers increasingly integrate software-driven features into vehicles, categorizing these advancements ensures:
 
@@ -19,22 +17,22 @@ In the wake of ADAS, the emergence of SDVs brings forth a similar need for stand
 3. **Regulatory Alignment:** Aids in the formulation of regulations and safety standards tailored to each SDV level.
 4. **Development Roadmap:** Guides manufacturers in the phased development and implementation of SDV features.
 
-### SDV Levels Overview
+## SDV Levels Overview
 
 The categorization of SDV levels typically ranges from Level 0 to Level 5, analogous to the ADAS framework. Each level represents a distinct stage in the software integration and automation capabilities of the vehicle.
 
-#### Level 0: No SDV Functionality
+### Level 0: No SDV Functionality
 
 - **Description:** Vehicles operate without any software-defined functionalities. All controls and features are managed manually without any digital assistance or connectivity.
 - **Features:** Traditional mechanical controls, no internet connectivity, no remote features.
 
-#### Level 1: Basic SDV Integration
+### Level 1: Basic SDV Integration
 
-##### Transitioning from Traditional Vehicles to SDV Level 1
+#### Transitioning from Traditional Vehicles to SDV Level 1
 
 Level 1 SDV marks the initial stage of integrating software-defined functionalities into traditional vehicle architectures. This level focuses on establishing basic internet connectivity and enabling rudimentary remote controls without extensive over-the-air (OTA) update capabilities.
 
-##### Key Features of SDV Level 1
+#### Key Features of SDV Level 1
 
 1. **Basic Internet Connectivity:**
    - Establishes a foundational link between the vehicle and external networks.
@@ -53,7 +51,7 @@ Level 1 SDV marks the initial stage of integrating software-defined functionalit
    - Applications developed by third parties can interact with vehicle systems to perform specific actions.
    - Examples include remote activation of climate control via smartphone apps.
 
-##### Example Implementations
+#### Example Implementations
 
 - **Hyundai Bluelink:**
   - **Features:** Vehicle identification, "Find My Vehicle," geofencing, vehicle status monitoring, and health reporting.
@@ -67,7 +65,7 @@ Level 1 SDV marks the initial stage of integrating software-defined functionalit
   - **Features:** Remote start/stop, climate control, vehicle status monitoring, and basic security functions.
   - **Functionality:** Enables users to control specific vehicle functions remotely through dedicated BMW applications.
 
-##### Technical Considerations for SDV Level 1
+#### Technical Considerations for SDV Level 1
 
 Implementing Level 1 SDV functionalities necessitates robust security measures to safeguard against unauthorized access and ensure data integrity. Key security elements include:
 
@@ -115,7 +113,7 @@ Implementing Level 1 SDV functionalities necessitates robust security measures t
          action: block
    ```
 
-##### Example Code Snippet: Remote Climate Control Activation
+#### Example Code Snippet: Remote Climate Control Activation
 
 ```javascript
 // JavaScript code for activating climate control via a cloud API
@@ -141,7 +139,7 @@ async function activateClimateControl(vehicleId, temperature) {
 activateClimateControl('VEH12345', 22.5);
 ```
 
-##### Infrastructure Components for SDV Level 1
+#### Infrastructure Components for SDV Level 1
 
 1. **Smartphone Integration:**
    - Acts as the primary interface for users to interact with the vehicle remotely.
@@ -155,7 +153,7 @@ activateClimateControl('VEH12345', 22.5);
    - **Infotainment Systems:** Interface with cloud services to receive and execute remote commands.
    - **Electronic Control Units (ECUs):** Handle specific vehicle functions such as climate control and engine management based on received commands.
 
-##### Example Code Snippet: Smartphone Application Trigger Integration
+#### Example Code Snippet: Smartphone Application Trigger Integration
 
 ```python
 import requests
@@ -175,11 +173,11 @@ def trigger_vehicle_feature(vehicle_id, feature, action):
 trigger_vehicle_feature('VEH12345', 'climate', 'activate')
 ```
 
-### Security Considerations for SDV Level 1
+## Security Considerations for SDV Level 1
 
 Ensuring the security and integrity of SDV Level 1 functionalities is paramount. As vehicles become more connected and reliant on software, robust security measures are essential to prevent unauthorized access and potential system compromises.
 
-#### Encryption
+### Encryption
 
 - **Purpose:** Protects data transmitted between the vehicle and external devices, such as smartphones and cloud services.
 - **Implementation:** Utilizes industry-standard encryption algorithms (e.g., AES) to secure data packets.
@@ -199,7 +197,7 @@ Ensuring the security and integrity of SDV Level 1 functionalities is paramount.
   print(encrypted)
   ```
 
-#### Software Integrity
+### Software Integrity
 
 - **Purpose:** Ensures that the software controlling vehicle functionalities remains unaltered and secure from malicious interventions.
 - **Implementation:** Implements integrity checks using hashing algorithms and digital signatures to verify software authenticity.
@@ -210,7 +208,7 @@ Ensuring the security and integrity of SDV Level 1 functionalities is paramount.
   # Compare the output with the expected hash value
   ```
 
-#### Firewalls
+### Firewalls
 
 - **Purpose:** Acts as a protective barrier to prevent unauthorized access and control over vehicle systems.
 - **Implementation:** Configures firewall rules to allow only trusted connections and block potentially harmful traffic.
@@ -229,10 +227,10 @@ Ensuring the security and integrity of SDV Level 1 functionalities is paramount.
         action: block
   ```
 
-### Summary of SDV Level 1
+## Summary of SDV Level 1
 
 SDV Level 1 represents the foundational stage of software-defined functionalities in vehicles, transitioning from purely mechanical controls to basic software-driven interactions. By enabling essential remote controls and establishing internet connectivity, Level 1 SDVs enhance user convenience and vehicle interactivity. However, the absence of comprehensive OTA update capabilities limits the scope of software-driven enhancements. Ensuring robust security measures, including encryption, software integrity checks, and firewall protections, is crucial to safeguarding these early-stage SDV functionalities against potential cyber threats.
 
-### Conclusion
+## Conclusion
 
 Categorizing SDV levels is a critical step in structuring the evolution of software-defined functionalities within the automotive industry. Drawing parallels from the ADAS levels, SDV levels provide a standardized framework that facilitates consistent development, implementation, and evaluation of vehicle software capabilities. SDV Level 1, with its basic internet connectivity and remote control features, marks the beginning of this transformative journey. As manufacturers progress through higher SDV levels, they will unlock more advanced functionalities, enhanced automation, and comprehensive OTA update mechanisms, all while maintaining stringent security and safety standards. Establishing these levels not only aids in technological advancement but also ensures that the integration of software within vehicles is systematic, secure, and aligned with consumer expectations and regulatory requirements.

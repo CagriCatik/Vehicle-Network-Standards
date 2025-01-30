@@ -18,6 +18,7 @@ This repository serves as a knowledge base for [**Vehicle Network Standards**](h
 - **SecOC**
 - **FuSa**
 - **FMEA**
+- **OTA**
 
 
 ## About the Knowledge-Base
@@ -53,12 +54,6 @@ Each folder represents a specific communication protocol and contains related do
 
 To view the documentation locally or contribute to the project, follow these steps:
 
-### Prerequisites
-
-- [Yarn](https://yarnpkg.com/)
-
-### Installation
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/cagricatik/Vehicle-Network-Standards.git
@@ -69,11 +64,11 @@ To view the documentation locally or contribute to the project, follow these ste
    ```
 3. Install dependencies:
    ```bash
-   yarn install
+   npm install
    ```
 4. Start the local development server:
    ```bash
-   yarn start
+   npm start
    ```
 
 ### Contributing

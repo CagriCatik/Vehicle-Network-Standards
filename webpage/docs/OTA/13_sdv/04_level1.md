@@ -1,4 +1,4 @@
-# Software Defined Vehicle Levels
+# Software Defined Vehicle Level 1
 
 As the automotive industry transitions towards Software Defined Vehicles (SDVs), it becomes imperative to establish standardized levels that categorize the progression and capabilities of these technologically advanced vehicles. This classification mirrors the historical approach taken with Advanced Driver Assistance Systems (ADAS), where defining levels from basic assistance to full automation provided clarity and uniformity across manufacturers and stakeholders. Similarly, categorizing SDV levels facilitates a structured understanding of the evolution, implementation, and capabilities of software-centric vehicle functionalities.
 

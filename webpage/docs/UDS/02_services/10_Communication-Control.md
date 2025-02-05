@@ -1,5 +1,5 @@
 
-# Communication Control Service (0x28)
+# Communication Control - 0x28
 
 The **Communication Control** service is a pivotal diagnostic service defined within the **Unified Diagnostic Services (UDS)** protocol, standardized under **ISO 14229**. This service, identified by **Service ID 0x28**, empowers diagnostic testers and tools to manage and manipulate the communication behavior of one or more **Electronic Control Units (ECUs)** within a vehicle's network. By enabling or disabling specific communication channels or functionalities, the Communication Control service facilitates efficient diagnostics, testing, configuration, and troubleshooting processes in complex automotive systems.
 

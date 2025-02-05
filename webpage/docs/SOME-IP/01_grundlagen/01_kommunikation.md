@@ -1,4 +1,4 @@
-# AUTOSAR PDU (Protokolldateneinheit)
+# AUTOSAR PDU
 
 ## Signal-orientierte Kommunikation
 

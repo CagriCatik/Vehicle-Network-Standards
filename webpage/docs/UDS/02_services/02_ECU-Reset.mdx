@@ -147,6 +147,33 @@ When a negative response is received, the diagnostic tool must handle the error 
 
 ---
 
+
+<PlantUML code={`
+@startuml
+title ECU Reset (0x11) Sequence Diagram
+
+actor Tester
+participant ECU
+
+' Soft Reset
+== Soft Reset ==
+Tester -> ECU: Request: 0x11 0x01\\n(Soft Reset Request)
+ECU --> Tester: Response: 0x51 0x01\\n(Positive Response for Soft Reset)
+
+' Hard Reset
+== Hard Reset ==
+Tester -> ECU: Request: 0x11 0x02\\n(Hard Reset Request)
+ECU --> Tester: Response: 0x51 0x02\\n(Positive Response for Hard Reset)
+
+' Error Handling Example
+== Error Handling ==
+Tester -> ECU: Request: 0x11 0x03\\n(Invalid Reset Request)
+ECU --> Tester: Response: 0x11 0x12\\n(Negative Response: Sub-function Not Supported)
+@enduml
+`} />
+
+---
+
 ## Practical Applications
 
 ### Post-Update ECU Reset

@@ -231,6 +231,11 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              }, 
+              
+              {
+                label: 'Agile-SCRUM',
+                to: '/docs/Agile-SCRUM/getting-started',
               },
               {
                 label: 'Sources',

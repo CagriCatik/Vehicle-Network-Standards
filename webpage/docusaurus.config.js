@@ -175,19 +175,19 @@ const config = {
             items: [
               {
                 label: 'CAN',
-                to: '/docs/intro',
+                to: '/docs/CAN/getting_started',
               },
               {
                 label: 'LIN',
-                to: '/docs/intro',
+                to: '/docs/LIN/getting_started',
               },
               {
                 label: 'FlexRay',
-                to: '/docs/intro',
+                to: '/docs/FLEXRAY/getting_started',
               },
               {
                 label: 'Ethernet',
-                to: '/docs/intro',
+                to: '/docs/ETHERNET/getting_started',
               },
             ],
           },
@@ -225,6 +225,34 @@ const config = {
               },
             ],
           },
+
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'ASPICE',
+                to: '/docs/ASPICE/getting-started',
+              }, 
+
+              {
+                label: 'Agile-SCRUM',
+                to: '/docs/Agile-SCRUM/getting-started',
+              },
+
+              
+              {
+                label: 'ISO26262',
+                to: '/docs/ISO26262/getting-started',
+              }, 
+
+              {
+                label: 'FMEA',
+                to: '/docs/FMEA/getting-started',
+              }, 
+          
+            ],
+          },
+
           {
             title: 'More',
             items: [
@@ -249,21 +277,6 @@ const config = {
             ],
           },
 
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'ASPICE',
-                to: '/docs/ASPICE/getting-started',
-              }, 
-
-              {
-                label: 'Agile-SCRUM',
-                to: '/docs/Agile-SCRUM/getting-started',
-              },
-          
-            ],
-          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Vehicle Network Standards.`,
       },

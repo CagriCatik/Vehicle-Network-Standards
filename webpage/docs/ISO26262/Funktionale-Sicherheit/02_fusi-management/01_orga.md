@@ -82,7 +82,7 @@ Safety anomalies are conditions that deviate from expectations and have the pote
 
 - **Analysis**
   - **Description**: Investigating anomalies to determine their root causes and potential impact on functional safety.
-  - **Practical Example**: Conducting Failure Mode and Effects Analysis (FMEA) to assess the severity and likelihood of identified anomalies.
+  - **Practical Example**: Conducting Failure Mode and Effects Analysis  to assess the severity and likelihood of identified anomalies.
   - **Best Practice**: Utilize structured analysis techniques to ensure comprehensive evaluation of anomalies.
 
 - **Mitigation**

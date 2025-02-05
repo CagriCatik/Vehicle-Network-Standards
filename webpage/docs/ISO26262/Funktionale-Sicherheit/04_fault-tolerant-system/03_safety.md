@@ -29,7 +29,7 @@ Safety analyses can be approached from different perspectives, categorized as fo
   
 - **Bottom-Up (Inductive) Analysis**:
   - Starts with known causes and moves upward to identify potential effects.
-  - **Example**: Failure Mode and Effects Analysis (FMEA).
+  - **Example**: Failure Mode and Effects Analysis .
 
 ### 2. Quantitative vs. Qualitative Analysis
 
@@ -52,7 +52,7 @@ Safety analyses can be approached from different perspectives, categorized as fo
 
 ISO 26262 recommends several safety analysis methods, each suited to different aspects of system development. Below are four primary methods, along with their applications and best practices.
 
-### 1. Failure Mode and Effects Analysis (FMEA)
+### 1. Failure Mode and Effects Analysis 
 
 - **Definition**: An inductive, bottom-up analysis method used to identify potential failure modes, their effects, and causes within a system.
   
@@ -143,7 +143,7 @@ Safety analyses are conducted at various stages of the system development lifecy
   - **Fault Tree Analysis (FTA)**:
     - Identify common cause faults across different systems.
     - Partition hardware metrics among system components.
-  - **Failure Mode and Effects Analysis (FMEA)**:
+  - **Failure Mode and Effects Analysis **:
     - Derive functional safety requirements.
     - Incorporate emission criteria and other non-functional aspects.
   

@@ -1,6 +1,6 @@
 # Types of FMEA
 
-Failure Modes and Effects Analysis (FMEA) is a versatile tool used to identify, analyze, and mitigate potential failures in various aspects of systems and processes. Different types of FMEA have been developed to address specific needs and focus areas, ensuring that organizations can select the most appropriate methodology for their particular challenges. This chapter provides a comprehensive overview of the various types of FMEA, with a detailed focus on Process FMEA (PFMEA), one of the most widely used forms in manufacturing and service industries.
+Failure Modes and Effects Analysis  is a versatile tool used to identify, analyze, and mitigate potential failures in various aspects of systems and processes. Different types of FMEA have been developed to address specific needs and focus areas, ensuring that organizations can select the most appropriate methodology for their particular challenges. This chapter provides a comprehensive overview of the various types of FMEA, with a detailed focus on Process FMEA (PFMEA), one of the most widely used forms in manufacturing and service industries.
 
 ---
 

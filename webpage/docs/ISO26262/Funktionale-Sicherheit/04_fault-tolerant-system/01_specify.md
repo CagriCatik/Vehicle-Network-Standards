@@ -219,7 +219,7 @@ Traceability ensures that all safety requirements are systematically addressed t
   
 - **Software-Specific Analysis**:
   - Concentrate on logical errors, algorithm reliability, and software robustness.
-  - Example: Failure Mode and Effects Analysis (FMEA) for software modules to identify potential faults and their impacts.
+  - Example: Failure Mode and Effects Analysis  for software modules to identify potential faults and their impacts.
 
 ## Best Practices
 

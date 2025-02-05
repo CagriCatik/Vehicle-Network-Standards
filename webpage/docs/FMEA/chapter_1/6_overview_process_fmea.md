@@ -12,7 +12,7 @@ A process is a series of coordinated actions or steps performed to achieve a spe
 
 ## Understanding FMEA
 
-**Failure Modes and Effects Analysis (FMEA)** is a methodical approach used to identify and assess potential failure modes within a system, product, or process. A failure mode represents the way in which a component, process, or system could deviate from its intended design or function. FMEA evaluates these failure modes by examining their effects on the system and ranking them according to criteria such as severity, occurrence, and detectability.
+**Failure Modes and Effects Analysis ** is a methodical approach used to identify and assess potential failure modes within a system, product, or process. A failure mode represents the way in which a component, process, or system could deviate from its intended design or function. FMEA evaluates these failure modes by examining their effects on the system and ranking them according to criteria such as severity, occurrence, and detectability.
 
 FMEA is generally conducted in two primary forms:
 

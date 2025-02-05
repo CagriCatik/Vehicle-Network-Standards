@@ -74,7 +74,7 @@ ISO 26262 recommends several safety analysis methods, each suited to different a
 
 Qualitative analysis focuses on identifying potential failures and their effects without quantifying their probabilities. This approach is essential during the early design phases to ensure comprehensive hazard identification and mitigation.
 
-#### Failure Mode and Effects Analysis (FMEA)
+#### Failure Mode and Effects Analysis 
 
 - **Definition**: An inductive, bottom-up analysis method used to identify potential failure modes, their effects, and causes within a system.
 - **Standards**: 

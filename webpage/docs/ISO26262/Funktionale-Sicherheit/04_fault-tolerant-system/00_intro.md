@@ -173,7 +173,7 @@ ISO 26262 Parts 3 and 4 lay the groundwork for functional safety through hazard 
   
 - **Software-Specific Analysis**:
   - Concentrate on logical errors, algorithm reliability, and software robustness.
-  - Example: Failure mode and effects analysis (FMEA) for software modules to identify potential faults and their impacts.
+  - Example: Failure mode and effects analysis  for software modules to identify potential faults and their impacts.
 
 ### Best Practices
 

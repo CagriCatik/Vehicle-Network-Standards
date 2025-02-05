@@ -1,3 +1,11 @@
+---
+id: diagnostic-sessions-control
+title: Diagnostic Session Control
+---
+
+import plantumlEncoder from 'plantuml-encoder';
+import PlantUML from '@site/src/components/PlantUML';
+
 # Diagnostic Session Control - 0x10
 
 The **Diagnostic Session Control (0x10)** service plays a vital role in the Unified Diagnostic Services (UDS) protocol, managing the access levels to various diagnostic functions in an ECU. It controls the initiation, switching, and termination of diagnostic sessions, thus regulating the type of operations the tester can perform. The UDS protocol is pivotal in vehicle diagnostics, allowing for efficient access to critical vehicle systems, performing in-depth diagnostics, and facilitating ECU reprogramming. This document explains the structure, function, and application of Diagnostic Session Control, providing a deep dive into the different session types, error handling, and real-world use cases.
@@ -51,6 +59,38 @@ Each session type provides different levels of access to the ECU and its systems
 - **Request/Response Example**:
   - **Request**: `0x10 0x04` (Initiate Safety System Diagnostic Session)
   - **Response**: `0x50 0x04` (Positive response confirming Safety System Diagnostic Session initiation)
+
+
+<PlantUML code={`
+@startuml
+title Sequence Diagram
+
+actor Tester
+participant ECU
+
+' Initiating the Default Session
+== Initiate Default Session ==
+Tester -> ECU: Request: 0x10 0x01 (Initiate Default Session)
+ECU --> Tester: Response: 0x50 0x01 (Confirmation of Default Session)
+
+' Switching to Extended Diagnostic Session
+== Switch to Extended Diagnostic Session ==
+Tester -> ECU: Request: 0x10 0x03 (Switch to Extended Diagnostic Session)
+ECU --> Tester: Response: 0x50 0x03 (Confirmation of Extended Session)
+
+' Error Handling Example for an Invalid Request
+== Error Handling ==
+Tester -> ECU: Request: 0x10 0x03 (Request Extended Session under invalid conditions)
+ECU --> Tester: Response: 0x7F 0x10 0x22 (Negative Response: Conditions Not Correct)
+
+' Terminating the Session (Returning to Default)
+== Terminate Session ==
+Tester -> ECU: Request: 0x10 0x01 (Return to Default Session)
+ECU --> Tester: Response: 0x50 0x01 (Confirmation of session termination)
+
+@enduml
+
+`} />
 
 ---
 

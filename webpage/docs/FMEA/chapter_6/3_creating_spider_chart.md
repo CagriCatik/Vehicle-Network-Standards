@@ -1,6 +1,6 @@
 # Creating a Spider Chart for FMEA Visualization
 
-In Failure Modes and Effects Analysis (FMEA), visualizing the Risk Priority Number (RPN) before and after corrective actions is crucial for understanding the effectiveness of your mitigation strategies. A Spider Chart, also known as a Radar Chart, is an effective tool for this purpose. If you prefer not to use Excel, programming languages like Python or R offer powerful alternatives for creating these charts. Below, we will explore how to create a Spider Chart using Python.
+In Failure Modes and Effects Analysis , visualizing the Risk Priority Number (RPN) before and after corrective actions is crucial for understanding the effectiveness of your mitigation strategies. A Spider Chart, also known as a Radar Chart, is an effective tool for this purpose. If you prefer not to use Excel, programming languages like Python or R offer powerful alternatives for creating these charts. Below, we will explore how to create a Spider Chart using Python.
 
 ## Option 1: Using Python with Matplotlib
 

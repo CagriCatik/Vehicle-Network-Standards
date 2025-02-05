@@ -1,6 +1,6 @@
 # The Six Stages of FMEA
 
-Failure Modes and Effects Analysis (FMEA) is a systematic process used to identify, assess, and mitigate risks associated with potential failures in systems, products, or processes. This structured methodology is divided into six distinct stages that work together to provide a comprehensive risk management strategy. Below is an in-depth exploration of each stage, outlining objectives, processes, and expected outcomes.
+Failure Modes and Effects Analysis  is a systematic process used to identify, assess, and mitigate risks associated with potential failures in systems, products, or processes. This structured methodology is divided into six distinct stages that work together to provide a comprehensive risk management strategy. Below is an in-depth exploration of each stage, outlining objectives, processes, and expected outcomes.
 
 ---
 

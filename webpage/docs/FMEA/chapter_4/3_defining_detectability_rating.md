@@ -1,53 +1,68 @@
 # Defining the Detectability Rating
 
-Detectability in the FMEA process is a critical factor that assesses the likelihood that a current process control will identify a potential weakness or failure mode before it can affect the product or service delivered to the customer. This assessment is performed under the assumption that the failure has already occurred, allowing the team to focus on evaluating the effectiveness of the detection mechanisms in place.
+Detectability in FMEA is a critical factor that measures the likelihood that a process control will identify a failure mode after it has occurred—but before it adversely affects the product or service. Importantly, the Detectability rating focuses solely on the effectiveness of detection controls and is independent of the failure mode's occurrence frequency. Even low-frequency failures must be rigorously evaluated to ensure that detection mechanisms are robust.
 
-When defining the Detectability rating, it is essential to remember that this rating should not be influenced by the frequency of occurrences but should solely reflect the ability of the process controls to detect the failure once it has happened. Low-frequency failure modes, although rare, must still be rigorously assessed to ensure that the detection controls can identify them and prevent them from progressing further in the process.
+---
 
 ## Key Considerations for Assigning a Detectability Rating
 
-- **Assessment of Process Capabilities**: Evaluate the current process controls to determine their effectiveness in detecting specific failure modes. This involves a thorough analysis of the control mechanisms, considering their sensitivity, reliability, and the speed at which they can identify a failure.
+When determining the Detectability rating, consider the following factors:
 
-- **Consistency in Evaluation**: The criteria and ranking system for Detectability should be agreed upon by the entire FMEA team and applied consistently throughout the process. This ensures that all failure modes are assessed under the same standards, leading to a fair and accurate representation of risk.
+- **Assessment of Process Capabilities:**  
+  Evaluate how effective current process controls are at detecting specific failure modes. This includes analyzing:
+  - Sensitivity of the detection mechanisms.
+  - Reliability and consistency.
+  - Response time for identifying failures.
 
-- **Avoiding Assumptions Based on Occurrence**: Detectability ratings should not be automatically lowered because a failure mode has a low occurrence. Instead, the team should critically assess whether the detection controls are capable of identifying even these low-frequency failures.
+- **Consistency in Evaluation:**  
+  The criteria and ranking system for Detectability should be agreed upon by the entire FMEA team. A consistent approach ensures that every failure mode is assessed under the same standards, resulting in a fair and accurate representation of risk.
+
+- **Avoiding Occurrence-Based Assumptions:**  
+  The Detectability rating must not be influenced by how often a failure occurs. Even if a failure mode is rare, the detection controls must be evaluated rigorously to confirm their ability to identify the failure when it happens.
+
+---
 
 ## Detectability Rating Scale
 
-The Detectability rating is typically represented on a scale from 1 to 10, where:
+The Detectability rating is typically represented on a scale from 1 to 10, where each number corresponds to the probability of detecting the failure mode:
 
-- **1**: Indicates that the process control will detect the failure mode every time it occurs, essentially a 100% detection probability.
-- **2**: Represents a 99% probability of detection.
+- **1:** The process control detects the failure mode every time it occurs (100% detection probability).
+- **2:** Indicates a 99% probability of detection.
 - **...**
-- **9**: Corresponds to a 50% probability of detecting the failure mode.
-- **10**: Indicates a less than 50% probability that the failure mode will be detected.
+- **9:** Corresponds to about a 50% probability of detecting the failure mode.
+- **10:** Less than a 50% probability of detection.
 
-Each rating level between these extremes corresponds to a slightly lower or higher probability of detection. This scale allows the team to quantify the effectiveness of their detection controls and compare them across different failure modes.
+Each level on the scale reflects a slight variation in detection probability, allowing teams to quantify and compare the effectiveness of detection controls across various failure modes.
+
+---
 
 ## Example: Applying Detectability Ratings
 
-Consider the following examples to illustrate how Detectability ratings might be assigned based on the current process controls:
+Consider the following examples, which illustrate how Detectability ratings may be assigned based on the current process controls:
 
-- **Failure Mode: No Calls**
-  - **Detectability Rating**: 3
-  - **Explanation**: The process control in place (e.g., continuous monitoring of the CMS) detects this failure mode 95% of the time, indicating a relatively high likelihood of detection.
+- **Failure Mode: No Calls**  
+  - **Detectability Rating:** 3  
+  - **Explanation:** The continuous monitoring of the Call Management System (CMS) detects this failure mode approximately 95% of the time, reflecting a high likelihood of detection.
 
-- **Failure Mode: Call Drops**
-  - **Detectability Rating**: 1
-  - **Explanation**: The monitoring systems for trunks and alarms on the PBX are so effective that they detect call drops 100% of the time. This warrants the highest Detectability rating, reflecting complete reliability in detecting this failure mode.
+- **Failure Mode: Call Drops**  
+  - **Detectability Rating:** 1  
+  - **Explanation:** The monitoring systems for trunks and alarms on the Private Branch Exchange (PBX) are extremely effective, detecting call drops 100% of the time, hence a rating of 1.
 
-- **Failure Mode: Bad Connection or Static**
-  - **Detectability Rating**: 1
-  - **Explanation**: The combination of hardware checks (e.g., replacing headsets) and systems monitoring ensures that this failure mode is detected every time it occurs, justifying a Detectability rating of 1.
+- **Failure Mode: Bad Connection or Static**  
+  - **Detectability Rating:** 1  
+  - **Explanation:** A combination of hardware checks (such as replacing headsets) and robust systems monitoring ensures that this failure mode is always detected, justifying a rating of 1.
 
-- **Failure Mode: Lower Decibel in Voice Quality**
-  - **Detectability Rating**: 1
-  - **Explanation**: The escalation procedures in place ensure that issues with voice quality are always identified and addressed, leading to a Detectability rating of 1.
+- **Failure Mode: Lower Decibel in Voice Quality**  
+  - **Detectability Rating:** 1  
+  - **Explanation:** Effective escalation procedures guarantee that issues with voice quality are promptly identified and addressed, leading to a rating of 1.
+
+---
 
 ## Activity: Assigning Detectability Ratings
 
-As part of your ongoing FMEA activity, you should now identify and assign a Detectability rating for each failure mode you have documented. This step involves carefully considering the current process controls and evaluating their ability to detect failures effectively.
+As part of your FMEA analysis, you should now:
+- Review each documented failure mode.
+- Evaluate the effectiveness of current process controls in detecting these failures.
+- Assign a Detectability rating based on the guidelines provided above.
 
-To assist you further, I have provided Detectability rating guidelines specific to both manufacturing and service industries. These resources are available for download in the Resources section of this lecture. Reviewing these guidelines will give you a clearer understanding of the rating scales and help you apply them accurately in your FMEA analysis.
-
-By methodically applying these ratings, you will enhance the rigor and reliability of your FMEA, ensuring that all potential risks are thoroughly assessed and managed.
+For further assistance, refer to the Detectability rating guidelines available in the Resources section, which include specific recommendations for both manufacturing and service industries. Applying these ratings methodically will enhance the rigor and reliability of your FMEA, ensuring that all potential risks are comprehensively assessed and managed.

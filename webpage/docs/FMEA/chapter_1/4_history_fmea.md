@@ -1,6 +1,6 @@
 # The History of FMEA
 
-Failure Modes and Effects Analysis (FMEA) is a systematic method for identifying potential failure modes in a system, product, or process, evaluating their impacts, and prioritizing corrective actions to mitigate associated risks. It is a cornerstone of reliability engineering and quality management, essential for enhancing the safety, reliability, and robustness of products and processes across numerous industries. The evolution of FMEA spans over six decades, originating in military and aerospace applications before expanding into diverse industrial sectors. This chapter details the historical development of FMEA through a timeline of key milestones.
+Failure Modes and Effects Analysis  is a systematic method for identifying potential failure modes in a system, product, or process, evaluating their impacts, and prioritizing corrective actions to mitigate associated risks. It is a cornerstone of reliability engineering and quality management, essential for enhancing the safety, reliability, and robustness of products and processes across numerous industries. The evolution of FMEA spans over six decades, originating in military and aerospace applications before expanding into diverse industrial sectors. This chapter details the historical development of FMEA through a timeline of key milestones.
 
 ---
 

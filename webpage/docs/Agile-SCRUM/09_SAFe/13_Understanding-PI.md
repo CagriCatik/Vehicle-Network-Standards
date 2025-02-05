@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Program Increment (PI) Planning is a crucial event within the Scaled Agile Framework (SAFe) that ensures alignment among all teams involved in an Agile Release Train (ART). This guide provides a detailed examination of PI Planning, highlighting its importance, structure, and execution.
+Program Increment  Planning is a crucial event within the Scaled Agile Framework  that ensures alignment among all teams involved in an Agile Release Train (ART). This guide provides a detailed examination of PI Planning, highlighting its importance, structure, and execution.
 
 ### What is PI Planning?
 

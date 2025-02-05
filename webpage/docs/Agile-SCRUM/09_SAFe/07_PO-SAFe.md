@@ -1,8 +1,8 @@
-# Areas of Responsibilities of a Product Owner in the Scaled Agile Framework (SAFe)
+# Areas of Responsibilities of a Product Owner in the Scaled Agile Framework 
 
 ## Distinction between Product Owners and Product Management
 
-In the Scaled Agile Framework (SAFe), it is crucial to delineate the roles of Product Owners and Product Management, as these roles have distinct responsibilities and focuses.
+In the Scaled Agile Framework , it is crucial to delineate the roles of Product Owners and Product Management, as these roles have distinct responsibilities and focuses.
 
 **Product Management**:
 

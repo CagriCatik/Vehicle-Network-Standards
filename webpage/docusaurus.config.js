@@ -233,10 +233,7 @@ const config = {
                 to: '/blog',
               }, 
               
-              {
-                label: 'Agile-SCRUM',
-                to: '/docs/Agile-SCRUM/getting-started',
-              },
+
               {
                 label: 'Sources',
                 to: '/docs/SOURCES/info',
@@ -249,6 +246,22 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/CagriCatik/Vehicle-Network-Standards',
               },
+            ],
+          },
+
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'ASPICE',
+                to: '/docs/ASPICE/getting-started',
+              }, 
+
+              {
+                label: 'Agile-SCRUM',
+                to: '/docs/Agile-SCRUM/getting-started',
+              },
+          
             ],
           },
         ],

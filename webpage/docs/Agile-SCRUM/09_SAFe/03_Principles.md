@@ -1,6 +1,6 @@
 # Applying Lean-Agile Principles in SAFe Framework
 
-This tutorial critically analyzes the application of lean-agile principles within the Scaled Agile Framework (SAFe), especially focusing on complex product development involving large teams. It will address common misconceptions and provide a structured explanation of each principle.
+This tutorial critically analyzes the application of lean-agile principles within the Scaled Agile Framework , especially focusing on complex product development involving large teams. It will address common misconceptions and provide a structured explanation of each principle.
 
 ## Introduction to Lean-Agile Principles in Large-Scale Product Development
 

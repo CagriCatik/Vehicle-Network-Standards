@@ -1,1 +1,0 @@
-# SCRUM Artifacts and Commitments

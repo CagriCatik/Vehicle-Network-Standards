@@ -2,7 +2,7 @@
 
 ## Overview
 
-In the context of the Scaled Agile Framework (SAFe), the Agile Release Train (ART) operates as a long-lived team of Agile teams, aligned to a common business and technology mission. ART level events play a crucial role in coordinating efforts across teams, aligning them towards common objectives, and ensuring the successful delivery of value. This guide provides an in-depth exploration of these events, highlighting their significance and detailing the processes involved.
+In the context of the Scaled Agile Framework , the Agile Release Train (ART) operates as a long-lived team of Agile teams, aligned to a common business and technology mission. ART level events play a crucial role in coordinating efforts across teams, aligning them towards common objectives, and ensuring the successful delivery of value. This guide provides an in-depth exploration of these events, highlighting their significance and detailing the processes involved.
 
 ## 1. Preparing for PI Planning
 

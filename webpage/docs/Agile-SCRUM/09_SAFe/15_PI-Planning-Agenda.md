@@ -2,7 +2,7 @@
 
 ## Overview of PI Planning in SAFe
 
-Program Increment (PI) Planning is a significant event within the Scaled Agile Framework (SAFe) where all teams within an Agile Release Train (ART) synchronize and plan their work for the upcoming increment, typically lasting 8-12 weeks. PI Planning ensures alignment, sets clear goals, and identifies dependencies and risks. When conducted in person, PI Planning spans two days; remotely, it extends to 3-4 days to accommodate virtual collaboration.
+Program Increment  Planning is a significant event within the Scaled Agile Framework  where all teams within an Agile Release Train (ART) synchronize and plan their work for the upcoming increment, typically lasting 8-12 weeks. PI Planning ensures alignment, sets clear goals, and identifies dependencies and risks. When conducted in person, PI Planning spans two days; remotely, it extends to 3-4 days to accommodate virtual collaboration.
 
 ## Day 1 Agenda
 

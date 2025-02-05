@@ -1,6 +1,6 @@
 # Agile Release Train
 
-The Agile Release Train (ART) is a critical concept within the Scaled Agile Framework (SAFe), designed to enhance the coordination and efficiency of agile teams working together on complex projects. This part provides a thorough understanding of the ART, its structure, functionality, and its importance in delivering continuous value in an agile environment.
+The Agile Release Train (ART) is a critical concept within the Scaled Agile Framework , designed to enhance the coordination and efficiency of agile teams working together on complex projects. This part provides a thorough understanding of the ART, its structure, functionality, and its importance in delivering continuous value in an agile environment.
 
 ## Definition and Structure of Agile Release Train
 
@@ -34,7 +34,7 @@ The primary objective of an ART is to ensure a continuous flow of value to the c
 
 ### Synchronization and Cadence
 
-ARTs operate on a synchronized cadence to maintain alignment and coherence among all teams. This synchronization is facilitated through events such as Program Increment (PI) Planning. During PI Planning:
+ARTs operate on a synchronized cadence to maintain alignment and coherence among all teams. This synchronization is facilitated through events such as Program Increment  Planning. During PI Planning:
 
 - All members of the ART, typically up to 125 people, come together to plan the work for the next iteration (usually three months).
 - Teams align their goals and objectives with the overarching mission of the ART.

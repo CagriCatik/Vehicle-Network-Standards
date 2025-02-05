@@ -1,6 +1,6 @@
-# Overview of Scaled Agile Framework (SAFe)
+# Overview of Scaled Agile Framework 
 
-The Scaled Agile Framework (SAFe) is a methodology designed to scale agile practices across large enterprises. It integrates principles from Agile, Lean, and DevOps to enhance productivity, quality, and time-to-market. SAFe provides a structured approach to align development with business goals, delivering value efficiently and predictably. This tutorial provides a comprehensive overview of SAFe, detailing its structure, roles, and processes.
+The Scaled Agile Framework  is a methodology designed to scale agile practices across large enterprises. It integrates principles from Agile, Lean, and DevOps to enhance productivity, quality, and time-to-market. SAFe provides a structured approach to align development with business goals, delivering value efficiently and predictably. This tutorial provides a comprehensive overview of SAFe, detailing its structure, roles, and processes.
 
 ## Key Levels of SAFe
 
@@ -44,7 +44,7 @@ Agile teams operate within the ART to deliver small, incremental changes. Each t
 ## Iterations and Program Increments
 
 - **Iterations:** Agile teams work in iterations, typically two weeks long, where they plan, execute, and deliver user stories.
-- **Program Increment (PI):** A time-boxed planning interval, usually 8-12 weeks, comprising multiple iterations. A PI aims to deliver a set of features that advance the solution towards the business objectives.
+- **Program Increment :** A time-boxed planning interval, usually 8-12 weeks, comprising multiple iterations. A PI aims to deliver a set of features that advance the solution towards the business objectives.
 
 ## Work Breakdown and Timeboxing
 

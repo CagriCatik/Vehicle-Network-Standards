@@ -1,6 +1,6 @@
 # Iteration Level Events in SAFe (Scaled Agile Framework)
 
-In the Scaled Agile Framework (SAFe), the iteration level events are crucial for maintaining agility, ensuring continuous improvement, and achieving alignment within the team. These events include iteration planning, team sync, iteration review, backlog refinement, and iteration retrospective. Each event has specific objectives and contributes to the overall effectiveness and efficiency of the agile team.
+In the Scaled Agile Framework , the iteration level events are crucial for maintaining agility, ensuring continuous improvement, and achieving alignment within the team. These events include iteration planning, team sync, iteration review, backlog refinement, and iteration retrospective. Each event has specific objectives and contributes to the overall effectiveness and efficiency of the agile team.
 
 ## 1. Iteration Planning
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This tutorial provides an in-depth examination of the Scrum framework's application at the team level within the Scaled Agile Framework (SAFe). The focus is on understanding how Scrum facilitates the development of new features, user stories, and functionalities. Additionally, the distinction between using Scrum and Kanban within SAFe is addressed, emphasizing their appropriate contexts.
+This tutorial provides an in-depth examination of the Scrum framework's application at the team level within the Scaled Agile Framework . The focus is on understanding how Scrum facilitates the development of new features, user stories, and functionalities. Additionally, the distinction between using Scrum and Kanban within SAFe is addressed, emphasizing their appropriate contexts.
 
 ## Scrum vs. Kanban in SAFe
 

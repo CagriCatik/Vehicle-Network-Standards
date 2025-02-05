@@ -2,12 +2,12 @@
 
 ## Introduction to the Role of Scrum Master in SAFe
 
-In the context of the Scaled Agile Framework (SAFe), the role of the Scrum Master, often referred to as the Team Coach, is pivotal. This individual not only facilitates Agile practices at the team level but also plays a crucial role in aligning team objectives with broader program and enterprise goals. This tutorial provides a detailed examination of the responsibilities and functions of the Scrum Master within the SAFe framework, addressing common misconceptions and emphasizing the importance of this role in fostering Agile principles and practices.
+In the context of the Scaled Agile Framework , the role of the Scrum Master, often referred to as the Team Coach, is pivotal. This individual not only facilitates Agile practices at the team level but also plays a crucial role in aligning team objectives with broader program and enterprise goals. This tutorial provides a detailed examination of the responsibilities and functions of the Scrum Master within the SAFe framework, addressing common misconceptions and emphasizing the importance of this role in fostering Agile principles and practices.
 
 ## Responsibilities of the Scrum Master
 
 1. **Facilitation of PI Planning**
-   - The Scrum Master is integral to Program Increment (PI) planning, a cornerstone event in SAFe where teams align on objectives for the upcoming increment. The Scrum Master ensures that the team’s objectives are clear, realistic, and aligned with the overall program goals. This involves facilitating discussions, helping to resolve dependencies, and ensuring that the team has a clear understanding of the priorities and deliverables.
+   - The Scrum Master is integral to Program Increment  planning, a cornerstone event in SAFe where teams align on objectives for the upcoming increment. The Scrum Master ensures that the team’s objectives are clear, realistic, and aligned with the overall program goals. This involves facilitating discussions, helping to resolve dependencies, and ensuring that the team has a clear understanding of the priorities and deliverables.
 
 2. **Support for Iteration Execution**
    - Throughout each iteration, the Scrum Master supports the execution of sprints by addressing and removing impediments. This may involve coaching team members on Agile techniques, facilitating discussions to resolve conflicts, and ensuring that the team adheres to Agile principles and practices. The goal is to maintain a smooth and efficient workflow, enabling the team to deliver value continuously.

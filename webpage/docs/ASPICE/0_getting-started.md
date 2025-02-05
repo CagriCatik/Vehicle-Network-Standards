@@ -1,4 +1,4 @@
-# Summary
+# Getting Started
 
 - [Motivation](./01/00.md)
   - [Situations](./01/01.md)

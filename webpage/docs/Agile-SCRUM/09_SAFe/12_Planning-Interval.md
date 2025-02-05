@@ -1,8 +1,8 @@
-# Definition of Planning Interval (PI) in SAFe
+# Definition of Planning Interval  in SAFe
 
 ## Overview
 
-The Planning Interval (PI) is a critical concept within the Scaled Agile Framework (SAFe). It represents a time-boxed period during which an Agile Release Train (ART) delivers incremental value in the form of working and tested software and systems. This tutorial aims to provide a comprehensive understanding of PI, its structure, purpose, and execution within SAFe.
+The Planning Interval  is a critical concept within the Scaled Agile Framework . It represents a time-boxed period during which an Agile Release Train (ART) delivers incremental value in the form of working and tested software and systems. This tutorial aims to provide a comprehensive understanding of PI, its structure, purpose, and execution within SAFe.
 
 ## Duration and Structure
 
@@ -56,4 +56,4 @@ The PI is essential for several reasons:
 
 ## Conclusion
 
-The Planning Interval (PI) in SAFe is a well-defined, time-boxed period that facilitates planning, building, validating, and demonstrating software and system increments. By structuring work into development and IP iterations, SAFe ensures that Agile Release Trains deliver consistent, incremental value while fostering continuous improvement and innovation. Understanding and effectively implementing PIs is crucial for the success of Agile teams and the overall organization.
+The Planning Interval  in SAFe is a well-defined, time-boxed period that facilitates planning, building, validating, and demonstrating software and system increments. By structuring work into development and IP iterations, SAFe ensures that Agile Release Trains deliver consistent, incremental value while fostering continuous improvement and innovation. Understanding and effectively implementing PIs is crucial for the success of Agile teams and the overall organization.

@@ -1,1 +1,0 @@
-# Fähigkeitsdimension und Bewertungsmethode

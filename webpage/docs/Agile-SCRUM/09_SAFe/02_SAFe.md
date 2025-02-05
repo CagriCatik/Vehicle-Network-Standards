@@ -1,8 +1,8 @@
-# Navigating the Scaled Agile Framework (SAFe)
+# Navigating the Scaled Agile Framework 
 
 ## Introduction
 
-The Scaled Agile Framework (SAFe) is a knowledge base of proven, integrated principles, practices, and competencies for achieving business agility using Lean, Agile, and DevOps. It is an open-source framework available to everyone through the official SAFe website. This tutorial provides a structured guide to understanding and navigating the SAFe website, with a focus on the sections relevant to Product Management and Product Ownership.
+The Scaled Agile Framework  is a knowledge base of proven, integrated principles, practices, and competencies for achieving business agility using Lean, Agile, and DevOps. It is an open-source framework available to everyone through the official SAFe website. This tutorial provides a structured guide to understanding and navigating the SAFe website, with a focus on the sections relevant to Product Management and Product Ownership.
 
 ## Understanding the Big Picture
 

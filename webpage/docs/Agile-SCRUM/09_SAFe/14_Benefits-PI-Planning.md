@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Program Increment (PI) Planning is a pivotal event in the Scaled Agile Framework (SAFe) that aims to align teams to a shared mission and vision. This tutorial delves into the benefits of PI Planning, highlighting its role in aligning development with business objectives, fostering collaboration, and enabling efficient decision-making.
+Program Increment  Planning is a pivotal event in the Scaled Agile Framework  that aims to align teams to a shared mission and vision. This tutorial delves into the benefits of PI Planning, highlighting its role in aligning development with business objectives, fostering collaboration, and enabling efficient decision-making.
 
 ## Aligning Development to Business Goals
 

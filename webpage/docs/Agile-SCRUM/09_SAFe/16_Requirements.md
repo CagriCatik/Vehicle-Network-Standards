@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Scaled Agile Framework (SAFe) is a comprehensive system for implementing Lean-Agile development at enterprise scale. One of the critical components of SAFe is the structured approach to capturing requirements through various artifacts such as Epics, Features, and Stories. This tutorial will provide a detailed overview of these artifacts and their roles in SAFe.
+The Scaled Agile Framework  is a comprehensive system for implementing Lean-Agile development at enterprise scale. One of the critical components of SAFe is the structured approach to capturing requirements through various artifacts such as Epics, Features, and Stories. This tutorial will provide a detailed overview of these artifacts and their roles in SAFe.
 
 ## Epics
 
@@ -32,7 +32,7 @@ A Feature is a service that fulfills a stakeholder need. It is a smaller, more m
 - **Name:** Each feature must have a distinct name.
 - **Benefit Hypothesis:** This is an assumption regarding the value or benefit the feature will deliver.
 - **Acceptance Criteria:** Defines the conditions that must be met for the feature to be considered complete.
-- **Size:** Features are sized to fit within a Program Increment (PI). If a feature is too large, it must be split into smaller features to fit within one PI.
+- **Size:** Features are sized to fit within a Program Increment . If a feature is too large, it must be split into smaller features to fit within one PI.
 
 ### Types of Features
 
